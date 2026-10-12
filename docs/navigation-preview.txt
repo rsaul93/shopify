@@ -1,0 +1,20 @@
+Navigation – Designkorrektur vom 12.10.2026
+
+Nutzerfeedback: Die erste Preview wirkte nicht ausreichend hochwertig, modern
+und professionell. Keine weitere Verstärkung der Kachel-/Button-Optik.
+
+Gestaltungsrichtung: ruhige Textnavigation, normale Groß-/Kleinschreibung,
+feine Trennlinien, mehr Weißraum und eine klar getrennte Bildspalte.
+Desktop mit zwei Linkspalten, kurze Menüs mit schmalerer Fläche und einer
+Linkspalte. Mobil großzügige Textzeilen statt grauer Karten; Schließen oben
+rechts. Vorhandene Menüstruktur, Ziele und JavaScript bleiben unverändert.
+Legacy-Custom-CSS für Großschrift und ausgeblendete Bilder wird ausschließlich
+innerhalb der Menüfläche überschrieben.
+
+Auslieferung nur an das unveröffentlichte Theme 202395255111.
+Live-Theme 201388654919 und main bleiben unverändert bis zur Sichtfreigabe.
+
+Prüfung dieser Iteration: Desktop 1024/1440, Drawer 390/768, Öffnen per
+Tastatur, mobiles Öffnen, Untermenü, Zurück und Schließen. Theme Check:
+unverändert 26 Fehler / 34 Warnungen außerhalb der betroffenen Menüdateien.
+Keine vollständige erneute Sprach-/Touch-/Screenreader-Abnahme dieser Iteration.

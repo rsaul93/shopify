@@ -1,0 +1,211 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cp_home_showcase": {
+      "type": "cp-homepage-showcase",
+      "blocks": {
+        "usp_advice": {
+          "type": "usp",
+          "settings": {
+            "icon": "advice",
+            "title": "Beratung aus eigener Campingpraxis",
+            "text": "Wir denken Einbausituation, Maße und Nutzung mit dir durch – persönlich und verständlich."
+          }
+        },
+        "usp_showroom": {
+          "type": "usp",
+          "settings": {
+            "icon": "showroom",
+            "title": "Vor Ort vergleichen",
+            "text": "Erlebe ausgewählte Produkte in unseren Showrooms in Thüringen und Bayern."
+          }
+        },
+        "usp_rental": {
+          "type": "usp",
+          "settings": {
+            "icon": "rental",
+            "title": "Erst mieten, dann entscheiden",
+            "text": "Teste Dachzelt oder Anhänger genau für den Zeitraum, in dem du sie brauchst."
+          }
+        },
+        "usp_fit": {
+          "type": "usp",
+          "settings": {
+            "icon": "fit",
+            "title": "Passend statt irgendwie",
+            "text": "Konfigurator und persönliche Empfehlung schützen dich vor unnötigen Fehlkäufen."
+          }
+        },
+        "lagun_standard": {
+          "type": "lagun_product",
+          "settings": {
+            "product": "lagun-tischgestell-set-mit-standard-befestigungsplatte-silber",
+            "fallback_image": "",
+            "fallback_link": "shopify://products/lagun-tischgestell-set-mit-standard-befestigungsplatte-silber",
+            "badge": "Bestseller",
+            "kicker": "Der Allrounder",
+            "title": "Lagun Standard-Set",
+            "text": "Die vielseitige Basis für die meisten Einbauten – höhenverstellbar, schwenkbar und ohne Werkzeug abnehmbar."
+          }
+        },
+        "lagun_two_arms": {
+          "type": "lagun_product",
+          "settings": {
+            "product": "lagun-tischgestell-set-silber-mit-zwei-armen-und-verbindungsbolzen",
+            "fallback_image": "",
+            "fallback_link": "shopify://products/lagun-tischgestell-set-silber-mit-zwei-armen-und-verbindungsbolzen",
+            "badge": "Maximal beweglich",
+            "kicker": "Zwei Drehpunkte",
+            "title": "Lagun Set mit zwei Armen",
+            "text": "Zwei Arme schaffen zusätzlichen Bewegungsradius – ideal, wenn die Tischplatte mehrere Sitz- und Arbeitspositionen erreichen soll."
+          }
+        },
+        "lagun_black": {
+          "type": "lagun_product",
+          "settings": {
+            "product": "lagun-tischgestell-set-mit-standard-befestigungsplatte-schwarz",
+            "fallback_image": "",
+            "fallback_link": "shopify://products/lagun-tischgestell-set-mit-standard-befestigungsplatte-schwarz",
+            "badge": "Black Edition",
+            "kicker": "Mattes Schwarz",
+            "title": "Lagun Black Edition",
+            "text": "Der bewährte Lagun Standard-Aufbau in mattem Schwarz – für moderne Camper, Offroad-Ausbauten und Yachten."
+          }
+        },
+        "world_rooftents": {
+          "type": "world",
+          "settings": {
+            "image": "shopify://shop_images/Web_1920_1.webp",
+            "kicker": "Schlafen, wo du ankommst",
+            "title": "Dachzelte",
+            "link_label": "Dachzelte entdecken",
+            "link": "shopify://collections/alle-dachzelte-zubehor",
+            "size": "wide",
+            "text_position": "top-left"
+          }
+        },
+        "world_rooftent_rental": {
+          "type": "world",
+          "settings": {
+            "image": "shopify://shop_images/dachzelt_track_horntools.webp",
+            "kicker": "Erst testen, dann entscheiden",
+            "title": "Dachzeltvermietung",
+            "link_label": "Mietzeitraum planen",
+            "link": "shopify://pages/dachzelte-mieten",
+            "size": "standard",
+            "text_position": "top-left"
+          }
+        },
+        "world_trailers": {
+          "type": "world",
+          "settings": {
+            "image": "shopify://shop_images/Besttrailers_KFZ_Anhaenger.png",
+            "kicker": "Mehr mitnehmen",
+            "title": "Anhänger & Zubehör",
+            "link_label": "Anhänger ansehen",
+            "link": "shopify://collections/anhanger-zubehor",
+            "size": "standard",
+            "text_position": "top-left"
+          }
+        },
+        "world_trailer_rental": {
+          "type": "world",
+          "settings": {
+            "image": "shopify://shop_images/Besttrailers_KFZ_Anhaenger_3.jpg",
+            "kicker": "Flexibel für dein Vorhaben",
+            "title": "Anhängervermietung",
+            "link_label": "Anhänger mieten",
+            "link": "shopify://pages/anhaenger-mieten",
+            "size": "standard",
+            "text_position": "top-right"
+          }
+        },
+        "world_showrooms": {
+          "type": "world",
+          "settings": {
+            "image": "shopify://shop_images/showroom-bamberg_cp.png",
+            "kicker": "Anfassen. Vergleichen. Fragen.",
+            "title": "Unsere Showrooms",
+            "link_label": "Standorte entdecken",
+            "link": "shopify://pages/showrooms",
+            "size": "standard",
+            "text_position": "top-center"
+          }
+        }
+      },
+      "block_order": [
+        "usp_advice",
+        "usp_showroom",
+        "usp_rental",
+        "usp_fit",
+        "lagun_standard",
+        "lagun_black",
+        "lagun_two_arms",
+        "world_rooftents",
+        "world_rooftent_rental",
+        "world_trailers",
+        "world_trailer_rental",
+        "world_showrooms"
+      ],
+      "settings": {
+        "hero_kicker": "Camping-Ausrüstung mit persönlicher Beratung",
+        "hero_heading": "Mehr Platz. Mehr Freiheit. <em>Besser unterwegs.</em>",
+        "hero_text": "<p>Lagun Tischgestelle, Dachzelte und Anhänger für Camper, Wohnmobil und Auto – passend auswählen, kaufen oder erst einmal mieten.</p>",
+        "hero_image": "shopify://shop_images/beautiful-shot-orange-tent-rocky-mountain-surrounded-by-trees-during-sunset_2_1920x1920_f608a060-3212-4e4c-b56e-36f818bf294f.jpg",
+        "hero_image_alt": "Camping-Abenteuer in den Bergen",
+        "hero_caption": "Draußen beginnt dein Freiraum.",
+        "hero_primary_label": "Lagun konfigurieren",
+        "hero_primary_link": "shopify://pages/lagun-tischgestell-konfigurator",
+        "hero_secondary_label": "Dachzelte entdecken",
+        "hero_secondary_link": "shopify://collections/alle-dachzelte-zubehor",
+        "promise_kicker": "Darauf kannst du dich verlassen",
+        "promise_heading": "Mehr Sicherheit bei jeder <em>Entscheidung.</em>",
+        "promise_text": "<p>Wir verbinden eigene Campingerfahrung mit Beratung, Showrooms und flexiblen Mietangeboten.</p>",
+        "lagun_kicker": "Der schwedische Klassiker",
+        "lagun_heading": "Ein Tischgestell. <em>Viele Möglichkeiten.</em>",
+        "lagun_text": "<p>Wähle zwischen dem vielseitigen Standard-Set, der mattschwarzen Black Edition und dem Zwei-Arm-Set für besonders viel Bewegungsfreiheit.</p>",
+        "film_one_url": "https://www.youtube.com/watch?v=I5qnJ5We6xU",
+        "film_one_poster": "shopify://shop_images/slider_lagun_1920x1920_95c1aee7-16eb-41bf-a312-14b7b4ab85a7.webp",
+        "film_one_kicker": "Lagun in Bewegung",
+        "film_one_heading": "Mehr Raum entsteht, wenn alles <em>beweglich</em> bleibt.",
+        "film_one_label": "Lagun kennenlernen",
+        "film_one_link": "shopify://pages/lagun-tischgestell",
+        "configurator_image": "shopify://shop_images/slider_lagun_1920x1920_95c1aee7-16eb-41bf-a312-14b7b4ab85a7.webp",
+        "configurator_image_alt": "Lagun Tischgestell im Camper",
+        "configurator_media_label": "Dein Ausbau. Dein Lagun.",
+        "configurator_kicker": "Stück für Stück",
+        "configurator_heading": "Nicht irgendein Lagun. <em>Deins.</em>",
+        "configurator_text": "<p>Beantworte drei kurze Fragen zu Einbauort, Platz und Optik. So stellst du genau das Lagun Tischgestell zusammen, das sich in deinem Camper frei bewegen lässt und zu deinem Ausbau passt.</p>",
+        "configurator_label": "Jetzt zusammenstellen",
+        "configurator_link": "shopify://pages/lagun-tischgestell-konfigurator",
+        "worlds_kicker": "Alles für deinen nächsten Aufbruch",
+        "worlds_heading": "Kaufen. Mieten. <em>Losfahren.</em>",
+        "worlds_text": "<p>Plane deine nächste Reise oder deinen Transport ohne Umwege: Dachzelte und Anhänger kannst du bei uns kaufen, mieten und persönlich ansehen.</p>",
+        "film_two_url": "https://www.youtube.com/watch?v=VmoDYTQRfBI",
+        "film_two_poster": "shopify://shop_images/Web_1920_1.webp",
+        "film_two_kicker": "Oben schlafen. Weiter träumen.",
+        "film_two_heading": "Heute hier. Morgen schon <em>woanders.</em>",
+        "film_two_label": "Dachzelte entdecken",
+        "film_two_link": "shopify://collections/alle-dachzelte-zubehor",
+        "consulting_image": "",
+        "consulting_image_alt": "Das CAMPING-PIONEERS Team vor dem Showroom in Bad Berka",
+        "consulting_kicker": "Echte Menschen. Echte Erfahrung.",
+        "consulting_heading": "Du musst nicht allein <em>entscheiden.</em>",
+        "consulting_text": "<p>Hinter CAMPING-PIONEERS steht ein Team, das Camping selbst lebt. Wir helfen dir bei Maßen, Montage, Fahrzeugkompatibilität und Mietablauf – online, am Telefon oder persönlich im Showroom.</p>",
+        "consulting_label": "Kontakt & Beratung",
+        "consulting_link": "shopify://pages/contact"
+      }
+    }
+  },
+  "order": [
+    "cp_home_showcase"
+  ]
+}

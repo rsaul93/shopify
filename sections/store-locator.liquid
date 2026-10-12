@@ -1,0 +1,418 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+	#shopify-section-{{ section.id }} .media-wrapper {
+		box-shadow: 0px 0.5rem 4.5rem 0px rgb(0 0 0 / 10%);
+    {% unless section.settings.full_width %}border-radius: 0.6rem;{% endunless %}
+	}
+
+	gmpx-store-locator {
+		width: 100%;
+		height: 100%;
+		--gmpx-color-surface: {{ section.settings.colors_overlay | default: '#fff' }};
+		--gmpx-color-on-surface: {{ section.settings.colors_text | default: '#212121' }};
+		--gmpx-color-on-surface-variant: {{ section.settings.colors_text | default: '#757575' }};
+		--gmpx-color-primary: {{ section.settings.colors_button_label | default: '#1967d2' }};
+		--gmpx-color-outline: {{ section.settings.colors_border | default: '#e0e0e0' }};
+		--gmpx-fixed-panel-width-row-layout: 31em;
+		--gmpx-fixed-panel-height-column-layout: 65%;
+		--gmpx-font-size-base: 1.1rem;
+		--gmpx-hours-color-open: #188038;
+		--gmpx-hours-color-closed: #d50000;
+		--gmpx-rating-color: #ffb300;
+		--gmpx-rating-color-empty: #e0e0e0;
+	}
+{%- endstyle -%}
+
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="section--padding{% if section.settings.show_divider %} section--divider{% endif %}">
+  <div class="page-width{% if section.settings.full_width %} page-width--full-width{% endif %}">
+		<div class="media-wrapper">
+			<div class="media media--{{ section.settings.image_ratio }} media-mobile--{{ section.settings.mobile_image_ratio }}">
+				{%- assign map_lang = section.settings.map_language | strip -%}
+				{%- if map_lang == 'auto' -%}
+					{%- assign map_lang = request.locale.iso_code | split: '-' | first -%}
+				{%- endif -%}
+				<script>
+					window.__GMAP_LIBRARY_URL__ = {{ 'googlemaps-extended-component-library.js' | asset_url | json }};
+					window.__GMAP_STRINGS__ = {
+						LOCATOR_BACK_BUTTON_CTA: {{ 'sections.store_locator.gmap_strings.locator_back_button_cta' | t | json }},
+						LOCATOR_DIRECTIONS_BUTTON_LABEL: {{ 'sections.store_locator.gmap_strings.locator_directions_button_label' | t | json }},
+						LOCATOR_LIST_HEADER: {{ 'sections.store_locator.gmap_strings.locator_list_header' | t | json }},
+						LOCATOR_LIST_SUBHEADING: {{ 'sections.store_locator.gmap_strings.locator_list_subheading' | t | json }},
+						LOCATOR_LIST_SUBHEADING_WITH_SEARCH: {{ 'sections.store_locator.gmap_strings.locator_list_subheading_with_search' | t | json }},
+						LOCATOR_SEARCH_LOCATION_MARKER_TITLE: {{ 'sections.store_locator.gmap_strings.locator_search_location_marker_title' | t | json }},
+						LOCATOR_SEARCH_PROMPT: {{ 'sections.store_locator.gmap_strings.locator_search_prompt' | t | json }},
+						LOCATOR_VIEW_DETAILS_CTA: {{ 'sections.store_locator.gmap_strings.locator_view_details_cta' | t | json }},
+						PLACE_CLEAR_ARIA_LABEL: {{ 'sections.store_locator.gmap_strings.place_clear_aria_label' | t | json }},
+						PLACE_CLOSED: {{ 'sections.store_locator.gmap_strings.place_closed' | t | json }},
+						PLACE_CLOSED_PERMANENTLY: {{ 'sections.store_locator.gmap_strings.place_closed_permanently' | t | json }},
+						PLACE_CLOSED_TEMPORARILY: {{ 'sections.store_locator.gmap_strings.place_closed_temporarily' | t | json }},
+						PLACE_CLOSES: {{ 'sections.store_locator.gmap_strings.place_closes' | t | json }},
+						PLACE_HAS_DELIVERY: {{ 'sections.store_locator.gmap_strings.place_has_delivery' | t | json }},
+						PLACE_HAS_DINE_IN: {{ 'sections.store_locator.gmap_strings.place_has_dine_in' | t | json }},
+						PLACE_HAS_TAKEOUT: {{ 'sections.store_locator.gmap_strings.place_has_takeout' | t | json }},
+						PLACE_NO_DELIVERY: {{ 'sections.store_locator.gmap_strings.place_no_delivery' | t | json }},
+						PLACE_NO_DINE_IN: {{ 'sections.store_locator.gmap_strings.place_no_dine_in' | t | json }},
+						PLACE_NO_TAKEOUT: {{ 'sections.store_locator.gmap_strings.place_no_takeout' | t | json }},
+						PLACE_OPEN_ALWAYS: {{ 'sections.store_locator.gmap_strings.place_open_always' | t | json }},
+						PLACE_OPEN_NOW: {{ 'sections.store_locator.gmap_strings.place_open_now' | t | json }},
+						PLACE_OPENING_HOURS_DEFAULT_SUMMARY: {{ 'sections.store_locator.gmap_strings.place_opening_hours_default_summary' | t | json }},
+						PLACE_OPENING_HOURS_ARIA_LABEL: {{ 'sections.store_locator.gmap_strings.place_opening_hours_aria_label' | t | json }},
+						PLACE_OPENS: {{ 'sections.store_locator.gmap_strings.place_opens' | t | json }},
+						PLACE_OPERATIONAL: {{ 'sections.store_locator.gmap_strings.place_operational' | t | json }},
+						PLACE_PHOTO_ALT: {{ 'sections.store_locator.gmap_strings.place_photo_alt' | t | json }},
+						PLACE_PHOTO_ATTRIBUTION_PREFIX: {{ 'sections.store_locator.gmap_strings.place_photo_attribution_prefix' | t | json }},
+						PLACE_PHOTO_BACK_ARIA_LABEL: {{ 'sections.store_locator.gmap_strings.place_photo_back_aria_label' | t | json }},
+						PLACE_PHOTO_NEXT_ARIA_LABEL: {{ 'sections.store_locator.gmap_strings.place_photo_next_aria_label' | t | json }},
+						PLACE_PHOTO_PREV_ARIA_LABEL: {{ 'sections.store_locator.gmap_strings.place_photo_prev_aria_label' | t | json }},
+						PLACE_PHOTO_TILE_ARIA_LABEL: {{ 'sections.store_locator.gmap_strings.place_photo_tile_aria_label' | t | json }},
+						PLACE_RATING_ARIA_LABEL: {{ 'sections.store_locator.gmap_strings.place_rating_aria_label' | t | json }},
+						PLACE_REVIEWS_AUTHOR_PHOTO_ALT: {{ 'sections.store_locator.gmap_strings.place_reviews_author_photo_alt' | t | json }},
+						PLACE_REVIEWS_MORE: {{ 'sections.store_locator.gmap_strings.place_reviews_more' | t | json }},
+						PLACE_REVIEWS_SECTION_CAPTION: {{ 'sections.store_locator.gmap_strings.place_reviews_section_caption' | t | json }},
+						PLACE_REVIEWS_SECTION_HEADING: {{ 'sections.store_locator.gmap_strings.place_reviews_section_heading' | t | json }},
+						PLACE_SEARCH_ARIA_LABEL: {{ 'sections.store_locator.gmap_strings.place_search_aria_label' | t | json }}
+					};
+				</script>
+				<script type="module" src="{{ 'googlemaps-extended-component-library.js' | asset_url }}"></script>
+				<script type="module" src="{{ 'store-locator-i18n.js' | asset_url }}"></script>
+				<gmpx-api-loader
+					key="{{ section.settings.map_api_key }}"
+					solution-channel="GMP_QB_locatorplus_v10_cABCDE"
+					{% if map_lang != blank %}language="{{ map_lang }}"{% endif %}
+					{% if section.settings.map_region != blank %}region="{{ section.settings.map_region | strip }}"{% endif %}
+				></gmpx-api-loader>
+				<gmpx-store-locator map-id="store-locator--{{ section.id }}"></gmpx-store-locator>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	var store_locator;
+  var LOCATOR_CONFIGURATION = {
+    locations: [],
+    mapOptions: {
+      fullscreenControl: true,
+      mapTypeControl: false,
+      streetViewControl: false,
+      zoom: {{ section.settings.map_zoom }},
+      zoomControl: true,
+      maxZoom: 17,
+      mapId: '',
+    },
+    mapsApiKey: '{{ section.settings.map_api_key }}',
+    capabilities: {
+      input: true,
+      autocomplete: true,
+      directions: true,
+      distanceMatrix: true,
+      details: true,
+      actions: true,
+    },
+  };
+
+	var locator_addresses = [];
+	{%- if section.blocks.size > 0 -%}
+		locator_addresses = [
+			{%- for block in section.blocks -%}
+				"{{ block.settings.address | escape }}"{%- unless forloop.last -%},{%- endunless -%}
+			{%- endfor -%}
+		];
+		{%- for block in section.blocks -%}
+			LOCATOR_CONFIGURATION.locations.push({ title:'{{ block.settings.title | escape }}',address1:'',address2:'',coords:{lat:0,lng:0},placeId:''});
+			{%- if block.settings.button_label != blank -%}
+				LOCATOR_CONFIGURATION.locations[{{ forloop.index0 }}].actions = [{"label":"{{ block.settings.button_label }}","defaultUrl":"{{ block.settings.button_link }}"}];
+			{%- endif -%}
+		{%- endfor -%}
+	{%- endif -%}
+
+	function geocodeAddressWithDelay(geocoder, addresses, index = 0, results = []) {
+    if (index < addresses.length) {
+			geocoder.geocode({ 'address': addresses[index] }, (res, status) => {
+				if (status === 'OK') {
+					results.push(res[0]);
+					LOCATOR_CONFIGURATION.locations[index].address1 = res[0].address_components[0].long_name + ' ' + res[0].address_components[1].long_name;
+					LOCATOR_CONFIGURATION.locations[index].address2 = res[0].formatted_address;
+					LOCATOR_CONFIGURATION.locations[index].placeId = res[0].place_id;
+					LOCATOR_CONFIGURATION.locations[index].coords.lat = res[0].geometry.location.lat();
+					LOCATOR_CONFIGURATION.locations[index].coords.lng = res[0].geometry.location.lng();
+				} else {
+					results.push(null);
+				}
+				setTimeout(() => {
+						geocodeAddressWithDelay(geocoder, addresses, index + 1, results);
+				}, 200);
+			});
+    } else {
+			store_locator = document.querySelector('gmpx-store-locator');
+			store_locator.configureFromQuickBuilder(LOCATOR_CONFIGURATION);
+    }
+	}
+
+	function startGeocoding(addresses) {
+			const geocoder = new google.maps.Geocoder();
+			geocodeAddressWithDelay(geocoder, addresses);
+	}
+
+	async function waitForConditionAsync(conditionFunc, checkInterval = 100) {
+    while (!conditionFunc()) {
+        await new Promise(resolve => setTimeout(resolve, checkInterval));
+    }
+	}
+
+	async function initializeGeocoder() {
+		await waitForConditionAsync(() => window.google && window.google.maps.Geocoder);
+		startGeocoding(locator_addresses);
+	}
+	initializeGeocoder();	
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.store-locator.name",
+  "tag": "section",
+  "class": "section",
+	"limit": 1,
+	"blocks": [
+		{
+      "type": "location",
+      "name": "t:sections.store-locator.blocks.location.name",
+      "limit": 10,
+      "settings": [
+				{
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.store-locator.blocks.location.settings.title.label"
+        },
+        {
+          "type": "text",
+          "id": "address",
+          "label": "t:sections.map.settings.map_address.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.all.button_label.label",
+          "info": "t:sections.all.button_label.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.all.button_link.label"
+        }
+      ]
+    }
+	],
+  "settings": [
+		{
+      "type": "text",
+      "id": "map_api_key",
+      "label": "t:sections.map.settings.map_api_key.label",
+      "info": "t:sections.map.settings.map_api_key.info"
+    },
+    {
+      "type": "range",
+      "id": "map_zoom",
+      "min": 4,
+      "max": 17,
+      "step": 1,
+      "label": "t:sections.map.settings.map_zoom.label",
+      "default": 5
+    },
+    {
+      "type": "select",
+      "id": "map_language",
+      "label": "t:sections.map.settings.map_language.label",
+      "info": "t:sections.map.settings.map_language.info",
+      "default": "auto",
+      "options": [
+        { "value": "auto", "label": "t:sections.map.settings.map_language.options__auto.label" },
+        { "value": "en", "label": "English" },
+        { "value": "vi", "label": "Tiếng Việt" },
+        { "value": "ja", "label": "日本語" },
+        { "value": "th", "label": "ไทย" },
+        { "value": "ko", "label": "한국어" },
+        { "value": "zh-CN", "label": "简体中文" },
+        { "value": "zh-TW", "label": "繁體中文" },
+        { "value": "fr", "label": "Français" },
+        { "value": "de", "label": "Deutsch" },
+        { "value": "es", "label": "Español" },
+        { "value": "", "label": "t:sections.map.settings.map_language.options__browser.label" }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "map_region",
+      "label": "t:sections.map.settings.map_region.label",
+      "info": "t:sections.map.settings.map_region.info",
+      "placeholder": "t:sections.map.settings.map_region.placeholder"
+    },
+		{
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "label": "t:sections.all.image_ratio.options__2.label",
+          "value": "400px"
+        },
+        {
+          "label": "t:sections.all.image_ratio.options__3.label",
+          "value": "450px"
+        },
+        {
+          "label": "t:sections.all.image_ratio.options__4.label",
+          "value": "500px"
+        },
+        {
+          "label": "t:sections.all.image_ratio.options__5.label",
+          "value": "550px"
+        },
+        {
+          "label": "t:sections.all.image_ratio.options__6.label",
+          "value": "600px"
+        },
+        {
+          "label": "t:sections.all.image_ratio.options__7.label",
+          "value": "650px"
+        },
+        {
+          "label": "t:sections.all.image_ratio.options__8.label",
+          "value": "700px"
+        },
+        {
+          "label": "t:sections.all.image_ratio.options__9.label",
+          "value": "750px"
+        },
+        {
+          "label": "t:sections.all.image_ratio.options__10.label",
+          "value": "100vh"
+        }
+      ],
+      "default": "600px",
+      "label": "t:sections.all.image_ratio.label"
+    },
+		{
+      "type": "checkbox",
+      "id": "full_width",
+      "default": false,
+      "label": "t:sections.all.full_width.label"
+    },
+		{
+      "type": "checkbox",
+      "id": "show_divider",
+      "default": false,
+      "label": "t:sections.all.show_divider.label"
+    },
+		{
+      "type": "header",
+      "content": "t:sections.all.mobile_layout.header.content"
+    },
+		{
+      "type": "select",
+      "id": "mobile_image_ratio",
+      "options": [
+        {
+          "label": "t:sections.all.mobile_layout.mobile_image_ratio.options__1.label",
+          "value": "auto"
+        },
+        {
+          "label": "t:sections.all.mobile_layout.mobile_image_ratio.options__2.label",
+          "value": "200px"
+        },
+        {
+          "label": "t:sections.all.mobile_layout.mobile_image_ratio.options__3.label",
+          "value": "250px"
+        },
+        {
+          "label": "t:sections.all.mobile_layout.mobile_image_ratio.options__4.label",
+          "value": "300px"
+        },
+        {
+          "label": "t:sections.all.mobile_layout.mobile_image_ratio.options__5.label",
+          "value": "400px"
+        },
+        {
+          "label": "t:sections.all.mobile_layout.mobile_image_ratio.options__6.label",
+          "value": "500px"
+        },
+        {
+          "label": "t:sections.all.mobile_layout.mobile_image_ratio.options__7.label",
+          "value": "600px"
+        },
+        {
+          "label": "t:sections.all.mobile_layout.mobile_image_ratio.options__8.label",
+          "value": "100vh"
+        }
+      ],
+      "default": "100vh",
+      "label": "t:sections.all.mobile_layout.mobile_image_ratio.label"
+    },
+		{
+      "type": "header",
+      "content": "t:sections.all.colors.header.content"
+    },
+    {
+      "type": "color",
+      "id": "colors_overlay",
+      "label": "t:sections.all.colors.colors_overlay.label",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "colors_text",
+      "label": "t:sections.all.colors.colors_text.label",
+      "default": "#212121"
+    },
+		{
+      "type": "color",
+      "id": "colors_button_label",
+      "label": "t:sections.all.colors.colors_button_label.label",
+      "default": "#1967d2"
+    },
+		{
+      "type": "color",
+      "id": "colors_border",
+      "label": "t:sections.all.colors.colors_border.label",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.header.content"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_top.unit",
+      "label": "t:sections.all.padding.padding_top.label",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "t:sections.all.padding.padding_bottom.unit",
+      "label": "t:sections.all.padding.padding_bottom.label",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.store-locator.presets.name"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  }
+}
+{% endschema %}

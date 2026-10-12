@@ -1,0 +1,229 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [],
+      "settings": {
+        "heading_size": "h0",
+        "show_description": true,
+        "show_image": true,
+        "apply_overlay": true,
+        "image_position": "center center",
+        "image_ratio": "400px",
+        "text_alignment": "center",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "250px",
+        "show_text_below": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "blocks_zxnD39": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_eee116b_3BnNeP": {
+          "type": "ai_gen_block_eee116b",
+          "name": "Neu Product carousel",
+          "settings": {
+            "heading": "Die perfekte Basis – unsere meistgewählten Lagun Tischgestell Sets",
+            "heading_alignment": "center",
+            "collection": "lagun-standard-set-silber-schwarz",
+            "products_limit": 12,
+            "button_text": "Zum Warenkorb hinzufügen",
+            "desktop_width_percent": 100,
+            "products_per_row_desktop": 4,
+            "products_per_row_mobile": "2",
+            "gap": 8,
+            "section_padding": 0,
+            "show_navigation": false,
+            "nav_button_background": "#ffffff",
+            "nav_button_color": "#092c91",
+            "nav_button_border": "#092c91",
+            "nav_button_hover_background": "#092c91",
+            "nav_button_hover_color": "#ffffff",
+            "card_background": "#ffffff",
+            "card_border_color": "#e0e0e0",
+            "card_border_width": 0,
+            "card_border_radius": 8,
+            "image_background": "#f3f3f3",
+            "text_alignment": "left",
+            "heading_size": 32,
+            "heading_color": "#1a1b18",
+            "title_font_size": 16,
+            "title_color": "#1a1b18",
+            "price_font_size": 16,
+            "price_color": "#092c91",
+            "button_background": "#092c91",
+            "button_hover_background": "#1a1b18",
+            "button_text_color": "#ffffff",
+            "button_font_size": 14,
+            "button_border_radius": 6
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_20283cb_jVdqea": {
+          "type": "ai_gen_block_20283cb",
+          "disabled": true,
+          "settings": {
+            "heading": "Die perfekte Basis – unsere meistgewählten Lagun Tischgestell Sets",
+            "collection": "lagun-standard-set-silber-schwarz",
+            "products_limit": 12,
+            "show_vendor": false,
+            "show_price": true,
+            "add_to_cart_text": "Zum Warenkorb hinzufügen",
+            "sold_out_text": "Ausverkauft",
+            "products_per_row": 4,
+            "products_per_row_tablet": 3,
+            "gap": 16,
+            "heading_color": "#1a1b18",
+            "card_background": "#ffffff",
+            "image_background": "#f3f3f3",
+            "title_color": "#1a1b18",
+            "vendor_color": "#666666",
+            "price_color": "#092c91",
+            "compare_price_color": "#999999",
+            "button_background": "#092c91",
+            "button_hover_background": "#061f66",
+            "button_text_color": "#ffffff",
+            "button_border_radius": 6,
+            "card_border_radius": 0,
+            "nav_background": "#ffffff",
+            "nav_hover_background": "#f3f3f3",
+            "nav_icon_color": "#1a1b18"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_eee116b_3BnNeP",
+        "ai_gen_block_20283cb_jVdqea"
+      ],
+      "name": "Product carousel",
+      "settings": {}
+    },
+    "rich_text_fbHpWG": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4UDdWd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Weitere Sets & Varianten",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4UDdWd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#ffb503",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "subs": {
+      "type": "main-collection-subs",
+      "disabled": true,
+      "settings": {
+        "menu": "",
+        "per_row": 5,
+        "columns_mobile": "1",
+        "horizontal_on_mobile": true,
+        "grid_image": "product",
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "apply_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        ".badge--onsale {display: none;}"
+      ],
+      "settings": {
+        "products_per_row": 4,
+        "rows_per_page": 3,
+        "columns_mobile": "2",
+        "pagination": "infinite",
+        "enable_sticky_facet": true,
+        "enable_sorting": true,
+        "enable_viewing": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_filtering_color_swatches": false,
+        "filtering_color_swatches_add_label": false,
+        "filtering_max_items": 10,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": false,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "show_divider": true,
+        "heading": "Kürzlich angesehene Produkte",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "blocks_zxnD39",
+    "rich_text_fbHpWG",
+    "subs",
+    "product-grid",
+    "recently-viewed"
+  ]
+}

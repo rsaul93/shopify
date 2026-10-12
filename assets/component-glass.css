@@ -1,0 +1,232 @@
+/* ==========================================================================
+   Glass Design System
+   Frosted glass effect for theme surfaces and elements.
+   All styles scoped under .glass-enabled (body class).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Shared glass mixin via utility class
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .glass-surface {
+  background: rgba(var(--glass-tint), var(--glass-bg-opacity)) !important;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-color: rgba(255, 255, 255, var(--glass-border-opacity)) !important;
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(1px)) {
+  .glass-enabled .glass-surface {
+    background: rgba(var(--glass-tint), calc(var(--glass-bg-opacity) + 0.3)) !important;
+  }
+}
+
+/* ==========================================================================
+   PHASE 1: Header, Mobile Dock, Buttons
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Header Sticky
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .shopify-section-header-sticky .header-wrapper {
+  background: rgba(var(--color-header-background), var(--glass-bg-opacity));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, var(--glass-border-opacity)),
+              0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.glass-enabled .shopify-section-header-sticky .header {
+  background: transparent;
+  box-shadow: none;
+}
+
+.glass-enabled .shopify-section-header-sticky .header::before,
+.glass-enabled .shopify-section-header-sticky .header::after {
+  display: none;
+}
+
+/* Disable glass on header when drawers/modals are open to prevent stacking context trapping */
+.glass-enabled.mini-cart--open .shopify-section-header-sticky .header-wrapper,
+.glass-enabled.mini-cart--opening .shopify-section-header-sticky .header-wrapper,
+.glass-enabled.menu-drawer--open .shopify-section-header-sticky .header-wrapper,
+.glass-enabled.menu-drawer--opening .shopify-section-header-sticky .header-wrapper,
+.glass-enabled.search-modal--open .shopify-section-header-sticky .header-wrapper {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: rgb(var(--color-header-background));
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Dock
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .mobile-dock {
+  background: rgba(var(--color-background), var(--glass-bg-opacity));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid rgba(255, 255, 255, var(--glass-border-opacity));
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons — keep original colors, add glass effects only
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .button:not(.shopify-payment-button__button):not(.button--cta):not(.button--video):not(.button--arrow):not(.button--secondary):not(.button--tertiary) {
+  background-color: rgba(var(--color-button-background), var(--glass-bg-opacity));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.5));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.5));
+  border-color: rgba(var(--color-button-border), var(--glass-border-opacity));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+              0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.glass-enabled .card-information__button {
+  overflow: visible;
+}
+
+@media screen and (hover: hover) {
+  .glass-enabled .button:not(.shopify-payment-button__button):not(.button--cta):not(.button--video):not(.button--arrow):not(.button--secondary):not(.button--tertiary):hover {
+    background-color: rgba(var(--color-button-background), calc(var(--glass-bg-opacity) + 0.15));
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+                0 4px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* ==========================================================================
+   PHASE 2: Drawers, Quick View, Facets, Announcement Bar
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Cart Drawer & Menu Drawer
+   Glass effect is intentionally NOT applied to these drawers because they are
+   rendered inside the sticky header (which creates a stacking context). This
+   traps backdrop-filter and prevents it from blurring the page content behind,
+   producing a broken see-through look. Default solid background is kept.
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   Quick View
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .quick-view__content {
+  background: rgba(var(--color-background), calc(var(--glass-bg-opacity) + 0.25));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid rgba(255, 255, 255, var(--glass-border-opacity));
+}
+
+/* --------------------------------------------------------------------------
+   Facet Filters Sticky
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .shopify-section-filters-sticky {
+  background: rgba(var(--color-background), var(--glass-bg-opacity));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, var(--glass-border-opacity));
+}
+
+/* --------------------------------------------------------------------------
+   Announcement Bar
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .announcement-bar {
+  background: rgba(var(--color-background), var(--glass-bg-opacity));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.6));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.6));
+}
+
+/* ==========================================================================
+   PHASE 3: Cards, Badges, Form Inputs, Popups
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Product Card hover overlay
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .card--glass .card__information {
+  background: rgba(var(--color-background), var(--glass-bg-opacity));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid rgba(255, 255, 255, var(--glass-border-opacity));
+}
+
+/* --------------------------------------------------------------------------
+   Badges
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .badge {
+  background-color: rgba(var(--color-background), var(--glass-bg-opacity));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.5));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.5));
+  border-color: rgba(var(--color-badge-border), var(--glass-border-opacity));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12),
+              0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.glass-enabled .badge--onsale {
+  background-color: rgba(var(--color-foreground), var(--glass-bg-opacity));
+}
+
+/* --------------------------------------------------------------------------
+   Form Inputs
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .field__input:not(.search__input),
+.glass-enabled .select__select,
+.glass-enabled .text-area {
+  background-color: rgba(var(--color-background), calc(var(--glass-bg-opacity) * 0.5));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.3));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.3));
+  border-color: rgba(var(--color-border), var(--glass-border-opacity));
+  transition: border-color var(--duration-default) ease, background-color var(--duration-default) ease;
+}
+
+.glass-enabled .field__input:not(.search__input):focus,
+.glass-enabled .select__select:focus,
+.glass-enabled .text-area:focus {
+  background-color: rgba(var(--color-background), calc(var(--glass-bg-opacity) * 0.7));
+  border-color: rgba(var(--color-border), calc(var(--glass-border-opacity) + 0.2));
+}
+
+/* --------------------------------------------------------------------------
+   Popups / Age Verifier
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .popup {
+  background: rgba(var(--color-background), calc(var(--glass-bg-opacity) + 0.3));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid rgba(255, 255, 255, var(--glass-border-opacity));
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumbs
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .breadcrumb-wrapper {
+  background: rgba(var(--color-background), calc(var(--glass-bg-opacity) * 0.5));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.4));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.4));
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, var(--glass-border-opacity));
+  padding: 0.6rem 1.2rem;
+  display: inline-flex;
+}
+
+/* --------------------------------------------------------------------------
+   Pagination
+   -------------------------------------------------------------------------- */
+
+.glass-enabled .pagination__item {
+  background-color: rgba(var(--color-background), calc(var(--glass-bg-opacity) * 0.5));
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.3));
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.3));
+  border-color: rgba(var(--color-border), var(--glass-border-opacity));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}

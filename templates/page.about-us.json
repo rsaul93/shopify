@@ -1,0 +1,422 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_XVjBgC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ccr3BX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die Pioniere - das Team",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_4JwhTX": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir lieben Camping. Wir sind Camping. Unsere Pioniere sind täglich für euch auf der Suche nach neuen, innovativen Produkten für euer perfektes Camping-Erlebnis. Mit unserem Sitz im Herzen Thüringens und im Norden Bayerns arbeiten wir eng mit den Herstellern zusammen und listen bevorzugt Produkte, die im europäischen Raum gefertigt werden. Weg vom Globalen – hin zum Lokalen! Regionale Betriebe unterstützen uns bei der Herstellung hochwertiger Materialien, und der enge Kontakt zur Camping-Branche hält uns stets auf dem neuesten Stand. Alles mit einem Ziel: Euch schnell und in hoher Qualität spannende Produkte bereitzustellen – Produkte, an die wir selbst glauben und die euch Freude bringen.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_DYUfVt": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ccr3BX",
+        "text_4JwhTX",
+        "button_DYUfVt"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Camping_Pioneers_Team_Gruppenfoto.webp",
+        "image_position": "20% 50%",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "600px",
+        "enlarge_content": false,
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_AQjRwp": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Fd4CBk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Produktion, Lager, Vermietung",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_mG3NRz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In unserer Produktion entsteht die Grundlage für viele Camping-Abenteuer: Von Serienprodukten bis hin zur Sonderanfertigung ist dabei alles am Start! Neben dem großzügigen Hochregallager bieten wir auch einen Showroom mit Dachzeltvermietung und Beratung an - alles schnell erreichbar und direkt an der Autobahn A4! </p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_yywPfw": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Fd4CBk",
+        "text_mG3NRz",
+        "button_yywPfw"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/produktion_einblicke_cp.webp",
+        "image_position": "20% 100%",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_qcqjWL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_jXQbdz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Der Standort",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_EHE69c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unsere Logistik machen überwiegend im eigenen Haus - in der heutigen Zeit des Dropshipping und Fulfillments nicht selbstverständlich. Damit haben wir die Möglichkeit auch spontane Kundenwünsche in die Tat umzusetzen und Abholungen an diversen Pickup-Points zu realisieren. </p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_HqyM3Y": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Abholung anfragen",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jXQbdz",
+        "text_EHE69c",
+        "button_HqyM3Y"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_9028.jpg",
+        "image_position": "20% 50%",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "adapt",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_M46Xif": {
+      "type": "gallery",
+      "blocks": {
+        "image_pxgTUK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cp_tasse.webp",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "image_B6iE4j": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lagun_tableframe_cp.webp",
+            "image_position": "top center",
+            "subheading": "2025 - Messe",
+            "subheading_size": "h5",
+            "heading": "Abenteuer Allrad",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "image_9PY9cL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_8395.gif",
+            "image_position": "center center",
+            "subheading": "CP Zentrallager",
+            "subheading_size": "h5",
+            "heading": "Wachhund Mira",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "image_XaMaQG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/cp_main_entrance_Kopie.webp",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "image_nidLr9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/zentrallager.webp",
+            "image_position": "center center",
+            "subheading": "CAMPING-PIONEERS",
+            "subheading_size": "h5",
+            "heading": "Zentrallager",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "image_UVRpJU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Bildschirmfoto2025-05-21um14.05.07.png",
+            "image_position": "80% 50%",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "image_jRpa4J": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_5718_Kopie.webp",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "image_tQGr7N": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Camping-Pioneers_sunset.png",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "",
+            "heading_size": "h3",
+            "link": "",
+            "text_box_position": "bottom-left",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "image_pxgTUK",
+        "image_B6iE4j",
+        "image_9PY9cL",
+        "image_XaMaQG",
+        "image_nidLr9",
+        "image_UVRpJU",
+        "image_jRpa4J",
+        "image_tQGr7N"
+      ],
+      "settings": {
+        "per_row": 4,
+        "spacing_images": 2,
+        "image_height": 280,
+        "apply_overlay": true,
+        "full_width": true,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 160,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "featured_collection_MxQpaU": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "bestseller-camping-pioneers",
+        "products_to_show": 8,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "enable_drag": false,
+        "heading": "Auch interessant:",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "show_product_highlights": false,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_XVjBgC",
+    "image_with_text_AQjRwp",
+    "image_with_text_qcqjWL",
+    "gallery_M46Xif",
+    "featured_collection_MxQpaU"
+  ]
+}

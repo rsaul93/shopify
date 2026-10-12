@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cp_lagun_new_products": {
+      "type": "cp-lagun-new-products",
+      "blocks": {
+        "pro_leg": {
+          "type": "pro_leg",
+          "settings": {
+            "heading": "Mehr als ein Tischbein. <em>Flexibler geplant.</em>",
+            "text": "<p>Das flexible Tischbein baut auf dem bewährten Lagun-Design auf. Es bietet neue Befestigungsmöglichkeiten, lässt sich vielseitiger einstellen und schafft eine modulare Grundlage, die mit deinem Ausbau mitwächst.</p>",
+            "benefit_one": "Zusätzliche Montageoptionen direkt am Bein",
+            "benefit_two": "Feiner auf unterschiedliche Nutzungssituationen einstellbar",
+            "benefit_three": "Modulare Plattform für künftige Lagun-Erweiterungen",
+            "image": "",
+            "image_alt": "Klassisches Lagun-Tischbein und neues flexibles Tischbein im Vergleich"
+          }
+        },
+        "tap_mount": {
+          "type": "tap_mount",
+          "settings": {
+            "heading": "Mehr Platz. <em>Mehr Flexibilität.</em>",
+            "text": "<p>Mit der flexiblen Armhalterung befestigst du jeden Lagun-Arm direkt am flexiblen Tischbein oder an einer Wandhalterung. So entstehen Arbeitsflächen, die sich ohne Werkzeug schnell an wechselnde Anforderungen anpassen lassen.</p>",
+            "benefit_one": "Lagun-Arm direkt am flexiblen Tischbein oder an der Wand nutzen",
+            "benefit_two": "Schnell wechselnde Arbeitsflächen ohne Werkzeug",
+            "benefit_three": "Mehr Funktionen bei gleichbleibend kleinem Grundriss",
+            "detail_image": "",
+            "detail_alt": "Flexible Armhalterung am neuen Lagun-Tischbein",
+            "detail_caption": "Direkt verbunden",
+            "lifestyle_image": "",
+            "lifestyle_alt": "Mehrere flexible Lagun Arbeitsflächen in einem Camper",
+            "lifestyle_caption": "Flexibel im Alltag"
+          }
+        },
+        "tabletops": {
+          "type": "tabletops",
+          "settings": {
+            "heading": "Passend für <em>deinen Raum.</em>",
+            "text": "<p>Unterschiedliche Grundrisse brauchen unterschiedliche Lösungen. Die neuen Tischplatten ergänzen das Lagun-System um weitere Größen, Materialien und Designs.</p>",
+            "image": "",
+            "image_alt": "Neue Lagun-Tischplatten in unterschiedlichen Materialien und Farben"
+          }
+        },
+        "hidden_compartment": {
+          "type": "hidden_compartment",
+          "settings": {
+            "heading": "Versteckt und trotzdem <em>griffbereit.</em>",
+            "text": "<p>Manchmal ist der beste Stauraum der, den man nicht sieht. Das versteckte Ablagefach bewahrt Wertsachen und kleinere Alltagsgegenstände ordentlich unter der Tischplatte auf, ohne zusätzlichen Platz zu beanspruchen.</p>",
+            "wide_image": "",
+            "wide_alt": "Verstecktes Lagun Ablagefach unter einer Tischplatte",
+            "detail_image": "",
+            "detail_alt": "Verstecktes schwarzes Lagun-Ablagefach"
+          }
+        }
+      },
+      "block_order": [
+        "pro_leg",
+        "tap_mount",
+        "tabletops",
+        "hidden_compartment"
+      ],
+      "settings": {
+        "jump_label": "Direkt zu",
+        "hero_kicker": "Neue Lagun-Produkte · bald vorbestellbar",
+        "hero_heading": "Ein System. <em>Noch mehr Möglichkeiten.</em>",
+        "hero_text": "<p>Jeder Camper ist anders. Entdecke neue Lagun-Lösungen, mit denen du deinen begrenzten Raum noch flexibler, funktionaler und komfortabler nutzen kannst.</p>",
+        "hero_image": "",
+        "hero_image_alt": "Flexibles Lagun-Tischbein mit mehreren beweglichen Arbeitsflächen im Camper",
+        "hero_primary_label": "Neuheiten entdecken",
+        "hero_secondary_link": "shopify://pages/lagun-tischgestell-konfigurator",
+        "hero_secondary_label": "Lagun-System konfigurieren",
+        "availability_text": "Vorbestellung startet in Kürze – Preise und Termine folgen.",
+        "hero_note_kicker": "Neue Möglichkeiten mit Lagun",
+        "hero_note": "Modular gedacht. Für kleine Räume gemacht.",
+        "promise_one": "Vier neue Bausteine im Überblick",
+        "promise_two": "Ergänzungen zum bewährten Sortiment",
+        "promise_three": "Vorbestellung bei CAMPING-PIONEERS",
+        "intro_kicker": "Mehr aus jedem Zentimeter",
+        "intro_heading": "Vier Ideen für Räume, die sich <em>mit dir verändern.</em>",
+        "intro_text": "<p>Kein Camper ist wie der andere. Genau deshalb erweitert Lagun sein bewährtes System um Produkte, die sich flexibel kombinieren lassen – vom variablen Tischbein bis zum nahezu unsichtbaren Stauraum.</p>",
+        "soon_label": "Bald vorbestellbar",
+        "system_kicker": "Ein System, das mitwächst",
+        "system_heading": "Bewährtes Lagun. <em>Ergänzt um neue Möglichkeiten.</em>",
+        "system_text": "<p>Die angekündigten Produkte ergänzen das bekannte Lagun-Sortiment. Tischgestelle, Arme, Wandplatten und Befestigungen, die du heute bei uns bekommst, bleiben weiterhin erhältlich. Sie werden nicht abgelöst.</p>",
+        "lifestyle_image": "",
+        "lifestyle_alt": "Reisende arbeiten an einem Lagun Tisch im Camper",
+        "system_step_one_title": "Bewährtes Sortiment",
+        "system_step_one_text": "Die heute erhältlichen Lagun-Produkte bleiben verfügbar.",
+        "system_step_two_title": "Neue Ergänzungen",
+        "system_step_two_text": "Flexibles Tischbein, Armhalterung, Tischplatten und Stauraum schaffen zusätzliche Möglichkeiten.",
+        "system_step_three_title": "Vorbestellung folgt",
+        "system_step_three_text": "Preise und Termine veröffentlichen wir, sobald sie feststehen.",
+        "cta_kicker": "Schon heute passend planen",
+        "cta_heading": "Schon verfügbar: Stell dir dein <em>Lagun-System zusammen.</em>",
+        "cta_text": "<p>Das bewährte Lagun-Sortiment bleibt erhältlich. Mit unserem Konfigurator findest du schon heute die passende Kombination aus Tischbein, Arm, Wandplatte und Untertischbefestigung. Bei Fragen beraten wir dich persönlich.</p>",
+        "cta_primary_link": "shopify://pages/lagun-tischgestell-konfigurator",
+        "cta_primary_label": "Lagun konfigurieren",
+        "cta_secondary_link": "shopify://pages/contact",
+        "cta_secondary_label": "Persönlich beraten lassen"
+      }
+    }
+  },
+  "order": [
+    "cp_lagun_new_products"
+  ]
+}

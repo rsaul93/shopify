@@ -1,0 +1,19 @@
+{% render 'cp-lagun-pdp-experience', product: product, module: 'lifestyle', scene: 'forest', module_section: section %}
+
+{% schema %}
+{
+  "name": "Lagun – Lifestyle",
+  "tag": "section",
+  "class": "cp-lagun-editor-section",
+  "settings": [
+    { "type": "image_picker", "id": "image", "label": "Lifestyle-Bild", "info": "Leer lassen, um das vorhandene Produktbild zu verwenden." },
+    { "type": "text", "id": "kicker", "label": "Übertitel", "default": "Mehr Bewegungsfreiheit im Camper" },
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Frühstücksplatz, Arbeitsplatz, freie Fläche – mit einer Bewegung." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Die beiden Arme lassen sich unabhängig schwenken. So holst du die Tischplatte genau dorthin, wo du sie gerade brauchst, und schaffst danach wieder Platz zum Bewegen." },
+    { "type": "text", "id": "bullet_1", "label": "Vorteil 1", "default": "Tischplatte flexibel zu Sitzplatz oder Bett schwenken" },
+    { "type": "text", "id": "bullet_2", "label": "Vorteil 2", "default": "Im Alltag werkzeuglos lösen, bewegen und fixieren" },
+    { "type": "text", "id": "bullet_3", "label": "Vorteil 3", "default": "Ideal für Camper, Wohnmobile, Boote und kleine Räume" }
+  ],
+  "presets": [{ "name": "Lagun – Lifestyle" }]
+}
+{% endschema %}

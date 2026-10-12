@@ -1,0 +1,237 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.overlay-group.name",
+  "type": "custom.overlay",
+  "sections": {
+    "popup": {
+      "type": "popup",
+      "blocks": {
+        "popup-0": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Lagun-News",
+            "subheading_size": "h5"
+          }
+        },
+        "popup-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Erfahre zuerst, was als Nächstes kommt.",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "popup-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sobald es neue Produktbilder, Preise oder einen Termin für die Vorbestellung gibt, informieren wir dich per E-Mail. Außerdem erhältst du ausgewählte Neuigkeiten von CAMPING-PIONEERS.<\/p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "popup-3": {
+          "type": "newsletter",
+          "settings": {
+            "text": "<p>Mit der Anmeldung stimmst du dem Erhalt unseres Newsletters zu. Du kannst dich jederzeit abmelden. <a href=\"\/policies\/privacy-policy\">Mehr zum Datenschutz.<\/a><\/p>",
+            "input_label": "Deine E-Mail-Adresse",
+            "button_label": "Updates abonnieren",
+            "customer_tags": "newsletter,lagun-neuheiten",
+            "button_style_secondary": false,
+            "button_full_width": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "popup-4": {
+          "type": "floating",
+          "settings": {
+            "subheading": "Lagun-News zuerst erfahren",
+            "compact_label": "News",
+            "show_social_media": "none",
+            "text_box_position": "left",
+            "colors_text": "#ffffff",
+            "mobile_disabled": false,
+            "mobile_hide_social_media": true,
+            "mobile_social_heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "popup-0",
+        "popup-1",
+        "popup-2",
+        "popup-3",
+        "popup-4"
+      ],
+      "settings": {
+        "modal_label": "Lagun-Newsletter",
+        "auto_open": false,
+        "mode": "enabled",
+        "only_homepage": false,
+        "only_visitor": false,
+        "return_url": "",
+        "delay": 5,
+        "expiry": 30,
+        "width": 660,
+        "padding": 48,
+        "text_alignment": "left",
+        "text_box_position": "center",
+        "image_position": "top",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#173596",
+        "colors_text": "#14213d",
+        "colors_border": "#c9d0dc",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_shadow": "#0c225f",
+        "colors_highlight": "#f0b647"
+      }
+    },
+    "cookie-banner": {
+      "type": "cookie-banner",
+      "blocks": {
+        "cookie-banner-0": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir nutzen Cookies, um unsere Webseite zu optimieren. Dazu gehören essenzielle Cookies für den Betrieb der Seite sowie optionale Cookies für Statistiken und personalisierte Erfahrungen.<\/p><p>Alle Details findest du auch in unserer <a href=\"\/policies\/privacy-policy\">Datenschutzerklärung<\/a><\/p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "cookie-banner-1": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Alle akzeptieren für die beste Erfahrung",
+            "button_label_2": "Nur technisch notwendige akzeptieren"
+          }
+        }
+      },
+      "block_order": [
+        "cookie-banner-0",
+        "cookie-banner-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".cookie__buttons {flex-wrap: wrap; flex: auto; column-gap: 1rem;}"
+      ],
+      "settings": {
+        "mode": "enabled",
+        "delay": 2,
+        "text_alignment": "left",
+        "text_box_position": "bottom",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#092c91",
+        "colors_text": "#1a1b18",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_shadow": "#092c91"
+      }
+    },
+    "age-verifier": {
+      "type": "age-verifier",
+      "disabled": true,
+      "settings": {
+        "mode": "enabled",
+        "expiry": 30,
+        "width": 480,
+        "padding": 40,
+        "text_alignment": "center",
+        "image_position": "right",
+        "colors_button_label": "#212326",
+        "colors_button_background": "#faeaa1",
+        "colors_text": "#1a1b18",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_shadow": "#a8e8e2",
+        "colors_overlay": "#212326",
+        "colors_overlay_opacity": 80,
+        "blur_image": true
+      }
+    },
+    "mobile-dock": {
+      "type": "mobile-dock",
+      "blocks": {
+        "mobile-dock-0": {
+          "type": "home",
+          "settings": {
+            "custom_icon": "",
+            "title": "Home"
+          }
+        },
+        "mobile-dock-1": {
+          "type": "menu",
+          "settings": {
+            "custom_icon": "",
+            "title": "Menü"
+          }
+        },
+        "mobile-dock-2": {
+          "type": "search",
+          "settings": {
+            "custom_icon": "",
+            "title": "Suche"
+          }
+        },
+        "mobile-dock-3": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "custom_icon": "",
+            "title": "Shop",
+            "link": "shopify:\/\/collections\/all"
+          }
+        },
+        "mobile-dock-4": {
+          "type": "cart",
+          "settings": {
+            "custom_icon": "",
+            "title": "Einkaufskorb"
+          }
+        },
+        "mobile-dock-5": {
+          "type": "account",
+          "settings": {
+            "custom_icon": "",
+            "title": "Account"
+          }
+        }
+      },
+      "block_order": [
+        "mobile-dock-0",
+        "mobile-dock-1",
+        "mobile-dock-2",
+        "mobile-dock-3",
+        "mobile-dock-4",
+        "mobile-dock-5"
+      ],
+      "settings": {
+        "use_custom_colors": false,
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    }
+  },
+  "order": [
+    "popup",
+    "cookie-banner",
+    "age-verifier",
+    "mobile-dock"
+  ]
+}

@@ -1,0 +1,423 @@
+{{ 'cp-lagun-new-products.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign hero_image = section.settings.hero_image
+  assign lifestyle_image = section.settings.lifestyle_image
+  assign pro_block = blank
+  assign tap_block = blank
+  assign tabletops_block = blank
+  assign hidden_block = blank
+  for block in section.blocks
+    case block.type
+      when 'pro_leg'
+        assign pro_block = block
+        assign pro_image = block.settings.image
+      when 'tap_mount'
+        assign tap_block = block
+        assign tap_detail_image = block.settings.detail_image
+        assign tap_lifestyle_image = block.settings.lifestyle_image
+      when 'tabletops'
+        assign tabletops_block = block
+        assign tabletops_image = block.settings.image
+      when 'hidden_compartment'
+        assign hidden_block = block
+        assign hidden_wide_image = block.settings.wide_image
+        assign hidden_detail_image = block.settings.detail_image
+    endcase
+  endfor
+  assign lagun_newsletter_anchor = 'lagun-newsletter-' | append: section.id
+  assign lagun_newsletter_return = request.path | append: '#' | append: lagun_newsletter_anchor
+  assign lagun_newsletter_form_id = 'LagunNewsletterForm-' | append: section.id
+-%}
+
+<div class="cp-lagun-news" id="cp-lagun-neuheiten-{{ section.id }}">
+  <div class="cp-lagun-news__shell">
+    <nav class="cp-lagun-news__jump" aria-label="Neuheiten auf dieser Seite">
+      <span>{{ section.settings.jump_label | escape }}</span>
+      <a href="#pro-leg-{{ section.id }}">Flexibles Tischbein</a>
+      <a href="#tap-mount-{{ section.id }}">Flexible Armhalterung</a>
+      <a href="#tabletops-{{ section.id }}">Tischplatten</a>
+      <a href="#hidden-compartment-{{ section.id }}">Verstecktes Ablagefach</a>
+    </nav>
+
+    <section class="cp-lagun-news__newsletter" id="{{ lagun_newsletter_anchor }}" aria-labelledby="lagun-newsletter-title-{{ section.id }}">
+      <div class="cp-lagun-news__newsletter-copy">
+        <p class="cp-lagun-news__eyebrow cp-lagun-news__eyebrow--light">Lagun-News</p>
+        <h2 id="lagun-newsletter-title-{{ section.id }}">Keine Neuheit <em>verpassen.</em></h2>
+        <div class="rte"><p>Preise, echte Produktbilder und den Vorbestellstart erfährst du zuerst per E-Mail.</p></div>
+      </div>
+      <div class="cp-lagun-news__newsletter-form-wrap">
+        {%- form 'customer', id: lagun_newsletter_form_id, class: 'cp-lagun-news__newsletter-form', return_to: lagun_newsletter_return -%}
+          <input type="hidden" name="contact[tags]" value="newsletter,lagun-neuheiten">
+
+          {%- if form.errors -%}
+            <small class="cp-lagun-news__form-message cp-lagun-news__form-message--error" id="LagunNewsletter-error-{{ section.id }}">
+              {% render 'icon', icon: 'error' %}
+              {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}
+            </small>
+          {%- endif -%}
+
+          {%- if form.posted_successfully? -%}
+            <p class="cp-lagun-news__form-message cp-lagun-news__form-message--success" id="LagunNewsletter-success-{{ section.id }}" tabindex="-1" autofocus>
+              {% render 'icon', icon: 'success' %}
+              {{ 'newsletter.success' | t }}
+            </p>
+          {%- else -%}
+            <div class="cp-lagun-news__field">
+              <label class="visually-hidden" for="LagunNewsletter-email-{{ section.id }}">{{ 'newsletter.label' | t }}</label>
+              <input
+                id="LagunNewsletter-email-{{ section.id }}"
+                type="email"
+                name="contact[email]"
+                value="{{ form.email }}"
+                placeholder="{{ 'newsletter.label' | t }}"
+                autocomplete="email"
+                autocorrect="off"
+                autocapitalize="off"
+                aria-required="true"
+                {% if form.errors %}aria-invalid="true" aria-describedby="LagunNewsletter-error-{{ section.id }}"{% endif %}
+                required
+              >
+              <button type="submit" name="commit">Updates abonnieren <span aria-hidden="true">→</span></button>
+            </div>
+            <div class="cp-lagun-news__newsletter-privacy rte"><p>Mit der Anmeldung stimmst du dem Erhalt unseres Newsletters zu. Du kannst dich jederzeit abmelden. <a href="{{ shop.privacy_policy.url | default: '/policies/privacy-policy' }}">Mehr zum Datenschutz.</a></p></div>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    </section>
+
+    <section class="cp-lagun-news__hero" aria-labelledby="cp-lagun-news-title-{{ section.id }}">
+      <div class="cp-lagun-news__hero-copy">
+        <p class="cp-lagun-news__eyebrow">{{ section.settings.hero_kicker | escape }}</p>
+        <h1 id="cp-lagun-news-title-{{ section.id }}">{{ section.settings.hero_heading }}</h1>
+        <div class="cp-lagun-news__lead rte">{{ section.settings.hero_text }}</div>
+        <div class="cp-lagun-news__actions">
+          <a class="cp-lagun-news__button cp-lagun-news__button--primary" href="#neuheiten-{{ section.id }}">
+            {{ section.settings.hero_primary_label | escape }} <span aria-hidden="true">→</span>
+          </a>
+          {%- if section.settings.hero_secondary_link != blank and section.settings.hero_secondary_label != blank -%}
+            <a class="cp-lagun-news__button cp-lagun-news__button--secondary" href="{{ section.settings.hero_secondary_link }}">
+              {{ section.settings.hero_secondary_label | escape }} <span aria-hidden="true">→</span>
+            </a>
+          {%- endif -%}
+        </div>
+        <p class="cp-lagun-news__availability"><span aria-hidden="true"></span>{{ section.settings.availability_text | escape }}</p>
+      </div>
+      <div class="cp-lagun-news__hero-media">
+        {%- if hero_image != blank -%}
+          {{ hero_image | image_url: width: 2000 | image_tag:
+            widths: '720, 960, 1200, 1600, 2000',
+            sizes: '(min-width: 990px) 51vw, 100vw',
+            loading: 'eager',
+            fetchpriority: 'high',
+            alt: section.settings.hero_image_alt
+          }}
+        {%- else -%}
+          <img src="{{ 'cp-lagun-news-hero.webp' | asset_url }}" width="1920" height="1080" loading="eager" fetchpriority="high" alt="{{ section.settings.hero_image_alt | escape }}">
+        {%- endif -%}
+        <div class="cp-lagun-news__hero-shade"></div>
+        <div class="cp-lagun-news__hero-note">
+          <span>{{ section.settings.hero_note_kicker | escape }}</span>
+          <strong>{{ section.settings.hero_note | escape }}</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="cp-lagun-news__promise" aria-label="Das Wichtigste zur Einführung">
+      <div><strong>01</strong><span>{{ section.settings.promise_one | escape }}</span></div>
+      <div><strong>02</strong><span>{{ section.settings.promise_two | escape }}</span></div>
+      <div><strong>03</strong><span>{{ section.settings.promise_three | escape }}</span></div>
+    </section>
+  </div>
+
+  <main id="neuheiten-{{ section.id }}">
+    <section class="cp-lagun-news__intro cp-lagun-news__section cp-lagun-news__shell" aria-labelledby="cp-lagun-news-intro-{{ section.id }}">
+      <div>
+        <p class="cp-lagun-news__eyebrow">{{ section.settings.intro_kicker | escape }}</p>
+        <h2 id="cp-lagun-news-intro-{{ section.id }}">{{ section.settings.intro_heading }}</h2>
+      </div>
+      <div class="cp-lagun-news__intro-copy rte">{{ section.settings.intro_text }}</div>
+    </section>
+
+    <section class="cp-lagun-news__feature cp-lagun-news__feature--pro cp-lagun-news__shell" id="pro-leg-{{ section.id }}" aria-labelledby="pro-leg-title-{{ section.id }}" {{ pro_block.shopify_attributes }}>
+      <div class="cp-lagun-news__feature-copy">
+        <p class="cp-lagun-news__eyebrow">01 · Flexibles Tischbein</p>
+        <h2 id="pro-leg-title-{{ section.id }}">{{ pro_block.settings.heading }}</h2>
+        <div class="rte">{{ pro_block.settings.text }}</div>
+        <ul class="cp-lagun-news__checks" role="list">
+          <li>{{ pro_block.settings.benefit_one | escape }}</li>
+          <li>{{ pro_block.settings.benefit_two | escape }}</li>
+          <li>{{ pro_block.settings.benefit_three | escape }}</li>
+        </ul>
+        <span class="cp-lagun-news__soon">{{ section.settings.soon_label | escape }}</span>
+      </div>
+      <div class="cp-lagun-news__feature-media cp-lagun-news__feature-media--wide">
+        {%- if pro_image != blank -%}
+          {{ pro_image | image_url: width: 1900 | image_tag:
+            widths: '640, 900, 1200, 1500, 1900',
+            sizes: '(min-width: 990px) 58vw, 100vw',
+            loading: 'lazy',
+            alt: pro_block.settings.image_alt
+          }}
+        {%- else -%}
+          <img src="{{ 'cp-lagun-news-pro-leg.webp' | asset_url }}" width="1920" height="1080" loading="lazy" alt="{{ pro_block.settings.image_alt | escape }}">
+        {%- endif -%}
+      </div>
+    </section>
+
+    <section class="cp-lagun-news__feature cp-lagun-news__feature--tap cp-lagun-news__shell" id="tap-mount-{{ section.id }}" aria-labelledby="tap-mount-title-{{ section.id }}" {{ tap_block.shopify_attributes }}>
+      <div class="cp-lagun-news__feature-copy">
+        <p class="cp-lagun-news__eyebrow">02 · Flexible Armhalterung</p>
+        <h2 id="tap-mount-title-{{ section.id }}">{{ tap_block.settings.heading }}</h2>
+        <div class="rte">{{ tap_block.settings.text }}</div>
+        <ul class="cp-lagun-news__checks" role="list">
+          <li>{{ tap_block.settings.benefit_one | escape }}</li>
+          <li>{{ tap_block.settings.benefit_two | escape }}</li>
+          <li>{{ tap_block.settings.benefit_three | escape }}</li>
+        </ul>
+        <span class="cp-lagun-news__soon">{{ section.settings.soon_label | escape }}</span>
+      </div>
+      <div class="cp-lagun-news__duo" aria-label="Flexible Armhalterung im Einsatz">
+        <div class="cp-lagun-news__duo-item cp-lagun-news__duo-item--detail">
+          {%- if tap_detail_image != blank -%}
+            {{ tap_detail_image | image_url: width: 1200 | image_tag:
+              widths: '480, 720, 960, 1200',
+              sizes: '(min-width: 990px) 27vw, 48vw',
+              loading: 'lazy',
+              alt: tap_block.settings.detail_alt
+            }}
+          {%- else -%}
+            <img src="{{ 'cp-lagun-news-tap-detail.webp' | asset_url }}" width="1920" height="1920" loading="lazy" alt="{{ tap_block.settings.detail_alt | escape }}">
+          {%- endif -%}
+          <span>{{ tap_block.settings.detail_caption | escape }}</span>
+        </div>
+        <div class="cp-lagun-news__duo-item">
+          {%- if tap_lifestyle_image != blank -%}
+            {{ tap_lifestyle_image | image_url: width: 1300 | image_tag:
+              widths: '480, 720, 960, 1300',
+              sizes: '(min-width: 990px) 31vw, 52vw',
+              loading: 'lazy',
+              alt: tap_block.settings.lifestyle_alt
+            }}
+          {%- else -%}
+            <img src="{{ 'cp-lagun-news-tap-lifestyle.webp' | asset_url }}" width="1536" height="1536" loading="lazy" alt="{{ tap_block.settings.lifestyle_alt | escape }}">
+          {%- endif -%}
+          <span>{{ tap_block.settings.lifestyle_caption | escape }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cp-lagun-news__editorial cp-lagun-news__shell" id="tabletops-{{ section.id }}" aria-labelledby="tabletops-title-{{ section.id }}" {{ tabletops_block.shopify_attributes }}>
+      <div class="cp-lagun-news__editorial-media">
+        {%- if tabletops_image != blank -%}
+          {{ tabletops_image | image_url: width: 2000 | image_tag:
+            widths: '720, 960, 1200, 1600, 2000',
+            sizes: '100vw',
+            loading: 'lazy',
+            alt: tabletops_block.settings.image_alt
+          }}
+        {%- else -%}
+          <img src="{{ 'cp-lagun-news-tabletops.webp' | asset_url }}" width="1536" height="864" loading="lazy" alt="{{ tabletops_block.settings.image_alt | escape }}">
+        {%- endif -%}
+      </div>
+      <div class="cp-lagun-news__editorial-copy">
+        <div>
+          <p class="cp-lagun-news__eyebrow">03 · Tischplatten</p>
+          <h2 id="tabletops-title-{{ section.id }}">{{ tabletops_block.settings.heading }}</h2>
+        </div>
+        <div class="rte">{{ tabletops_block.settings.text }}</div>
+        <span class="cp-lagun-news__soon">{{ section.settings.soon_label | escape }}</span>
+      </div>
+    </section>
+
+    <section class="cp-lagun-news__hidden cp-lagun-news__shell" id="hidden-compartment-{{ section.id }}" aria-labelledby="hidden-title-{{ section.id }}" {{ hidden_block.shopify_attributes }}>
+      <div class="cp-lagun-news__hidden-wide">
+        {%- if hidden_wide_image != blank -%}
+          {{ hidden_wide_image | image_url: width: 1900 | image_tag:
+            widths: '720, 960, 1200, 1500, 1900',
+            sizes: '(min-width: 990px) 66vw, 100vw',
+            loading: 'lazy',
+            alt: hidden_block.settings.wide_alt
+          }}
+        {%- else -%}
+          <img src="{{ 'cp-lagun-news-hidden-wide.webp' | asset_url }}" width="1536" height="864" loading="lazy" alt="{{ hidden_block.settings.wide_alt | escape }}">
+        {%- endif -%}
+      </div>
+      <div class="cp-lagun-news__hidden-copy">
+        <p class="cp-lagun-news__eyebrow cp-lagun-news__eyebrow--light">04 · Verstecktes Ablagefach</p>
+        <h2 id="hidden-title-{{ section.id }}">{{ hidden_block.settings.heading }}</h2>
+        <div class="rte">{{ hidden_block.settings.text }}</div>
+        <span class="cp-lagun-news__soon cp-lagun-news__soon--light">{{ section.settings.soon_label | escape }}</span>
+      </div>
+      <div class="cp-lagun-news__hidden-detail">
+        {%- if hidden_detail_image != blank -%}
+          {{ hidden_detail_image | image_url: width: 1200 | image_tag:
+            widths: '480, 720, 960, 1200',
+            sizes: '(min-width: 990px) 34vw, 100vw',
+            loading: 'lazy',
+            alt: hidden_block.settings.detail_alt
+          }}
+        {%- else -%}
+          <img src="{{ 'cp-lagun-news-hidden-detail.webp' | asset_url }}" width="1236" height="1202" loading="lazy" alt="{{ hidden_block.settings.detail_alt | escape }}">
+        {%- endif -%}
+      </div>
+    </section>
+
+    <section class="cp-lagun-news__system cp-lagun-news__section cp-lagun-news__shell" aria-labelledby="system-title-{{ section.id }}">
+      <div class="cp-lagun-news__system-media">
+        {%- if lifestyle_image != blank -%}
+          {{ lifestyle_image | image_url: width: 1500 | image_tag:
+            widths: '560, 760, 1000, 1250, 1500',
+            sizes: '(min-width: 990px) 46vw, 100vw',
+            loading: 'lazy',
+            alt: section.settings.lifestyle_alt
+          }}
+        {%- else -%}
+          <img src="{{ 'cp-lagun-news-lifestyle.jpg' | asset_url }}" width="1365" height="2048" loading="lazy" alt="{{ section.settings.lifestyle_alt | escape }}">
+        {%- endif -%}
+      </div>
+      <div class="cp-lagun-news__system-copy">
+        <p class="cp-lagun-news__eyebrow">{{ section.settings.system_kicker | escape }}</p>
+        <h2 id="system-title-{{ section.id }}">{{ section.settings.system_heading }}</h2>
+        <div class="rte">{{ section.settings.system_text }}</div>
+        <ol class="cp-lagun-news__steps">
+          <li><span>01</span><div><strong>{{ section.settings.system_step_one_title | escape }}</strong><p>{{ section.settings.system_step_one_text | escape }}</p></div></li>
+          <li><span>02</span><div><strong>{{ section.settings.system_step_two_title | escape }}</strong><p>{{ section.settings.system_step_two_text | escape }}</p></div></li>
+          <li><span>03</span><div><strong>{{ section.settings.system_step_three_title | escape }}</strong><p>{{ section.settings.system_step_three_text | escape }}</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cp-lagun-news__cta cp-lagun-news__shell" aria-labelledby="cta-title-{{ section.id }}">
+      <div class="cp-lagun-news__cta-copy">
+        <p class="cp-lagun-news__eyebrow cp-lagun-news__eyebrow--light">{{ section.settings.cta_kicker | escape }}</p>
+        <h2 id="cta-title-{{ section.id }}">{{ section.settings.cta_heading }}</h2>
+        <div class="rte">{{ section.settings.cta_text }}</div>
+      </div>
+      <div class="cp-lagun-news__cta-actions">
+        {%- if section.settings.cta_primary_link != blank -%}
+          <a class="cp-lagun-news__button cp-lagun-news__button--light" href="{{ section.settings.cta_primary_link }}">{{ section.settings.cta_primary_label | escape }} <span aria-hidden="true">→</span></a>
+        {%- endif -%}
+        {%- if section.settings.cta_secondary_link != blank -%}
+          <a class="cp-lagun-news__button cp-lagun-news__button--ghost" href="{{ section.settings.cta_secondary_link }}">{{ section.settings.cta_secondary_label | escape }} <span aria-hidden="true">→</span></a>
+        {%- endif -%}
+      </div>
+    </section>
+  </main>
+</div>
+
+{% schema %}
+{
+  "name": "CP Lagun – Neuheiten",
+  "tag": "section",
+  "class": "section-cp-lagun-new-products",
+  "settings": [
+    { "type": "text", "id": "jump_label", "label": "Sprungnavigation", "default": "Direkt zu" },
+    { "type": "text", "id": "hero_kicker", "label": "Hero – Dachzeile", "default": "Neue Lagun-Produkte · bald vorbestellbar" },
+    { "type": "html", "id": "hero_heading", "label": "Hero – Überschrift", "default": "Ein System. <em>Noch mehr Möglichkeiten.</em>" },
+    { "type": "richtext", "id": "hero_text", "label": "Hero – Text", "default": "<p>Jeder Camper ist anders. Entdecke neue Lagun-Lösungen, mit denen du deinen begrenzten Raum noch flexibler, funktionaler und komfortabler nutzen kannst.</p>" },
+    { "type": "image_picker", "id": "hero_image", "label": "Hero – Bild" },
+    { "type": "text", "id": "hero_image_alt", "label": "Hero – Bildbeschreibung", "default": "Flexibles Lagun-Tischbein mit mehreren beweglichen Arbeitsflächen im Camper" },
+    { "type": "text", "id": "hero_primary_label", "label": "Hero – Primärbutton", "default": "Neuheiten entdecken" },
+    { "type": "url", "id": "hero_secondary_link", "label": "Hero – Sekundärlink" },
+    { "type": "text", "id": "hero_secondary_label", "label": "Hero – Sekundärbutton", "default": "Lagun-System konfigurieren" },
+    { "type": "text", "id": "availability_text", "label": "Verfügbarkeitshinweis", "default": "Vorbestellung startet in Kürze – Preise und Termine folgen." },
+    { "type": "text", "id": "hero_note_kicker", "label": "Hero – Bildlabel", "default": "Neue Möglichkeiten mit Lagun" },
+    { "type": "text", "id": "hero_note", "label": "Hero – Bildtext", "default": "Modular gedacht. Für kleine Räume gemacht." },
+    { "type": "text", "id": "promise_one", "label": "Versprechen 1", "default": "Vier neue Bausteine im Überblick" },
+    { "type": "text", "id": "promise_two", "label": "Versprechen 2", "default": "Ergänzungen zum bewährten Sortiment" },
+    { "type": "text", "id": "promise_three", "label": "Versprechen 3", "default": "Vorbestellung bei CAMPING-PIONEERS" },
+    { "type": "text", "id": "intro_kicker", "label": "Einleitung – Dachzeile", "default": "Mehr aus jedem Zentimeter" },
+    { "type": "html", "id": "intro_heading", "label": "Einleitung – Überschrift", "default": "Vier Ideen für Räume, die sich <em>mit dir verändern.</em>" },
+    { "type": "richtext", "id": "intro_text", "label": "Einleitung – Text", "default": "<p>Kein Camper ist wie der andere. Genau deshalb erweitert Lagun sein bewährtes System um Produkte, die sich flexibel kombinieren lassen – vom variablen Tischbein bis zum nahezu unsichtbaren Stauraum.</p>" },
+    { "type": "text", "id": "soon_label", "label": "Neuheiten-Label", "default": "Bald vorbestellbar" },
+    { "type": "text", "id": "system_kicker", "label": "System – Dachzeile", "default": "Ein System, das mitwächst" },
+    { "type": "html", "id": "system_heading", "label": "System – Überschrift", "default": "Bewährtes Lagun. <em>Ergänzt um neue Möglichkeiten.</em>" },
+    { "type": "richtext", "id": "system_text", "label": "System – Text", "default": "<p>Die angekündigten Produkte ergänzen das bekannte Lagun-Sortiment. Tischgestelle, Arme, Wandplatten und Befestigungen, die du heute bei uns bekommst, bleiben weiterhin erhältlich. Sie werden nicht abgelöst.</p>" },
+    { "type": "image_picker", "id": "lifestyle_image", "label": "System – Bild" },
+    { "type": "text", "id": "lifestyle_alt", "label": "System – Bildbeschreibung", "default": "Reisende arbeiten an einem Lagun Tisch im Camper" },
+    { "type": "text", "id": "system_step_one_title", "label": "System – Schritt 1 Titel", "default": "Bewährtes Sortiment" },
+    { "type": "text", "id": "system_step_one_text", "label": "System – Schritt 1 Text", "default": "Die heute erhältlichen Lagun-Produkte bleiben verfügbar." },
+    { "type": "text", "id": "system_step_two_title", "label": "System – Schritt 2 Titel", "default": "Neue Ergänzungen" },
+    { "type": "text", "id": "system_step_two_text", "label": "System – Schritt 2 Text", "default": "Flexibles Tischbein, Armhalterung, Tischplatten und Stauraum schaffen zusätzliche Möglichkeiten." },
+    { "type": "text", "id": "system_step_three_title", "label": "System – Schritt 3 Titel", "default": "Vorbestellung folgt" },
+    { "type": "text", "id": "system_step_three_text", "label": "System – Schritt 3 Text", "default": "Preise und Termine veröffentlichen wir, sobald sie feststehen." },
+    { "type": "text", "id": "cta_kicker", "label": "CTA – Dachzeile", "default": "Schon heute passend planen" },
+    { "type": "html", "id": "cta_heading", "label": "CTA – Überschrift", "default": "Schon verfügbar: Stell dir dein <em>Lagun-System zusammen.</em>" },
+    { "type": "richtext", "id": "cta_text", "label": "CTA – Text", "default": "<p>Das bewährte Lagun-Sortiment bleibt erhältlich. Mit unserem Konfigurator findest du schon heute die passende Kombination aus Tischbein, Arm, Wandplatte und Untertischbefestigung. Bei Fragen beraten wir dich persönlich.</p>" },
+    { "type": "url", "id": "cta_primary_link", "label": "CTA – Primärlink" },
+    { "type": "text", "id": "cta_primary_label", "label": "CTA – Primärbutton", "default": "Lagun konfigurieren" },
+    { "type": "url", "id": "cta_secondary_link", "label": "CTA – Sekundärlink" },
+    { "type": "text", "id": "cta_secondary_label", "label": "CTA – Sekundärbutton", "default": "Persönlich beraten lassen" }
+  ],
+  "blocks": [
+    {
+      "type": "pro_leg",
+      "name": "01 · Tischbein",
+      "limit": 1,
+      "settings": [
+        { "type": "html", "id": "heading", "label": "Überschrift", "default": "Mehr als ein Tischbein. <em>Flexibler geplant.</em>" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Das flexible Tischbein baut auf dem bewährten Lagun-Design auf. Es bietet neue Befestigungsmöglichkeiten, lässt sich vielseitiger einstellen und schafft eine modulare Grundlage, die mit deinem Ausbau mitwächst.</p>" },
+        { "type": "text", "id": "benefit_one", "label": "Vorteil 1", "default": "Zusätzliche Montageoptionen direkt am Bein" },
+        { "type": "text", "id": "benefit_two", "label": "Vorteil 2", "default": "Feiner auf unterschiedliche Nutzungssituationen einstellbar" },
+        { "type": "text", "id": "benefit_three", "label": "Vorteil 3", "default": "Modulare Plattform für künftige Lagun-Erweiterungen" },
+        { "type": "image_picker", "id": "image", "label": "Bild" },
+        { "type": "text", "id": "image_alt", "label": "Bildbeschreibung", "default": "Klassisches Lagun-Tischbein und neues flexibles Tischbein im Vergleich" }
+      ]
+    },
+    {
+      "type": "tap_mount",
+      "name": "02 · Armhalterung",
+      "limit": 1,
+      "settings": [
+        { "type": "html", "id": "heading", "label": "Überschrift", "default": "Mehr Platz. <em>Mehr Flexibilität.</em>" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Mit der flexiblen Armhalterung befestigst du jeden Lagun-Arm direkt am flexiblen Tischbein oder an einer Wandhalterung. So entstehen Arbeitsflächen, die sich ohne Werkzeug schnell an wechselnde Anforderungen anpassen lassen.</p>" },
+        { "type": "text", "id": "benefit_one", "label": "Vorteil 1", "default": "Lagun-Arm direkt am flexiblen Tischbein oder an der Wand nutzen" },
+        { "type": "text", "id": "benefit_two", "label": "Vorteil 2", "default": "Schnell wechselnde Arbeitsflächen ohne Werkzeug" },
+        { "type": "text", "id": "benefit_three", "label": "Vorteil 3", "default": "Mehr Funktionen bei gleichbleibend kleinem Grundriss" },
+        { "type": "image_picker", "id": "detail_image", "label": "Detailbild" },
+        { "type": "text", "id": "detail_alt", "label": "Detailbild – Beschreibung", "default": "Flexible Armhalterung am neuen Lagun-Tischbein" },
+        { "type": "text", "id": "detail_caption", "label": "Detailbild – Beschriftung", "default": "Direkt verbunden" },
+        { "type": "image_picker", "id": "lifestyle_image", "label": "Anwendungsbild" },
+        { "type": "text", "id": "lifestyle_alt", "label": "Anwendungsbild – Beschreibung", "default": "Mehrere flexible Lagun Arbeitsflächen in einem Camper" },
+        { "type": "text", "id": "lifestyle_caption", "label": "Anwendungsbild – Beschriftung", "default": "Flexibel im Alltag" }
+      ]
+    },
+    {
+      "type": "tabletops",
+      "name": "03 · Tischplatten",
+      "limit": 1,
+      "settings": [
+        { "type": "html", "id": "heading", "label": "Überschrift", "default": "Passend für <em>deinen Raum.</em>" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Unterschiedliche Grundrisse brauchen unterschiedliche Lösungen. Die neuen Tischplatten ergänzen das Lagun-System um weitere Größen, Materialien und Designs.</p>" },
+        { "type": "image_picker", "id": "image", "label": "Bild" },
+        { "type": "text", "id": "image_alt", "label": "Bildbeschreibung", "default": "Neue Lagun-Tischplatten in unterschiedlichen Materialien und Farben" }
+      ]
+    },
+    {
+      "type": "hidden_compartment",
+      "name": "04 · Ablagefach",
+      "limit": 1,
+      "settings": [
+        { "type": "html", "id": "heading", "label": "Überschrift", "default": "Versteckt und trotzdem <em>griffbereit.</em>" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Manchmal ist der beste Stauraum der, den man nicht sieht. Das versteckte Ablagefach bewahrt Wertsachen und kleinere Alltagsgegenstände ordentlich unter der Tischplatte auf, ohne zusätzlichen Platz zu beanspruchen.</p>" },
+        { "type": "image_picker", "id": "wide_image", "label": "Breites Bild" },
+        { "type": "text", "id": "wide_alt", "label": "Breites Bild – Beschreibung", "default": "Verstecktes Lagun Ablagefach unter einer Tischplatte" },
+        { "type": "image_picker", "id": "detail_image", "label": "Detailbild" },
+        { "type": "text", "id": "detail_alt", "label": "Detailbild – Beschreibung", "default": "Verstecktes schwarzes Lagun-Ablagefach" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CP Lagun – Neuheiten",
+      "blocks": [
+        { "type": "pro_leg" },
+        { "type": "tap_mount" },
+        { "type": "tabletops" },
+        { "type": "hidden_compartment" }
+      ]
+    }
+  ]
+}
+{% endschema %}

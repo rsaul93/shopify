@@ -1,0 +1,252 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "narrow": false,
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
+    "multicolumn_jj9pyz": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_zTFcfq": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230921_Lagun_schwarz_klein.gif",
+            "title": "20% auf alle LAGUN Tischgestelle mit Zubehör",
+            "title_size": "h3",
+            "text": "<p>Unser Black Friday Angebot 2025:<br\/><br\/>Kaufe ein LAGUN Tischgestell in einer beliebigen Farbe deiner Wahl und erhalte 20% Rabatt beim gleichzeitigen Kauf von LAGUN Zubehör oder Ersatzteilen.<\/p><p><\/p>",
+            "button_label": "Hier gehts zu den tischgestellen",
+            "button_link": "shopify:\/\/collections\/tischgestelle-alt",
+            "button_style_secondary": false
+          }
+        },
+        "column_DTEheq": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "title_size": "h3",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        },
+        "column_Amq3TE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lagun_schwarz_2023_Edition_lagun_black_black_3e891903-101b-4508-a79f-2d62a321b944.webp",
+            "title": "Zubehör und Ersatzteile",
+            "title_size": "h3",
+            "text": "<p>Das LAGUN Tischgestell ist leicht und stabil und überzeugt zugleich durch seine flexible Erweiterbarkeit. Es kann mühelos mit zusätzlichen Armen, Beinen und vielfältigen Befestigungen ergänzt werden, sodass es sich an unterschiedliche Bedürfnisse und Einsatzbereiche anpasst.<\/p><p><\/p>",
+            "button_label": "Hier gehts zum Zubehör",
+            "button_link": "shopify:\/\/collections\/zubehor-ersatzteile",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "column_zTFcfq",
+        "column_DTEheq",
+        "column_Amq3TE"
+      ],
+      "settings": {
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "text_alignment": "left",
+        "show_divider": false,
+        "image_width": "full",
+        "columns_desktop": 2,
+        "open_in_new_tab": false,
+        "heading": "Black Friday Aktionspreis - 20% auf LAGUN Tischgestelle beim gemeinsamen Kauf von Zubehör!",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "countdown_timer_x33xTE": {
+      "type": "countdown-timer",
+      "blocks": {
+        "subheading_nGcQNh": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "BLACK FRIDAY 2025",
+            "subheading_size": "h5",
+            "secondary_color": true
+          }
+        },
+        "text_VR6Pa3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Die Aktion startet am 14. November 2025 um Mitternacht und geht  bis zum 30. November um 23:59 (oder bis wir ausverkauft sind!).<br\/><br\/><br\/><strong>Der Rabatt wird automatisch im Warenkorb angewandt!<\/strong><\/p><p><\/p><p><\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "heading_qyfYhV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Aktionsstart:",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "countdown_yjDaBz": {
+          "type": "countdown",
+          "settings": {
+            "date": "11-14-2025",
+            "number_size": "small",
+            "message": "<p>Die Aktion ist aktiv! Der Rabatt wird automatisch im Warenkorb abgezogen.<\/p>",
+            "message_size": "typeset2"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_nGcQNh",
+        "text_VR6Pa3",
+        "heading_qyfYhV",
+        "countdown_yjDaBz"
+      ],
+      "custom_css": [
+        ".media--placeholder {display: none;}"
+      ],
+      "settings": {
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "enlarge_content": true,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#f3f3f3",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_Ve3AV8": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "tischgestelle-alt",
+        "products_to_show": 4,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "LAGUN Tischgestelle",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": false,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": false,
+        "enable_countdown": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_X9tj4R": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "zubehor-ersatzteile",
+        "products_to_show": 4,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "LAGUN Zubehör & Ersatzteile",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": false,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": false,
+        "enable_countdown": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_UCWxmF": {
+      "type": "rich-text",
+      "blocks": {
+        "text_HEHkfb": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Übersicht - Black Friday Aktion 2025 bei Camping Pioneers.<\/strong><\/p><p>Diese Aktion gilt nur im Rahmen des Black Friday 2025 und ist zeitlich auf den Zeitraum vom 14. November 2025, 00:00 Uhr, bis zum 30. November 2025, 23:59 Uhr begrenzt. Im Rahmen dieser Aktion erhältst du <strong>20% Rabatt auf Tischgestelle wenn du mindestens ein Zubehörartikel aus der Kategorie LAGUN Zubehör & Ersatzteile im Warenkorb hast. <\/strong>Die Rabatte werden automatisch im Warenkorb angewandt. <\/p><p><strong>Ausschlüsse und Bedingungen:<\/strong><\/p><ul><li>Die Aktion kann vorzeitig beendet werden, wenn einzelne Produkte ausverkauft sind.<\/li><li>Die Rabatte sind nicht mit anderen Rabatten, Gutscheinen oder Aktionen kombinierbar.<\/li><li>Die Aktion gilt nur für Bestellungen, die im angegebenen Zeitraum aufgegeben und abgeschlossen werden.<\/li><li>Produkte, die bereits reduziert sind oder anderweitige Sonderpreise haben, sind von dieser Aktion ausgeschlossen.<\/li><\/ul>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "text_HEHkfb"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_jj9pyz",
+    "countdown_timer_x33xTE",
+    "featured_collection_Ve3AV8",
+    "featured_collection_X9tj4R",
+    "rich_text_UCWxmF"
+  ]
+}

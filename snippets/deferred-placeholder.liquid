@@ -1,0 +1,19 @@
+{%- liquid
+  assign placeholder_height = height | default: '300px'
+  assign placeholder_type = type | default: 'spinner'
+  assign placeholder_class = class | default: ''
+-%}
+
+<div class="deferred-placeholder {{ placeholder_class }}" style="min-height: {{ placeholder_height }};">
+  {%- case placeholder_type -%}
+    {%- when 'spinner' -%}
+      <svg class="deferred-spinner" viewBox="0 0 24 24" width="32" height="32">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="32" stroke-linecap="round" opacity="0.25"/>
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="32" stroke-dashoffset="24" stroke-linecap="round"/>
+      </svg>
+    {%- when 'skeleton' -%}
+      <div class="deferred-skeleton ignore-empty" style="width: 100%; min-height: {{ placeholder_height }}"></div>
+    {%- when 'none' -%}
+      {%- comment -%} Empty placeholder {%- endcomment -%}
+  {%- endcase -%}
+</div>

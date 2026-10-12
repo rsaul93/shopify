@@ -1,0 +1,1375 @@
+{{ 'cp-lagun-configurator.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'cp-english-runtime.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cp-lagun-configurator.js' | asset_url }}" defer="defer"></script>
+{%- liquid
+  assign step_mount = section.blocks | where: 'type', 'step_mount' | first
+  assign step_leg = section.blocks | where: 'type', 'step_leg' | first
+  assign step_arm = section.blocks | where: 'type', 'step_arm' | first
+  assign step_under = section.blocks | where: 'type', 'step_under' | first
+  assign step_table = section.blocks | where: 'type', 'step_table' | first
+  assign gap_guide = section.blocks | where: 'type', 'gap_guide' | first
+  assign service_guide = section.blocks | where: 'type', 'service_guide' | first
+  assign color_guide = section.blocks | where: 'type', 'color_guide' | first
+  assign extension_guide = section.blocks | where: 'type', 'extension_guide' | first
+  if section.settings.product_wall_standard != blank
+    assign configured_handle = section.settings.product_wall_standard.handle | default: section.settings.product_wall_standard
+    assign wall_standard = all_products[configured_handle]
+  else
+    assign wall_standard = all_products['lagun-befestigungsplatte']
+  endif
+  if section.settings.product_wall_standard_black != blank
+    assign configured_handle = section.settings.product_wall_standard_black.handle | default: section.settings.product_wall_standard_black
+    assign wall_standard_black = all_products[configured_handle]
+  else
+    assign wall_standard_black = all_products['lagun-befestigungsplatte-black-edition-2023']
+  endif
+  if section.settings.product_wall_smart != blank
+    assign configured_handle = section.settings.product_wall_smart.handle | default: section.settings.product_wall_smart
+    assign wall_smart = all_products[configured_handle]
+  else
+    assign wall_smart = all_products['lagun-smart-befestigungsplatte']
+  endif
+  if section.settings.product_wall_smart_black != blank
+    assign configured_handle = section.settings.product_wall_smart_black.handle | default: section.settings.product_wall_smart_black
+    assign wall_smart_black = all_products[configured_handle]
+  else
+    assign wall_smart_black = all_products['lagun-smart-befestigungsplatte-black-edition']
+  endif
+  if section.settings.product_floor != blank
+    assign configured_handle = section.settings.product_floor.handle | default: section.settings.product_floor
+    assign floor = all_products[configured_handle]
+  else
+    assign floor = all_products['lagun-bodenadapter-alternative-zur-wandmontage']
+  endif
+  if section.settings.product_legs != blank
+    assign configured_handle = section.settings.product_legs.handle | default: section.settings.product_legs
+    assign legs = all_products[configured_handle]
+  else
+    assign legs = all_products['lagun-tischbein-in-verschiedenen-langen']
+  endif
+  if section.settings.product_adjustable_leg != blank
+    assign configured_handle = section.settings.product_adjustable_leg.handle | default: section.settings.product_adjustable_leg
+    assign adjustable_leg = all_products[configured_handle]
+  else
+    assign adjustable_leg = all_products['lagun-tischbein-mit-extra-verstellhohe']
+  endif
+  if section.settings.product_arm_silver != blank
+    assign configured_handle = section.settings.product_arm_silver.handle | default: section.settings.product_arm_silver
+    assign arm_silver = all_products[configured_handle]
+  else
+    assign arm_silver = all_products['lagun-arm-silber-400mm']
+  endif
+  if section.settings.product_arm_black != blank
+    assign configured_handle = section.settings.product_arm_black.handle | default: section.settings.product_arm_black
+    assign arm_black = all_products[configured_handle]
+  else
+    assign arm_black = all_products['lagun-arm-400mm-schwarz-black-edition-2023']
+  endif
+  if section.settings.product_extra_arm != blank
+    assign configured_handle = section.settings.product_extra_arm.handle | default: section.settings.product_extra_arm
+    assign extra_arm = all_products[configured_handle]
+  else
+    assign extra_arm = all_products['bundle-arm-bolzen-schwarz-400-mm']
+  endif
+  if section.settings.product_extra_arm_silver != blank
+    assign configured_handle = section.settings.product_extra_arm_silver.handle | default: section.settings.product_extra_arm_silver
+    assign extra_arm_silver = all_products[configured_handle]
+  else
+    assign extra_arm_silver = all_products['bundle-arm-300-mm-bolzen-verbindungsstuck-silber']
+  endif
+  if section.settings.product_extension_bolt != blank
+    assign configured_handle = section.settings.product_extension_bolt.handle | default: section.settings.product_extension_bolt
+    assign extension_bolt = all_products[configured_handle]
+  else
+    assign extension_bolt = all_products['lagun-tisch-erweiterungsbolzen-zum-verbinden-zweier-arme']
+  endif
+  if section.settings.product_under_table != blank
+    assign configured_handle = section.settings.product_under_table.handle | default: section.settings.product_under_table
+    assign under_table = all_products[configured_handle]
+  else
+    assign under_table = all_products['lagun-untertisch-befestigungsplatte-ersatzteil']
+  endif
+  if section.settings.product_folding_under_table != blank
+    assign configured_handle = section.settings.product_folding_under_table.handle | default: section.settings.product_folding_under_table
+    assign folding_under_table = all_products[configured_handle]
+  else
+    assign folding_under_table = all_products['lagun-untertisch-befestigungsplatte-mit-dreh-klappachse']
+  endif
+  if section.settings.product_gap != blank
+    assign configured_handle = section.settings.product_gap.handle | default: section.settings.product_gap
+    assign gap = all_products[configured_handle]
+  else
+    assign gap = all_products['lagun-gap-abstandshalter-fur-die-befestigungsplatte']
+  endif
+  if section.settings.product_compact_gap != blank
+    assign configured_handle = section.settings.product_compact_gap.handle | default: section.settings.product_compact_gap
+    assign compact_gap = all_products[configured_handle]
+  else
+    assign compact_gap = all_products['lagun-erweiterungsbugel-klein']
+  endif
+  if section.settings.product_table_top != blank
+    assign configured_handle = section.settings.product_table_top.handle | default: section.settings.product_table_top
+    assign table_top = all_products[configured_handle]
+  else
+    assign table_top = all_products['b-ware-tischplatten-fur-das-lagun-tischgestell-beton-fichte-eiche-500x700-mm-copy']
+  endif
+  if section.settings.product_adjustment_service != blank
+    assign configured_handle = section.settings.product_adjustment_service.handle | default: section.settings.product_adjustment_service
+    assign adjustment_service = all_products[configured_handle]
+  else
+    assign adjustment_service = all_products['anpassungsservice-fur-lagun-bein-oder-lagun-arm']
+  endif
+  if section.settings.product_silver_set != blank
+    assign configured_handle = section.settings.product_silver_set.handle | default: section.settings.product_silver_set
+    assign silver_set = all_products[configured_handle]
+  else
+    assign silver_set = all_products['lagun-tischgestell-set-mit-standard-befestigungsplatte-silber']
+  endif
+  if section.settings.product_black_set != blank
+    assign configured_handle = section.settings.product_black_set.handle | default: section.settings.product_black_set
+    assign black_set = all_products[configured_handle]
+  else
+    assign black_set = all_products['lagun-tischgestell-set-mit-standard-befestigungsplatte-schwarz']
+  endif
+  assign tops_collection = section.settings.tops_collection | default: collections['tischplatten-ohne-b-ware']
+  assign poplar_top = tops_collection.products | where: 'handle', 'tischplatte-pappelholz-fur-lagun-tischgestell' | first
+  assign ponga_top = tops_collection.products | where: 'handle', 'ponga-tischplatte-eiche-pappelsperrholz-mit-eichenoptik-einfach-beschichtet-inklusive-kanten-500-x-700-mm' | first
+-%}
+<section class="cp-lagun-configurator" id="cp-lagun-configurator-{{ section.id }}" data-cp-lagun-configurator data-cp-lagun-configurator-version="redesign-v1" data-currency="{{ cart.currency.iso_code | default: shop.currency }}" data-section-id="{{ section.id }}">
+  <script type="application/json" data-cp-lagun-catalog>
+    {
+      "wallStandard": {{ wall_standard | json }}, "wallStandardBlack": {{ wall_standard_black | json }},
+      "wallSmart": {{ wall_smart | json }}, "wallSmartBlack": {{ wall_smart_black | json }},
+      "floor": {{ floor | json }}, "legs": {{ legs | json }}, "adjustableLeg": {{ adjustable_leg | json }},
+      "armSilver": {{ arm_silver | json }}, "armBlack": {{ arm_black | json }}, "extraArm": {{ extra_arm | json }}, "extraArmSilver": {{ extra_arm_silver | json }}, "extensionBolt": {{ extension_bolt | json }},
+      "underTable": {{ under_table | json }}, "foldingUnderTable": {{ folding_under_table | json }},
+      "gap": {{ gap | json }}, "compactGap": {{ compact_gap | json }}, "tableTop": {{ table_top | json }},
+      "poplarTop": {{ poplar_top | json }}, "pongaTop": {{ ponga_top | json }},
+      "adjustmentService": {{ adjustment_service | json }}, "sets": [{{ silver_set | json }}, {{ black_set | json }}]
+    }
+  </script>
+  <script type="application/json" data-cp-lagun-variant-gids>
+    {
+      "mount.standard.silver": "gid://shopify/ProductVariant/48833550745927",
+      "mount.standard.black": "gid://shopify/ProductVariant/48825730171207",
+      "mount.smart.silver": "gid://shopify/ProductVariant/48831442190663",
+      "mount.smart.black": "gid://shopify/ProductVariant/48865492271431",
+      "mount.flush.silver": "gid://shopify/ProductVariant/51266402517319",
+      "mount.flush.black": "gid://shopify/ProductVariant/54035789218119",
+      "mount.surface.silver": "gid://shopify/ProductVariant/51266402550087",
+      "mount.surface.black": "gid://shopify/ProductVariant/54035789250887",
+      "leg.400.silver": "gid://shopify/ProductVariant/48767238144327",
+      "leg.500.silver": "gid://shopify/ProductVariant/48767238111559",
+      "leg.500.black": "gid://shopify/ProductVariant/52886410920263",
+      "leg.700.silver": "gid://shopify/ProductVariant/48767238078791",
+      "leg.700.black": "gid://shopify/ProductVariant/52886410887495",
+      "leg.500plus.silver": "gid://shopify/ProductVariant/49423994650951",
+      "arm.400.silver": "gid://shopify/ProductVariant/53586840191303",
+      "arm.400.black": "gid://shopify/ProductVariant/52886354133319",
+      "under.standard.silver": "gid://shopify/ProductVariant/50082689614151",
+      "under.standard.black": "gid://shopify/ProductVariant/50082689679687",
+      "under.fold.silver": "gid://shopify/ProductVariant/52782662811975",
+      "under.fold.black": "gid://shopify/ProductVariant/52782662844743",
+      "gap.standard.silver": "gid://shopify/ProductVariant/49714257527111",
+      "gap.standard.black": "gid://shopify/ProductVariant/49714257559879",
+      "gap.smart.silver": "gid://shopify/ProductVariant/51311722266951",
+      "gap.smart.black": "gid://shopify/ProductVariant/51311722299719",
+      "extension.300.silver": "gid://shopify/ProductVariant/53599015403847",
+      "extension.300.black": "gid://shopify/ProductVariant/54388728889671",
+      "extension.400.arm.silver": "gid://shopify/ProductVariant/53586840191303",
+      "extension.400.arm.black": "gid://shopify/ProductVariant/52886354133319",
+      "extension.400.bolt.silver": "gid://shopify/ProductVariant/52886288630087",
+      "extension.400.bolt.black": "gid://shopify/ProductVariant/52886288662855",
+      "table.oakModern": "gid://shopify/ProductVariant/51443081969991",
+      "table.pine": "gid://shopify/ProductVariant/51443081937223",
+      "table.concrete": "gid://shopify/ProductVariant/51443082035527",
+      "table.oakLight": "gid://shopify/ProductVariant/51443082002759",
+      "table.poplar": "gid://shopify/ProductVariant/48831380259143",
+      "table.ponga": "gid://shopify/ProductVariant/48830648451399",
+      "service.default": "gid://shopify/ProductVariant/48830437196103",
+      "legacy.arm.400.silver": "gid://shopify/ProductVariant/49479811072327"
+    }
+  </script>
+  <script type="application/json" data-cp-purchase-clusters>{% render 'cp-lagun-purchase-clusters' %}</script>
+  <script type="application/json" data-cp-initial-cart>{"items":[{% for item in cart.items %}{% render 'cp-lagun-cart-item', item: item %}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
+  <script type="application/json" data-cp-delivery>{
+    {%- assign delivery_separator = '' -%}
+    {%- assign delivery_products = 'wallStandard,wallStandardBlack,wallSmart,wallSmartBlack,floor,legs,adjustableLeg,armSilver,armBlack,extraArm,extraArmSilver,extensionBolt,underTable,foldingUnderTable,gap,compactGap,tableTop' | split: ',' -%}
+    {%- for delivery_key in delivery_products -%}
+      {%- case delivery_key -%}
+        {%- when 'wallStandard' -%}{%- assign delivery_product = wall_standard -%}
+        {%- when 'wallStandardBlack' -%}{%- assign delivery_product = wall_standard_black -%}
+        {%- when 'wallSmart' -%}{%- assign delivery_product = wall_smart -%}
+        {%- when 'wallSmartBlack' -%}{%- assign delivery_product = wall_smart_black -%}
+        {%- when 'floor' -%}{%- assign delivery_product = floor -%}
+        {%- when 'legs' -%}{%- assign delivery_product = legs -%}
+        {%- when 'adjustableLeg' -%}{%- assign delivery_product = adjustable_leg -%}
+        {%- when 'armSilver' -%}{%- assign delivery_product = arm_silver -%}
+        {%- when 'armBlack' -%}{%- assign delivery_product = arm_black -%}
+        {%- when 'extraArm' -%}{%- assign delivery_product = extra_arm -%}
+        {%- when 'extraArmSilver' -%}{%- assign delivery_product = extra_arm_silver -%}
+        {%- when 'extensionBolt' -%}{%- assign delivery_product = extension_bolt -%}
+        {%- when 'underTable' -%}{%- assign delivery_product = under_table -%}
+        {%- when 'foldingUnderTable' -%}{%- assign delivery_product = folding_under_table -%}
+        {%- when 'gap' -%}{%- assign delivery_product = gap -%}
+        {%- when 'compactGap' -%}{%- assign delivery_product = compact_gap -%}
+        {%- when 'tableTop' -%}{%- assign delivery_product = table_top -%}
+      {%- endcase -%}
+      {%- for delivery_variant in delivery_product.variants -%}
+        {{ delivery_separator }}"{{ delivery_variant.id }}": {"preorder": {{ delivery_variant.metafields.custom.preorder_enabled.value | default: false | json }}, "date": {{ delivery_variant.metafields.custom.preorder_delivery_date.value | json }}}{%- assign delivery_separator = ',' -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  }</script>
+
+  <div class="page-width cp-lagun-configurator__shell">
+    <header class="cp-lagun-configurator__hero">
+      <div class="cp-lagun-hero__copy">
+        <p class="cp-lagun-kicker">{{ section.settings.kicker | escape }}</p>
+        <h1>{{ section.settings.heading }}</h1>
+        <p>{{ section.settings.intro | default: 'Frühstücken, am Laptop arbeiten oder Platz zum Einsteigen schaffen: Stell dir den Tisch zusammen, der zu deinem Sitzplatz und deinem Alltag im Camper passt.' | escape }}</p>
+        <a class="cp-lagun-configurator__start" href="#cp-lagun-color">Dein Lagun zusammenstellen <span aria-hidden="true">↗</span></a>
+        <span class="cp-lagun-hero__footnote">Wir führen dich durch 4 Bauteile – Schritt für Schritt.</span>
+      </div>
+      <div class="cp-lagun-hero__image">
+        {%- assign lifestyle_image = section.settings.hero_image | default: silver_set.images[6] -%}
+        {%- if lifestyle_image -%}{{ lifestyle_image | image_url: width: 1400 | image_tag: widths: '600, 900, 1400', sizes: '(min-width: 990px) 50vw, 100vw', loading: 'eager', fetchpriority: 'high', alt: 'Lagun Tischgestell im Camper: mehr Freiraum zum Leben' }}{%- endif -%}
+        <span>Mehr Platz für deinen Alltag.</span>
+      </div>
+    </header>
+
+    <details class="cp-lagun-save-panel">
+      <summary><span>Dein Ausbau braucht etwas Bedenkzeit?</span><strong>Konfiguration speichern &amp; teilen <span aria-hidden="true">＋</span></strong></summary>
+      <div class="cp-lagun-save-panel__body">
+        <p>Merke dir deinen Zwischenstand, besprich ihn mit deiner Reisebegleitung oder lade eine gespeicherte Auswahl. Preise und Verfügbarkeit prüfen wir beim Laden neu.</p>
+        <div class="cp-lagun-save-actions">
+          <button type="button" data-cp-config-action="save">Auf diesem Gerät speichern</button>
+          <button type="button" data-cp-config-action="share">Link teilen ↗</button>
+          <button type="button" data-cp-config-action="download">Datei herunterladen ↓</button>
+          <button type="button" data-cp-config-action="upload">Konfiguration hochladen ↑</button>
+          <button type="button" data-cp-config-action="restore" hidden>Gespeicherte Auswahl laden</button>
+        </div>
+        <input type="file" accept=".json,application/json" data-cp-config-file aria-label="Lagun-Konfiguration als JSON-Datei auswählen" hidden>
+        <label class="cp-lagun-share-result" data-cp-share-result hidden>Dein Link zum Weitergeben<input type="text" readonly data-cp-share-link></label>
+        <p class="cp-lagun-save-panel__note">Dateien enthalten auch deine Anpassungswünsche. Im geteilten Link lassen wir deine Freitextangaben weg.</p>
+        <p role="status" data-cp-config-status></p>
+      </div>
+    </details>
+
+    <div class="cp-lagun-configurator__layout">
+      <div class="cp-lagun-configurator__steps">
+        <section class="cp-lagun-configurator__color" id="cp-lagun-color" {{ color_guide.shopify_attributes }}>
+          <div class="cp-lagun-heading-row"><p class="cp-lagun-kicker">ZUERST DER LOOK</p></div>
+          <h2>{{ color_guide.settings.title | escape }}</h2>
+          <p>{{ color_guide.settings.intro | escape }}</p>
+          <div class="cp-config-color-options" role="group" aria-label="Farbe auswählen">
+            <button type="button" class="cp-config-color-option" data-cp-color="silver" aria-pressed="false">
+              <span class="cp-config-color-option__image">{{ silver_set.featured_image | image_url: width: 700 | image_tag: widths: '350, 500, 700', sizes: '(min-width: 990px) 350px, 45vw', loading: 'eager', alt: 'Lagun Standardgestell in Silber' }}</span>
+              <span class="cp-config-color-option__body"><span class="cp-lagun-swatch cp-lagun-swatch--silver"></span><strong>Silber</strong><span class="cp-config-color-option__check" aria-hidden="true">✓</span><small>{{ color_guide.settings.silver | escape }}</small></span>
+            </button>
+            <button type="button" class="cp-config-color-option" data-cp-color="black" aria-pressed="false">
+              <span class="cp-config-color-option__image">{{ black_set.featured_image | image_url: width: 700 | image_tag: widths: '350, 500, 700', sizes: '(min-width: 990px) 350px, 45vw', loading: 'eager', alt: 'Lagun Standardgestell in Schwarz' }}</span>
+              <span class="cp-config-color-option__body"><span class="cp-lagun-swatch cp-lagun-swatch--black"></span><strong>Schwarz</strong><span class="cp-config-color-option__check" aria-hidden="true">✓</span><small>{{ color_guide.settings.black | escape }}</small></span>
+            </button>
+          </div>
+          <p class="cp-lagun-configurator__color-note" data-cp-color-note>Die Bauteile unten zeigen zunächst Silber. Entscheide dich jetzt oder vergleiche später.</p>
+        </section>
+
+        <nav class="cp-lagun-step-nav" aria-label="Konfigurationsschritte">
+          <a href="#cp-lagun-step-mount">01 Befestigung</a><a href="#cp-lagun-step-leg">02 Bein</a><a href="#cp-lagun-step-arm">03 Arm</a><a href="#cp-lagun-step-under">04 Untertischplatte</a><a href="#cp-lagun-step-table">05 Tischplatte</a><a href="#cp-lagun-step-service">06 Anpassung</a>
+        </nav>
+
+        <section class="cp-lagun-step" id="cp-lagun-step-mount" data-cp-step="mount" {{ step_mount.shopify_attributes }}>
+          <div class="cp-lagun-step__heading"><span class="cp-lagun-step__number">01</span><div><p>{{ step_mount.settings.kicker | escape }}</p><h2>{{ step_mount.settings.title | escape }}</h2></div></div>
+          <p class="cp-lagun-step__intro">{{ step_mount.settings.intro | escape }}</p>
+          <div class="cp-lagun-choice-grid" role="group" aria-label="Montageort">
+            {% render 'cp-lagun-config-option', choice: 'mount', value: 'wall', card_product: wall_standard, title: 'An der Wand', description: 'Du möchtest deine Tischhöhe anpassen und den Boden frei halten? Nutze eine tragfähige Möbelwand neben deinem Sitzplatz.', facts: 'Standard- oder schmale Smart-Platte', tag: 'Der Klassiker' %}
+            {% render 'cp-lagun-config-option', choice: 'mount', value: 'floor', card_product: floor, title: 'Auf dem Boden', description: 'Neben deinem Sitzplatz fehlt eine geeignete Wand? Befestige dein Lagun auf einer tragfähigen Bodenfläche.', facts: 'Bündig oder aufgesetzt' %}
+          </div>
+          <div class="cp-lagun-followup" data-cp-followup="wall" hidden>
+            <h3>Wie viel Platz hast du an der Wand?</h3>
+            <div class="cp-lagun-choice-grid" role="group" aria-label="Wandplatte">
+              {% render 'cp-lagun-config-option', choice: 'mountVariant', value: 'standard', card_product: wall_standard, title: 'Standard-Platte', description: 'Für dich, wenn genug Wandfläche frei ist: Die breite Platte verteilt die Kraft auf eine größere Fläche.', facts: '170 × 91 mm · 13 mm stark' %}
+              {% render 'cp-lagun-config-option', choice: 'mountVariant', value: 'smart', card_product: wall_smart, title: 'Smart-Platte', description: 'Für dich, wenn nur ein schmaler, stabiler Montageplatz frei ist. Die Platte bleibt hinter dem Bein besonders unauffällig.', facts: '170 × 30 mm · 13 mm stark' %}
+            </div>
+            <div class="cp-lagun-advice">{{ step_mount.settings.advice_0 }}</div>
+            <div class="cp-lagun-gap-guide" {{ gap_guide.shopify_attributes }}>
+              <div class="cp-lagun-gap-guide__photo">
+                {% assign gap_photo = gap_guide.settings.image | default: gap.images[2] %}
+                {{ gap_photo | image_url: width: 700 | image_tag: widths: '350, 500, 700', loading: 'lazy', alt: 'GAP hinter der Befestigungsplatte; das Bein sitzt auf der Schwalbenschwanzführung' }}
+                <span>Mehr Abstand zur Wand.<br><strong>Mehr Platz zum Schwenken.</strong></span>
+              </div>
+              <div class="cp-lagun-gap-guide__copy"><p class="cp-lagun-kicker">BRAUCHE ICH EINEN GAP?</p><h3>{{ gap_guide.settings.title | escape }}</h3>{{ gap_guide.settings.text }}<p class="cp-lagun-gap-guide__tip">{{ gap_guide.settings.tip | escape }}</p></div>
+              <details class="cp-lagun-gap-install"><summary>Wie werden GAP, Platte und Bein verbunden?</summary><div class="cp-lagun-gap-install__body">{% assign frame_photo = gap_guide.settings.frame_image | default: gap.images[3] %}{{ frame_photo | image_url: width: 500 | image_tag: loading: 'lazy', alt: 'Offener GAP-Rahmen vor der Montage der Befestigungsplatte' }}<div>{{ gap_guide.settings.installation }}</div></div></details>
+              <div class="cp-lagun-gap-guide__selection"><img data-cp-gap-image src="{{ gap.featured_image | image_url: width: 220 }}" width="110" height="110" alt="Lagun GAP Abstandshalter" loading="lazy"><label class="cp-lagun-check"><input type="checkbox" data-cp-choice="gap"><span><strong>Passenden GAP ergänzen</strong><small data-cp-gap-label>Standard zur Standard-Platte · GAP klein zur Smart-Platte</small><b data-cp-gap-price></b></span></label></div>
+            </div>
+          </div>
+          <div class="cp-lagun-followup" data-cp-followup="floor" hidden>
+            <h3>Lieber bündig oder aufgesetzt?</h3>
+            <div class="cp-lagun-choice-grid" role="group" aria-label="Bodenadapter">
+              {% render 'cp-lagun-config-option', choice: 'mountVariant', value: 'flush', card_product: floor, title: 'Flush · bündig', description: 'Du möchtest nach dem Abnehmen des Gestells möglichst wenig Überstand? Dieser Adapter wird bündig eingelassen.', facts: 'Bodenausschnitt erforderlich' %}
+              {% render 'cp-lagun-config-option', choice: 'mountVariant', value: 'surface', card_product: floor, title: 'Aufgesetzt', description: 'Du möchtest keinen großen Ausschnitt im Boden? Dieser Adapter wird oben aufgeschraubt und bleibt etwas erhöht.', facts: 'Ohne Bodenausschnitt' %}
+            </div>
+            <p class="cp-lagun-alert"><strong>Gut zu wissen:</strong> Bei Bodenmontage entfällt die Höhenverstellung. Passende Schrauben für deinen tragfähigen Bodenaufbau besorgst du separat.</p>
+          </div>
+          <details><summary>{{ step_mount.settings.faq_0_title | escape }}</summary>{{ step_mount.settings.faq_0_text }}</details>
+          <details class="cp-lagun-original"><summary data-cp-product-info-title="mount">Weitere Produktdetails</summary><div data-cp-product-description="mount"></div><a data-cp-product-link="mount" target="_blank" rel="noopener">Produktseite mit allen Bildern öffnen ↗</a></details>
+        </section>
+
+        <section class="cp-lagun-step" id="cp-lagun-step-leg" data-cp-step="leg" {{ step_leg.shopify_attributes }}>
+          <div class="cp-lagun-step__heading"><span class="cp-lagun-step__number">02</span><div><p>{{ step_leg.settings.kicker | escape }}</p><h2>{{ step_leg.settings.title | escape }}</h2></div></div>
+          <p class="cp-lagun-step__intro">{{ step_leg.settings.intro | escape }}</p>
+          <div class="cp-lagun-choice-grid" role="group" aria-label="Tischbein">
+            {% render 'cp-lagun-config-option', choice: 'leg', value: '400', card_product: legs, title: '400 mm', description: 'Dein Montagepunkt liegt höher oder dein Sitzplatz ist niedrig? Prüfe zuerst diese kurze Ausführung.', facts: 'Bis zu 15 cm Verstellbereich an der Wand' %}
+            {% render 'cp-lagun-config-option', choice: 'leg', value: '500', card_product: legs, title: '500 mm', description: 'Dein Ausgangspunkt für viele Sitzgruppen. Gleiche die Länge vor der Wahl mit deinem Montagepunkt ab.', facts: 'Bis zu 15 cm Verstellbereich an der Wand', tag: 'Allrounder' %}
+            {% render 'cp-lagun-config-option', choice: 'leg', value: '500plus', card_product: adjustable_leg, title: '500 mm · zwei Griffe', description: 'Du wechselst zwischen Sitzplätzen oder brauchst deutlich unterschiedliche Tischhöhen? Die zwei Griffe geben dir mehr Verstellweg.', facts: 'Bis zu 30 cm Verstellbereich an der Wand' %}
+            {% render 'cp-lagun-config-option', choice: 'leg', value: '700', card_product: legs, title: '700 mm', description: 'Deine Befestigung sitzt weit unten oder deine Sitzbank ist hoch? Das längere Bein überbrückt den größeren Abstand.', facts: 'Bis zu 15 cm Verstellbereich an der Wand' %}
+          </div>
+          <div class="cp-lagun-advice cp-lagun-advice--measure">{{ step_leg.settings.advice_0 }}</div>
+          <details class="cp-lagun-original"><summary data-cp-product-info-title="leg">Weitere Produktdetails</summary><div data-cp-product-description="leg"></div><a data-cp-product-link="leg" target="_blank" rel="noopener">Produktseite mit allen Bildern öffnen ↗</a></details>
+        </section>
+
+        <section class="cp-lagun-step" id="cp-lagun-step-arm" data-cp-step="arm" {{ step_arm.shopify_attributes }}>
+          <div class="cp-lagun-step__heading"><span class="cp-lagun-step__number">03</span><div><p>{{ step_arm.settings.kicker | escape }}</p><h2>{{ step_arm.settings.title | escape }}</h2></div></div>
+          <p class="cp-lagun-step__intro">{{ step_arm.settings.intro | escape }}</p>
+          <div class="cp-lagun-arm-guide" {{ extension_guide.shopify_attributes }}>
+            <p class="cp-lagun-arm-guide__intro">{{ extension_guide.settings.intro | escape }}</p>
+            <div class="cp-lagun-choice-grid cp-lagun-choice-grid--arm" role="radiogroup" aria-label="Tischarm und Armverlängerung">
+              <label class="cp-lagun-choice cp-lagun-arm-choice" data-cp-arm-configuration-option="base">
+                <input class="visually-hidden" type="radio" name="cp-lagun-arm-configuration-{{ section.id }}" value="base" data-cp-arm-configuration>
+                <span class="cp-lagun-choice__image"><img data-cp-arm-configuration-image="base" src="{{ arm_silver.featured_image | image_url: width: 640 }}" width="320" height="230" alt="Lagun 400-mm-Basisarm" loading="lazy"><i class="cp-lagun-choice__tick" aria-hidden="true">✓</i></span>
+                <span class="cp-lagun-choice__body"><strong>Nur 400-mm-Basisarm</strong><span class="cp-lagun-choice__description">Ein Schwenkarm für den normalen Sitzplatz – ohne zusätzliche Armverlängerung.</span><span class="cp-lagun-choice__facts">400 mm · um 360° drehbar</span><span class="cp-lagun-choice__bottom"><b data-cp-arm-configuration-price="base"></b><small data-cp-arm-configuration-stock="base"></small></span></span>
+              </label>
+              <label class="cp-lagun-choice cp-lagun-arm-choice" data-cp-arm-configuration-option="300">
+                <input class="visually-hidden" type="radio" name="cp-lagun-arm-configuration-{{ section.id }}" value="300" data-cp-arm-configuration>
+                <span class="cp-lagun-choice__image"><img data-cp-arm-configuration-image="300" src="{{ extra_arm_silver.featured_image | image_url: width: 640 }}" width="320" height="230" alt="Lagun zusätzlicher 300-mm-Arm mit Verbindungsbolzen" loading="lazy"><i class="cp-lagun-choice__tick" aria-hidden="true">✓</i></span>
+                <span class="cp-lagun-choice__body"><span class="cp-lagun-choice__tag">Empfohlen</span><strong>Zusätzlicher 300-mm-Arm</strong><span class="cp-lagun-choice__description">Mehr Bewegungsfreiheit bei moderaterer Hebelwirkung. Der farblich passende Verbindungsbolzen ist enthalten.</span><span class="cp-lagun-choice__facts">Zweiter Schwenkarm · zweiter Drehpunkt</span><span class="cp-lagun-choice__bottom"><b data-cp-arm-configuration-price="300"></b><small data-cp-arm-configuration-stock="300"></small></span></span>
+              </label>
+              <label class="cp-lagun-choice cp-lagun-arm-choice" data-cp-arm-configuration-option="400">
+                <input class="visually-hidden" type="radio" name="cp-lagun-arm-configuration-{{ section.id }}" value="400" data-cp-arm-configuration>
+                <span class="cp-lagun-choice__image"><img data-cp-arm-configuration-image="400" src="{{ arm_silver.featured_image | image_url: width: 640 }}" width="320" height="230" alt="Lagun zusätzlicher 400-mm-Arm mit Verbindungsbolzen" loading="lazy"><i class="cp-lagun-choice__tick" aria-hidden="true">✓</i></span>
+                <span class="cp-lagun-choice__body"><span class="cp-lagun-choice__tag cp-lagun-choice__tag--warning">Nur bei notwendiger Reichweite</span><strong>Zusätzlicher 400-mm-Arm</strong><span class="cp-lagun-choice__description">Erheblich größere Hebelwirkung und deutlich geringere Tragkraft. Nur mit einer kleinen, leichten Tischplatte verwenden.</span><span class="cp-lagun-choice__facts">Zweiter Schwenkarm · farblich passender Bolzen</span><span class="cp-lagun-choice__bottom"><b data-cp-arm-configuration-price="400"></b><small data-cp-arm-configuration-stock="400"></small></span></span>
+              </label>
+            </div>
+            <p class="cp-lagun-arm-guide__advice">{{ extension_guide.settings.advice | escape }}</p>
+          </div>
+          <details><summary>{{ step_arm.settings.faq_0_title | escape }}</summary>{{ step_arm.settings.faq_0_text }}</details>
+          <details class="cp-lagun-original"><summary data-cp-product-info-title="arm">Weitere Produktdetails</summary><div data-cp-product-description="arm"></div><a data-cp-product-link="arm" target="_blank" rel="noopener">Produktseite mit allen Bildern öffnen ↗</a></details>
+        </section>
+
+        <section class="cp-lagun-step" id="cp-lagun-step-under" data-cp-step="under" {{ step_under.shopify_attributes }}>
+          <div class="cp-lagun-step__heading"><span class="cp-lagun-step__number">04</span><div><p>{{ step_under.settings.kicker | escape }}</p><h2>{{ step_under.settings.title | escape }}</h2></div></div>
+          <p class="cp-lagun-step__intro">{{ step_under.settings.intro | escape }}</p>
+          <div class="cp-lagun-choice-grid" role="group" aria-label="Untertischplatte">
+            {% render 'cp-lagun-config-option', choice: 'under', value: 'standard', card_product: under_table, title: 'Standard', description: 'Dir reicht es, den Tisch zur Seite zu schwenken? Dann ist diese einfache Verbindung ohne Klappmechanik passend.', facts: 'Drehbar · ohne Klappscharnier' %}
+            {% render 'cp-lagun-config-option', choice: 'under', value: 'fold', card_product: folding_under_table, title: 'Dreh- & Klappachse', description: 'Du möchtest häufiger vorbeigehen, ohne den Tisch abzunehmen? Klappe die Platte um 90° zur Seite und schaffe Platz.', facts: '200 × 200 mm · um 90° klappbar', tag: 'Mehr Freiraum' %}
+          </div>
+          <div class="cp-lagun-advice">{{ step_under.settings.advice_0 }}</div>
+          <details class="cp-lagun-original"><summary data-cp-product-info-title="under">Weitere Produktdetails</summary><div data-cp-product-description="under"></div><a data-cp-product-link="under" target="_blank" rel="noopener">Produktseite mit allen Bildern öffnen ↗</a></details>
+        </section>
+
+        <section class="cp-lagun-step" id="cp-lagun-step-table" data-cp-step="table" {{ step_table.shopify_attributes }}>
+          <div class="cp-lagun-step__heading"><span class="cp-lagun-step__number">05</span><div><p>{{ step_table.settings.kicker | escape }}</p><h2>{{ step_table.settings.title | escape }}</h2></div></div>
+          <p class="cp-lagun-step__intro">{{ step_table.settings.intro | escape }}</p>
+          <button type="button" class="cp-lagun-choice cp-lagun-choice--own" data-cp-choice="table" data-value="own" aria-pressed="false"><strong>Ich verwende meine eigene Tischplatte</strong><span>Keine zusätzliche Platte ergänzen <span aria-hidden="true">↗</span></span></button>
+          <div class="cp-lagun-choice-grid" role="group" aria-label="Tischplatte">
+            {% render 'cp-lagun-config-option', choice: 'table', value: 'oakModern', card_product: table_top, title: 'Eiche modern', description: 'Warmer Holzlook für einen gemütlichen Ausbau.', facts: '700 × 500 mm · 15 mm · unter 3 kg' %}
+            {% render 'cp-lagun-config-option', choice: 'table', value: 'pine', card_product: table_top, title: 'Fichte / Kiefer', description: 'Helle Holzoptik, die Leichtigkeit in den Camper bringt.', facts: '700 × 500 mm · 15 mm · unter 3 kg' %}
+            {% render 'cp-lagun-config-option', choice: 'table', value: 'concrete', card_product: table_top, title: 'Betonoptik', description: 'Klar und modern – besonders schön mit dunklen Details.', facts: '700 × 500 mm · 15 mm · unter 3 kg' %}
+            {% render 'cp-lagun-config-option', choice: 'table', value: 'oakLight', card_product: table_top, title: 'Eiche hell', description: 'Eine helle Oberfläche für ein freundliches Raumgefühl.', facts: '700 × 500 mm · 15 mm · unter 3 kg' %}
+            {% if poplar_top != blank %}{% render 'cp-lagun-config-option', choice: 'table', value: 'poplar', card_product: poplar_top, title: 'Pappelholz · Weiß', description: 'Die leichte Basis mit robuster, pflegeleichter HPL-Oberfläche.', facts: '700 × 500 mm · ca. 2,4 kg' %}{% endif %}
+            {% if ponga_top != blank %}{% render 'cp-lagun-config-option', choice: 'table', value: 'ponga', card_product: ponga_top, title: 'Ponga · Eiche', description: 'Ausdrucksstarke Maserung und beschichtete Kanten. Bereits vorgebohrt.', facts: '700 × 500 mm · ca. 2,8 kg' %}{% endif %}
+          </div>
+          <details><summary>{{ step_table.settings.faq_0_title | escape }}</summary>{{ step_table.settings.faq_0_text }}</details>
+          <details><summary>{{ step_table.settings.faq_1_title | escape }}</summary>{{ step_table.settings.faq_1_text }}</details>
+          <a class="cp-lagun-service" href="#cp-lagun-step-service"><span><small>GRIFF IM WEG ODER SONDERMASS?</small><strong>Dein Lagun passend machen.</strong><span>Griffe umsetzen oder Bein kürzen: Deine Wünsche gibst du im nächsten Schritt direkt an.</span></span><b aria-hidden="true">↗</b></a>
+          <details class="cp-lagun-original"><summary data-cp-product-info-title="table">Weitere Produktdetails</summary><div data-cp-product-description="table"></div><a data-cp-product-link="table" target="_blank" rel="noopener">Produktseite mit allen Bildern öffnen ↗</a></details>
+        </section>
+        <section class="cp-lagun-step cp-lagun-custom" id="cp-lagun-step-service" data-cp-step="service" {{ service_guide.shopify_attributes }}>
+          <div class="cp-lagun-step__heading"><span class="cp-lagun-step__number">06</span><div><p>PASSEND FÜR DEINEN EINBAU</p><h2>{{ service_guide.settings.title | escape }}</h2></div></div>
+          <div class="cp-lagun-custom__intro">{{ service_guide.settings.intro }}</div>
+          <details><summary>Beispiele: Wann hilft eine Anpassung?</summary>{{ service_guide.settings.examples }}</details>
+          <label class="cp-lagun-check cp-lagun-custom__activate"><input type="checkbox" data-cp-choice="service"><span><strong>{{ service_guide.settings.activate_label | escape }}</strong><small>Optional · deine Angaben werden zusammen mit dem Service im Warenkorb gespeichert.</small><b data-cp-service-price></b></span></label>
+          <div data-cp-service-fields hidden>
+            <h3>{{ service_guide.settings.handles_title | escape }}</h3>
+            <div class="cp-lagun-custom__grid">
+              <label>{{ service_guide.settings.leg_label | escape }}<select data-cp-service-field="legHandle"><option value="original">So lassen</option><option value="opposite">Griff umdrehen</option></select></label>
+              <label>{{ service_guide.settings.arm_label | escape }}<select data-cp-service-field="armHandle"><option value="original">So lassen</option><option value="opposite">Griff umdrehen</option></select></label>
+            </div>
+            <label class="cp-lagun-custom__notes">{{ service_guide.settings.notes_label | escape }}<textarea data-cp-service-field="instructions" maxlength="1000" rows="3" placeholder="Zum Beispiel: den oberen Griff am Zwei-Griff-Bein umsetzen. Beim zweiten Arm bitte genau angeben, welcher Arm betroffen ist."></textarea></label>
+            <label class="cp-lagun-check"><input type="checkbox" data-cp-service-field="shorten"><span><strong>{{ service_guide.settings.shorten_label | escape }}</strong><small>Ich möchte eine kürzere Metalllänge als bei meinem gewählten Bein.</small></span></label>
+            <div class="cp-lagun-custom__measure" data-cp-service-measure {% if service_guide.settings.image %}data-custom-image="true"{% endif %} hidden>
+              {% assign measure_photo = service_guide.settings.image | default: legs.featured_image %}{{ measure_photo | image_url: width: 500 | image_tag: loading: 'lazy', alt: 'Lagun Tischbein: Für das Kürzen nur das Metall ohne den schwarzen Kunststoffbolzen messen' }}
+              <div>{{ service_guide.settings.measure }}<label>{{ service_guide.settings.length_label | escape }} <span class="cp-lagun-custom__length"><input type="number" min="170" max="699" step="1" inputmode="numeric" data-cp-service-field="length" placeholder="z. B. 450" aria-describedby="cp-lagun-length-help"> mm</span></label><p id="cp-lagun-length-help" data-cp-length-help></p></div>
+            </div>
+            <p class="cp-lagun-custom__validation" data-cp-service-validation role="status"></p>
+          </div>
+          <p><a href="{{ adjustment_service.url }}">Alle Details zum Anpassungsservice ↗</a> · <a href="{{ section.settings.contact_link | default: '/pages/contact' }}">Foto schicken und Einbau besprechen ↗</a></p>
+        </section>
+
+      </div>
+
+      <aside class="cp-lagun-summary" data-cp-lagun-summary aria-label="Deine Lagun-Konfiguration">
+        <div class="cp-lagun-summary__sticky">
+          <button class="cp-lagun-summary__mobile-toggle" type="button" aria-expanded="false" aria-controls="cp-lagun-summary-details-{{ section.id }}" data-cp-summary-toggle><span class="cp-lagun-mobile-title" data-cp-mobile-title>Dein Lagun</span> <span data-cp-progress-mini>0 / 4</span><b data-cp-mobile-price>Auswahl ansehen ↑</b></button>
+          <div class="cp-lagun-summary__content" data-cp-summary-content id="cp-lagun-summary-content-{{ section.id }}">
+            <div class="cp-lagun-summary__heading"><div><p class="cp-lagun-kicker">STÜCK FÜR STÜCK</p><h2>Dein Tisch. Deine Auswahl.</h2></div><span data-cp-count>0/4</span></div>
+            {% render 'cp-lagun-assembly', section: section %}
+            <div class="cp-lagun-summary__colors" role="group" aria-label="Farbe jederzeit wechseln"><span>Dein Look</span><button type="button" data-cp-color="silver" aria-pressed="false"><i class="cp-lagun-swatch cp-lagun-swatch--silver"></i>Silber</button><button type="button" data-cp-color="black" aria-pressed="false"><i class="cp-lagun-swatch cp-lagun-swatch--black"></i>Schwarz</button></div>
+            <div class="cp-lagun-progress-track" aria-hidden="true"><i data-cp-progress-bar></i></div>
+            <p class="cp-lagun-summary__progress" data-cp-progress aria-live="polite">Wähle deine Bauteile – wir behalten den Überblick.</p>
+          </div>
+          <div class="cp-lagun-summary__footer" id="cp-lagun-summary-details-{{ section.id }}">
+            <div class="cp-lagun-success" data-cp-success role="status" hidden><span aria-hidden="true">✓</span><div><strong data-cp-success-title></strong><p data-cp-success-copy></p><button type="button" data-cp-jump="table" data-cp-success-next>Tischplatte auswählen →</button></div></div>
+            <details class="cp-lagun-price-details" data-cp-price-details>
+              <summary class="cp-lagun-summary__total"><span>Jetzt ergänzen<small data-cp-price-description>Bestandteile &amp; Einzelpreise ansehen</small></span><strong data-cp-summary-total>0,00 €</strong><span class="cp-price-chevron" aria-hidden="true">⌄</span></summary>
+              <div class="cp-lagun-price-breakdown"><p>Neu gewählte Artikel werden jeweils einmal ergänzt. Vorhandene Warenkorbteile kosten hier nichts zusätzlich.</p><ul class="cp-lagun-summary__items" data-cp-summary-items></ul></div>
+            </details>
+            <small class="cp-lagun-cart-caption" data-cp-summary-cart></small>
+            <p class="cp-lagun-summary__tax">{% if cart.taxes_included and localization.country.iso_code != 'CH' %}Inkl. MwSt. · {% endif %}<a href="/pages/zahlung-und-versand-1">Versand im Checkout</a></p>
+            <button type="button" class="cp-lagun-summary__add" data-cp-add disabled>Zum Warenkorb hinzufügen</button>
+            <button type="button" class="cp-lagun-summary__checkout" data-cp-checkout disabled>Direkt zur Kasse →</button>
+            <p class="cp-lagun-checkout-note">Mit deiner Auswahl und den übrigen Warenkorbartikeln.</p>
+            {% if section.settings.purchase_proof_enabled %}
+              <details class="cp-lagun-purchase-proof" data-cp-purchase-proof hidden>
+                <summary><span aria-hidden="true">✓</span><span><strong data-cp-purchase-count></strong><small>kauften eine ähnliche Gestellkombination</small></span><b aria-hidden="true">⌄</b></summary>
+                <p><strong>Verglichen mit:</strong> <span data-cp-purchase-label></span></p>
+                <p data-cp-purchase-period></p>
+                <p>Gezählt werden Kunden mit diesen Bauteilen in ihrer zusammengefassten Kaufhistorie. Tischplatten und Anpassungsservice gehören nicht zum Vergleich.</p>
+              </details>
+            {% endif %}
+            <p class="cp-lagun-summary__status" data-cp-status role="status"></p>
+            <a class="cp-lagun-summary__help" href="{{ section.settings.contact_link | default: '/pages/contact' }}">Foto oder Maße schicken – wir beraten dich. ↗</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <noscript><p class="page-width">Bitte aktiviere JavaScript für die gemeinsame Konfiguration. Alle Teile findest du auch in unserer <a href="/collections/brands-lagun">Lagun-Übersicht</a>.</p></noscript>
+</section>
+{% schema %}
+{
+  "name": "Lagun – Konfigurator",
+  "tag": "section",
+  "class": "cp-lagun-configurator-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Übertitel",
+      "default": "DEIN AUSBAU. DEINE FREIHEIT."
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Dein Lagun. Passt zu <em>dir.</em>"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Einleitung",
+      "default": "Frühstücken, am Laptop arbeiten oder Platz zum Einsteigen schaffen: Stell dir den Tisch zusammen, der zu deinem Sitzplatz und deinem Alltag im Camper passt."
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Camper-Foto im Einstieg"
+    },
+    {
+      "type": "collection",
+      "id": "tops_collection",
+      "label": "Tischplatten-Kollektion"
+    },
+    {
+      "type": "url",
+      "id": "contact_link",
+      "label": "Link zur Beratung"
+    },
+    {
+      "type": "header",
+      "content": "Ähnliche Käufe am Preis"
+    },
+    {
+      "type": "checkbox",
+      "id": "purchase_proof_enabled",
+      "label": "Belegte Käuferzahlen anzeigen",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "Auswertung 09.09.2024–08.09.2026: eindeutige Kunden je ähnlicher Gestellkombination. Gezählt ohne Hochrechnung. Aktualisierung über den Bestell-Auswertungsprozess."
+    },
+    {
+      "type": "header",
+      "content": "Produktzuordnungen"
+    },
+    {
+      "type": "paragraph",
+      "content": "Farbpaare und Bauteilrollen sind fest zugeordnet. Ersatzprodukte müssen dieselben Variantenbezeichnungen und Maße verwenden."
+    },
+    {
+      "type": "product",
+      "id": "product_wall_standard",
+      "label": "Wandplatte Standard · Silber"
+    },
+    {
+      "type": "product",
+      "id": "product_wall_standard_black",
+      "label": "Wandplatte Standard · Schwarz"
+    },
+    {
+      "type": "product",
+      "id": "product_wall_smart",
+      "label": "Wandplatte Smart · Silber"
+    },
+    {
+      "type": "product",
+      "id": "product_wall_smart_black",
+      "label": "Wandplatte Smart · Schwarz"
+    },
+    {
+      "type": "product",
+      "id": "product_floor",
+      "label": "Bodenadapter"
+    },
+    {
+      "type": "product",
+      "id": "product_legs",
+      "label": "Tischbeine mit verschiedenen Längen"
+    },
+    {
+      "type": "product",
+      "id": "product_adjustable_leg",
+      "label": "Bein mit zwei Griffen"
+    },
+    {
+      "type": "product",
+      "id": "product_arm_silver",
+      "label": "400-mm-Arm · Silber"
+    },
+    {
+      "type": "product",
+      "id": "product_arm_black",
+      "label": "400-mm-Arm · Schwarz"
+    },
+    {
+      "type": "product",
+      "id": "product_extra_arm",
+      "label": "Verlängerung mit Bolzen · Schwarz"
+    },
+    {
+      "type": "product",
+      "id": "product_extra_arm_silver",
+      "label": "Verlängerung mit Bolzen · Silber"
+    },
+    {
+      "type": "product",
+      "id": "product_extension_bolt",
+      "label": "Verbindungsbolzen für 400-mm-Verlängerung"
+    },
+    {
+      "type": "product",
+      "id": "product_under_table",
+      "label": "Untertischplatte Standard"
+    },
+    {
+      "type": "product",
+      "id": "product_folding_under_table",
+      "label": "Untertischplatte mit Klappachse"
+    },
+    {
+      "type": "product",
+      "id": "product_gap",
+      "label": "GAP Standard"
+    },
+    {
+      "type": "product",
+      "id": "product_compact_gap",
+      "label": "GAP für Smart-Platte"
+    },
+    {
+      "type": "product",
+      "id": "product_table_top",
+      "label": "Tischplatten mit Dekorvarianten"
+    },
+    {
+      "type": "product",
+      "id": "product_adjustment_service",
+      "label": "Anpassungsservice"
+    },
+    {
+      "type": "product",
+      "id": "product_silver_set",
+      "label": "Farbvergleich · Silbernes Set"
+    },
+    {
+      "type": "product",
+      "id": "product_black_set",
+      "label": "Farbvergleich · Schwarzes Set"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lagun – Konfigurator",
+      "blocks": [
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "mount:wall",
+            "title": "An der Wand",
+            "description": "Du möchtest deine Tischhöhe anpassen und den Boden frei halten? Nutze eine tragfähige Möbelwand neben deinem Sitzplatz.",
+            "facts": "Standard- oder schmale Smart-Platte",
+            "tag": "Der Klassiker"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "mount:floor",
+            "title": "Auf dem Boden",
+            "description": "Neben deinem Sitzplatz fehlt eine geeignete Wand? Befestige dein Lagun auf einer tragfähigen Bodenfläche.",
+            "facts": "Bündig oder aufgesetzt"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "mountVariant:standard",
+            "title": "Standard-Platte",
+            "description": "Für dich, wenn genug Wandfläche frei ist: Die breite Platte verteilt die Kraft auf eine größere Fläche.",
+            "facts": "170 × 91 mm · 13 mm stark"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "mountVariant:smart",
+            "title": "Smart-Platte",
+            "description": "Für dich, wenn nur ein schmaler, stabiler Montageplatz frei ist. Die Platte bleibt hinter dem Bein besonders unauffällig.",
+            "facts": "170 × 30 mm · 13 mm stark"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "mountVariant:flush",
+            "title": "Flush · bündig",
+            "description": "Du möchtest nach dem Abnehmen des Gestells möglichst wenig Überstand? Dieser Adapter wird bündig eingelassen.",
+            "facts": "Bodenausschnitt erforderlich"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "mountVariant:surface",
+            "title": "Aufgesetzt",
+            "description": "Du möchtest keinen großen Ausschnitt im Boden? Dieser Adapter wird oben aufgeschraubt und bleibt etwas erhöht.",
+            "facts": "Ohne Bodenausschnitt"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "leg:400",
+            "title": "400 mm",
+            "description": "Dein Montagepunkt liegt höher oder dein Sitzplatz ist niedrig? Prüfe zuerst diese kurze Ausführung.",
+            "facts": "Bis zu 15 cm Verstellbereich an der Wand"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "leg:500",
+            "title": "500 mm",
+            "description": "Dein Ausgangspunkt für viele Sitzgruppen. Gleiche die Länge vor der Wahl mit deinem Montagepunkt ab.",
+            "facts": "Bis zu 15 cm Verstellbereich an der Wand",
+            "tag": "Allrounder"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "leg:500plus",
+            "title": "500 mm · zwei Griffe",
+            "description": "Du wechselst zwischen Sitzplätzen oder brauchst deutlich unterschiedliche Tischhöhen? Die zwei Griffe geben dir mehr Verstellweg.",
+            "facts": "Bis zu 30 cm Verstellbereich an der Wand"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "leg:700",
+            "title": "700 mm",
+            "description": "Deine Befestigung sitzt weit unten oder deine Sitzbank ist hoch? Das längere Bein überbrückt den größeren Abstand.",
+            "facts": "Bis zu 15 cm Verstellbereich an der Wand"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "arm:400",
+            "title": "400-mm-Basisarm",
+            "description": "Für deinen normalen Sitzplatz: ein Schwenkarm, mit dem du die Tischplatte zu dir holst oder zur Seite drehst.",
+            "facts": "400 mm · um 360° drehbar"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "under:standard",
+            "title": "Standard",
+            "description": "Dir reicht es, den Tisch zur Seite zu schwenken? Dann ist diese einfache Verbindung ohne Klappmechanik passend.",
+            "facts": "Drehbar · ohne Klappscharnier"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "under:fold",
+            "title": "Dreh- & Klappachse",
+            "description": "Du möchtest häufiger vorbeigehen, ohne den Tisch abzunehmen? Klappe die Platte um 90° zur Seite und schaffe Platz.",
+            "facts": "200 × 200 mm · um 90° klappbar",
+            "tag": "Mehr Freiraum"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "table:oakModern",
+            "title": "Eiche modern",
+            "description": "Warmer Holzlook für einen gemütlichen Ausbau.",
+            "facts": "700 × 500 mm · 15 mm · unter 3 kg"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "table:pine",
+            "title": "Fichte / Kiefer",
+            "description": "Helle Holzoptik, die Leichtigkeit in den Camper bringt.",
+            "facts": "700 × 500 mm · 15 mm · unter 3 kg"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "table:concrete",
+            "title": "Betonoptik",
+            "description": "Klar und modern – besonders schön mit dunklen Details.",
+            "facts": "700 × 500 mm · 15 mm · unter 3 kg"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "table:oakLight",
+            "title": "Eiche hell",
+            "description": "Eine helle Oberfläche für ein freundliches Raumgefühl.",
+            "facts": "700 × 500 mm · 15 mm · unter 3 kg"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "table:poplar",
+            "title": "Pappelholz · Weiß",
+            "description": "Die leichte Basis mit robuster, pflegeleichter HPL-Oberfläche.",
+            "facts": "700 × 500 mm · ca. 2,4 kg"
+          }
+        },
+        {
+          "type": "product_card",
+          "settings": {
+            "key": "table:ponga",
+            "title": "Ponga · Eiche",
+            "description": "Ausdrucksstarke Maserung und beschichtete Kanten. Bereits vorgebohrt.",
+            "facts": "700 × 500 mm · ca. 2,8 kg"
+          }
+        },
+        {
+          "type": "step_mount",
+          "settings": {
+            "kicker": "DIE BASIS",
+            "title": "Wo soll dein Tisch stehen?",
+            "intro": "Wo möchtest du essen oder arbeiten? Entscheidend ist, ob neben deinem Sitzplatz eine tragfähige Möbelwand frei ist.",
+            "advice_0": "<p><strong>Schmale Platte heißt nicht: für eine schwache Wand.</strong></p><p>Bei dünnen oder wenig steifen Wänden empfehlen wir die breite Standard-Platte. Prüfe auch eine Verstärkung hinter der Möbelwand – die kleine Smart-Platte ersetzt keinen tragfähigen Untergrund.</p>",
+            "faq_0_title": "Worauf muss ich beim Einbau achten?",
+            "faq_0_text": "<p>Die Befestigung braucht einen stabilen, tragfähigen Untergrund. Plane Sitzhöhe, Montagehöhe und den freien Schwenkbereich vor dem Bohren. Für Wand- und Bodenmontage muss die Befestigung zu Material und Aufbau passen.</p><p>Das Tischbein sitzt mit seiner Schwalbenschwanzführung auf der Befestigungsplatte. Löse den Klemmgriff zum Verstellen oder Abnehmen und stelle ihn vor der Nutzung wieder fest. Mit einer zweiten, separat montierten Befestigungsplatte kannst du dasselbe Gestell an einem weiteren Platz im Fahrzeug oder Boot nutzen.</p>"
+          }
+        },
+        {
+          "type": "step_leg",
+          "settings": {
+            "kicker": "DIE RICHTIGE HÖHE",
+            "title": "Welche Höhe ist für dich bequem?",
+            "intro": "Setz dich auf deinen späteren Sitzplatz und überlege, auf welcher Höhe du entspannt essen oder tippen möchtest. Die Beinlänge allein ist noch nicht deine fertige Tischhöhe.",
+            "advice_0": "<p><strong>So prüfst du deine Sitzhöhe vor dem Kauf</strong></p><ol><li><b>Bequem hinsetzen:</b> Miss mit deinem tatsächlichen Sitzpolster, wo deine Tischoberfläche liegen soll.</li><li><b>Montagepunkt prüfen:</b> Markiere die freie, tragfähige Fläche. Je tiefer sie sitzt, desto mehr Länge brauchst du in der Regel.</li><li><b>Platz mitdenken:</b> Plane auch Arm, Untertischbefestigung und die Dicke deiner Tischplatte ein. Das Beinmaß ist nicht die Tischhöhe.</li></ol><p>Zwischen zwei Längen unsicher? Schick uns ein Foto mit Sitz-, Wunsch- und Montagehöhe. Bei Bodenmontage steht die Höhe fest; der zusätzliche Verstellbereich des Zwei-Griff-Beins bringt dort keinen Vorteil.</p>"
+          }
+        },
+        {
+          "type": "step_arm",
+          "settings": {
+            "kicker": "MEHR BEWEGUNGSFREIHEIT",
+            "title": "Hol den Tisch zu dir.",
+            "intro": "Zieh den Tisch zum Essen an dich heran und schwenke ihn anschließend aus dem Weg. Arm und Tischplatte lassen sich unabhängig voneinander drehen – soweit dein Ausbau Platz lässt.",
+            "faq_0_title": "Brauche ich wirklich einen zweiten Arm?",
+            "faq_0_text": "<p>Stell dir den Weg der Tischplatte vom Montagepunkt zu deinem Sitzplatz vor. Reicht ein Arm, bleibt dein Aufbau kompakter. Mit der Verlängerung kannst du den Tisch um einen weiteren Drehpunkt führen – nützlich für eine breitere Sitzgruppe oder wechselnde Sitzpositionen.</p><p>Die Armlängen ergeben nicht automatisch denselben geraden Abstand: Winkel, Gelenke, Tischplatte und Möbel begrenzen deinen tatsächlichen Schwenkbereich.</p>"
+          }
+        },
+        {
+          "type": "step_under",
+          "settings": {
+            "kicker": "DIE VERBINDUNG ZUR PLATTE",
+            "title": "Wie schnell brauchst du wieder Platz?",
+            "intro": "Drehen kannst du deine Tischplatte mit beiden Varianten. Entscheide hier, ob du sie zusätzlich wegklappen möchtest – etwa für einen freien Durchgang.",
+            "advice_0": "<p><strong>Erst den Durchgang prüfen, dann die Klappfunktion wählen.</strong></p><p>Wenn einfaches Wegschwenken bei dir reicht, brauchst du die Klappachse nicht. Ist der Gang eng oder bleibt die Tischplatte beim Einsteigen im Weg, kann das Abklappen bequemer sein. Lass neben der Platte genug Raum für die 90°-Bewegung.</p><p>Zum Verstauen lässt sich das Lagun auch ohne Werkzeug zerlegen. Vor der Fahrt baust du das Gestell gemäß Anleitung ab und sicherst es – eine abgeklappte Platte ist keine Transportsicherung.</p>"
+          }
+        },
+        {
+          "type": "step_table",
+          "settings": {
+            "kicker": "DEIN PERSÖNLICHES FINISH",
+            "title": "Welches Material möchtest du für deine Tischplatte?",
+            "intro": "Dein Lagun ist das Untergestell. Darauf montierst du eine Tischplatte – erst zusammen wird daraus dein Tisch. Vergleiche hier Materialien und Dekore oder verwende deine eigene Tischplatte.",
+            "faq_0_title": "Was ist bei meiner eigenen Tischplatte wichtig?",
+            "faq_0_text": "<p>Miss nicht nur die nutzbare Tischfläche, sondern auch den Platz zum Schwenken, Einsteigen und gegebenenfalls Abklappen. Eine leichte Platte lässt sich angenehmer bewegen und belastet den ausgefahrenen Arm weniger.</p><p>Prüfe, ob Material und Plattenstärke die Befestigungsschrauben sicher halten. Wähle die Schraubenlänge so, dass sie oben nicht durchstößt. Halte dich bei Plattengröße und Belastung an die Anleitung deiner Kombination; mit einem zweiten Arm ist eine kleinere, leichtere Platte besonders wichtig.</p>",
+            "faq_1_title": "Damit du lange Freude an deinem Tisch hast",
+            "faq_1_text": "<p>Stelle die Griffe vor der Nutzung fest und prüfe den sicheren Sitz. Nutze den Tisch zum Essen, Lesen oder Arbeiten – nicht zum Abstützen beim Aufstehen. Zum Verstauen löst du die Griffe und zerlegst das Gestell ohne Werkzeug.</p><p><a href=\"https://cdn.shopify.com/s/files/1/0783/6696/6087/files/Manual_Lagun.pdf?v=1711457612\" target=\"_blank\" rel=\"noopener\">Aufbau- und Bedienungsanleitung öffnen ↗</a></p>"
+          }
+        },
+        {
+          "type": "gap_guide",
+          "settings": {
+            "title": "Kann dein Arm frei an der Wand vorbeischwenken?",
+            "text": "<p>Steht der Arm zu dicht an der Wand, stößt er beim Schwenken an – dein Lagun kann sich nicht mehr frei drehen. Der GAP setzt die komplette Befestigung etwa <strong>25 mm vor die Wand</strong> und gibt dem Arm mehr Bewegungsraum.</p><p>Prüfe den gewünschten Schwenkweg direkt an deinem Einbauplatz: Kommen Arm, Griff oder Tischplatte an Wand, Sitzbank oder Polster? Wenn der zusätzliche Abstand reicht, hilft der GAP.</p>",
+            "installation": "<p><strong>Wand → GAP-Rahmen → Befestigungsplatte → Tischbein.</strong></p><p>Der GAP ist ein offener Rahmen im Format deiner Standard- oder Smart-Platte. Die Befestigungsplatte deckt die offene Mitte vollständig ab. Eingebaut siehst du deshalb den seitlichen Abstand zur Wand, kein offenes Loch.</p><p>Das Bein wird auf die Schwalbenschwanzführung der Befestigungsplatte geschoben und mit dem Klemmgriff festgestellt. Es wird nicht durch den GAP geführt. Standard-GAP und kleiner GAP passen jeweils zu ihrer zugehörigen Platte.</p>",
+            "tip": "Arm und Griffe haben genug Platz? Dann brauchst du keinen GAP."
+          }
+        },
+        {
+          "type": "service_guide",
+          "settings": {
+            "title": "Was soll an deinem Lagun anders werden?",
+            "intro": "<p>Ein Griff stößt in deiner Sitzecke an die Wand? Oder die passende Tischhöhe liegt zwischen zwei Beinlängen? Wir können die Griffe umsetzen und dein Tischbein auf dein Wunschmaß kürzen.</p>",
+            "examples": "<ul><li><strong>Enge Ecke:</strong> Der Griff am Arm kollidiert beim Schwenken mit der Wand – du möchtest ihn auf der gegenüberliegenden Seite.</li><li><strong>Schlecht erreichbar:</strong> Du kommst nicht bequem an den Griff am Bein – beschreibe uns die besser zugängliche Position.</li><li><strong>Tisch zu hoch:</strong> Aus einem 500-mm-Bein soll ein Bein mit 450 mm Metalllänge werden: Es werden 50 mm Metall entfernt.</li></ul>",
+            "measure": "<p>Gib die <strong>fertige Metalllänge</strong> an: vom Metallanfang bis zum Metallende, <strong>ohne den schwarzen Beinbolzen aus Kunststoff</strong>. Schreibe also „450 mm Metalllänge“, wenn diese Länge nach dem Kürzen übrig bleiben soll.</p><p>Mindestens 170 mm Metall müssen stehen bleiben. Miss vor deiner Bestellung nach; die Metalllänge ist nicht die spätere Tischhöhe.</p>",
+            "activate_label": "Anpassungsservice zu meinem Gestell ergänzen",
+            "handles_title": "Welcher Griff soll umgesetzt werden?",
+            "leg_label": "Griff am Tischbein",
+            "arm_label": "Griff am Schwenkarm",
+            "notes_label": "Welcher Griff soll umgedreht werden? Was ist bei deinem Einbau wichtig?",
+            "shorten_label": "Soll dein Tischbein gekürzt werden?",
+            "length_label": "Wie lang soll das Metall nach dem Kürzen sein?"
+          }
+        },
+        {
+          "type": "color_guide",
+          "settings": {
+            "title": "Silber oder Schwarz?",
+            "intro": "Schau auf deine Möbel, Griffe und Beschläge: Welcher Look fügt sich bei dir am besten ein?",
+            "silver": "Passt zu hellen Möbeln und silbernen Beschlägen.",
+            "black": "Greift dunkle Griffe und schwarze Details auf."
+          }
+        },
+        {
+          "type": "extension_guide",
+          "settings": {
+            "title": "Einen weiteren Sitzplatz erreichen",
+            "intro": "Mit einem zusätzlichen 300-mm-Arm erreichst du weitere Positionen. Der Verbindungsbolzen schafft einen zweiten Drehpunkt und ist im Bundle enthalten.",
+            "advice": "Für dich sinnvoll, wenn der einfache Arm deinen Sitzplatz nicht erreicht. Der längere Hebel reduziert die Tragkraft: Wähle eine kleinere, leichte Tischplatte."
+          }
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Produktkarte",
+      "settings": [
+        {
+          "type": "select",
+          "id": "key",
+          "label": "Bauteil / Ausführung",
+          "options": [
+            {
+              "value": "mount:wall",
+              "label": "An der Wand"
+            },
+            {
+              "value": "mount:floor",
+              "label": "Auf dem Boden"
+            },
+            {
+              "value": "mountVariant:standard",
+              "label": "Standard-Platte"
+            },
+            {
+              "value": "mountVariant:smart",
+              "label": "Smart-Platte"
+            },
+            {
+              "value": "mountVariant:flush",
+              "label": "Flush · bündig"
+            },
+            {
+              "value": "mountVariant:surface",
+              "label": "Aufgesetzt"
+            },
+            {
+              "value": "leg:400",
+              "label": "400 mm"
+            },
+            {
+              "value": "leg:500",
+              "label": "500 mm"
+            },
+            {
+              "value": "leg:500plus",
+              "label": "500 mm · zwei Griffe"
+            },
+            {
+              "value": "leg:700",
+              "label": "700 mm"
+            },
+            {
+              "value": "arm:400",
+              "label": "400-mm-Basisarm"
+            },
+            {
+              "value": "under:standard",
+              "label": "Standard"
+            },
+            {
+              "value": "under:fold",
+              "label": "Dreh- & Klappachse"
+            },
+            {
+              "value": "table:oakModern",
+              "label": "Eiche modern"
+            },
+            {
+              "value": "table:pine",
+              "label": "Fichte / Kiefer"
+            },
+            {
+              "value": "table:concrete",
+              "label": "Betonoptik"
+            },
+            {
+              "value": "table:oakLight",
+              "label": "Eiche hell"
+            },
+            {
+              "value": "table:poplar",
+              "label": "Pappelholz · Weiß"
+            },
+            {
+              "value": "table:ponga",
+              "label": "Ponga · Eiche"
+            }
+          ],
+          "default": "mount:wall"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titel"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Wann passt das zu mir?"
+        },
+        {
+          "type": "text",
+          "id": "facts",
+          "label": "Maße / Kurzinfo"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Empfehlungsmarke"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_silver",
+          "label": "Bild Silber / Tischplatten-Dekor"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_black",
+          "label": "Bild Schwarz"
+        }
+      ]
+    },
+    {
+      "type": "step_mount",
+      "name": "01 · Befestigung",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Übertitel",
+          "default": "DIE BASIS"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Wo soll dein Tisch stehen?"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Einleitung",
+          "default": "Wo möchtest du essen oder arbeiten? Entscheidend ist, ob neben deinem Sitzplatz eine tragfähige Möbelwand frei ist."
+        },
+        {
+          "type": "richtext",
+          "id": "advice_0",
+          "label": "Einbau-Beratung",
+          "default": "<p><strong>Schmale Platte heißt nicht: für eine schwache Wand.</strong></p><p>Bei dünnen oder wenig steifen Wänden empfehlen wir die breite Standard-Platte. Prüfe auch eine Verstärkung hinter der Möbelwand – die kleine Smart-Platte ersetzt keinen tragfähigen Untergrund.</p>"
+        },
+        {
+          "type": "text",
+          "id": "faq_0_title",
+          "label": "Detailfrage 1",
+          "default": "Worauf muss ich beim Einbau achten?"
+        },
+        {
+          "type": "richtext",
+          "id": "faq_0_text",
+          "label": "Antwort 1",
+          "default": "<p>Die Befestigung braucht einen stabilen, tragfähigen Untergrund. Plane Sitzhöhe, Montagehöhe und den freien Schwenkbereich vor dem Bohren. Für Wand- und Bodenmontage muss die Befestigung zu Material und Aufbau passen.</p><p>Das Tischbein sitzt mit seiner Schwalbenschwanzführung auf der Befestigungsplatte. Löse den Klemmgriff zum Verstellen oder Abnehmen und stelle ihn vor der Nutzung wieder fest. Mit einer zweiten, separat montierten Befestigungsplatte kannst du dasselbe Gestell an einem weiteren Platz im Fahrzeug oder Boot nutzen.</p>"
+        }
+      ]
+    },
+    {
+      "type": "step_leg",
+      "name": "02 · Bein",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Übertitel",
+          "default": "DIE RICHTIGE HÖHE"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Welche Höhe ist für dich bequem?"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Einleitung",
+          "default": "Setz dich auf deinen späteren Sitzplatz und überlege, auf welcher Höhe du entspannt essen oder tippen möchtest. Die Beinlänge allein ist noch nicht deine fertige Tischhöhe."
+        },
+        {
+          "type": "richtext",
+          "id": "advice_0",
+          "label": "Einbau-Beratung",
+          "default": "<p><strong>So prüfst du deine Sitzhöhe vor dem Kauf</strong></p><ol><li><b>Bequem hinsetzen:</b> Miss mit deinem tatsächlichen Sitzpolster, wo deine Tischoberfläche liegen soll.</li><li><b>Montagepunkt prüfen:</b> Markiere die freie, tragfähige Fläche. Je tiefer sie sitzt, desto mehr Länge brauchst du in der Regel.</li><li><b>Platz mitdenken:</b> Plane auch Arm, Untertischbefestigung und die Dicke deiner Tischplatte ein. Das Beinmaß ist nicht die Tischhöhe.</li></ol><p>Zwischen zwei Längen unsicher? Schick uns ein Foto mit Sitz-, Wunsch- und Montagehöhe. Bei Bodenmontage steht die Höhe fest; der zusätzliche Verstellbereich des Zwei-Griff-Beins bringt dort keinen Vorteil.</p>"
+        }
+      ]
+    },
+    {
+      "type": "step_arm",
+      "name": "03 · Arm",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Übertitel",
+          "default": "MEHR BEWEGUNGSFREIHEIT"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Hol den Tisch zu dir."
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Einleitung",
+          "default": "Zieh den Tisch zum Essen an dich heran und schwenke ihn anschließend aus dem Weg. Arm und Tischplatte lassen sich unabhängig voneinander drehen – soweit dein Ausbau Platz lässt."
+        },
+        {
+          "type": "text",
+          "id": "faq_0_title",
+          "label": "Detailfrage 1",
+          "default": "Brauche ich wirklich einen zweiten Arm?"
+        },
+        {
+          "type": "richtext",
+          "id": "faq_0_text",
+          "label": "Antwort 1",
+          "default": "<p>Stell dir den Weg der Tischplatte vom Montagepunkt zu deinem Sitzplatz vor. Reicht ein Arm, bleibt dein Aufbau kompakter. Mit der Verlängerung kannst du den Tisch um einen weiteren Drehpunkt führen – nützlich für eine breitere Sitzgruppe oder wechselnde Sitzpositionen.</p><p>Die Armlängen ergeben nicht automatisch denselben geraden Abstand: Winkel, Gelenke, Tischplatte und Möbel begrenzen deinen tatsächlichen Schwenkbereich.</p>"
+        }
+      ]
+    },
+    {
+      "type": "step_under",
+      "name": "04 · Untertischplatte",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Übertitel",
+          "default": "DIE VERBINDUNG ZUR PLATTE"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Wie schnell brauchst du wieder Platz?"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Einleitung",
+          "default": "Drehen kannst du deine Tischplatte mit beiden Varianten. Entscheide hier, ob du sie zusätzlich wegklappen möchtest – etwa für einen freien Durchgang."
+        },
+        {
+          "type": "richtext",
+          "id": "advice_0",
+          "label": "Einbau-Beratung",
+          "default": "<p><strong>Erst den Durchgang prüfen, dann die Klappfunktion wählen.</strong></p><p>Wenn einfaches Wegschwenken bei dir reicht, brauchst du die Klappachse nicht. Ist der Gang eng oder bleibt die Tischplatte beim Einsteigen im Weg, kann das Abklappen bequemer sein. Lass neben der Platte genug Raum für die 90°-Bewegung.</p><p>Zum Verstauen lässt sich das Lagun auch ohne Werkzeug zerlegen. Vor der Fahrt baust du das Gestell gemäß Anleitung ab und sicherst es – eine abgeklappte Platte ist keine Transportsicherung.</p>"
+        }
+      ]
+    },
+    {
+      "type": "step_table",
+      "name": "05 · Tischplatte",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Übertitel",
+          "default": "DEIN PERSÖNLICHES FINISH"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Welches Material möchtest du für deine Tischplatte?"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Einleitung",
+          "default": "Dein Lagun ist das Untergestell. Darauf montierst du eine Tischplatte – erst zusammen wird daraus dein Tisch. Vergleiche hier Materialien und Dekore oder verwende deine eigene Tischplatte."
+        },
+        {
+          "type": "text",
+          "id": "faq_0_title",
+          "label": "Detailfrage 1",
+          "default": "Was ist bei meiner eigenen Tischplatte wichtig?"
+        },
+        {
+          "type": "richtext",
+          "id": "faq_0_text",
+          "label": "Antwort 1",
+          "default": "<p>Miss nicht nur die nutzbare Tischfläche, sondern auch den Platz zum Schwenken, Einsteigen und gegebenenfalls Abklappen. Eine leichte Platte lässt sich angenehmer bewegen und belastet den ausgefahrenen Arm weniger.</p><p>Prüfe, ob Material und Plattenstärke die Befestigungsschrauben sicher halten. Wähle die Schraubenlänge so, dass sie oben nicht durchstößt. Halte dich bei Plattengröße und Belastung an die Anleitung deiner Kombination; mit einem zweiten Arm ist eine kleinere, leichtere Platte besonders wichtig.</p>"
+        },
+        {
+          "type": "text",
+          "id": "faq_1_title",
+          "label": "Detailfrage 2",
+          "default": "Damit du lange Freude an deinem Tisch hast"
+        },
+        {
+          "type": "richtext",
+          "id": "faq_1_text",
+          "label": "Antwort 2",
+          "default": "<p>Stelle die Griffe vor der Nutzung fest und prüfe den sicheren Sitz. Nutze den Tisch zum Essen, Lesen oder Arbeiten – nicht zum Abstützen beim Aufstehen. Zum Verstauen löst du die Griffe und zerlegst das Gestell ohne Werkzeug.</p><p><a href=\"https://cdn.shopify.com/s/files/1/0783/6696/6087/files/Manual_Lagun.pdf?v=1711457612\" target=\"_blank\" rel=\"noopener\">Aufbau- und Bedienungsanleitung öffnen ↗</a></p>"
+        }
+      ]
+    },
+    {
+      "type": "gap_guide",
+      "name": "GAP · Freier Schwenkweg",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Kann dein Arm frei an der Wand vorbeischwenken?"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Wann brauche ich den GAP?",
+          "default": "<p>Steht der Arm zu dicht an der Wand, stößt er beim Schwenken an – dein Lagun kann sich nicht mehr frei drehen. Der GAP setzt die komplette Befestigung etwa <strong>25 mm vor die Wand</strong> und gibt dem Arm mehr Bewegungsraum.</p><p>Prüfe den gewünschten Schwenkweg direkt an deinem Einbauplatz: Kommen Arm, Griff oder Tischplatte an Wand, Sitzbank oder Polster? Wenn der zusätzliche Abstand reicht, hilft der GAP.</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "installation",
+          "label": "So wird er eingebaut",
+          "default": "<p><strong>Wand → GAP-Rahmen → Befestigungsplatte → Tischbein.</strong></p><p>Der GAP ist ein offener Rahmen im Format deiner Standard- oder Smart-Platte. Die Befestigungsplatte deckt die offene Mitte vollständig ab. Eingebaut siehst du deshalb den seitlichen Abstand zur Wand, kein offenes Loch.</p><p>Das Bein wird auf die Schwalbenschwanzführung der Befestigungsplatte geschoben und mit dem Klemmgriff festgestellt. Es wird nicht durch den GAP geführt. Standard-GAP und kleiner GAP passen jeweils zu ihrer zugehörigen Platte.</p>"
+        },
+        {
+          "type": "text",
+          "id": "tip",
+          "label": "Entscheidungshilfe",
+          "default": "Arm und Griffe haben genug Platz? Dann brauchst du keinen GAP."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Foto: eingebauter GAP"
+        },
+        {
+          "type": "image_picker",
+          "id": "frame_image",
+          "label": "Foto: offener Rahmen"
+        }
+      ]
+    },
+    {
+      "type": "service_guide",
+      "name": "06 · Anpassungsservice",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Was soll an deinem Lagun anders werden?"
+        },
+        {
+          "type": "richtext",
+          "id": "intro",
+          "label": "Beratung",
+          "default": "<p>Ein Griff stößt in deiner Sitzecke an die Wand? Oder die passende Tischhöhe liegt zwischen zwei Beinlängen? Wir können die Griffe umsetzen und dein Tischbein auf dein Wunschmaß kürzen.</p>"
+        },
+        {
+          "type": "richtext",
+          "id": "examples",
+          "label": "Beispiele",
+          "default": "<ul><li><strong>Enge Ecke:</strong> Der Griff am Arm kollidiert beim Schwenken mit der Wand – du möchtest ihn auf der gegenüberliegenden Seite.</li><li><strong>Schlecht erreichbar:</strong> Du kommst nicht bequem an den Griff am Bein – beschreibe uns die besser zugängliche Position.</li><li><strong>Tisch zu hoch:</strong> Aus einem 500-mm-Bein soll ein Bein mit 450 mm Metalllänge werden: Es werden 50 mm Metall entfernt.</li></ul>"
+        },
+        {
+          "type": "richtext",
+          "id": "measure",
+          "label": "So wird gemessen",
+          "default": "<p>Gib die <strong>fertige Metalllänge</strong> an: vom Metallanfang bis zum Metallende, <strong>ohne den schwarzen Beinbolzen aus Kunststoff</strong>. Schreibe also „450 mm Metalllänge“, wenn diese Länge nach dem Kürzen übrig bleiben soll.</p><p>Mindestens 170 mm Metall müssen stehen bleiben. Miss vor deiner Bestellung nach; die Metalllänge ist nicht die spätere Tischhöhe.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Foto zur Maßberatung"
+        },
+        {
+          "type": "text",
+          "id": "activate_label",
+          "label": "Service auswählen",
+          "default": "Anpassungsservice zu meinem Gestell ergänzen"
+        },
+        {
+          "type": "text",
+          "id": "handles_title",
+          "label": "Frage: Griffe",
+          "default": "Welcher Griff soll umgesetzt werden?"
+        },
+        {
+          "type": "text",
+          "id": "leg_label",
+          "label": "Bein-Griff",
+          "default": "Griff am Tischbein"
+        },
+        {
+          "type": "text",
+          "id": "arm_label",
+          "label": "Arm-Griff",
+          "default": "Griff am Schwenkarm"
+        },
+        {
+          "type": "text",
+          "id": "notes_label",
+          "label": "Frage: Einbau",
+          "default": "Welcher Griff soll umgedreht werden? Was ist bei deinem Einbau wichtig?"
+        },
+        {
+          "type": "text",
+          "id": "shorten_label",
+          "label": "Frage: Kürzen",
+          "default": "Soll dein Tischbein gekürzt werden?"
+        },
+        {
+          "type": "text",
+          "id": "length_label",
+          "label": "Frage: Endmaß",
+          "default": "Wie lang soll das Metall nach dem Kürzen sein?"
+        }
+      ]
+    },
+    {
+      "type": "color_guide",
+      "name": "Farbe · Vergleich",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Silber oder Schwarz?"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Einleitung",
+          "default": "Schau auf deine Möbel, Griffe und Beschläge: Welcher Look fügt sich bei dir am besten ein?"
+        },
+        {
+          "type": "text",
+          "id": "silver",
+          "label": "Silber-Beratung",
+          "default": "Passt zu hellen Möbeln und silbernen Beschlägen."
+        },
+        {
+          "type": "text",
+          "id": "black",
+          "label": "Schwarz-Beratung",
+          "default": "Greift dunkle Griffe und schwarze Details auf."
+        }
+      ]
+    },
+    {
+      "type": "extension_guide",
+      "name": "Arm · Verlängerung",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Überschrift",
+          "default": "Einen weiteren Sitzplatz erreichen"
+        },
+        {
+          "type": "textarea",
+          "id": "intro",
+          "label": "Nutzen",
+          "default": "Die Armverlängerung ist kein Teleskopteil: Ein zweiter Schwenkarm wird mit einem Verbindungsbolzen am 400-mm-Basisarm befestigt. So entsteht ein zweiter Drehpunkt, mit dem du die Tischplatte zu weiteren Sitzpositionen führen kannst. Der tatsächliche Bewegungsradius hängt von Gelenkwinkeln, Möbeln und Tischplatte ab."
+        },
+        {
+          "type": "textarea",
+          "id": "advice",
+          "label": "Beratung",
+          "default": "Wir empfehlen die 300-mm-Verlängerung. Beim zweiten 400-mm-Arm wird die Hebelwirkung erheblich größer und die Tragkraft sinkt deutlich. Verwende 400 mm deshalb nur, wenn du die zusätzliche Reichweite wirklich brauchst, und wähle immer eine kleine, leichte Tischplatte."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 40
+}
+{% endschema %}

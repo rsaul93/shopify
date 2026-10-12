@@ -1,0 +1,382 @@
+{% doc %}
+  @prompt
+    Create a product badge overlay for collection product grid thumbnails that displays a label from the product metafield custom.label. The badge should only appear when the metafield has data. The badge should be positioned on top of the product image thumbnail and be visually prominent with customizable styling options for background color, text color, and position., this should mimic the display of a product grid on a collection page closely. only addition is the badges
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-product-card-{{ ai_gen_id }} {
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .ai-product-card-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .ai-product-card-image-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ settings.card_corner_radius }}px;
+    border: {{ settings.card_border_thickness }}px solid rgba(var(--color-foreground), 0.1);
+    background-color: rgb(var(--color-background));
+  }
+
+  .ai-product-card-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .ai-product-card-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(var(--color-foreground), 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-product-card-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 200px;
+    opacity: 0.3;
+  }
+
+  .ai-product-badge-{{ ai_gen_id }} {
+    position: absolute;
+    z-index: 10;
+    padding: {{ block.settings.badge_padding_vertical }}px {{ block.settings.badge_padding_horizontal }}px;
+    background-color: {{ block.settings.badge_background_color }};
+    color: {{ block.settings.badge_text_color }};
+    font-size: {{ block.settings.badge_font_size }}px;
+    font-weight: {{ block.settings.badge_font_weight }};
+    border-radius: {{ block.settings.badge_border_radius }}px;
+    text-transform: {{ block.settings.badge_text_transform }};
+    white-space: nowrap;
+    line-height: 1.2;
+    {% if block.settings.badge_position == 'top-left' %}
+      top: {{ block.settings.badge_offset }}px;
+      left: {{ block.settings.badge_offset }}px;
+    {% elsif block.settings.badge_position == 'top-right' %}
+      top: {{ block.settings.badge_offset }}px;
+      right: {{ block.settings.badge_offset }}px;
+    {% elsif block.settings.badge_position == 'bottom-left' %}
+      bottom: {{ block.settings.badge_offset }}px;
+      left: {{ block.settings.badge_offset }}px;
+    {% elsif block.settings.badge_position == 'bottom-right' %}
+      bottom: {{ block.settings.badge_offset }}px;
+      right: {{ block.settings.badge_offset }}px;
+    {% endif %}
+  }
+
+  .ai-product-card-info-{{ ai_gen_id }} {
+    padding: 12px 0;
+    text-align: {{ settings.card_text_alignment }};
+  }
+
+  .ai-product-card-vendor-{{ ai_gen_id }} {
+    font-size: 12px;
+    color: rgba(var(--color-foreground), 0.7);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .ai-product-card-title-{{ ai_gen_id }} {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(var(--color-foreground));
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+
+  .ai-product-card-title-link-{{ ai_gen_id }} {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ai-product-card-title-link-{{ ai_gen_id }}:hover {
+    color: rgba(var(--color-foreground), 0.7);
+  }
+
+  .ai-product-card-price-{{ ai_gen_id }} {
+    font-size: 14px;
+    color: rgb(var(--color-foreground));
+    display: flex;
+    gap: 8px;
+    {% if settings.card_text_alignment == 'center' %}
+      justify-content: center;
+    {% elsif settings.card_text_alignment == 'end' %}
+      justify-content: flex-end;
+    {% else %}
+      justify-content: flex-start;
+    {% endif %}
+  }
+
+  .ai-product-card-price-regular-{{ ai_gen_id }} {
+    font-weight: 600;
+  }
+
+  .ai-product-card-price-compare-{{ ai_gen_id }} {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  .ai-product-card-price-sale-{{ ai_gen_id }} {
+    color: {{ settings.colors_sale_price }};
+    font-weight: 600;
+  }
+{% endstyle %}
+
+<div
+  class="ai-product-card-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-product-card-wrapper-{{ ai_gen_id }}">
+    <div class="ai-product-card-image-wrapper-{{ ai_gen_id }}">
+      {% if product.featured_image %}
+        <img
+          src="{{ product.featured_image | image_url: width: 800 }}"
+          alt="{{ product.featured_image.alt | escape }}"
+          loading="lazy"
+          width="{{ product.featured_image.width }}"
+          height="{{ product.featured_image.height }}"
+          class="ai-product-card-image-{{ ai_gen_id }}"
+        >
+      {% else %}
+        <div class="ai-product-card-placeholder-{{ ai_gen_id }}">
+          {{ 'product-1' | placeholder_svg_tag }}
+        </div>
+      {% endif %}
+
+      {% if product.metafields.custom.label != blank %}
+        <div class="ai-product-badge-{{ ai_gen_id }}">
+          {{ product.metafields.custom.label }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-product-card-info-{{ ai_gen_id }}">
+      {% if block.settings.show_vendor and product.vendor != blank %}
+        <div class="ai-product-card-vendor-{{ ai_gen_id }}">
+          {{ product.vendor }}
+        </div>
+      {% endif %}
+
+      <h3 class="ai-product-card-title-{{ ai_gen_id }}">
+        <a
+          href="{{ product.url }}"
+          class="ai-product-card-title-link-{{ ai_gen_id }}"
+        >
+          {{ product.title }}
+        </a>
+      </h3>
+
+      {% if block.settings.show_price %}
+        <div class="ai-product-card-price-{{ ai_gen_id }}">
+          {% if product.compare_at_price > product.price %}
+            <span class="ai-product-card-price-compare-{{ ai_gen_id }}">
+              {{ product.compare_at_price | money }}
+            </span>
+            <span class="ai-product-card-price-sale-{{ ai_gen_id }}">
+              {{ product.price | money }}
+            </span>
+          {% else %}
+            <span class="ai-product-card-price-regular-{{ ai_gen_id }}">
+              {{ product.price | money }}
+            </span>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product badge overlay",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product card"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "label": "Show vendor",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show price",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Badge style"
+    },
+    {
+      "type": "select",
+      "id": "badge_position",
+      "label": "Position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "value": "bottom-left",
+          "label": "Bottom left"
+        },
+        {
+          "value": "bottom-right",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "top-left"
+    },
+    {
+      "type": "range",
+      "id": "badge_offset",
+      "label": "Offset from edge",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "badge_background_color",
+      "label": "Background color",
+      "default": "#092c91"
+    },
+    {
+      "type": "color",
+      "id": "badge_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "badge_font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "badge_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "select",
+      "id": "badge_text_transform",
+      "label": "Text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "badge_padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 4,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "badge_padding_vertical",
+      "label": "Vertical padding",
+      "min": 2,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "badge_border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product badge overlay"
+    }
+  ]
+}
+{% endschema %}

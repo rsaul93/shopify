@@ -1,0 +1,37 @@
+{% render 'cp-lagun-pdp-experience', product: product, module: 'details', scene: 'paper', module_section: section %}
+
+{% schema %}
+{
+  "name": "Lagun – Produktdetails",
+  "tag": "section",
+  "class": "cp-lagun-editor-section",
+  "settings": [
+    { "type": "header", "content": "Material" },
+    { "type": "text", "id": "material_kicker", "label": "Übertitel", "default": "Leicht unterwegs. Lange nutzbar." },
+    { "type": "text", "id": "material_heading", "label": "Überschrift", "default": "Wenig Gewicht, viel Alltagstauglichkeit." },
+    { "type": "textarea", "id": "material_body", "label": "Text", "default": "Hochwertiges Aluminium hält das System leicht und stabil. Dank der modularen Bauweise kannst du einzelne Teile ersetzen, statt das komplette Tischgestell auszutauschen." },
+    { "type": "text", "id": "fact_1_value", "label": "Fakt 1: Wert", "default": "Silber" },
+    { "type": "text", "id": "fact_1_label", "label": "Fakt 1: Bezeichnung", "default": "Farbe" },
+    { "type": "text", "id": "fact_2_value", "label": "Fakt 2: Wert", "default": "400 mm" },
+    { "type": "text", "id": "fact_2_label", "label": "Fakt 2: Bezeichnung", "default": "Armlänge" },
+    { "type": "text", "id": "fact_3_value", "label": "Fakt 3: Wert", "default": "Modular" },
+    { "type": "text", "id": "fact_3_label", "label": "Fakt 3: Bezeichnung", "default": "Bauweise" },
+    { "type": "header", "content": "Montage" },
+    { "type": "text", "id": "mounting_kicker", "label": "Übertitel", "default": "In drei Schritten startklar" },
+    { "type": "text", "id": "mounting_heading", "label": "Überschrift", "default": "Vom Einbau bis zur ersten Tischrunde." },
+    { "type": "textarea", "id": "mounting_body", "label": "Text", "default": "Plane zuerst Höhe und Bewegungsraum, befestige die Wandplatte an einem tragfähigen Untergrund und setze anschließend Bein und Arme ein. Detaillierte Hinweise und den Lieferumfang findest du oben in den Produktdetails." }
+  ],
+  "blocks": [
+    {
+      "type": "mounting_step",
+      "name": "Montageschritt",
+      "limit": 3,
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Titel", "default": "Platz festlegen" },
+        { "type": "text", "id": "body", "label": "Kurztext", "default": "Wähle Tischhöhe und Bewegungsraum passend zu deinem Sitzplatz." }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Lagun – Produktdetails", "blocks": [{ "type": "mounting_step" }, { "type": "mounting_step" }, { "type": "mounting_step" }] }]
+}
+{% endschema %}

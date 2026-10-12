@@ -1,0 +1,682 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_H9JJg4": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumbs ul {list-style-type: none; padding: 0; margin: 0;}",
+        ".breadcrumbs li {display: inline;}",
+        ".breadcrumbs li a {color: #333; text-decoration: none;}",
+        ".breadcrumbs li a:hover {text-decoration: underline;}",
+        ".breadcrumbs li:not(:last-child) {margin: 0 7px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"breadcrumbs\">\n  <ul>\n    <li><a href=\"/\">Home</a> ›</li>\n    {% if collection %}\n      <li><a href=\"{{ collection.url }}\">{{ collection.title }}</a> ›</li>\n    {% endif %}\n    {% if product.collections.size > 0 %}\n      {% assign category = product.collections.first %}\n      {% if category %}\n        <li><a href=\"{{ category.url }}\">{{ category.title }}</a> ›</li>\n      {% endif %}\n    {% endif %}\n\n    {% for collection in product.collections %}\n      {% if forloop.last %}\n        <li><a href=\"{{ collection.url }}\">{{ collection.title }}</a> ›</li>\n      {% endif %}\n    {% endfor %}\n\n    <li>{{ product.title }}</li>\n  </ul>\n</div>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "empty-space": {
+      "type": "empty-space",
+      "settings": {
+        "desktop_height": 8,
+        "mobile_height": 16
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_liquid_iEJ7Kk": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- assign in_lager = false -%}\n{%- for col in product.collections -%}\n  {%- if col.handle == 'lagerraumung' -%}\n    {%- assign in_lager = true -%}\n    {%- break -%}\n  {%- endif -%}\n{%- endfor -%}\n\n{%- if in_lager -%}\n    <span class=\"badge‐lagerräumung\">LAGERRÄUMUNG!</span> <br>Dieses Produkt verlässt unser Sortiment und ist daher stark reduziert. Jetzt zuschlagen - was weg ist, ist weg.  <br> <br>\n{%- endif -%}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": true,
+            "price_size": "medium"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_liquid_RAdM3V": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_size": "large",
+            "show_badges": true,
+            "sale_badge_basis": "auto"
+          }
+        },
+        "custom_liquid_bKGNXM": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% assign today_date = \"now\" | date: \"%Y-%m-%d\" %}\n{% assign target_date = \"2024-11-20\" %}\n\n{% if product.id == 8924748939591 and today_date >= target_date %}\n  \n  <p class=\"qeedosummersale\"><b>BLACK FRIDAY 2024:</b> Unser Super Deal für das Lagun Tischgestell in der Black Edition zum Black Friday. 40€ Rabatt auf das schwarze Tischgestell und 10% Rabatt auf schwarzes Zubehör. <br><b>Rabatte werden automatisch im Warenkorb angewandt.</b><br> <a href=\"/pages/black-friday-2024-bei-camping-pioneers\">Alle Details & Bedingungen hier</a></p>\n{% endif %}"
+          }
+        },
+        "custom_liquid_qxWg83": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% assign collection_handle = \"qeedo-summer-sale-2024\" %}\n\n\n\n{% assign product_in_collection = false %}\n\n{% for collection in product.collections %}\n  {% if collection.handle == collection_handle %}\n    {% assign product_in_collection = true %}\n  {% endif %}\n{% endfor %}\n\n{% if product_in_collection %}\n{% if product.selected_or_first_available_variant %}\n  {% assign variant_price = product.selected_or_first_available_variant.price %}\n  {% assign discount = variant_price | times: 0.15 %}\n  {% assign discount_formatted = discount | money %}\n\n{% else %}\n  {% assign product_price = product.price %}\n  {% assign discount = product_price | times: 0.15 %}\n  {% assign discount_formatted = discount | money %}\n\n{% endif %}\n\n  <p class=\"qeedosummersale\"><b>qeedo Summer Sale 2024:</b> Jetzt bis zu <b>{{discount_formatted}}</b> auf diesen Artikel sparen! Beim Kauf eines qeedo Zubehörprodukts gibt es einen Rabatt von 10%. Ab dem zweiten Zubehörprodukt erhältst du einen Rabatt von 15% auf jedes qeedo Zubehörprodukt.  <a href=\"/collections/qeedo-summer-sale-2024\">Mehr Details & Bedingungen hier</a></p>\n{% endif %}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "swatch_source": "variant",
+            "swatch_type": "round",
+            "enable_swatch_unavailable_click": true,
+            "size_chart": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "collapsible_tab-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Beschreibung",
+            "content": "{{ product.description }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": true
+          }
+        },
+        "collapsible_tab_cQ4HDe": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Eigenschaften",
+            "content": "{{ product.metafields.custom.produkteigenschaften_richtext | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_pB6XnB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Hinweise",
+            "content": "{{ product.metafields.custom.hinweise | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Lieferumfang",
+            "content": "{{ product.metafields.custom.lieferumfang | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_RjCNM7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Herstellerinformationen",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{% if product.metafields.custom.gpsr_data.value.name.value \n  and product.metafields.custom.gpsr_data.value.e_mail.value \n  and product.metafields.custom.gpsr_data.value.adresse %}\n\n<p>\n  <strong>Herstellerangaben gemäß EU-Produktsicherheitsverordnung (GPSR):</strong><br><br>\n\n  <span style=\"display:block; margin-left:16px;\">\n    <strong>Hersteller:</strong> {{ product.metafields.custom.gpsr_data.value.name.value }}<br>\n    <strong>Kontakt:</strong> {{ product.metafields.custom.gpsr_data.value.e_mail.value }}<br>\n    <strong>Adresse:</strong> {{ product.metafields.custom.gpsr_data.value.adresse | strip_html | replace: '\\n', ', ' }}\n  </span>\n</p>\n\n{% endif %}",
+            "keep_open": false
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 20,
+            "show_inventory_transfer": true,
+            "color_scheme": "accent-6"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_liquid_BjzJRj": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<ul class=\"list list-payment\" role=\"list\"><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" x=\"0\" y=\"0\" width=\"38\" height=\"24\" viewBox=\"0 0 165.521 105.965\" xml:space=\"preserve\" aria-labelledby=\"pi-apple_pay\"><title id=\"pi-apple_pay\">Apple Pay</title><path fill=\"#000\" d=\"M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z\"></path><path fill=\"#FFF\" d=\"M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875\"></path><g><g><path fill=\"#000\" d=\"M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858\"></path><path fill=\"#000\" d=\"M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048\"></path></g><g><path fill=\"#000\" d=\"M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z\"></path><path fill=\"#000\" d=\"M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z\"></path><path fill=\"#000\" d=\"M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z\"></path></g></g></svg>\n\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" xmlns=\"http://www.w3.org/2000/svg\" aria-labelledby=\"pi-bancontact\" role=\"img\" viewBox=\"0 0 38 24\" width=\"38\" height=\"24\"><title id=\"pi-bancontact\">Bancontact</title><path fill=\"#000\" opacity=\".07\" d=\"M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z\"></path><path fill=\"#fff\" d=\"M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32\"></path><path d=\"M4.703 3.077h28.594c.139 0 .276.023.405.068.128.045.244.11.343.194a.9.9 0 0 1 .229.29c.053.107.08.223.08.34V20.03a.829.829 0 0 1-.31.631 1.164 1.164 0 0 1-.747.262H4.703a1.23 1.23 0 0 1-.405-.068 1.09 1.09 0 0 1-.343-.194.9.9 0 0 1-.229-.29.773.773 0 0 1-.08-.34V3.97c0-.118.027-.234.08-.342a.899.899 0 0 1 .23-.29c.098-.082.214-.148.342-.193a1.23 1.23 0 0 1 .405-.068Z\" fill=\"#fff\"></path><path d=\"M6.38 18.562v-3.077h1.125c.818 0 1.344.259 1.344.795 0 .304-.167.515-.401.638.338.132.536.387.536.734 0 .62-.536.91-1.37.91H6.38Zm.724-1.798h.537c.328 0 .468-.136.468-.387 0-.268-.255-.356-.599-.356h-.406v.743Zm0 1.262h.448c.438 0 .693-.093.693-.383 0-.286-.219-.404-.63-.404h-.51v.787Zm3.284.589c-.713 0-1.073-.295-1.073-.69 0-.436.422-.69 1.047-.695.156.002.31.014.464.035v-.105c0-.269-.183-.396-.531-.396a2.128 2.128 0 0 0-.688.105l-.13-.474a3.01 3.01 0 0 1 .9-.132c.767 0 1.147.343 1.147.936v1.222c-.214.093-.615.194-1.136.194Zm.438-.497v-.47a2.06 2.06 0 0 0-.37-.036c-.24 0-.427.08-.427.286 0 .185.156.281.432.281a.947.947 0 0 0 .365-.061Zm1.204.444v-2.106a3.699 3.699 0 0 1 1.177-.193c.76 0 1.198.316 1.198.9v1.399h-.719v-1.354c0-.303-.167-.444-.484-.444a1.267 1.267 0 0 0-.459.079v1.719h-.713Zm4.886-2.167-.135.479a1.834 1.834 0 0 0-.588-.11c-.422 0-.652.25-.652.664 0 .453.24.685.688.685.2-.004.397-.043.578-.114l.115.488a2.035 2.035 0 0 1-.75.128c-.865 0-1.365-.453-1.365-1.17 0-.712.495-1.182 1.323-1.182.27-.001.538.043.787.132Zm1.553 2.22c-.802 0-1.302-.47-1.302-1.178 0-.704.5-1.174 1.302-1.174.807 0 1.297.47 1.297 1.173 0 .708-.49 1.179-1.297 1.179Zm0-.502c.37 0 .563-.259.563-.677 0-.413-.193-.672-.563-.672-.364 0-.568.26-.568.672 0 .418.204.677.568.677Zm1.713.449v-2.106a3.699 3.699 0 0 1 1.177-.193c.76 0 1.198.316 1.198.9v1.399h-.719v-1.354c0-.303-.166-.444-.484-.444a1.268 1.268 0 0 0-.459.079v1.719h-.713Zm3.996.053c-.62 0-.938-.286-.938-.866v-.95h-.354v-.484h.355v-.488l.718-.03v.518h.578v.484h-.578v.94c0 .256.125.374.36.374.093 0 .185-.008.276-.026l.036.488c-.149.028-.3.041-.453.04Zm1.814 0c-.713 0-1.073-.295-1.073-.69 0-.436.422-.69 1.047-.695.155.002.31.014.464.035v-.105c0-.269-.183-.396-.532-.396a2.128 2.128 0 0 0-.687.105l-.13-.474a3.01 3.01 0 0 1 .9-.132c.766 0 1.146.343 1.146.936v1.222c-.213.093-.614.194-1.135.194Zm.438-.497v-.47a2.06 2.06 0 0 0-.37-.036c-.24 0-.427.08-.427.286 0 .185.156.281.432.281a.946.946 0 0 0 .365-.061Zm3.157-1.723-.136.479a1.834 1.834 0 0 0-.588-.11c-.422 0-.651.25-.651.664 0 .453.24.685.687.685.2-.004.397-.043.578-.114l.115.488a2.035 2.035 0 0 1-.75.128c-.865 0-1.365-.453-1.365-1.17 0-.712.495-1.182 1.323-1.182.27-.001.538.043.787.132Zm1.58 2.22c-.62 0-.938-.286-.938-.866v-.95h-.354v-.484h.354v-.488l.72-.03v.518h.577v.484h-.578v.94c0 .256.125.374.36.374.092 0 .185-.008.276-.026l.036.488c-.149.028-.3.041-.453.04Z\" fill=\"#1E3764\"></path><path d=\"M11.394 13.946c3.803 0 5.705-2.14 7.606-4.28H6.38v4.28h5.014Z\" fill=\"url(#pi-bancontact-a)\"></path><path d=\"M26.607 5.385c-3.804 0-5.705 2.14-7.607 4.28h12.62v-4.28h-5.013Z\" fill=\"url(#pi-bancontact-b)\"></path><defs><linearGradient id=\"pi-bancontact-a\" x1=\"8.933\" y1=\"12.003\" x2=\"17.734\" y2=\"8.13\" gradientUnits=\"userSpaceOnUse\"><stop stop-color=\"#005AB9\"></stop><stop offset=\"1\" stop-color=\"#1E3764\"></stop></linearGradient><linearGradient id=\"pi-bancontact-b\" x1=\"19.764\" y1=\"10.037\" x2=\"29.171\" y2=\"6.235\" gradientUnits=\"userSpaceOnUse\"><stop stop-color=\"#FBA900\"></stop><stop offset=\"1\" stop-color=\"#FFD800\"></stop></linearGradient></defs></svg>\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" viewBox=\"0 0 38 24\" width=\"38\" height=\"24\" aria-labelledby=\"pi-eps\"> <title id=\"pi-eps\">EPS</title> <path d=\"M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z\" opacity=\".07\"></path> <path d=\"M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32\" fill=\"#fff\"></path> <path fill=\"#71706f\" d=\"M27.745 12.32h-2.322a.465.465 0 01-.468-.464c0-.258.21-.484.468-.484h3.535V9.628h-3.535c-1.233 0-2.237 1.006-2.237 2.236s1.004 2.237 2.237 2.237h2.29c.259 0 .469.205.469.462 0 .258-.21.448-.468.448h-4.912c-.417.796-.822 1.478-1.645 1.82h6.588c1.213-.018 2.205-1.045 2.205-2.265 0-1.22-.992-2.23-2.205-2.247z\"></path> <path fill=\"#71706f\" d=\"M18.845 9.628c-1.968 0-3.571 1.612-3.571 3.594V20.697h1.782V16.83h1.785c1.968 0 3.565-1.634 3.565-3.615 0-1.98-1.593-3.587-3.561-3.587zm0 5.383h-1.79v-1.796c0-1.003.8-1.82 1.79-1.82s1.796.817 1.796 1.82a1.79 1.79 0 01-1.796 1.796z\"></path> <path fill=\"#c8036f\" d=\"M9.634 16.83c-1.685 0-3.101-1.2-3.484-2.768 0 0-.111-.519-.111-.86 0-.342.105-.865.105-.865a3.594 3.594 0 013.482-2.73c1.978 0 3.6 1.608 3.6 3.586v.87H7.973c.31.607.938.948 1.662.948h4.724l.006-5.13c0-.764-.625-1.39-1.39-1.39H6.278c-.764 0-1.39.607-1.39 1.371v6.696c0 .765.626 1.41 1.39 1.41h6.696c.686 0 1.259-.493 1.37-1.138h-4.71z\"></path> <path fill=\"#c8036f\" d=\"M9.626 11.31c-.72 0-1.348.44-1.66 1.01h3.32c-.312-.57-.939-1.01-1.66-1.01zM12.659 6.314c0-1.635-1.359-2.96-3.034-2.96-1.647 0-2.987 1.282-3.031 2.879v.91c0 .106.086.21.195.21h1.116c.11 0 .205-.104.205-.21v-.83c0-.815.68-1.48 1.516-1.48.837 0 1.516.665 1.516 1.48v.83c0 .106.089.21.198.21h1.116c.109 0 .202-.104.202-.21v-.83z\"></path> <g> <path fill=\"#71706f\" d=\"M20.843 19.142l-.16.914c-.082.462-.384.673-.794.673-.347 0-.616-.226-.538-.672l.161-.914h.249l-.161.913c-.05.285.078.447.32.447.249 0 .462-.148.513-.446l.161-.915h.25zm-.977-.285c0 .076.059.112.121.112.079 0 .164-.057.164-.162 0-.074-.05-.112-.114-.112-.08 0-.17.052-.17.162zm.538-.003c0 .079.06.114.126.114.07 0 .161-.056.161-.159 0-.074-.054-.114-.114-.114-.08 0-.173.052-.173.16zM21.445 19.142l-.112.632a.57.57 0 01.423-.199c.278 0 .47.163.47.465 0 .428-.297.686-.678.686-.148 0-.274-.055-.35-.194l-.042.165h-.218l.276-1.554h.23zm-.175 1.066c-.01.183.11.302.282.302a.444.444 0 00.441-.423c.01-.186-.111-.296-.28-.296a.45.45 0 00-.443.417zM22.68 20.242c-.01.151.11.275.311.275.112 0 .26-.044.34-.12l.126.145a.782.782 0 01-.508.188c-.319 0-.505-.19-.505-.482 0-.388.305-.677.695-.677.356 0 .558.216.437.67h-.896zm.708-.19c.018-.19-.094-.267-.28-.267-.168 0-.323.078-.39.267h.67zM24.193 19.597l-.012.146a.414.414 0 01.357-.17c.107 0 .204.039.255.095l-.139.201a.244.244 0 00-.183-.067.346.346 0 00-.352.3l-.106.595h-.23l.195-1.1h.215zM25.905 19.597l.116.87.422-.87h.257l-.578 1.1h-.27l-.11-.725-.178.36-.192.365h-.27l-.194-1.1h.26l.114.87.424-.87h.199zM26.997 20.242c-.01.151.11.275.311.275.112 0 .26-.044.34-.12l.126.145a.782.782 0 01-.508.188c-.319 0-.505-.19-.505-.482 0-.388.305-.677.695-.677.356 0 .558.216.437.67h-.896zm.708-.19c.018-.19-.094-.267-.28-.267-.168 0-.323.078-.39.267h.67zM28.525 19.597l-.194 1.1H28.1l.195-1.1h.23zm-.204-.3c0 .08.059.12.121.12.09 0 .173-.059.173-.168a.113.113 0 00-.117-.117c-.082 0-.177.054-.177.166zM29.55 19.87c-.072-.081-.164-.104-.274-.104-.152 0-.26.052-.26.148 0 .08.088.114.218.126.201.017.459.085.405.37-.038.205-.244.326-.53.326-.18 0-.353-.04-.47-.204l.151-.163c.083.114.229.161.358.164.11 0 .24-.04.26-.144.02-.098-.067-.136-.228-.152-.188-.018-.394-.087-.394-.296 0-.276.298-.372.522-.372.17 0 .295.038.399.148l-.157.152zM30.278 19.597l-.105.592c-.034.189.051.319.244.319.181 0 .336-.15.367-.334l.101-.576h.231l-.195 1.099h-.208l.015-.16a.573.573 0 01-.412.182c-.271 0-.432-.194-.374-.528l.105-.593h.231zM32.13 20.697l.105-.589c.033-.19-.032-.317-.242-.317-.184 0-.339.148-.37.33l-.1.576h-.232l.195-1.1h.21l-.015.16a.583.583 0 01.403-.176c.27 0 .444.187.384.525l-.106.59h-.233zM32.912 20.848c-.016.152.1.213.296.213.17 0 .354-.095.396-.337l.034-.189c-.1.142-.285.197-.421.197-.283 0-.48-.168-.48-.473 0-.434.323-.685.688-.685.155 0 .294.073.343.199l.038-.176h.224l-.193 1.132c-.071.42-.383.55-.668.55-.34 0-.528-.165-.481-.43h.224zm.065-.633c0 .188.123.302.3.302.477 0 .605-.733.128-.733a.42.42 0 00-.428.43z\"></path></g></svg>\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" viewBox=\"0 0 38 24\" width=\"38\" height=\"24\" aria-labelledby=\"pi-google_pay\"><title id=\"pi-google_pay\">Google Pay</title><path d=\"M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z\" fill=\"#000\" opacity=\".07\"></path><path d=\"M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32\" fill=\"#FFF\"></path><path d=\"M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006zm0-3.732v2.788h1.698c.377.012.741-.135 1.005-.404a1.391 1.391 0 0 0-1.005-2.354l-1.698-.03zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.931 2.17 2.17 0 0 1-1.496-.533 1.667 1.667 0 0 1-.613-1.324 1.606 1.606 0 0 1 .613-1.336 2.746 2.746 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.331v-.208a1.134 1.134 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.488 2.488 0 0 1 2.182-1.06zM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.047 2.047 0 0 0-1.324-.374 1.716 1.716 0 0 0-1.03.294.883.883 0 0 0-.392.73zm9.286-3.75l-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097z\" fill=\"#5F6368\"></path><path d=\"M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.096 2.096 0 0 1-.9 1.373v1.134h1.464a4.433 4.433 0 0 0 1.348-3.334z\" fill=\"#4285F4\"></path><path d=\"M9.629 15.721a4.352 4.352 0 0 0 3.01-1.097l-1.466-1.14a2.752 2.752 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507z\" fill=\"#34A853\"></path><path d=\"M7.079 12.05a2.709 2.709 0 0 1 0-1.735v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17z\" fill=\"#FBBC04\"></path><path d=\"M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875z\" fill=\"#EA4335\"></path></svg>\n\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" viewBox=\"0 0 38 24\" width=\"38\" height=\"24\" aria-labelledby=\"pi-ideal\"><title id=\"pi-ideal\">iDEAL</title><g clip-path=\"url(#pi-clip0_19918_2)\"><path fill=\"#000\" opacity=\".07\" d=\"M35 0H3C1.3 0 0 1.3 0 3V21C0 22.7 1.4 24 3 24H35C36.7 24 38 22.7 38 21V3C38 1.3 36.6 0 35 0Z\"></path><path fill=\"#fff\" d=\"M35 1C36.1 1 37 1.9 37 3V21C37 22.1 36.1 23 35 23H3C1.9 23 1 22.1 1 21V3C1 1.9 1.9 1 3 1H35Z\"></path><g clip-path=\"url(#pi-clip1_19918_2)\"><path d=\"M11.5286 5.35759V18.694H19.6782C25.0542 18.694 27.3855 15.8216 27.3855 12.0125C27.3855 8.21854 25.0542 5.35742 19.6782 5.35742L11.5286 5.35759Z\" fill=\"white\"></path><path d=\"M19.7305 5.06445C26.8437 5.06445 27.9055 9.4164 27.9055 12.0098C27.9055 16.5096 25.0025 18.9876 19.7305 18.9876H11.0118V5.06462L19.7305 5.06445ZM11.6983 5.71921V18.3329H19.7305C24.5809 18.3329 27.2195 16.1772 27.2195 12.0098C27.2195 7.72736 24.3592 5.71921 19.7305 5.71921H11.6983Z\" fill=\"black\"></path><path d=\"M12.7759 17.3045H15.3474V12.9372H12.7757M15.6593 10.7375C15.6593 11.5796 14.944 12.2625 14.0613 12.2625C13.179 12.2625 12.4633 11.5796 12.4633 10.7375C12.4633 10.3332 12.6316 9.94537 12.9313 9.65945C13.231 9.37352 13.6374 9.21289 14.0613 9.21289C14.4851 9.21289 14.8915 9.37352 15.1912 9.65945C15.4909 9.94537 15.6593 10.3332 15.6593 10.7375Z\" fill=\"black\"></path><path d=\"M20.7043 11.4505V12.1573H18.8719V9.32029H20.6452V10.0266H19.6127V10.3556H20.5892V11.0616H19.6127V11.4503L20.7043 11.4505ZM21.06 12.158L21.9569 9.31944H23.0109L23.9075 12.158H23.1362L22.9683 11.6089H21.9995L21.8308 12.158H21.06ZM22.216 10.9028H22.7518L22.5067 10.1007H22.4623L22.216 10.9028ZM24.2797 9.31944H25.0205V11.4505H26.1178C25.8168 7.58344 22.6283 6.74805 19.7312 6.74805H16.6418V9.32063H17.0989C17.9328 9.32063 18.4505 9.86014 18.4505 10.7275C18.4505 11.6228 17.9449 12.157 17.0989 12.157H16.6422V17.3052H19.7308C24.4416 17.3052 26.081 15.218 26.1389 12.1572H24.2797V9.31944ZM16.6415 10.0273V11.4505H17.0992C17.4165 11.4505 17.7094 11.3631 17.7094 10.7278C17.7094 10.1067 17.3834 10.0271 17.0992 10.0271L16.6415 10.0273Z\" fill=\"#CC0066\"></path></g></g><defs><clipPath id=\"pi-clip0_19918_2\"><rect width=\"38\" height=\"24\" fill=\"white\"></rect></clipPath><clipPath id=\"pi-clip1_19918_2\"><rect width=\"17\" height=\"14\" fill=\"white\" transform=\"translate(11 5)\"></rect></clipPath></defs></svg>\n\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" width=\"38\" height=\"24\" viewBox=\"0 0 38 24\" aria-labelledby=\"pi-klarna\" fill=\"none\"><title id=\"pi-klarna\">Klarna</title><rect width=\"38\" height=\"24\" rx=\"2\" fill=\"#FFA8CD\"></rect><rect x=\".5\" y=\".5\" width=\"37\" height=\"23\" rx=\"1.5\" stroke=\"#000\" stroke-opacity=\".07\"></rect><path d=\"M30.62 14.755c-.662 0-1.179-.554-1.179-1.226 0-.673.517-1.226 1.18-1.226.663 0 1.18.553 1.18 1.226 0 .672-.517 1.226-1.18 1.226zm-.33 1.295c.565 0 1.286-.217 1.686-1.068l.04.02c-.176.465-.176.742-.176.81v.11h1.423v-4.786H31.84v.109c0 .069 0 .346.175.81l-.039.02c-.4-.85-1.121-1.068-1.687-1.068-1.355 0-2.31 1.088-2.31 2.522 0 1.433.955 2.521 2.31 2.521zm-4.788-5.043c-.643 0-1.15.228-1.56 1.068l-.039-.02c.175-.464.175-.741.175-.81v-.11h-1.423v4.787h1.462V13.4c0-.662.38-1.078.995-1.078.614 0 .917.356.917 1.068v2.532h1.462v-3.046c0-1.088-.838-1.869-1.989-1.869zm-4.963 1.068l-.039-.02c.176-.464.176-.741.176-.81v-.11h-1.424v4.787h1.463l.01-2.304c0-.673.35-1.078.926-1.078.156 0 .282.02.429.06v-1.464c-.644-.139-1.22.109-1.54.94zm-4.65 2.68c-.664 0-1.18-.554-1.18-1.226 0-.673.516-1.226 1.18-1.226.662 0 1.179.553 1.179 1.226 0 .672-.517 1.226-1.18 1.226zm-.332 1.295c.565 0 1.287-.217 1.687-1.068l.038.02c-.175.465-.175.742-.175.81v.11h1.424v-4.786h-1.424v.109c0 .069 0 .346.175.81l-.038.02c-.4-.85-1.122-1.068-1.687-1.068-1.356 0-2.311 1.088-2.311 2.522 0 1.433.955 2.521 2.31 2.521zm-4.349-.128h1.463V9h-1.463v6.922zM10.136 9H8.644c0 1.236-.751 2.343-1.892 3.134l-.448.317V9h-1.55v6.922h1.55V12.49l2.564 3.43h1.892L8.293 12.64c1.121-.82 1.852-2.096 1.843-3.639z\" fill=\"#0B051D\"></path></svg>\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" viewBox=\"0 0 38 24\" xmlns=\"http://www.w3.org/2000/svg\" width=\"38\" height=\"24\" role=\"img\" aria-labelledby=\"pi-maestro\"><title id=\"pi-maestro\">Maestro</title><path opacity=\".07\" d=\"M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z\"></path><path fill=\"#fff\" d=\"M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32\"></path><circle fill=\"#EB001B\" cx=\"15\" cy=\"12\" r=\"7\"></circle><circle fill=\"#00A2E5\" cx=\"23\" cy=\"12\" r=\"7\"></circle><path fill=\"#7375CF\" d=\"M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z\"></path></svg>\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" viewBox=\"0 0 38 24\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" width=\"38\" height=\"24\" aria-labelledby=\"pi-master\"><title id=\"pi-master\">Mastercard</title><path opacity=\".07\" d=\"M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z\"></path><path fill=\"#fff\" d=\"M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32\"></path><circle fill=\"#EB001B\" cx=\"15\" cy=\"12\" r=\"7\"></circle><circle fill=\"#F79E1B\" cx=\"23\" cy=\"12\" r=\"7\"></circle><path fill=\"#FF5F00\" d=\"M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z\"></path></svg>\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" viewBox=\"0 0 38 24\" xmlns=\"http://www.w3.org/2000/svg\" width=\"38\" height=\"24\" role=\"img\" aria-labelledby=\"pi-paypal\"><title id=\"pi-paypal\">PayPal</title><path opacity=\".07\" d=\"M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z\"></path><path fill=\"#fff\" d=\"M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32\"></path><path fill=\"#003087\" d=\"M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z\"></path><path fill=\"#3086C8\" d=\"M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z\"></path><path fill=\"#012169\" d=\"M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z\"></path></svg>\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" viewBox=\"0 0 38 24\" width=\"38\" height=\"24\" aria-labelledby=\"pi-shopify_pay\"><title id=\"pi-shopify_pay\">Shop Pay</title><path opacity=\".07\" d=\"M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z\" fill=\"#000\"></path><path d=\"M35.889 0C37.05 0 38 .982 38 2.182v19.636c0 1.2-.95 2.182-2.111 2.182H2.11C.95 24 0 23.018 0 21.818V2.182C0 .982.95 0 2.111 0H35.89z\" fill=\"#5A31F4\"></path><path d=\"M9.35 11.368c-1.017-.223-1.47-.31-1.47-.705 0-.372.306-.558.92-.558.54 0 .934.238 1.225.704a.079.079 0 00.104.03l1.146-.584a.082.082 0 00.032-.114c-.475-.831-1.353-1.286-2.51-1.286-1.52 0-2.464.755-2.464 1.956 0 1.275 1.15 1.597 2.17 1.82 1.02.222 1.474.31 1.474.705 0 .396-.332.582-.993.582-.612 0-1.065-.282-1.34-.83a.08.08 0 00-.107-.035l-1.143.57a.083.083 0 00-.036.111c.454.92 1.384 1.437 2.627 1.437 1.583 0 2.539-.742 2.539-1.98s-1.155-1.598-2.173-1.82v-.003zM15.49 8.855c-.65 0-1.224.232-1.636.646a.04.04 0 01-.069-.03v-2.64a.08.08 0 00-.08-.081H12.27a.08.08 0 00-.08.082v8.194a.08.08 0 00.08.082h1.433a.08.08 0 00.081-.082v-3.594c0-.695.528-1.227 1.239-1.227.71 0 1.226.521 1.226 1.227v3.594a.08.08 0 00.081.082h1.433a.08.08 0 00.081-.082v-3.594c0-1.51-.981-2.577-2.355-2.577zM20.753 8.62c-.778 0-1.507.24-2.03.588a.082.082 0 00-.027.109l.632 1.088a.08.08 0 00.11.03 2.5 2.5 0 011.318-.366c1.25 0 2.17.891 2.17 2.068 0 1.003-.736 1.745-1.669 1.745-.76 0-1.288-.446-1.288-1.077 0-.361.152-.657.548-.866a.08.08 0 00.032-.113l-.596-1.018a.08.08 0 00-.098-.035c-.799.299-1.359 1.018-1.359 1.984 0 1.46 1.152 2.55 2.76 2.55 1.877 0 3.227-1.313 3.227-3.195 0-2.018-1.57-3.492-3.73-3.492zM28.675 8.843c-.724 0-1.373.27-1.845.746-.026.027-.069.007-.069-.029v-.572a.08.08 0 00-.08-.082h-1.397a.08.08 0 00-.08.082v8.182a.08.08 0 00.08.081h1.433a.08.08 0 00.081-.081v-2.683c0-.036.043-.054.069-.03a2.6 2.6 0 001.808.7c1.682 0 2.993-1.373 2.993-3.157s-1.313-3.157-2.993-3.157zm-.271 4.929c-.956 0-1.681-.768-1.681-1.783s.723-1.783 1.681-1.783c.958 0 1.68.755 1.68 1.783 0 1.027-.713 1.783-1.681 1.783h.001z\" fill=\"#fff\"></path></svg>\n\n                </li><li class=\"list-payment__item\">\n                  <svg class=\"icon icon--full-color\" viewBox=\"0 0 38 24\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" width=\"38\" height=\"24\" aria-labelledby=\"pi-visa\"><title id=\"pi-visa\">Visa</title><path opacity=\".07\" d=\"M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z\"></path><path fill=\"#fff\" d=\"M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32\"></path><path d=\"M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z\" fill=\"#142688\"></path></svg>\n                </li></ul>"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Teilen"
+          }
+        },
+        "sticky_cart": {
+          "type": "sticky_cart",
+          "settings": {
+            "show_quantity_selector": false
+          }
+        }
+      },
+      "block_order": [
+        "custom_liquid_iEJ7Kk",
+        "title",
+        "rating",
+        "custom_liquid_RAdM3V",
+        "price",
+        "custom_liquid_bKGNXM",
+        "custom_liquid_qxWg83",
+        "variant_picker",
+        "description",
+        "collapsible_tab-0",
+        "collapsible_tab_cQ4HDe",
+        "collapsible_tab_pB6XnB",
+        "collapsible_tab-1",
+        "collapsible_tab_RjCNM7",
+        "inventory_status",
+        "buy_buttons",
+        "custom_liquid_BjzJRj",
+        "share",
+        "sticky_cart"
+      ],
+      "custom_css": [
+        ".badge‐lagerräumung {display: inline-block; background-color: #e53935; /* kräftiges Rot */ color: #fff; /* weißer Text */ font-weight: 600; /* etwas stärker als normal */ text-transform: uppercase; /* alles groß */ line-height: 1; padding: 0.25em 0.75em; /* oben/unten, links/rechts */ border-radius: 0.375rem; /* abgerundete Ecken */ letter-spacing: 0.05em; /* etwas mehr Abstand */ vertical-align: middle; /* in einer Zeile mit Text korrekt ausrichten */}",
+        ".badge‐lagerräumung:hover {background-color: #d32f2f; cursor: default;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "media_size": "small",
+        "gallery_layout": "thumbnail_slider",
+        "image_ratio": "adapt",
+        "show_featured_media": false,
+        "show_thumbnails": true,
+        "hide_variants": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "mobile_image_ratio": "adapt_first",
+        "show_mobile_thumbnails": true,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "collapsible_content_DetPwP": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_JjPRcA": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Für wen ist dieser Anhänger gedacht?",
+            "row_content": "<p>Für alle, die einen <strong>kleinen, soliden und funktionellen Anhänger</strong> suchen – alltagstauglich, leicht zu handhaben.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PNwcjj": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Was bringt ein Stützrad – und was kostet es bei euch?",
+            "row_content": "<p>Ein Stützrad macht <strong>An- und Abkuppeln</strong> sowie <strong>Rangieren von Hand</strong> deutlich einfacher und kontrollierter (besonders auf Hof/Einfahrt/Stellplatz).<br/><br/>Bei CampingPioneers: <strong>optional +30 €</strong> (Variante „mit Stützrad“).</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_qGH6Um": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Welche Plane passt auf dieses Modell?",
+            "row_content": "<p>Für <strong>GN102</strong> sind u. a. gelistet:</p><ul><li><strong>Flachplane (650 g/m²)</strong> <br/></li><li><strong>Hochplane 800 mm (650 g/m²) + Spriegel 800 mm</strong> </li></ul>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WDbVbE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Kann ich ihn mit unterschiedlichen zGG zulassen?",
+            "row_content": "<p>Ja – Neptun nennt Registrierungsvarianten mit <strong>DMC/zGG 350 bis 750 kg</strong> (abhängig von der jeweiligen Registrierung/Zulassung).</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_ECVF7b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Welche Innenmaße hat die Ladefläche?",
+            "row_content": "<p><strong>202 × 114 × 30 cm (L × B × H)</strong> Innenabmessungen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_MeLC7h": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie viel darf ich laden?",
+            "row_content": "<p><strong>Zulässiges Gesamtgewicht:</strong> 750 kg </p><p><br/><strong>Nutzlast:</strong> 624 kg </p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_cfhG8D": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ist der Anhänger gebremst?",
+            "row_content": "<p>Nein, dieses Modell ist <strong>ungebremst</strong>. </p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_JjPRcA",
+        "collapsible_row_PNwcjj",
+        "collapsible_row_qGH6Um",
+        "collapsible_row_WDbVbE",
+        "collapsible_row_ECVF7b",
+        "collapsible_row_MeLC7h",
+        "collapsible_row_cfhG8D"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "open_first_collapsible_row": false,
+        "narrow": false,
+        "show_divider": false,
+        "heading": "Häufig gestellte Fragen",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "enable_faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "guarantees_UhrKqX": {
+      "type": "guarantees",
+      "blocks": {
+        "guarantee_TPbGMJ": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "shield",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "24 Monate Garantie",
+            "title_size": "h3",
+            "text": "<p>Ab Erstzulassung</p>"
+          }
+        },
+        "guarantee_QRUHcQ": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "return",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Online-Bestellung möglich",
+            "title_size": "h3",
+            "text": "<p>Papiere werden vorab zugeschickt, Anhänger muss vor Ort abgeholt werden</p>"
+          }
+        },
+        "guarantee_kaTYrR": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "headset",
+            "icon_size": "medium",
+            "custom_icon": "",
+            "title": "Persönliche Beratung",
+            "title_size": "h3",
+            "text": "<p>Wir sind  für Sie da!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "guarantee_TPbGMJ",
+        "guarantee_QRUHcQ",
+        "guarantee_kaTYrR"
+      ],
+      "name": "t:sections.guarantees.presets.name",
+      "settings": {
+        "layout": "default",
+        "column_alignment": "center",
+        "horizontal_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "columns_desktop": 3,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "use_custom_colors": false,
+        "colors_icon": "#ffffff",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_PyjFd6": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/1.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": true,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "ambient",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "map_GxiGdM": {
+      "type": "map",
+      "blocks": {
+        "heading_cKhUP8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Abholung und Beratung",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "subheading_8yDEYH": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Add a tagline",
+            "subheading_size": "h5",
+            "secondary_color": true
+          }
+        },
+        "text_qU3NHQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Direkt im Showroom in Bad Berka bei Weimar kaufen und abholen!</p><p>+49 3643 8780470 (Mo–Fr, 9:00–17:00 Uhr)<br>info@camping-pioneers.de<br>Am Schloßberg 3, 99438 Bad Berka</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_RAEEbn": {
+          "type": "button",
+          "settings": {
+            "button_label": "Google Maps öffnen",
+            "button_link": "https://www.google.com/maps/place/Am+Schlo%C3%9Fberg+3,+99438+Bad+Berka,+Deutschland/@50.9105381,11.2869052,17z/data=!4m15!1m8!3m7!1s0x47a405be1b3c2445:0xbceb3b02ae57d478!2sAm+Schlo%C3%9Fberg+3,+99438+Bad+Berka,+Deutschland!3b1!8m2!3d50.9098786!4d11.2880425!16s%2Fg%2F11gx_dblgr!3m5!1s0x47a405bdf5c5cb23:0x65deefe2c7792cbf!8m2!3d50.9111773!4d11.2888778!16s%2Fg%2F11b8v6j6cl?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoKLDEwMDc5MjA3MUgBUAM%3D",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cKhUP8",
+        "subheading_8yDEYH",
+        "text_qU3NHQ",
+        "button_RAEEbn"
+      ],
+      "name": "t:sections.map.presets.name",
+      "settings": {
+        "map_address": "Am Schloßberg 3, 99438 Bad Berka",
+        "map_api_key": "",
+        "map_zoom": 14,
+        "map_style": "night",
+        "image": "shopify://shop_images/Bildschirmfoto_2026-01-26_um_18.43.41.png",
+        "image_position": "center center",
+        "text_box_position": "middle-left",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "full_width": false,
+        "show_divider": false,
+        "mobile_text_box_position": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "400px",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#1a1b18",
+        "colors_overlay": "#ffffff",
+        "gradient_overlay": "",
+        "colors_overlay_opacity": 96,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_zPgcih": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/2.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": true,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "ambient",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image_banner_BPcf4a": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/3.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": true,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "ambient",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image_banner_G43AXB": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/4.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": true,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "ambient",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image_banner_4i4Tz3": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/5_b28218ab-c9c4-4c77-bb78-0410ce2ca3ce.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": true,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "ambient",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image_banner_dKRnGg": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/6.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "adapt",
+        "show_text_box": true,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "ambient",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#ffffff",
+        "colors_overlay_opacity": 0,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_list_limit": 4,
+        "show_divider": false,
+        "heading": "Das könnte dir auch gefallen",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1703271860ee895e98": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "show_divider": false,
+        "heading": "Kürzlich angesehene Produkte",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_H9JJg4",
+    "empty-space",
+    "main",
+    "collapsible_content_DetPwP",
+    "guarantees_UhrKqX",
+    "image_banner_PyjFd6",
+    "map_GxiGdM",
+    "image_banner_zPgcih",
+    "image_banner_BPcf4a",
+    "image_banner_G43AXB",
+    "image_banner_4i4Tz3",
+    "image_banner_dKRnGg",
+    "product-recommendations",
+    "1703271860ee895e98",
+    "recently-viewed-products"
+  ]
+}

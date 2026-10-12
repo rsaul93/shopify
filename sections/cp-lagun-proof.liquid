@@ -1,0 +1,38 @@
+{% render 'cp-lagun-pdp-experience', product: product, module: 'proof', scene: 'paper', module_section: section %}
+
+{% schema %}
+{
+  "name": "Lagun – Markenwerte",
+  "tag": "section",
+  "class": "cp-lagun-editor-section",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Übertitel", "default": "Mehr Platz auf kleinem Raum" },
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Dein Tisch ist da, wenn du ihn brauchst – und aus dem Weg, wenn nicht." },
+    { "type": "textarea", "id": "body", "label": "Text", "default": "Zieh die Tischplatte zum Essen, Arbeiten oder Spielen einfach zu dir. Danach schwenkst du sie zur Seite und hast sofort wieder freien Durchgang im Camper." }
+  ],
+  "blocks": [
+    {
+      "type": "fact",
+      "name": "Markenwert",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "default": "shield",
+          "options": [
+            { "value": "shield", "label": "Qualität" },
+            { "value": "award", "label": "Erfahrung" },
+            { "value": "leaf", "label": "Nachhaltigkeit" },
+            { "value": "return", "label": "Rückgabe" }
+          ]
+        },
+        { "type": "text", "id": "heading", "label": "Titel", "default": "Qualität aus Europa" },
+        { "type": "text", "id": "body", "label": "Kurztext", "default": "leichtes, langlebiges Aluminium" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Lagun – Markenwerte", "blocks": [{ "type": "fact" }, { "type": "fact" }, { "type": "fact" }, { "type": "fact" }] }]
+}
+{% endschema %}

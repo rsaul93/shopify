@@ -1,0 +1,182 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_ddG4c6": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xLnR46": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zahlung und Versand",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_rJ7hBh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hier erhältst du alle Details bezüglich der Zahlungsabwicklung und des Versands. Falls du zusätzliche Fragen hast, zögere nicht, uns über den Chat zu kontaktieren oder das <a href=\"\/pages\/contact\" title=\"Kontakt\">Kontaktformular<\/a> zu nutzen.<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xLnR46",
+        "text_rJ7hBh"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/rosebox-BFdSCxmqvYc-unsplash.jpg",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "450px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_BzX7PT": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_n6Wdd3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Versand",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "text_hPi37g": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Es gelten folgende Bedingungen: <\/strong><\/p><p>Die Lieferung erfolgt im Inland (Deutschland) und in die nachstehenden Länder: Österreich, Schweiz, Frankreich, Dänemark, Schweden, Italien, Spanien, Niederlande, Ungarn, Tschechische Republik, Polen, Norwegen, Slowenien, Rumänien, Malta, Luxemburg, Zypern, Kroatien, Estland, Irland, Griechenland, Belgien, Finnland, Litauen, Lettland, Portugal, Bulgarien, Slowakei.<\/p><p><\/p><p>Versandkosten (inklusive gesetzlicher Mehrwertsteuer) für Lieferungen im Inland (Deutschland): 6,00 EUR. <\/p><p>Ab einem Warenwert von 200,00 EUR entfallen die Versandkosten im Paketversand innerhalb Deutschlands.<\/p><p>Unsere Dachzelte werden per Spedition an dich geliefert. Daher fällt hier ein Speditionszuschlag von 130€ an. Ab 3500€ entfällt der Speditionszuschlag komplett.<\/p><p>Bitte gib unbedingt eine Telefonnummer an, da wir sonst die Bestellung nicht an die Spedition übergeben können. Anderenfalls kann sich die Auslieferung verzögern.<\/p><p><\/p><p>Je nach Gewicht oder Form sind Abweichungen möglich. Den genauen Versand entnehmen Sie bitte der Berechnung im Checkout.<\/p><p><\/p><p><strong>Lieferfristen<\/strong> <\/p><p>Soweit im jeweiligen Angebot keine andere Frist angegeben ist, erfolgt die Lieferung der Ware im Inland (Deutschland) innerhalb von 1 - 3 Tagen, bei Auslandslieferungen innerhalb von 8 - 12 Tagen nach Vertragsschluss (bei vereinbarter Vorauszahlung nach dem Zeitpunkt Ihrer Zahlungsanweisung). <\/p><p>Speditionslieferungen werden in der Regel innerhalb von 5-9 Werktagen ausgeführt. Die Spedition wird sich mit Ihnen in Verbindung setzen.<\/p><p>Beachten Sie, dass an Sonn- und Feiertagen keine Zustellung erfolgt. Haben Sie Artikel mit unterschiedlichen Lieferzeiten bestellt, versenden wir die Ware in einer gemeinsamen Sendung, sofern wir keine abweichenden Vereinbarungen mit Ihnen getroffen haben.Die Lieferzeit bestimmt sich in diesem Fall nach dem Artikel mit der längsten Lieferzeit den Sie bestellt haben. Es kann vorkommen dass wir Artikel einzeln verschicken. <\/p><p><\/p><p><\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_style": "marker"
+          }
+        },
+        "heading_FgBPFH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Zahlungsmöglichkeiten",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Uzakbj": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Vorkasse per Überweisung<\/li><li>Zahlung per Nachnahme<\/li><li>Zahlung per SEPA-Basislastschrift<\/li><li>Zahlung per Kreditkarte<\/li><li>Zahlung per PayPal<\/li><li>Zahlung per PayPal Express<\/li><li>Zahlung per PayPal (Kreditkarte, Lastschrift, ggf. Rechnung)- Zahlung per Sofortüberweisung (über Klarna)<\/li><li>Zahlung per Rechnung (über Klarna)<\/li><li>Zahlung per Ratenkauf (über Klarna)- Zahlung per Lastschrift (über Klarna)<\/li><li>Zahlung per Kreditkarte (über Klarna)<\/li><li>Zahlung per amazon payments<\/li><li>Ivy GmbH via Stripe<\/li><\/ul><p><\/p><p><strong>Weitere Einzelheiten zur Zahlung<\/strong><\/p><p>Bei Zahlung per SEPA-Basislastschrift oder per SEPA-Firmenlastschrift ermächtigen Sie uns durch Erteilung eines entsprechenden SEPA-Mandats, den Rechnungsbetrag vom angegebenen Konto einzuziehen. Sie erhalten eine Vorabankündigung (Pre-Notification) mindestens 5 Tage vor dem Datum des Lastschrifteinzugs. Beachten Sie bitte, dass Sie verpflichtet sind für die ausreichende Deckung des Kontos zum angekündigten Datum zu sorgen. Bei Zahlung per Kreditkarte erfolgt die Belastung Ihres Kreditkartenkontos mit Vertragsschluss.<\/p><p><br\/><strong>Unsere Bankverbindung:<\/strong><\/p><p>Camping-Pioneers<br\/>Sparkasse Schweinfurt-Haßberge<br\/>DE58 7935 0101 0009 3204 66<br\/>BYLADEM1KSW<br\/><br\/>Bei Fragen finden Sie unsere Kontaktdaten im Impressum.<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_n6Wdd3",
+        "text_hPi37g",
+        "heading_FgBPFH",
+        "text_Uzakbj"
+      ],
+      "custom_css": [],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "logo_list_yRxQXb": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_agdU8n": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/DHL.png",
+            "link": ""
+          }
+        },
+        "logo_fwCFXi": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gls.png",
+            "link": ""
+          }
+        },
+        "logo_nVTLii": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Logo_IDS-f8cfa43a.svg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_agdU8n",
+        "logo_fwCFXi",
+        "logo_nVTLii"
+      ],
+      "settings": {
+        "opacity": 100,
+        "show_divider": false,
+        "heading": "Unsere Versandpartner",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_tag": "h3",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_with_text_ddG4c6",
+    "main",
+    "rich_text_BzX7PT",
+    "logo_list_yRxQXb"
+  ]
+}

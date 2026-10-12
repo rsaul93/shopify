@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_phVKap": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_LdQCdd": {
+          "type": "heading",
+          "settings": {
+            "heading": "404 - Seite nicht gefunden",
+            "heading_size": "h2",
+            "heading_tag": "h1"
+          }
+        },
+        "text_dBrneN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sorry, da bist du in einer Sackgasse gelandet - diese Seite gibt es nicht (mehr).<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_cTHwx6": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Ab zur Startseite",
+            "button_link": "shopify:\/\/collections\/frontpage",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_LdQCdd",
+        "text_dBrneN",
+        "button_cTHwx6"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/jonathan-farber-QgeIMfZJgFs-unsplash.jpg",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-404",
+      "disabled": true,
+      "settings": {}
+    },
+    "featured_collection_TixiR7": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "lagun-tischgestell",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Beliebte Produkte",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_with_text_phVKap",
+    "main",
+    "featured_collection_TixiR7"
+  ]
+}

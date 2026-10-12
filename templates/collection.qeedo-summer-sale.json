@@ -1,0 +1,314 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "custom_css": [],
+      "settings": {
+        "heading_size": "h1",
+        "show_description": true,
+        "show_image": true,
+        "apply_overlay": true,
+        "image_position": "center center",
+        "image_ratio": "400px",
+        "text_alignment": "center",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "250px",
+        "show_text_below": false,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "countdown_timer_4byBnn": {
+      "type": "countdown-timer",
+      "blocks": {
+        "heading_nmFkBG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bis zu 30% auf Dachzelte und bis zu 15% auf Zubehör",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "subheading_7byjQy": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Jetzt im großen qeedo Summer Sale zuschlagen und bis zu 30% sparen",
+            "subheading_size": "h4",
+            "secondary_color": false
+          }
+        },
+        "countdown_Lbf9PJ": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "date": "07-15-2024",
+            "number_size": "large",
+            "message": "<p>Aktion abgelaufen.<\/p>",
+            "message_size": "typeset2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nmFkBG",
+        "subheading_7byjQy",
+        "countdown_Lbf9PJ"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Z3773_6.jpg",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "enlarge_content": false,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "use_custom_colors": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#f3f3f3",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_ypPCPC": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rLRHXP": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bis zu 15% auf Zubehör",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_MUatFR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alle Zubehörartikel auf dieser Seite sind bis zu 15% reduziert!<br\/><br\/>So funktionierts:<\/p><ul><li>10% auf einen Zubehör-Artikel<\/li><li>15% auf zwei Zubehör-Artikel oder mehr<\/li><\/ul><p>Der Rabatt wird automatisch im Warenkorb angewandt!<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_rLRHXP",
+        "text_MUatFR"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/15off-de.png",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "adapt",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_YqYHnr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_k9M4Am": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bis zu 30% auf Dachzelte",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_xixyYp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alle verfügbaren Dachzelte sind im großen Summer Sale reduziert.<br\/><br\/>So funktionierts:<\/p><ul><li>Bis zu 30% Rabatt auf Dachzelte<\/li><li>Die Dachzelte sind bereits im Preis reduziert. <\/li><\/ul><p>z.B. das Freedom Compact 1+ für 1.199 statt 1.699€! <\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_iYEP9J": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Zu den Dachzelten",
+            "button_link": "shopify:\/\/collections\/dachzelte",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_k9M4Am",
+        "text_xixyYp",
+        "button_iYEP9J"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/30off-de.png",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "adapt",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "subs": {
+      "type": "main-collection-subs",
+      "disabled": true,
+      "settings": {
+        "menu": "",
+        "per_row": 5,
+        "columns_mobile": "1",
+        "horizontal_on_mobile": true,
+        "grid_image": "product",
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "apply_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        ".badge--onsale {display: none;}"
+      ],
+      "settings": {
+        "products_per_row": 4,
+        "rows_per_page": 3,
+        "columns_mobile": "2",
+        "pagination": "paginated",
+        "enable_sticky_facet": true,
+        "enable_sorting": true,
+        "enable_viewing": true,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_filtering_color_swatches": false,
+        "filtering_color_swatches_add_label": false,
+        "filtering_max_items": 10,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "rich_text_iENXRY": {
+      "type": "rich-text",
+      "blocks": {
+        "text_3X7T7r": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Alle Artikel auf dieser Aktionsseite sind rabattberechtigt für bis zu 15% Rabatt im Rahmen der Zubehöraktion. Der Rabatt wird im Warenkorb automatisch berechnet und gilt nicht auf Versandkosten. Bei einem Zubehörartikel gibt es 10% Rabatt, bei zwei Zubehörartikeln sind es 15% Rabatt. Diese Aktion ist nicht mit weiteren Rabattaktionen kombinierbar.<\/p><p>Aktion kann jederzeit ohne Vorankündigung beendet werden. Bei Rücksendung einzelner Produkte einer Bestellung kann der Rabatt reduziert werden, also bspw. wenn die Regeln für 15% Rabatt nicht mehr gegeben sind. <\/p>",
+            "text_size": "typeset",
+            "secondary_color": true,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "text_3X7T7r"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "show_divider": true,
+        "heading": "Kürzlich angesehene Produkte",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "countdown_timer_4byBnn",
+    "image_with_text_ypPCPC",
+    "image_with_text_YqYHnr",
+    "subs",
+    "product-grid",
+    "rich_text_iENXRY",
+    "recently-viewed"
+  ]
+}

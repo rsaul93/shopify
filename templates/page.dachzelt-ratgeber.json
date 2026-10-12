@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_qMAPw9": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_XG73iz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dachzelte erfreuen sich immer größerer Beliebtheit unter Outdoor-Enthusiasten und Abenteurern. Sie bieten eine flexible und komfortable Übernachtungsmöglichkeit auf Reisen, ohne auf die Nähe zur Natur verzichten zu müssen. Hier ist ein umfassender Überblick darüber, wann und wie Dachzelte verwendet werden können und was bei der Montage zu beachten ist.",
+            "heading_size": "h2",
+            "heading_tag": "p"
+          }
+        },
+        "text_YtDY7e": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Wann kann ein Dachzelt verwendet werden?<\/strong><\/p><p>Dachzelte sind vielseitig einsetzbar und ideal für:<\/p><p><strong>Campingreisen:<\/strong> Ideal für spontane Wochenendausflüge oder ausgedehnte Roadtrips. Sie bieten die Freiheit, überall dort zu campen, wo das Fahrzeug sicher geparkt werden kann.<\/p><p><strong>Festivalbesuche:<\/strong> Ein Dachzelt bietet eine komfortable Schlafmöglichkeit direkt vor Ort, abseits von überfüllten und lauten Zeltplätzen.<\/p><p><strong>Abenteuerreisen:<\/strong> Besonders nützlich für Offroad-Abenteuer oder in entlegenen Gebieten, wo traditionelle Unterkünfte schwer zu finden sind.<\/p><p><strong>Familienausflüge:<\/strong> Dachzelte bieten ausreichend Platz und sind oft bequemer und sicherer als Bodenzelte, besonders bei schlechtem Wetter.<\/p><p><strong><br\/><br\/>Welches Dachzelt passt auf mein Auto?<\/strong><\/p><p>Die Auswahl des richtigen Dachzelts hängt von verschiedenen Faktoren ab:<\/p><p><strong>Dachlast des Fahrzeugs:<\/strong> Die dynamische Dachlast (maximale Last während der Fahrt) und die statische Dachlast (maximale Last im Stillstand) müssen beachtet werden. Diese Werte sind in der Regel in den Fahrzeughandbüchern zu finden.<\/p><p><strong>Größe des Fahrzeugs:<\/strong> Das Zelt sollte nicht über die Grenzen des Dachs hinausragen, um Stabilität und Sicherheit zu gewährleisten.<\/p><p><strong>Dachträger:<\/strong> Ein geeigneter Dachträger ist notwendig, um das Zelt sicher zu montieren. Das Zelt kann nicht direkt an der Dachreling befestigt werden, sondern benötigt passende Querträger.<\/p><p><strong><br\/><br\/>Was benötige ich zur Montage meines Dachzeltes?<\/strong><\/p><p>Für die Montage eines Dachzeltes wird in der Regel folgendes benötigt:<\/p><p><strong>Dachträger:<\/strong> Diese müssen robust und für das Gewicht des Zeltes sowie eventueller zusätzlicher Ausrüstung ausgelegt sein.<\/p><p><strong>Montagematerial:<\/strong> Meistens werden alle erforderlichen Teile, einschließlich Schrauben und Halterungen, mit dem Zelt geliefert. Es ist wichtig, die spezifische Bedienungsanleitung des Herstellers zu befolgen.<\/p><p><strong>Werkzeuge:<\/strong> In der Regel sind keine extra Werkzeuge notwendig. Je nach Dachträger und Fahrzeug kann das aber abweichen. Bei der Montage unterstützen wir auch gerne.<strong><br\/><br\/>Wichtige Tipps zur Dachlast<\/strong><\/p><p><strong>Dynamische Dachlast:<\/strong> Dies ist die entscheidende Größe, da sie das maximale Gewicht angibt, das während der Fahrt transportiert werden darf. Diese setzt sich aus dem Gewicht des Dachträgers, des Dachzeltes und aller im Zelt transportierten Gegenstände zusammen.<\/p><p><strong>Statische Dachlast:<\/strong> Diese ist im Stand deutlich höher als die dynamische Dachlast, da das Fahrzeug im Stillstand mehr Gewicht tragen kann. Dennoch sollte man sich immer an die Herstellerangaben halten und das Gesamtgewicht inklusive Insassen und Gepäck beachten.<\/p><p>Dachzelte bieten eine hervorragende Möglichkeit, flexibel und komfortabel zu reisen. Mit der richtigen Vorbereitung und Beachtung der Montageanweisungen steht einem unvergesslichen Abenteuer nichts im Wege. <\/p><p><br\/><\/p><p><strong>Was ist sonst noch zu beachten?<\/strong><\/p><p>Durch das Dachzelt erhöht sich die Gesamthöhe des Fahrzeugs. Für die meisten PKW stellt das im normalen Straßenverkehr kein Problem dar, in Tiefgaragen oder unter Brücken kann es jedoch Schwierigkeiten geben. Außerdem solltest du darauf achten, eine maximale Geschwindigkeit von 120 km\/h nicht zu überschreiten, wenn das Dachzelt montiert ist.<\/p><p>Wenn du ein Dachzelt bei uns mietest, weisen wir dich natürlich ausführlich in den Gebrauch ein. Solltest du dich später für den Kauf eines Dachzeltes entscheiden, erstatten wir dir 50 % der Miete auf den Kaufpreis des von dir gemieteten Zeltes.<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_jQxNnL": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Jetzt alle Dachzelte sehen",
+            "button_link": "shopify:\/\/collections\/dachzelte",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_XG73iz",
+        "text_YtDY7e",
+        "button_jQxNnL"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": true,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_CDhRH9": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "dachzelte",
+        "products_to_show": 12,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Dachzelte entdecken",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": false,
+        "enable_color_swatches": true,
+        "enable_countdown": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_qMAPw9",
+    "featured_collection_CDhRH9"
+  ]
+}

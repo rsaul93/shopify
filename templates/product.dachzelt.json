@@ -1,0 +1,343 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_GyJqHk": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumbs ul {list-style-type: none; padding: 0; margin: 0;}",
+        ".breadcrumbs li {display: inline;}",
+        ".breadcrumbs li a {color: #333; text-decoration: none;}",
+        ".breadcrumbs li a:hover {text-decoration: underline;}",
+        ".breadcrumbs li:not(:last-child) {margin: 0 7px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"breadcrumbs\">\n  <ul>\n    <li><a href=\"\/\">Home<\/a> ›<\/li>\n    {% if collection %}\n      <li><a href=\"{{ collection.url }}\">{{ collection.title }}<\/a> ›<\/li>\n    {% endif %}\n    {% if product.collections.size > 0 %}\n      {% assign category = product.collections.first %}\n      {% if category %}\n        <li><a href=\"{{ category.url }}\">{{ category.title }}<\/a> ›<\/li>\n      {% endif %}\n    {% endif %}\n\n  \n\n    <li>{{ product.title }}<\/li>\n  <\/ul>\n<\/div>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 12,
+        "padding_bottom": 36
+      }
+    },
+    "countdown_timer_4byBnn": {
+      "type": "countdown-timer",
+      "blocks": {
+        "heading_nmFkBG": {
+          "type": "heading",
+          "settings": {
+            "heading": "qeedo Aktion im Juli 2024",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "subheading_7byjQy": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Quick Kimmy S + Buch GRATIS zum Dachzelt - 163,90€ sparen bis zum 15. Juli!",
+            "subheading_size": "h4",
+            "secondary_color": false
+          }
+        },
+        "countdown_Lbf9PJ": {
+          "type": "countdown",
+          "settings": {
+            "date": "07-15-2024",
+            "number_size": "small",
+            "message": "<p>Aktion abgelaufen.<\/p>",
+            "message_size": "typeset2"
+          }
+        },
+        "button_H677mh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Alle Details zur Aktion",
+            "button_link": "shopify:\/\/pages\/qeedo-aktion-im-juli-2024",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nmFkBG",
+        "subheading_7byjQy",
+        "countdown_Lbf9PJ",
+        "button_H677mh"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 120%;}",
+        "p {font-size: 80%; margin-top: 0.5em;}",
+        ".button {margin-top: 10px; margin-bottom: 0; min-height: 1em;}",
+        "countdown-timer {line-height: 1.5em;}",
+        ".image-with-text__content {padding-left: 15px; padding-top: 0; padding-bottom: 0; padding-right: 0;}",
+        ".media--400px {height: 200px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Z3863_7.jpg",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "enlarge_content": true,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "200px",
+        "use_custom_colors": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#f3f3f3",
+        "gradient_background": "",
+        "padding_top": 8,
+        "padding_bottom": 0
+      }
+    },
+    "empty-space": {
+      "type": "empty-space",
+      "disabled": true,
+      "settings": {
+        "desktop_height": 36,
+        "mobile_height": 16
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": true,
+            "price_size": "medium"
+          }
+        },
+        "custom_liquid_39HhKn": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"benefits\" style=\"display: flex; flex-direction: column; gap: 6px; margin-bottom:32px;box-shadow:0 2px 5px #0003;border-radius:4px; padding:12px;background-color:#eee;\">\n  <span class=\"inline-benefit\" style=\"display: flex; align-items: center; gap: 8px;\">\n   <span style=\"font-size: 20px; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;\">⚡<\/span>\n Schneller Auf- & Abbau\n  <\/span>\n  <span class=\"inline-benefit\" style=\"display: flex; align-items: center; gap: 8px;\">\n    <span style=\"font-size: 20px; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;\">🛏️ \n<\/span>\n   Komfortable Liegefläche mit integrierter Matratze\n  <\/span>\n <span class=\"inline-benefit\" style=\"display: flex; align-items: center; gap: 8px;\">\n   <span style=\"font-size: 20px; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;\">🚚<\/span>\n    <b> Nur 130€ Speditionsversand oder kostenlose Selbstabholung – Montage & Einweisung für 80€ buchbar!\n  <\/span>\n \n<\/div>"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_size": "large",
+            "show_badges": true,
+            "sale_badge_basis": "auto"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "swatch_source": "variant",
+            "swatch_type": "round",
+            "enable_swatch_unavailable_click": false,
+            "size_chart": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "collapsible_tab-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Eigenschaften",
+            "content": "{{ product.metafields.custom.produkteigenschaften_richtext | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_pB6XnB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Hinweise",
+            "content": "{{ product.metafields.custom.hinweise | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Lieferumfang",
+            "content": "{{ product.metafields.custom.lieferumfang | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_yzyhGN": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Herstellerinformationen",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{% if product.metafields.custom.gpsr_data.value.name.value \n  and product.metafields.custom.gpsr_data.value.e_mail.value \n  and product.metafields.custom.gpsr_data.value.adresse %}\n\n<p>\n  <strong>Herstellerangaben gemäß EU-Produktsicherheitsverordnung (GPSR):<\/strong><br><br>\n\n  <span style=\"display:block; margin-left:16px;\">\n    <strong>Hersteller:<\/strong> {{ product.metafields.custom.gpsr_data.value.name.value }}<br>\n    <strong>Kontakt:<\/strong> {{ product.metafields.custom.gpsr_data.value.e_mail.value }}<br>\n    <strong>Adresse:<\/strong> {{ product.metafields.custom.gpsr_data.value.adresse | strip_html | replace: '\\n', ', ' }}\n  <\/span>\n<\/p>\n\n{% endif %}",
+            "keep_open": false
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 20,
+            "show_inventory_transfer": true,
+            "color_scheme": "accent-6"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Teilen"
+          }
+        },
+        "sticky_cart": {
+          "type": "sticky_cart",
+          "settings": {
+            "show_quantity_selector": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "custom_liquid_39HhKn",
+        "rating",
+        "price",
+        "variant_picker",
+        "description",
+        "collapsible_tab-0",
+        "collapsible_tab_pB6XnB",
+        "collapsible_tab-1",
+        "collapsible_tab_yzyhGN",
+        "inventory_status",
+        "buy_buttons",
+        "share",
+        "sticky_cart"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "media_size": "small",
+        "gallery_layout": "thumbnail_slider",
+        "image_ratio": "adapt",
+        "show_featured_media": false,
+        "show_thumbnails": true,
+        "hide_variants": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "mobile_image_ratio": "adapt_first",
+        "show_mobile_thumbnails": true,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_list_limit": 4,
+        "show_divider": false,
+        "heading": "Das könnte dir auch gefallen",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1703271860ee895e98": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "show_divider": false,
+        "heading": "Kürzlich angesehene Produkte",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_QUj8eT": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<a style=\"color:black;text-decoration:none\" href=\"https:\/\/www.qeedo.de\" target=\"_blank\" rel=\"noopener noreferrer\">\n  qeedo\n<\/a>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_GyJqHk",
+    "countdown_timer_4byBnn",
+    "empty-space",
+    "main",
+    "product-recommendations",
+    "1703271860ee895e98",
+    "recently-viewed-products",
+    "custom_liquid_QUj8eT"
+  ]
+}

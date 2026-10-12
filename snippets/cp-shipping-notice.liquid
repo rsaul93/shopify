@@ -1,0 +1,30 @@
+{% comment %}Generated from delivery profiles by complete-shipping-clarity-20260903.mjs. Unknown products never get a free-shipping promise. cart_context suppresses the generic product fallback.{% endcomment %}
+{%- assign cp_language = request.locale.iso_code | downcase | slice: 0, 2 -%}
+{%- capture cp_notice_text -%}
+{%- case product.id -%}
+{%- when 10630893273415, 10630894453063, 10731589468487, 10731633443143, 10737467261255, 10741272445255, 10741275951431 -%}
+{%- if cp_language == 'en' -%}Self-pickup only in Bad Berka or Pettstadt, without shipping costs. No delivery.{%- else -%}Nur Selbstabholung in Bad Berka oder Pettstadt ohne Versandkosten. Keine Lieferung.{%- endif -%}
+{%- when 8917776171335, 8919124148551, 8919176479047, 8919203774791, 8919207412039, 8919209607495 -%}
+{%- if cp_language == 'en' -%}Freight shipping within Germany: €99. No free shipping threshold at €200 or €3,500.{%- else -%}Speditionsversand innerhalb Deutschlands: 99 €. Keine Versandkostenbefreiung ab 200 € oder 3.500 €.{%- endif -%}
+{%- when 10214795673927, 10214799933767, 10214803669319 -%}
+{%- if cp_language == 'en' -%}Freight shipping within Germany: €99. No free shipping threshold at €200 or €3,500. Alternatively, free self-pickup in Leipzig – no delivery.{%- else -%}Speditionsversand innerhalb Deutschlands: 99 €. Keine Versandkostenbefreiung ab 200 € oder 3.500 €. Alternativ Selbstabholung in Leipzig ohne Versandkosten – keine Lieferung.{%- endif -%}
+{%- when 9145681117511, 9145683509575, 9145684558151, 9869429637447, 9869436649799, 10656573587783, 10656573882695, 10656574701895, 10656574898503, 10722721956167, 10724378476871, 10726861013319, 10726944276807, 10783441289543, 10783443976519, 10791622443335, 10792134410567 -%}
+{%- if cp_language == 'en' -%}Roof-tent freight shipping within Germany: €130; free from €3,500 order value. Alternatively, free self-pickup in Bad Berka or Pettstadt – no delivery. Pickup with installation and instruction: €80.{%- else -%}Dachzelt-Speditionsversand innerhalb Deutschlands: 130 €; ab 3.500 € Warenwert kostenlos. Alternativ Selbstabholung in Bad Berka oder Pettstadt ohne Versandkosten – keine Lieferung. Abholung mit Montage und Einweisung: 80 €.{%- endif -%}
+{%- when 10647705944391, 10647753916743, 10647797530951, 10647868932423, 10792131494215, 10792135196999, 10792136114503 -%}
+{%- if cp_language == 'en' -%}Roof-tent freight shipping within Germany: €130; free from €3,500 order value. Alternatively, free self-pickup in Bad Berka or Pettstadt – no delivery. Pickup with installation and instruction: €80.{%- else -%}Dachzelt-Speditionsversand innerhalb Deutschlands: 130 €; ab 3.500 € Warenwert kostenlos. Alternativ Selbstabholung in Bad Berka oder Pettstadt ohne Versandkosten – keine Lieferung. Abholung mit Montage und Einweisung: 80 €.{%- endif -%}
+{%- when 10625647411527, 10625657340231, 10625666384199, 10625690599751, 10625700364615, 10625716093255, 10628457038151, 10628466245959, 10628473520455, 10628480926023, 10628484858183, 10628487086407, 10630756565319, 10630766920007, 10630773342535, 10630870303047, 10757928419655 -%}
+{%- if cp_language == 'en' -%}Roof-tent freight shipping within Germany: €130; free from €3,500 order value. Alternatively, free self-pickup in Bad Berka or Pettstadt – no delivery. Pickup with installation and instruction: €80.{%- else -%}Dachzelt-Speditionsversand innerhalb Deutschlands: 130 €; ab 3.500 € Warenwert kostenlos. Alternativ Selbstabholung in Bad Berka oder Pettstadt ohne Versandkosten – keine Lieferung. Abholung mit Montage und Einweisung: 80 €.{%- endif -%}
+{%- when 9193492808007, 10656574406983 -%}
+{%- if cp_language == 'en' -%}GLS shipping within Germany: €16. This shipping charge also applies to orders of €200 or more.{%- else -%}GLS-Versand innerhalb Deutschlands: 16 €. Auch ab 200 € Warenwert fallen diese Versandkosten an.{%- endif -%}
+{%- endcase -%}
+{%- endcapture -%}
+{%- if cp_notice_text != blank -%}
+  <div class="cp-shipping-notice" role="note" style="margin: 0 0 1.2rem; padding: 1rem 1.2rem; border: 1px solid rgba(var(--color-foreground), 0.18); border-radius: 0.6rem; background: rgba(var(--color-foreground), 0.04); line-height: 1.5; text-align: left;">
+    {% if cart_context %}<strong>{{ product.title | escape }}</strong><br>{% endif %}
+    <strong>{{ cp_notice_text }}</strong><br>
+    {% if cp_language == 'en' %}These are the options for Germany. Other destinations and mixed carts may have different or additional shipping charges.{% else %}Diese Angaben gelten für Deutschland. Für andere Lieferländer und gemischte Warenkörbe können andere oder zusätzliche Versandkosten gelten.{% endif %}
+    <a class="link underlined-link" href="{{ pages['zahlung-und-versand-1'].url }}">{% if cp_language == 'en' %}Shipping costs by destination{% else %}Versandkosten nach Lieferland{% endif %}</a>
+  </div>
+{%- elsif cart_context != true -%}
+  <p class="cp-shipping-notice">{% if cp_language == 'en' %}Shipping costs depend on the item, destination and shipping method.{% else %}Die Versandkosten hängen von Artikel, Lieferland und Versandart ab.{% endif %} <a class="link underlined-link" href="{{ pages['zahlung-und-versand-1'].url }}">{% if cp_language == 'en' %}View shipping rates{% else %}Versandkosten ansehen{% endif %}</a></p>
+{%- endif -%}

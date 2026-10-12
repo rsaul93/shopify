@@ -1,0 +1,139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_7pNGfK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_RkJRwh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Teile Deine Erlebnisse mit uns!",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_VXpRVU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir freuen uns immer über die tollen Momente, die unsere Kunden mit unseren Produkten erleben. Wenn Du ein Bild oder Video hast, das Du mit uns teilen möchtest, nutze bitte das untenstehende Formular. Mit Deiner Zustimmung können wir Deine Einsendungen auf unseren Social-Media-Kanälen, unserer Website und in unseren Marketingmaterialien verwenden. Vielen Dank, dass Du Teil unserer Community bist!<\/p><p><strong>Wichtige Hinweise:<\/strong><\/p><ul><li>Bitte gib an, wie wir deine Materialien kennzeichnen sollen.<\/li><li>Bitte bestätige, dass Du der rechtliche Eigentümer der hochgeladenen Bilder\/Videos bist.<\/li><li>Durch das Hochladen Deiner Dateien stimmst Du zu, dass wir diese für Marketingzwecke verwenden dürfen.<\/li><li>Wir verpflichten uns nicht, alle Materialien zu nutzen.<\/li><li>Du kannst dein Einverständnis jederzeit widerrufen. Hierzu reicht eine E-Mail an uns.<\/li><\/ul><p><\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_RkJRwh",
+        "text_VXpRVU"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_DWpMej": {
+      "type": "contact-form",
+      "blocks": {
+        "custom_field_kfF6Tx": {
+          "type": "custom_field",
+          "settings": {
+            "type": "text",
+            "label": "Credits - wie möchtest du namentlich erwähnt werden?",
+            "required": true,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "custom_field_fmyyGr": {
+          "type": "custom_field",
+          "settings": {
+            "type": "checkbox",
+            "label": "Ich stimmen der Verwendung meiner Daten im Rahmen dieser Aktion zu.",
+            "required": true,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "custom_field_VgeYJp": {
+          "type": "custom_field",
+          "settings": {
+            "type": "checkbox",
+            "label": "Ich bestätige, dass ich der rechtmäßige Eigentümer des Bildes\/des Videos bin und dass keine Rechte Dritter verletzt werden.",
+            "required": true,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        },
+        "custom_field_jNpa6E": {
+          "type": "custom_field",
+          "settings": {
+            "type": "checkbox",
+            "label": "Ich stimme der Verwendung der zur Verfügung gestellten Bilder\/Videos für Marketingzwecke zu.",
+            "required": true,
+            "checked_value": "Yes",
+            "unchecked_value": "No",
+            "radio_options": "",
+            "select_options": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_field_kfF6Tx",
+        "custom_field_fmyyGr",
+        "custom_field_VgeYJp",
+        "custom_field_jNpa6E"
+      ],
+      "settings": {
+        "return_url": "",
+        "show_phone": false,
+        "show_divider": false,
+        "heading": "Videos und Fotos mit Camping Pioneers teilen",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_7pNGfK",
+    "contact_form_DWpMej"
+  ]
+}

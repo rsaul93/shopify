@@ -1,0 +1,17 @@
+{
+  "id": {{ item.variant.id | json }},
+  "variant_id": {{ item.variant.id | json }},
+  "key": {{ item.key | json }},
+  "handle": {{ item.product.handle | json }},
+  "title": {{ item.title | json }},
+  "product_title": {{ item.product.title | json }},
+  "quantity": {{ item.quantity | json }},
+  "final_price": {{ item.final_price | json }},
+  "properties": {{ item.properties | json }},
+  "image": {% if item.image %}{{ item.image | image_url: width: 160 | json }}{% else %}null{% endif %},
+  "item_components": [
+    {%- for component in item.item_components -%}
+      {% render 'cp-lagun-cart-item', item: component %}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}

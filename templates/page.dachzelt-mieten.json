@@ -1,0 +1,700 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        ".rte {display: none;}"
+      ],
+      "name": "Page",
+      "settings": {
+        "narrow": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_KXKYTV": {
+      "type": "image-banner",
+      "blocks": {
+        "text_ee6qne": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Miete ein Dachzelt für deinen Urlaub, teste dein Wunschmodell vor dem Kauf oder plane erst einmal unverbindlich. Auf dieser Seite wählst du Modell, Standort und Zeitraum, siehst den Mietpreis sofort und sendest deine Anfrage direkt an unser Team.</p><p>Qeedo, Horntools und Vickywood kannst du in unseren Showrooms in <strong>Bad Berka bei Weimar</strong> und <strong>Pettstadt bei Bamberg</strong> vergleichen. Bei passenden Qeedo-Dachzelten kannst du im Rechner zusätzlich Vorzelt und Verbindungsschleuse auswählen.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "text_ee6qne"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/natur_car_tent.png",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "400px",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_image": "shopify://shop_images/natur_car_tent.png",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 28,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_wGU8qW": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<!-- cp588-cache-bust-20260707b -->\n{% render 'mietmanager-dachzelt-custom-liquid' %}",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_zkBMLA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_rRTyGQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "So läuft deine Mietanfrage",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_AehVmJ": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li><strong>Modell und Standort wählen</strong><br/>Such dir dein Dachzelt aus und wähle Bad Berka oder Pettstadt als Abholort.</li><li><strong>Zeitraum im Kalender markieren</strong><br/>Du siehst sofort, ob der Zeitraum grundsätzlich verfügbar ist und welche Übergabezeiten passen.</li><li><strong>Zubehör bewusst entscheiden</strong><br/>Bei passenden Qeedo-Modellen kannst du Vorzelt und Schleuse direkt mit anfragen.</li><li><strong>Anfrage absenden</strong><br/>Trage deine Kontaktdaten ein. Wir bestätigen die Buchung persönlich und senden dir alle Übergabedetails.</li></ol>",
+            "text_size": "typeset2",
+            "secondary_color": true,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_rRTyGQ",
+        "text_AehVmJ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mietung.png",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "550px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_8VWDee": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kBimCq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gut zu wissen:",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_4kQNHg": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Mietpreis:</strong> Die ersten 4 Tage werden pauschal berechnet, weil Einweisung, Montage und Rücknahme bereits enthalten sind. Danach steigt der Preis transparent nach Mietdauer.</li><li><strong>Kaution:</strong> Für Dachzelte beträgt die Kaution 500 € und wird nach ordnungsgemäßer Rückgabe erstattet.</li><li><strong>Qeedo-Zubehör:</strong> Bei geeigneten Qeedo-Dachzelten kannst du Quick Base Vorzelt und Verbindungsschleuse im Rechner optional dazubuchen.</li><li><strong>Kaufoption:</strong> Wenn du dich nach der Miete für den Kauf entscheidest, rechnen wir 50 % der gezahlten Miete auf den Kaufpreis an.</li><li><strong>Miettage:</strong> Abhol- und Rückgabetag zählen jeweils als Miettag.</li></ul>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kBimCq",
+        "text_4kQNHg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_Ry3pVJ": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_6YCTbk": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "qeedo-dachzelt",
+            "image": "shopify://shop_images/Web_1920_1.webp",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_xeHnKP": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "horntools-dachzelte",
+            "image": "shopify://shop_images/dachzelt_track_horntools.webp",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_zcHYGt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "vickywood",
+            "image": "shopify://shop_images/klapp-dachzelt-willowpro-vickywood.webp",
+            "image_position": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_6YCTbk",
+        "featured_collection_xeHnKP",
+        "featured_collection_zcHYGt"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "show_view_all": false,
+        "show_divider": false,
+        "columns_desktop": 3,
+        "heading": "Dachzelt nach Hersteller auswählen",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "apply_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_QLKYTM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9tfR6d": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dachzelt-Miete online planen",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_9gxKeE": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>In wenigen Schritten zur passenden Mietanfrage</strong></p><p>Wähle zuerst dein Dachzelt, den Abholort und deinen Reisezeitraum. Der Rechner zeigt dir direkt den Mietpreis, die Kaution und die verfügbaren Übergabezeiten.</p><p>Wenn alles passt, sendest du die Auswahl als unverbindliche Anfrage ab. Wir prüfen deine Angaben final, reservieren das Dachzelt nach Bestätigung und schicken dir alle Details zur Übergabe.</p><p>Bei Qeedo-Dachzelten kannst du optional das Quick Base Vorzelt mit Verbindungsschleuse dazubuchen. So entscheidest du schon in der Anfrage, ob du nur das Dachzelt oder direkt mehr geschützten Raum am Stellplatz möchtest.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9tfR6d",
+        "text_9gxKeE"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_qXLHmQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QdRRpN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Erfahre mehr über unsere Dachzelthersteller",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_CcPgEE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du bist dir noch unsicher, welcher Hersteller zu dir passt? Dann nutze unseren Dachzelt Vergleich und entdecke die Unterschiede zwischen Qeedo, Horntools und Vickywood.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_4k9hjn": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Dachzelt Vergleich ansehen",
+            "button_link": "shopify://pages/dachzelt-vergleich",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QdRRpN",
+        "text_CcPgEE",
+        "button_4k9hjn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_gBtCrp": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_gxBDjR": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/dawid-zawila--G3rw6Y02D0-unsplash.jpg",
+            "title": "Entdecke die Freiheit des Campings - auf dem Dach deines Autos",
+            "title_size": "h3",
+            "text": "<p>Unsere hochwertigen Dachzelte bieten Komfort und Abenteuer zugleich. Egal, ob du einen Roadtrip planst oder einen Campingausflug mit der Familie machst, wir haben das passende Zelt für dich.</p><p>Mit einem Dachzelt kannst du dein Alltagsauto in ein mobiles Zuhause verwandeln. Egal ob Kleinwagen oder Familienkombi - wir haben das passende Modell für dich. </p>",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "shopify://collections/dachzelte",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_Gbrxxh": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/christian-dubovan-Y_x747Yshlw-unsplash.jpg",
+            "title": "Kaufen oder Mieten?",
+            "title_size": "h3",
+            "text": "<p>Noch unsicher, ob ein Dachzelt zu dir, deinem Auto oder deiner Reiseart passt? Dann ist Mieten der einfachste Test unter realen Bedingungen.</p><p>Du bekommst eine persönliche Einweisung, nutzt das Dachzelt auf deiner Tour und kannst danach in Ruhe entscheiden. Wenn du anschließend kaufst, rechnen wir dir 50 % der gezahlten Miete auf den Kaufpreis an.</p>",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "#product-form",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_bqWnUD": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/IMG_5716.webp",
+            "title": "Besuche unsere Showrooms und lerne die qeedo, Horntools & Vickywood Dachzelte kennen",
+            "title_size": "h3",
+            "text": "<p>Noch unentschlossen? Dann komm in einem unserer Showrooms in Bad Berka bei Weimar oder in Pettstadt bei Bamberg vorbei und erlebe die verschiedenen Dachzelte hautnah.</p><p>Entdecke die Vielfalt unserer Hersteller & Modelle, lass dich persönlich beraten und finde das perfekte Dachzelt für dein nächstes Abenteuer.</p>",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "Mehr Infos zu den Showrooms",
+            "button_link": "shopify://pages/showrooms",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "column_gxBDjR",
+        "column_Gbrxxh",
+        "column_bqWnUD"
+      ],
+      "settings": {
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "text_alignment": "left",
+        "show_divider": false,
+        "image_width": "full",
+        "columns_desktop": 3,
+        "open_in_new_tab": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "card_border_radius": 0,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "rich_text_nUXq6z": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tR6dkY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Standorte",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_XhmcJa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du kannst dein Dachzelt an einem unserer beiden Standorte abholen. Beide Showrooms sind gut erreichbar und bieten dir eine persönliche Übergabe inklusive Einweisung.</p><h4>Pettstadt bei Bamberg</h4><p>Ideal für Kunden aus Bamberg, Forchheim, Erlangen und der gesamten Region Oberfranken.</p><h4>Bad Berka bei Weimar</h4><p>Optimal erreichbar für Kunden aus Weimar, Erfurt, Jena und Umgebung.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_jByArY": {
+          "type": "text",
+          "settings": {
+            "text": "<h4><strong>Bitte beachte: Unsere Showrooms sind nicht durchgehend besetzt. Melde dich vor deinem Besuch kurz bei uns, damit wir einen Termin vereinbaren können.</strong></h4>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_Bmmdwr": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Unsere Showrooms",
+            "button_link": "https://www.camping-pioneers.de/pages/showrooms",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tR6dkY",
+        "text_XhmcJa",
+        "text_jByArY",
+        "button_Bmmdwr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_dEXYHc": {
+      "type": "contact-form",
+      "blocks": {
+        "contact_Q4VrcK": {
+          "type": "contact",
+          "settings": {
+            "heading": "Kontaktadresse",
+            "text": "info@camping-pioneers.de",
+            "link": ""
+          }
+        },
+        "contact_pgzUMq": {
+          "type": "contact",
+          "settings": {
+            "heading": "Hotline (9-17 Uhr, Mo-Fr)",
+            "text": "+49 364 387 804 70",
+            "link": ""
+          }
+        },
+        "contact_3LTn6W": {
+          "type": "contact",
+          "settings": {
+            "heading": "WhatsApp",
+            "text": "+49 364 387 804 70",
+            "link": "https://api.whatsapp.com/send/?phone=4936438780470&text=&type=phone_number&app_absent=0"
+          }
+        }
+      },
+      "block_order": [
+        "contact_Q4VrcK",
+        "contact_pgzUMq",
+        "contact_3LTn6W"
+      ],
+      "settings": {
+        "return_url": "",
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "Noch Fragen zur Dachzelt-Miete?",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_ynj8Y4": {
+      "type": "faq",
+      "blocks": {
+        "question_ApNfHE": {
+          "type": "question",
+          "settings": {
+            "title": "Wie hoch sind die Kosten für die Dachzelt-Miete?",
+            "text": "<p>Die Kosten hängen vom gewählten Dachzelt, der Mietdauer und optionalem Zubehör ab. Im Mietrechner auf dieser Seite siehst du den Preis vor dem Absenden deiner Anfrage.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_BtU4nK": {
+          "type": "question",
+          "settings": {
+            "title": "Kann ich mir die Dachzelte vor der Miete ansehen?",
+            "text": "<p>Ja. Du kannst die Dachzelte in unseren <a href=\"/pages/showrooms\" target=\"_blank\" title=\"Camping Pioneers Showrooms – Dachzelte & Anhänger live erleben\"><strong>Showrooms</strong></a><strong> in Bad Berka oder Pettstadt persönlich ansehen und dich beraten lassen. Vereinbare hierzu bitte vorab einen Termin, da unsere Showrooms nicht durchgehend besetzt sind.</strong></p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_EqkNhe": {
+          "type": "question",
+          "settings": {
+            "title": "Wie erfolgt die Bezahlung?",
+            "text": "<p>Du kannst per <strong>Barzahlung, EC-Karte, PayPal oder Überweisung</strong> bezahlen. Alle Zahlungsdetails erhältst du mit deiner Buchungsbestätigung. Die Zahlung erfolgt in der Regel bei Abholung.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_rLVrEq": {
+          "type": "question",
+          "settings": {
+            "title": "Wie hoch ist die Kaution für die Dachzelt-Miete?",
+            "text": "<p>Die Kaution beträgt <strong>500 € pro Dachzelt</strong>. Sie wird bei der Übergabe hinterlegt und nach ordnungsgemäßer Rückgabe vollständig erstattet.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_FwHGr4": {
+          "type": "question",
+          "settings": {
+            "title": "Wie lange ist die Mindestmietdauer?",
+            "text": "<p>Die ersten 4 Tage werden pauschal berechnet. Kürzere Zeiträume kannst du anfragen, preislich bleibt die 4-Tage-Pauschale die Basis.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_XWrwWa": {
+          "type": "question",
+          "settings": {
+            "title": "Kann ich das Dachzelt nach der Miete kaufen?",
+            "text": "<p>Ja. Wenn du dich nach der Miete für den Kauf entscheidest, werden dir <strong>50 % der gezahlten Miete auf den Kaufpreis angerechnet.</strong></p><p></p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_t79jzr": {
+          "type": "question",
+          "settings": {
+            "title": "Wo kann ich das Dachzelt abholen?",
+            "text": "<p>Die Abholung ist an unseren Standorten in <strong>Pettstadt bei Bamberg</strong> oder <strong>Bad Berka bei Weimar</strong> möglich. Alle Details erhältst du mit deiner Buchungsbestätigung.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_MVCemR": {
+          "type": "question",
+          "settings": {
+            "title": "Ist eine Einweisung bei der Abholung dabei?",
+            "text": "<p>Ja. Bei der Übergabe erhältst du eine persönliche Einweisung. Bei Dachzelten ist die Montage am Fahrzeug bereits Teil der Übergabe.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_UkwiMq": {
+          "type": "question",
+          "settings": {
+            "title": "Wie muss das Dachzelt zurückgegeben werden?",
+            "text": "<p>Das Dachzelt sollte <strong>besenrein und in ordnungsgemäßem Zustand</strong> zurückgegeben werden. Normale Gebrauchsspuren durch die Nutzung sind selbstverständlich kein Problem.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "question_ApNfHE",
+        "question_BtU4nK",
+        "question_EqkNhe",
+        "question_rLVrEq",
+        "question_FwHGr4",
+        "question_XWrwWa",
+        "question_t79jzr",
+        "question_MVCemR",
+        "question_UkwiMq"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "FAQ zur Dachzelt-Miete",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "featured_collection_qQFTdC": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "dachzelte",
+        "products_to_show": 8,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "enable_drag": false,
+        "heading": "Unsere Dachzelte",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": false,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": false,
+        "show_product_highlights": false,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_KXKYTV",
+    "custom_liquid_wGU8qW",
+    "image_with_text_zkBMLA",
+    "rich_text_8VWDee",
+    "collection_list_Ry3pVJ",
+    "rich_text_QLKYTM",
+    "rich_text_qXLHmQ",
+    "multicolumn_gBtCrp",
+    "rich_text_nUXq6z",
+    "contact_form_dEXYHc",
+    "faq_ynj8Y4",
+    "featured_collection_qQFTdC"
+  ]
+}

@@ -1,0 +1,231 @@
+<script>
+  (function () {
+    if (window.__cpAnalyticsBridgeLoaded) return;
+    window.__cpAnalyticsBridgeLoaded = true;
+
+    var collector = 'https://analytics.camping-pioneers.de/api/collect';
+    var bridgeVersion = '7.0.0-theme-interaction-bridge';
+    var sessionKey = 'cp_theme_analytics_session';
+
+    var analyticsAllowed = function () {
+      try {
+        return Boolean(window.Shopify && Shopify.customerPrivacy && Shopify.customerPrivacy.analyticsProcessingAllowed());
+      } catch (_) { return false; }
+    };
+
+    var sessionId = function () {
+      try {
+        var now = Date.now();
+        var stored = JSON.parse(localStorage.getItem(sessionKey) || '{}');
+        if (!stored.id || !stored.at || now - stored.at > 30 * 60 * 1000) {
+          stored = { id: 't_' + now + '_' + Math.random().toString(36).slice(2), at: now };
+        } else stored.at = now;
+        localStorage.setItem(sessionKey, JSON.stringify(stored));
+        return stored.id;
+      } catch (_) { return 't_' + Date.now() + '_' + Math.random().toString(36).slice(2); }
+    };
+
+    var attribution = function () {
+      try {
+        var url = new URL(window.location.href);
+        var utm = {}, adIds = {};
+        [['utm_source','source'],['utm_medium','medium'],['utm_campaign','campaign'],['utm_term','term'],['utm_content','content']].forEach(function (pair) {
+          var value = url.searchParams.get(pair[0]); if (value) utm[pair[1]] = value.slice(0, 300);
+        });
+        ['gclid','gbraid','wbraid'].forEach(function (key) { var value = url.searchParams.get(key); if (value) adIds[key] = value.slice(0, 300); });
+        return { utm: Object.keys(utm).length ? utm : undefined, adIds: Object.keys(adIds).length ? adIds : undefined };
+      } catch (_) { return {}; }
+    };
+
+    var cleanUrl = function (value) {
+      try { var url = new URL(value, window.location.origin); return url.origin + url.pathname; } catch (_) { return undefined; }
+    };
+
+    var collect = function (name, details) {
+      if (!analyticsAllowed()) return;
+      var attr = attribution();
+      var event = {
+        name: name,
+        property: 'shopify',
+        timestamp: new Date().toISOString(),
+        pixelVersion: bridgeVersion,
+        sessionId: sessionId(),
+        consent: { analytics: true },
+        page: page(),
+        utm: attr.utm,
+        adIds: attr.adIds,
+        target: details && details.target,
+        interaction: details && details.interaction,
+        scroll: details && details.scroll,
+        webVital: details && details.webVital,
+        raw: { source: 'theme-interaction-bridge' }
+      };
+      var body = JSON.stringify({ events: [event] });
+      fetch(collector, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body, mode: 'cors', keepalive: true })
+        .then(function (response) { if (!response.ok) throw new Error('collector ' + response.status); })
+        .catch(function () { try { if (navigator.sendBeacon) navigator.sendBeacon(collector, new Blob([body], { type: 'application/json' })); } catch (_) {} });
+    };
+
+    var publish = function (name, data) {
+      try {
+        if (window.Shopify && Shopify.analytics && typeof Shopify.analytics.publish === 'function') {
+          Shopify.analytics.publish(name, data || {});
+        }
+      } catch (_) {}
+    };
+
+    var page = function () {
+      return {
+        url: window.location.href,
+        referrer: document.referrer || '',
+        title: document.title || ''
+      };
+    };
+
+    var viewport = function () {
+      return {
+        viewportWidth: window.innerWidth || 0,
+        viewportHeight: window.innerHeight || 0
+      };
+    };
+
+    var scrollMarks = [25, 50, 75, 90, 100];
+    var sentScroll = {};
+    var scrollTimer = 0;
+
+    var checkScroll = function () {
+      try {
+        var doc = document.documentElement;
+        var body = document.body || {};
+        var scrollTop = window.pageYOffset || doc.scrollTop || body.scrollTop || 0;
+        var height = Math.max(
+          body.scrollHeight || 0,
+          doc.scrollHeight || 0,
+          body.offsetHeight || 0,
+          doc.offsetHeight || 0,
+          body.clientHeight || 0,
+          doc.clientHeight || 0
+        );
+        var viewHeight = window.innerHeight || doc.clientHeight || 0;
+        var maxScroll = Math.max(1, height - viewHeight);
+        var depth = Math.min(100, Math.max(0, Math.round((scrollTop / maxScroll) * 100)));
+        for (var i = 0; i < scrollMarks.length; i += 1) {
+          var mark = scrollMarks[i];
+          if (depth >= mark && !sentScroll[mark]) {
+            sentScroll[mark] = true;
+            publish('cp_scroll', {
+              page: page(),
+              scroll: { depth: mark },
+              interaction: viewport()
+            });
+            collect('scroll', { scroll: { depth: mark }, interaction: viewport() });
+          }
+        }
+      } catch (_) {}
+    };
+
+    var onScroll = function () {
+      if (scrollTimer) return;
+      scrollTimer = window.setTimeout(function () {
+        scrollTimer = 0;
+        checkScroll();
+      }, 250);
+    };
+
+    try {
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      window.addEventListener('load', checkScroll, { once: true });
+      checkScroll();
+    } catch (_) {}
+
+    var sendVital = function (name, value) {
+      var numeric = Number(value);
+      if (!Number.isFinite(numeric) || numeric < 0) return;
+      publish('cp_web_vital', {
+        page: page(),
+        webVital: { name: name, value: Math.round(numeric * 1000) / 1000 },
+        interaction: viewport()
+      });
+      collect('web_vital', { webVital: { name: name, value: Math.round(numeric * 1000) / 1000 }, interaction: viewport() });
+    };
+
+    try {
+      var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+      if (nav && nav.responseStart) sendVital('TTFB', nav.responseStart);
+    } catch (_) {}
+
+    try {
+      new PerformanceObserver(function (list) {
+        var entries = list.getEntries();
+        for (var i = 0; i < entries.length; i += 1) sendVital('FCP', entries[i].startTime);
+      }).observe({ type: 'paint', buffered: true });
+    } catch (_) {}
+
+    try {
+      new PerformanceObserver(function (list) {
+        var entries = list.getEntries();
+        var last = entries[entries.length - 1];
+        if (last) sendVital('LCP', last.startTime);
+      }).observe({ type: 'largest-contentful-paint', buffered: true });
+    } catch (_) {}
+
+    try {
+      var cls = 0;
+      new PerformanceObserver(function (list) {
+        var entries = list.getEntries();
+        for (var i = 0; i < entries.length; i += 1) {
+          if (!entries[i].hadRecentInput) cls += entries[i].value || 0;
+        }
+        sendVital('CLS', cls);
+      }).observe({ type: 'layout-shift', buffered: true });
+    } catch (_) {}
+
+    try {
+      new PerformanceObserver(function (list) {
+        var entries = list.getEntries();
+        for (var i = 0; i < entries.length; i += 1) {
+          var value = entries[i].duration || 0;
+          if (entries[i].processingStart && entries[i].startTime) {
+            value = entries[i].processingStart - entries[i].startTime;
+          }
+          sendVital('INP', value);
+        }
+      }).observe({ type: 'event', buffered: true, durationThreshold: 40 });
+    } catch (_) {}
+
+    try {
+      document.addEventListener('click', function (event) {
+        var element = event.target && event.target.closest ? event.target.closest('a,button,[role="button"]') : null;
+        if (!element) return;
+        var href = String(element.getAttribute('href') || '');
+        var name = /^mailto:/i.test(href) ? 'mailto_clicked'
+          : /^tel:/i.test(href) ? 'phone_clicked'
+          : /whatsapp|wa\.me/i.test(href) ? 'whatsapp_clicked'
+          : 'clicked';
+        var role = name === 'mailto_clicked' ? 'mailto' : name === 'phone_clicked' ? 'phone' : name === 'whatsapp_clicked' ? 'whatsapp' : 'link';
+        collect(name, { target: {
+          label: String(element.textContent || element.getAttribute('aria-label') || role).trim().slice(0, 180),
+          url: role === 'link' ? cleanUrl(href) : role,
+          role: role,
+          selector: element.id ? '#' + String(element.id).slice(0, 120) : undefined
+        }, interaction: viewport() });
+      }, true);
+      document.addEventListener('submit', function (event) {
+        var form = event.target;
+        collect('form_submitted', { target: {
+          label: String((form && (form.getAttribute('name') || form.id || form.getAttribute('action'))) || 'form').slice(0, 180),
+          url: cleanUrl(form && form.getAttribute('action')),
+          role: 'form_submit',
+          selector: form && form.id ? '#' + String(form.id).slice(0, 120) : undefined
+        }, interaction: viewport() });
+      }, true);
+    } catch (_) {}
+
+    try {
+      if (window.Shopify && typeof Shopify.loadFeatures === 'function') {
+        Shopify.loadFeatures([{ name: 'consent-tracking-api', version: '0.1' }], function () {});
+      }
+    } catch (_) {}
+  })();
+</script>

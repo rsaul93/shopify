@@ -1,0 +1,333 @@
+{%- comment -%}
+  CP Lagun PDP – editorial modules for the isolated Stage-1 redesign.
+  Product, price, availability and media data always come from Shopify.
+{%- endcomment -%}
+
+{%- liquid
+  assign cp_module = module | default: 'all'
+  assign cp_scene = scene | default: 'paper'
+  assign cp_lagun_template_active = false
+  if product.template_suffix == 'lagun-seite-neu'
+    assign cp_lagun_template_active = true
+  endif
+  assign target_handle = 'lagun-tischgestell-set-mit-standard-befestigungsplatte-silber'
+  assign black_handle = 'lagun-tischgestell-set-mit-standard-befestigungsplatte-schwarz'
+  assign canonical_product = all_products[target_handle]
+  assign current_comparison_handle = product.handle
+  if product.handle == black_handle
+    assign current_comparison_handle = target_handle
+  endif
+  assign current_variant = product.selected_or_first_available_variant
+  assign comparison_handles = target_handle | append: ',lagun-tischgestell-set-mit-400mm-tischbein-silber,lagun-tischgestell-set-mit-700mm-tischbein-silber,lagun-tischgestell-set-mit-smarter-befestigungsplatte-silber,lagun-tischgestell-set-mit-dreh-klappbarer-untertischbefestigungsplatte-silber' | split: ','
+  assign upgrade_product = all_products['lagun-tischgestell-set-mit-dreh-klappbarer-untertischbefestigungsplatte-silber']
+  assign bundle_handles = 'ausgleichskeil-set-lagun-fur-die-befestigungsplatte-bei-schragen-wanden,lagun-ruckwandverstarkung,lagun-befestigungsplatte' | split: ','
+  assign story_image_flexible = product.media[7].preview_image | default: canonical_product.media[7].preview_image
+  assign story_image_material = product.media[1].preview_image | default: canonical_product.media[1].preview_image
+  assign story_image_mounting = product.media[8].preview_image | default: canonical_product.media[8].preview_image
+  assign story_image_detail = product.media[10].preview_image | default: canonical_product.media[10].preview_image
+-%}
+
+{%- if cp_lagun_template_active -%}
+  <div
+    class="cp-lagun-experience cp-lagun-experience--module"
+    id="cp-lagun-{{ cp_module }}-{{ module_section.id | default: 'legacy' }}"
+    data-cp-lagun-experience
+    data-cp-scene="{{ cp_scene }}"
+    data-currency="{{ cart.currency.iso_code | default: shop.currency | escape }}"
+  >
+    {%- if cp_module == 'proof' or cp_module == 'all' -%}
+    <section class="cp-lagun-proof page-width" aria-labelledby="cp-lagun-proof-title">
+      <p class="cp-lagun-kicker">{{ module_section.settings.kicker | default: 'Mehr Platz auf kleinem Raum' | escape }}</p>
+      <h2 id="cp-lagun-proof-title">{{ module_section.settings.heading | default: 'Dein Tisch ist da, wenn du ihn brauchst – und aus dem Weg, wenn nicht.' | escape }}</h2>
+      <p class="cp-lagun-lead">
+        {{ module_section.settings.body | default: 'Zieh die Tischplatte zum Essen, Arbeiten oder Spielen einfach zu dir. Danach schwenkst du sie zur Seite und hast sofort wieder freien Durchgang im Camper.' | escape }}
+      </p>
+      <ul class="cp-lagun-proof__facts" role="list">
+        {%- for block in module_section.blocks -%}
+          <li {{ block.shopify_attributes }}>
+            <span class="cp-lagun-proof__icon" aria-hidden="true">
+              {%- case block.settings.icon -%}
+                {%- when 'award' -%}
+                  <svg viewBox="0 0 24 24"><path d="M7 3h10v4a5 5 0 0 1-10 0V3Z"/><path d="M7 5H4v2a4 4 0 0 0 4 4m9-6h3v2a4 4 0 0 1-4 4M12 12v5m-4 4h8m-6-4h4"/></svg>
+                {%- when 'leaf' -%}
+                  <svg viewBox="0 0 24 24"><path d="M20 4c-8 0-14 4.2-14 10 0 2.8 2.2 5 5 5 5.8 0 9-7 9-15Z"/><path d="M4 21c2.2-5.5 5.8-9.2 11.5-12"/></svg>
+                {%- when 'return' -%}
+                  <svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7L4 8.6"/><path d="M4 4v4.6h4.6"/><path d="M12 8v4l2.7 1.7"/></svg>
+                {%- else -%}
+                  <svg viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.7 3.2 7.8 7.5 9.5 4.3-1.7 7.5-4.8 7.5-9.5V6L12 3Z"/><path d="m8.7 12.1 2.1 2.1 4.6-4.8"/></svg>
+              {%- endcase -%}
+            </span>
+            <span><strong>{{ block.settings.heading | escape }}</strong><small>{{ block.settings.body | escape }}</small></span>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </section>
+    {%- endif -%}
+
+    {%- if cp_module == 'lifestyle' or cp_module == 'all' -%}
+      {%- assign lifestyle_image = module_section.settings.image | default: story_image_flexible -%}
+    <section class="cp-lagun-story cp-lagun-story--image-left cp-lagun-story--forest page-width" aria-labelledby="cp-lagun-flex-title" data-cp-background-scene="forest">
+      <div class="cp-lagun-story__media" data-cp-parallax>
+        {%- if lifestyle_image != blank -%}
+          {{ lifestyle_image | image_url: width: 1800 | image_tag:
+            loading: 'lazy',
+            widths: '480, 720, 960, 1280, 1600, 1800',
+            sizes: '(min-width: 990px) 58vw, 100vw',
+            alt: 'Lagun Tischgestell im flexiblen Camper-Ausbau'
+          }}
+        {%- endif -%}
+      </div>
+      <div class="cp-lagun-story__copy">
+        <p class="cp-lagun-kicker">{{ module_section.settings.kicker | default: 'Mehr Bewegungsfreiheit im Camper' | escape }}</p>
+        <h2 id="cp-lagun-flex-title">{{ module_section.settings.heading | default: 'Frühstücksplatz, Arbeitsplatz, freie Fläche – mit einer Bewegung.' | escape }}</h2>
+        <p>
+          {{ module_section.settings.body | default: 'Die beiden Arme lassen sich unabhängig schwenken. So holst du die Tischplatte genau dorthin, wo du sie gerade brauchst, und schaffst danach wieder Platz zum Bewegen.' | escape }}
+        </p>
+        <ul class="cp-lagun-checklist" role="list">
+          <li>{{ module_section.settings.bullet_1 | default: 'Tischplatte flexibel zu Sitzplatz oder Bett schwenken' | escape }}</li>
+          <li>{{ module_section.settings.bullet_2 | default: 'Im Alltag werkzeuglos lösen, bewegen und fixieren' | escape }}</li>
+          <li>{{ module_section.settings.bullet_3 | default: 'Ideal für Camper, Wohnmobile, Boote und kleine Räume' | escape }}</li>
+        </ul>
+      </div>
+    </section>
+    {%- endif -%}
+
+    {%- if cp_module == 'all' -%}
+      {% render 'cp-lagun-immersive', product: product %}
+    {%- endif -%}
+
+    {%- if cp_module == 'set-guide' or cp_module == 'all' -%}
+    <section class="cp-lagun-compare page-width" aria-labelledby="cp-lagun-compare-title" data-cp-background-scene="paper">
+      <div class="cp-lagun-section-heading">
+        <p class="cp-lagun-kicker">{{ module_section.settings.compare_kicker | default: 'Finde dein passendes Set' | escape }}</p>
+        <h2 id="cp-lagun-compare-title">{{ module_section.settings.compare_heading | default: 'Welche Lagun-Lösung passt zu deinem Einbau?' | escape }}</h2>
+        <p>{{ module_section.settings.compare_body | default: 'Vergleiche Beinhöhe, Befestigung und Bewegungsfreiheit. Preis und Verfügbarkeit sind immer aktuell.' | escape }}</p>
+      </div>
+      <div class="cp-lagun-compare__grid">
+        {%- for comparison_handle in comparison_handles -%}
+          {%- assign comparison_product = all_products[comparison_handle] -%}
+          {%- if comparison_product != blank -%}
+            {%- liquid
+              assign comparison_label = module_section.settings.standard_label | default: 'Standard-Set'
+              assign comparison_note = module_section.settings.standard_note | default: 'Flexibel für die meisten Einbauten'
+              case comparison_handle
+                when 'lagun-tischgestell-set-mit-400mm-tischbein-silber'
+                  assign comparison_label = module_section.settings.compact_label | default: '400-mm-Set'
+                  assign comparison_note = module_section.settings.compact_note | default: 'Für niedrige Einbauhöhen'
+                when 'lagun-tischgestell-set-mit-700mm-tischbein-silber'
+                  assign comparison_label = module_section.settings.tall_label | default: '700-mm-Set'
+                  assign comparison_note = module_section.settings.tall_note | default: 'Für höhere Tischpositionen'
+                when 'lagun-tischgestell-set-mit-smarter-befestigungsplatte-silber'
+                  assign comparison_label = module_section.settings.smart_label | default: 'Smart-Set'
+                  assign comparison_note = module_section.settings.smart_note | default: 'Schnell an- und abnehmen'
+                when 'lagun-tischgestell-set-mit-dreh-klappbarer-untertischbefestigungsplatte-silber'
+                  assign comparison_label = module_section.settings.fold_label | default: 'Dreh-/Klapp-Set'
+                  assign comparison_note = module_section.settings.fold_note | default: 'Drehen, klappen und Platz schaffen'
+              endcase
+            -%}
+            <article class="cp-lagun-compare-card{% if comparison_handle == current_comparison_handle %} is-current{% endif %}">
+              <a href="{{ comparison_product.url }}#cp-lagun-compare-title" class="cp-lagun-compare-card__image" aria-label="{{ comparison_product.title | escape }} ansehen" data-cp-lagun-product-switch>
+                {%- if comparison_product.featured_image != blank -%}
+                  {{ comparison_product.featured_image | image_url: width: 720 | image_tag:
+                    loading: 'lazy',
+                    widths: '240, 360, 540, 720',
+                    sizes: '(min-width: 1200px) 220px, (min-width: 750px) 30vw, 72vw',
+                    alt: comparison_product.title
+                  }}
+                {%- endif -%}
+              </a>
+              <div class="cp-lagun-compare-card__body">
+                {%- if comparison_handle == current_comparison_handle -%}<span class="cp-lagun-badge">{{ module_section.settings.current_badge | default: 'Aktuelle Auswahl' | escape }}</span>{%- endif -%}
+                <p class="cp-lagun-compare-card__eyebrow">{{ comparison_label }}</p>
+                <h3><a href="{{ comparison_product.url }}#cp-lagun-compare-title" data-cp-lagun-product-switch>{{ comparison_product.title }}</a></h3>
+                <p>{{ comparison_note }}</p>
+                <div class="cp-lagun-compare-card__meta">
+                  <strong>{{ comparison_product.price | money }}</strong>
+                  <span class="cp-lagun-availability{% unless comparison_product.available %} is-unavailable{% endunless %}">
+                    {% if comparison_product.available %}{{ module_section.settings.available_label | default: 'Verfügbar' | escape }}{% else %}{{ module_section.settings.unavailable_label | default: 'Aktuell nicht verfügbar' | escape }}{% endif %}
+                  </span>
+                </div>
+              </div>
+            </article>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </section>
+
+    {%- if upgrade_product != blank and product.handle != upgrade_product.handle -%}
+      <section class="cp-lagun-upgrade page-width" aria-labelledby="cp-lagun-upgrade-title">
+        <div class="cp-lagun-upgrade__media">
+          {%- if upgrade_product.featured_image != blank -%}
+            {{ upgrade_product.featured_image | image_url: width: 1200 | image_tag:
+              loading: 'lazy',
+              widths: '480, 720, 960, 1200',
+              sizes: '(min-width: 990px) 46vw, 100vw',
+              alt: upgrade_product.title
+            }}
+          {%- endif -%}
+        </div>
+        <div class="cp-lagun-upgrade__copy">
+          <p class="cp-lagun-kicker">{{ module_section.settings.upgrade_kicker | default: 'Noch mehr freie Fläche' | escape }}</p>
+          <h2 id="cp-lagun-upgrade-title">{{ module_section.settings.upgrade_heading | default: 'Drehe und klappe deine Tischplatte einfach weg.' | escape }}</h2>
+          <p>
+            {{ module_section.settings.upgrade_body | default: 'Wenn du den Innenraum maximal frei halten möchtest, wähle direkt das vollständige Dreh-/Klapp-Set. So kaufst du nur das Tischgestell, das wirklich zu deinem Ausbau passt.' | escape }}
+          </p>
+          <div class="cp-lagun-upgrade__price">
+            <strong>{{ upgrade_product.price | money }}</strong>
+            <span>{% if upgrade_product.available %}{{ module_section.settings.available_label | default: 'Verfügbar' | escape }}{% else %}{{ module_section.settings.unavailable_label | default: 'Aktuell nicht verfügbar' | escape }}{% endif %}</span>
+          </div>
+          <a class="cp-lagun-button cp-lagun-button--secondary" href="{{ upgrade_product.url }}" data-cp-lagun-product-switch>{{ module_section.settings.upgrade_button | default: 'Dreh-/Klapp-Set vergleichen' | escape }}</a>
+        </div>
+      </section>
+    {%- endif -%}
+    {%- endif -%}
+
+    {%- if cp_module == 'details' or cp_module == 'all' -%}
+    <section class="cp-lagun-story cp-lagun-story--image-right page-width" aria-labelledby="cp-lagun-material-title">
+      <div class="cp-lagun-story__media cp-lagun-story__media--stack" data-cp-parallax>
+        {%- if story_image_material != blank -%}
+          {{ story_image_material | image_url: width: 1600 | image_tag:
+            loading: 'lazy',
+            widths: '480, 720, 960, 1280, 1600',
+            sizes: '(min-width: 990px) 52vw, 100vw',
+            alt: 'Details des silbernen Lagun Tischgestells aus Aluminium'
+          }}
+        {%- endif -%}
+        {%- if story_image_detail != blank -%}
+          {{ story_image_detail | image_url: width: 720 | image_tag:
+            loading: 'lazy',
+            widths: '240, 360, 540, 720',
+            sizes: '(min-width: 990px) 240px, 42vw',
+            alt: 'Lagun Tischgestell im Camping-Ausbau'
+          }}
+        {%- endif -%}
+      </div>
+      <div class="cp-lagun-story__copy">
+        <p class="cp-lagun-kicker">{{ module_section.settings.material_kicker | default: 'Leicht unterwegs. Lange nutzbar.' | escape }}</p>
+        <h2 id="cp-lagun-material-title">{{ module_section.settings.material_heading | default: 'Wenig Gewicht, viel Alltagstauglichkeit.' | escape }}</h2>
+        <p>
+          {{ module_section.settings.material_body | default: 'Hochwertiges Aluminium hält das System leicht und stabil. Dank der modularen Bauweise kannst du einzelne Teile ersetzen, statt das komplette Tischgestell auszutauschen.' | escape }}
+        </p>
+        <div class="cp-lagun-mini-facts">
+          <span><strong>{{ module_section.settings.fact_1_value | default: 'Silber' | escape }}</strong>{{ module_section.settings.fact_1_label | default: 'Farbe' | escape }}</span>
+          <span><strong>{{ module_section.settings.fact_2_value | default: '400 mm' | escape }}</strong>{{ module_section.settings.fact_2_label | default: 'Armlänge' | escape }}</span>
+          <span><strong>{{ module_section.settings.fact_3_value | default: 'Modular' | escape }}</strong>{{ module_section.settings.fact_3_label | default: 'Bauweise' | escape }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cp-lagun-mounting page-width" aria-labelledby="cp-lagun-mounting-title">
+      <div class="cp-lagun-mounting__copy">
+        <p class="cp-lagun-kicker">{{ module_section.settings.mounting_kicker | default: 'In drei Schritten startklar' | escape }}</p>
+        <h2 id="cp-lagun-mounting-title">{{ module_section.settings.mounting_heading | default: 'Vom Einbau bis zur ersten Tischrunde.' | escape }}</h2>
+        <p>
+          {{ module_section.settings.mounting_body | default: 'Plane zuerst Höhe und Bewegungsraum, befestige die Wandplatte an einem tragfähigen Untergrund und setze anschließend Bein und Arme ein. Detaillierte Hinweise und den Lieferumfang findest du oben in den Produktdetails.' | escape }}
+        </p>
+        <ol class="cp-lagun-steps">
+          {%- for block in module_section.blocks -%}
+            <li {{ block.shopify_attributes }}><span>{{ forloop.index }}</span><div><strong>{{ block.settings.heading | escape }}</strong><small>{{ block.settings.body | escape }}</small></div></li>
+          {%- endfor -%}
+        </ol>
+      </div>
+      <div class="cp-lagun-mounting__media" data-cp-parallax>
+        {%- if story_image_mounting != blank -%}
+          {{ story_image_mounting | image_url: width: 1500 | image_tag:
+            loading: 'lazy',
+            widths: '480, 720, 960, 1280, 1500',
+            sizes: '(min-width: 990px) 48vw, 100vw',
+            alt: 'Montiertes Lagun Tischgestell im Camper'
+          }}
+        {%- endif -%}
+      </div>
+    </section>
+    {%- endif -%}
+
+    {%- if cp_module == 'bundle-service' or cp_module == 'all' -%}
+    <section
+      class="cp-lagun-bundle page-width"
+      aria-labelledby="cp-lagun-bundle-title"
+      data-cp-bundle
+      data-adding-text="{{ module_section.settings.adding_text | default: 'Auswahl wird hinzugefügt …' | escape }}"
+      data-success-text="{{ module_section.settings.success_text | default: 'Die Auswahl liegt jetzt im Warenkorb.' | escape }}"
+      data-error-text="{{ module_section.settings.error_text | default: 'Die Auswahl konnte nicht hinzugefügt werden.' | escape }}"
+    >
+      <div class="cp-lagun-section-heading">
+        <p class="cp-lagun-kicker">{{ module_section.settings.bundle_kicker | default: 'Passend zu deinem Einbau' | escape }}</p>
+        <h2 id="cp-lagun-bundle-title">{{ module_section.settings.bundle_heading | default: 'Nimm nur mit, was du wirklich brauchst.' | escape }}</h2>
+        <p>{{ module_section.settings.bundle_body | default: 'Wähle das Zubehör passend zu Wand, Montageort und gewünschter Nutzung – der Gesamtpreis aktualisiert sich automatisch.' | escape }}</p>
+      </div>
+      <div class="cp-lagun-bundle__layout">
+        <div class="cp-lagun-bundle__products">
+          <label class="cp-lagun-bundle-card is-base">
+            <input
+              type="checkbox"
+              checked
+              disabled
+              data-cp-bundle-item
+              data-variant-id="{{ current_variant.id }}"
+              data-price="{{ current_variant.price }}"
+            >
+            <span class="cp-lagun-bundle-card__check" aria-hidden="true"></span>
+            {%- if product.featured_image != blank -%}
+              {{ product.featured_image | image_url: width: 360 | image_tag: loading: 'lazy', widths: '180, 240, 360', sizes: '112px', alt: product.title }}
+            {%- endif -%}
+            <span class="cp-lagun-bundle-card__copy">
+              <small>{{ module_section.settings.base_label | default: 'Basisprodukt' | escape }}</small>
+              <strong>{{ product.title }}</strong>
+              <span>{{ current_variant.price | money }}</span>
+            </span>
+          </label>
+
+          {%- for bundle_handle in bundle_handles -%}
+            {%- assign bundle_product = all_products[bundle_handle] -%}
+            {%- if bundle_product != blank -%}
+              {%- assign bundle_variant = bundle_product.selected_or_first_available_variant -%}
+              <label class="cp-lagun-bundle-card{% unless bundle_variant.available %} is-unavailable{% endunless %}">
+                <input
+                  type="checkbox"
+                  {% if bundle_variant.available %}checked{% else %}disabled{% endif %}
+                  data-cp-bundle-item
+                  data-variant-id="{{ bundle_variant.id }}"
+                  data-price="{{ bundle_variant.price }}"
+                >
+                <span class="cp-lagun-bundle-card__check" aria-hidden="true"></span>
+                {%- if bundle_product.featured_image != blank -%}
+                  {{ bundle_product.featured_image | image_url: width: 360 | image_tag: loading: 'lazy', widths: '180, 240, 360', sizes: '112px', alt: bundle_product.title }}
+                {%- endif -%}
+                <span class="cp-lagun-bundle-card__copy">
+                  <small>{% if bundle_variant.available %}{{ module_section.settings.accessory_label | default: 'Optionales Zubehör' | escape }}{% else %}{{ module_section.settings.unavailable_label | default: 'Aktuell nicht verfügbar' | escape }}{% endif %}</small>
+                  <strong>{{ bundle_product.title }}</strong>
+                  <span>{{ bundle_variant.price | money }}</span>
+                </span>
+              </label>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <aside class="cp-lagun-bundle__summary" aria-label="Zusammenfassung der Produktauswahl">
+          <span>{{ module_section.settings.total_label | default: 'Gesamtpreis der Auswahl' | escape }}</span>
+          <strong data-cp-bundle-total>{{ current_variant.price | money }}</strong>
+          <p>{{ module_section.settings.tax_note | default: 'Inklusive MwSt., zzgl. möglicher Versandkosten.' | escape }}</p>
+          <button class="cp-lagun-button" type="button" data-cp-bundle-add>{{ module_section.settings.add_button | default: 'Auswahl in den Warenkorb' | escape }}</button>
+          <p class="cp-lagun-bundle__status" role="status" aria-live="polite" data-cp-bundle-status></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="cp-lagun-service page-width" aria-labelledby="cp-lagun-service-title">
+      <div>
+        <p class="cp-lagun-kicker">{{ module_section.settings.service_kicker | default: 'Du musst nicht allein planen' | escape }}</p>
+        <h2 id="cp-lagun-service-title">{{ module_section.settings.service_heading | default: 'Wir finden gemeinsam das passende Set für deinen Ausbau.' | escape }}</h2>
+        <p>{{ module_section.settings.service_body | default: 'Schick uns ein Foto oder beschreibe deinen Einbau. Wir helfen dir persönlich bei Befestigung, Zubehör und der passenden Lagun-Konfiguration.' | escape }}</p>
+      </div>
+      <div class="cp-lagun-service__actions">
+        <a class="cp-lagun-button" href="{{ module_section.settings.primary_link | default: '/pages/contact' }}">{{ module_section.settings.primary_label | default: 'Einbau prüfen lassen' | escape }}</a>
+        <a class="cp-lagun-button cp-lagun-button--secondary" href="{{ module_section.settings.secondary_link | default: 'tel:+4936438780470' }}">{{ module_section.settings.secondary_label | default: '+49 3643 8780470' | escape }}</a>
+      </div>
+    </section>
+
+    <section class="cp-lagun-reviews page-width" id="cp-lagun-product-reviews" tabindex="-1" style="scroll-margin-top:140px" aria-label="Produktbewertungen">
+      <div data-cp-reviews-destination></div>
+    </section>
+    {%- endif -%}
+  </div>
+{%- endif -%}

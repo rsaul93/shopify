@@ -1,0 +1,128 @@
+{{ 'cp-lagun-service.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'cp-lagun-service.js' | asset_url }}" defer="defer"></script>
+
+<section
+  class="cp-lagun-service"
+  data-cp-lagun-service
+  data-locale="{{ request.locale.iso_code | escape }}"
+  data-root-url="{{ routes.root_url }}"
+  data-logged-in="{% if customer %}true{% else %}false{% endif %}"
+  data-error="{{ 'templates.lagun_service.error' | t | escape }}"
+  data-review-done="{{ 'templates.lagun_service.review_done' | t | escape }}"
+  data-product-cta="{{ 'templates.lagun_service.product_cta' | t | escape }}"
+  data-fallback-cta="{{ 'templates.lagun_service.fallback_cta' | t | escape }}"
+>
+  <div class="cp-lagun-service__hero">
+    <div class="cp-lagun-service__wrap cp-lagun-service__hero-copy">
+      <p class="cp-lagun-service__eyebrow">{{ 'templates.lagun_service.eyebrow' | t }}</p>
+      <h1>{{ 'templates.lagun_service.hero_title' | t }}</h1>
+      <p>{{ 'templates.lagun_service.hero_text' | t }}</p>
+      <div class="cp-lagun-service__hero-actions">
+        <a class="cp-lagun-service__button cp-lagun-service__button--yellow" href="#montagehilfe">{{ 'templates.lagun_service.install_cta' | t }} →</a>
+        <a class="cp-lagun-service__text-link" href="#passende-erweiterungen">{{ 'templates.lagun_service.hero_extend' | t }} →</a>
+      </div>
+      <div class="cp-lagun-service__note">
+        {{ 'templates.lagun_service.note' | t }}
+        <strong>{{ 'templates.lagun_service.note_sign' | t }}</strong>
+      </div>
+    </div>
+    <div class="cp-lagun-service__hero-image">
+      <img src="{{ 'cp-lagun-news-lifestyle.jpg' | asset_url }}" width="1365" height="2048" alt="{{ 'templates.lagun_service.hero_alt' | t | escape }}" fetchpriority="high">
+      <span class="cp-lagun-service__hero-caption">{{ 'templates.lagun_service.hero_caption' | t }}</span>
+    </div>
+  </div>
+
+  <div class="cp-lagun-service__section" id="montagehilfe">
+    <div class="cp-lagun-service__wrap">
+      <p class="cp-lagun-service__eyebrow">{{ 'templates.lagun_service.help_eyebrow' | t }}</p>
+      <h2>{{ 'templates.lagun_service.help_title' | t }}</h2>
+      <div class="cp-lagun-service__grid">
+        <a class="cp-lagun-service__card" href="#lagun-anleitung">
+          <span class="cp-lagun-service__card-index">01</span><h3>{{ 'templates.lagun_service.install_title' | t }}</h3><p>{{ 'templates.lagun_service.install_text' | t }}</p><span>{{ 'templates.lagun_service.install_cta' | t }} →</span>
+        </a>
+        <a class="cp-lagun-service__card" href="{{ routes.root_url }}/collections/zubehor-ersatzteile">
+          <span class="cp-lagun-service__card-index">02</span><h3>{{ 'templates.lagun_service.config_title' | t }}</h3><p>{{ 'templates.lagun_service.config_text' | t }}</p><span>{{ 'templates.lagun_service.config_cta' | t }} →</span>
+        </a>
+        <a class="cp-lagun-service__card" href="mailto:info@camping-pioneers.de?subject=Lagun%20Einbausituation">
+          <span class="cp-lagun-service__card-index">03</span><h3>{{ 'templates.lagun_service.support_title' | t }}</h3><p>{{ 'templates.lagun_service.support_text' | t }}</p><span>{{ 'templates.lagun_service.support_cta' | t }} →</span>
+        </a>
+      </div>
+      <div class="cp-lagun-service__manual" id="lagun-anleitung">
+        <img src="{{ 'cp-lagun-service-manual.jpg' | asset_url }}" width="600" height="856" alt="{{ 'templates.lagun_service.manual_alt' | t | escape }}" loading="lazy">
+        <div><p class="cp-lagun-service__eyebrow">{{ 'templates.lagun_service.manual_eyebrow' | t }}</p><h3>{{ 'templates.lagun_service.manual_title' | t }}</h3><p>{{ 'templates.lagun_service.manual_text' | t }}</p></div>
+        <div class="cp-lagun-service__manual-actions"><a class="cp-lagun-service__button" href="https://cdn.shopify.com/s/files/1/0783/6696/6087/files/Manual_Lagun.pdf?v=1711457612" target="_blank" rel="noopener">{{ 'templates.lagun_service.manual_cta' | t }} ↗</a></div>
+      </div>
+      <details class="cp-lagun-service__manual-preview" data-lagun-manual>
+        <summary>{{ 'templates.lagun_service.manual_preview' | t }}</summary>
+        {% if request.locale.iso_code == 'de' %}{% assign manual_excerpt = 'cp-lagun-service-manual-de.jpg' %}{% else %}{% assign manual_excerpt = 'cp-lagun-service-manual-en.jpg' %}{% endif %}
+        <img class="cp-lagun-service__manual-spread" src="{{ manual_excerpt | asset_url }}" width="1400" height="998" alt="{{ 'templates.lagun_service.manual_title' | t | escape }}" loading="lazy">
+        <p><a class="cp-lagun-service__text-link" href="https://cdn.shopify.com/s/files/1/0783/6696/6087/files/Manual_Lagun.pdf?v=1711457612" target="_blank" rel="noopener">{{ 'templates.lagun_service.manual_cta' | t }} ↗</a></p>
+      </details>
+    </div>
+  </div>
+
+  <div class="cp-lagun-service__section cp-lagun-service__section--soft" id="passende-erweiterungen">
+    <div class="cp-lagun-service__wrap">
+      <div class="cp-lagun-service__identify">
+        <div>
+          <p class="cp-lagun-service__eyebrow">{{ 'templates.lagun_service.recommend_eyebrow' | t }}</p>
+          <h2>{{ 'templates.lagun_service.recommend_title' | t }}</h2>
+          <p class="cp-lagun-service__intro">{{ 'templates.lagun_service.recommend_text' | t }}</p>
+        </div>
+        <div>
+          <div class="cp-lagun-service__loading{% unless customer %} cp-lagun-service__hidden{% endunless %}" data-lagun-loading><span class="cp-lagun-service__spinner" aria-hidden="true"></span>{{ 'templates.lagun_service.loading' | t }}</div>
+          <form class="cp-lagun-service__form{% if customer %} cp-lagun-service__hidden{% endif %}" data-lagun-access-form novalidate>
+            <h3>{{ 'templates.lagun_service.guest_title' | t }}</h3><p>{{ 'templates.lagun_service.guest_text' | t }}</p>
+            <div class="cp-lagun-service__tabs" role="tablist">
+              <button class="cp-lagun-service__tab" type="button" role="tab" aria-selected="true" data-lagun-mode="order">{{ 'templates.lagun_service.tab_order' | t }}</button>
+              <button class="cp-lagun-service__tab" type="button" role="tab" aria-selected="false" data-lagun-mode="email">{{ 'templates.lagun_service.tab_email' | t }}</button>
+            </div>
+            <div class="cp-lagun-service__field" data-lagun-order-field><label for="LagunOrderNumber">{{ 'templates.lagun_service.order_label' | t }}</label><input id="LagunOrderNumber" name="orderNumber" required autocomplete="off" placeholder="{{ 'templates.lagun_service.order_placeholder' | t | escape }}"></div>
+            <div class="cp-lagun-service__field cp-lagun-service__hidden" data-lagun-email-field><label for="LagunOrderEmail">{{ 'templates.lagun_service.email_label' | t }}</label><input id="LagunOrderEmail" name="email" type="email" autocomplete="email" placeholder="{{ 'templates.lagun_service.email_placeholder' | t | escape }}"></div>
+            <div class="cp-lagun-service__field"><label for="LagunPostalCode">{{ 'templates.lagun_service.postal_label' | t }}</label><input id="LagunPostalCode" name="postalCode" required autocomplete="postal-code" placeholder="{{ 'templates.lagun_service.postal_placeholder' | t | escape }}"></div>
+            <button class="cp-lagun-service__button" type="submit" data-idle="{{ 'templates.lagun_service.submit' | t | escape }}" data-pending="{{ 'templates.lagun_service.submitting' | t | escape }}">{{ 'templates.lagun_service.submit' | t }}</button>
+            <p class="cp-lagun-service__hint">{{ 'templates.lagun_service.form_hint' | t }}</p><p class="cp-lagun-service__message" data-lagun-message role="alert" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="cp-lagun-service__recommendations" data-lagun-general>
+        <div class="cp-lagun-service__grid">
+          <article class="cp-lagun-service__card cp-lagun-service__scenario"><img src="{{ 'cp-lagun-service-mount.jpg' | asset_url }}" width="900" height="675" alt="" loading="lazy"><div class="cp-lagun-service__scenario-body"><h3>{{ 'templates.lagun_service.general_mount_title' | t }}</h3><p>{{ 'templates.lagun_service.general_mount_text' | t }}</p><a class="cp-lagun-service__text-link" href="{{ routes.root_url }}/products/lagun-befestigungsplatte?utm_source=lagun_flyer&amp;utm_medium=lagun_service&amp;utm_content=general_mount">{{ 'templates.lagun_service.product_cta' | t }} →</a></div></article>
+          <article class="cp-lagun-service__card cp-lagun-service__scenario"><img src="{{ 'cp-lagun-news-tabletops.webp' | asset_url }}" width="1536" height="864" alt="" loading="lazy"><div class="cp-lagun-service__scenario-body"><h3>{{ 'templates.lagun_service.general_table_title' | t }}</h3><p>{{ 'templates.lagun_service.general_table_text' | t }}</p><a class="cp-lagun-service__text-link" href="{{ routes.root_url }}/collections/tischplatten-ohne-b-ware?utm_source=lagun_flyer&amp;utm_medium=lagun_service&amp;utm_content=general_table">{{ 'templates.lagun_service.table_cta' | t }} →</a></div></article>
+          <article class="cp-lagun-service__card cp-lagun-service__scenario"><img src="{{ 'cp-lagun-service-extension.jpg' | asset_url }}" width="900" height="675" alt="" loading="lazy"><div class="cp-lagun-service__scenario-body"><h3>{{ 'templates.lagun_service.general_extend_title' | t }}</h3><p>{{ 'templates.lagun_service.general_extend_text' | t }}</p><a class="cp-lagun-service__text-link" href="{{ routes.root_url }}/products/bundle-arm-300-mm-bolzen-verbindungsstuck-silber?utm_source=lagun_flyer&amp;utm_medium=lagun_service&amp;utm_content=general_extend">{{ 'templates.lagun_service.product_cta' | t }} →</a></div></article>
+        </div>
+      </div>
+      <div class="cp-lagun-service__recommendations cp-lagun-service__hidden" data-lagun-results>
+        <h3>{{ 'templates.lagun_service.identified_title' | t }}</h3><div class="cp-lagun-service__grid" data-lagun-results-grid></div>
+      </div>
+      <noscript>{{ 'templates.lagun_service.nojs' | t }}</noscript>
+      <div class="cp-lagun-service__accessory-links"><span>{{ 'templates.lagun_service.more_accessories' | t }}</span><a href="{{ routes.root_url }}/products/lagun-aufbewahrungstasche-fur-tischplatten-und-tischgestell?utm_source=lagun_flyer&amp;utm_medium=lagun_service&amp;utm_content=browse_bags">{{ 'templates.lagun_service.bags_cta' | t }} →</a><a href="{{ routes.root_url }}/products/lagun-gap-abstandshalter-fur-die-befestigungsplatte?utm_source=lagun_flyer&amp;utm_medium=lagun_service&amp;utm_content=browse_gap">{{ 'templates.lagun_service.gap_cta' | t }} →</a><a href="{{ routes.root_url }}/collections/zubehor-ersatzteile?utm_source=lagun_flyer&amp;utm_medium=lagun_service&amp;utm_content=browse_all">{{ 'templates.lagun_service.config_cta' | t }} →</a></div>
+    </div>
+  </div>
+
+  <div class="cp-lagun-service__section">
+    <div class="cp-lagun-service__wrap cp-lagun-service__feature">
+      <a class="cp-lagun-service__feature-image" href="{{ routes.root_url }}/pages/lagun-neuheiten?utm_source=lagun_flyer&amp;utm_medium=lagun_service&amp;utm_content=new_range"><img src="{{ 'cp-lagun-news-hidden-wide.webp' | asset_url }}" width="1536" height="864" alt="{{ 'templates.lagun_service.news_alt' | t | escape }}" loading="lazy"></a>
+      <div class="cp-lagun-service__feature-copy"><p class="cp-lagun-service__eyebrow">{{ 'templates.lagun_service.news_eyebrow' | t }}</p><h2>{{ 'templates.lagun_service.news_title' | t }}</h2><p>{{ 'templates.lagun_service.news_text' | t }}</p><p class="cp-lagun-service__hint">{{ 'templates.lagun_service.news_status' | t }}</p><a class="cp-lagun-service__text-link" href="{{ routes.root_url }}/pages/lagun-neuheiten?utm_source=lagun_flyer&amp;utm_medium=lagun_service&amp;utm_content=new_range">{{ 'templates.lagun_service.news_cta' | t }} →</a></div>
+    </div>
+  </div>
+
+  <div class="cp-lagun-service__section cp-lagun-service__section--soft" id="dein-team">
+    <div class="cp-lagun-service__wrap cp-lagun-service__feature cp-lagun-service__feature--team">
+      <div class="cp-lagun-service__feature-copy"><p class="cp-lagun-service__eyebrow">{{ 'templates.lagun_service.team_eyebrow' | t }}</p><h2>{{ 'templates.lagun_service.team_title' | t }}</h2><p>{{ 'templates.lagun_service.team_text' | t }}</p><div class="cp-lagun-service__hero-actions"><a class="cp-lagun-service__button" href="mailto:info@camping-pioneers.de?subject=Lagun%20Frage">{{ 'templates.lagun_service.team_cta' | t }} →</a><a class="cp-lagun-service__text-link" href="{{ routes.root_url }}/pages/contact">{{ 'templates.lagun_service.team_contact' | t }} →</a></div></div>
+      <img class="cp-lagun-service__team-image" src="{{ 'cp-team-bad-berka.jpg' | asset_url }}" width="1800" height="1126" alt="{{ 'templates.lagun_service.team_alt' | t | escape }}" loading="lazy">
+    </div>
+  </div>
+
+  <div class="cp-lagun-service__section cp-lagun-service__review" id="bewerten">
+    <div class="cp-lagun-service__wrap cp-lagun-service__review-grid">
+      <div><p class="cp-lagun-service__eyebrow">{{ 'templates.lagun_service.review_eyebrow' | t }}</p><h2>{{ 'templates.lagun_service.review_title' | t }}</h2><p>{{ 'templates.lagun_service.review_text' | t }}</p><p class="cp-lagun-service__fair">{{ 'templates.lagun_service.review_fair' | t }}</p></div>
+      <div class="cp-lagun-service__review-action"><div class="cp-lagun-service__voucher" data-lagun-voucher><strong>10 €</strong><span>{{ 'templates.lagun_service.voucher_photo' | t }}</span></div><p data-lagun-review-status>{{ 'templates.lagun_service.review_wait' | t }}</p><a class="cp-lagun-service__text-link" style="color:white" href="#passende-erweiterungen" data-lagun-review-identify>{{ 'templates.lagun_service.review_identify' | t }} →</a><a class="cp-lagun-service__button cp-lagun-service__hidden" data-lagun-review-link href="#">{{ 'templates.lagun_service.review_cta' | t }}</a></div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{"name":"Lagun Service","settings":[],"presets":[{"name":"Lagun Service"}]}
+{% endschema %}

@@ -1,0 +1,233 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "empty-space": {
+      "type": "empty-space",
+      "settings": {
+        "desktop_height": 36,
+        "mobile_height": 16
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": false,
+            "price_size": "medium"
+          }
+        },
+        "countdown_CbhPTK": {
+          "type": "countdown",
+          "settings": {
+            "heading": "Verfügbar ab",
+            "number_size": "small",
+            "colors_heading": "#da3f3f",
+            "colors_text": "#da3f3f",
+            "colors_background": "#feeeee"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_size": "large",
+            "show_badges": true,
+            "sale_badge_basis": "auto"
+          }
+        },
+        "custom_liquid_y38iyk": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"benefits\" style=\"display: flex; flex-direction: column; gap: 6px; margin-bottom:32px;box-shadow:0 2px 5px #0003;border-radius:4px; padding:12px;background-color:#eee;\">\n  <span class=\"inline-benefit\" style=\"display: flex; align-items: center; gap: 8px;\">\n   <span style=\"font-size: 20px; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;\">⚡<\/span>\n Schneller Auf- & Abbau\n  <\/span>\n  <span class=\"inline-benefit\" style=\"display: flex; align-items: center; gap: 8px;\">\n    <span style=\"font-size: 20px; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;\">🛏️ \n<\/span>\n   Komfortable Liegefläche mit integrierter Matratze\n  <\/span>\n <span class=\"inline-benefit\" style=\"display: flex; align-items: center; gap: 8px;\">\n   <span style=\"font-size: 20px; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center;\">🚚<\/span>\n    <b> Nur 130€ Speditionsversand oder kostenlose Selbstabholung – Montage & Einweisung für 80€ buchbar!\n  <\/span>\n \n<\/div>\n\n<p class=\"product__text bluedate marker\"><svg class=\"icon icon-accordion\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\"><path d=\"M9.69502 0.6786C9.91338 0.601796 10.1516 0.603123 10.3691 0.682353L18.2151 3.54058C18.61 3.68445 18.8728 4.05988 18.8728 4.48018V14.4287C18.8728 14.8074 18.6588 15.1537 18.32 15.3231L10.4731 19.2465C10.196 19.385 9.87022 19.3873 9.59117 19.2526L1.45405 15.3244C1.10843 15.1576 0.888794 14.8076 0.888794 14.4239V4.48434C0.888794 4.05997 1.15665 3.68181 1.55699 3.541L9.69502 0.6786ZM6.07999 3.01017L2.5346 4.25719L10.149 7.63545L13.5692 6.118L6.07999 3.01017ZM6.78606 2.76183L14.1997 5.83828L17.5367 4.35774L10.0268 1.62195L6.78606 2.76183ZM1.88879 14.4239L1.88879 5.06467L9.64898 8.50762V18.1701L1.88879 14.4239ZM17.8728 14.4287L10.649 18.0405V8.50762L17.8728 5.30263V14.4287Z\" fill-rule=\"evenodd\"><\/path><\/svg> {{ product.metafields.custom.hinweise.value.children[0].children[0].value }} <\/p>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "swatch_source": "variant",
+            "swatch_type": "round",
+            "enable_swatch_unavailable_click": false,
+            "size_chart": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "text_PmQPPX": {
+          "type": "text",
+          "settings": {
+            "icon": "clipboard",
+            "text": "Dieser Artikel ist derzeit noch nicht lieferbar. Die vorrausichtliche Lieferzeit siehst du in der Beschreibung",
+            "text_style": "body"
+          }
+        },
+        "text_8nNGWf": {
+          "type": "text",
+          "settings": {
+            "icon": "lightning_bolt",
+            "text": "Du kannst den Artikel aber jetzt bereits bestellen und wir liefern so schnell wie möglich. Versprochen!",
+            "text_style": "body"
+          }
+        },
+        "collapsible_tab-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Eigenschaften",
+            "content": "{{ product.metafields.custom.produkteigenschaften_richtext | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Lieferumfang",
+            "content": "{{ product.metafields.custom.lieferumfang | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "custom_liquid_DaQ4an": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"product__text bluedate\"><svg class=\"icon icon-accordion\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\"><path d=\"M9.69502 0.6786C9.91338 0.601796 10.1516 0.603123 10.3691 0.682353L18.2151 3.54058C18.61 3.68445 18.8728 4.05988 18.8728 4.48018V14.4287C18.8728 14.8074 18.6588 15.1537 18.32 15.3231L10.4731 19.2465C10.196 19.385 9.87022 19.3873 9.59117 19.2526L1.45405 15.3244C1.10843 15.1576 0.888794 14.8076 0.888794 14.4239V4.48434C0.888794 4.05997 1.15665 3.68181 1.55699 3.541L9.69502 0.6786ZM6.07999 3.01017L2.5346 4.25719L10.149 7.63545L13.5692 6.118L6.07999 3.01017ZM6.78606 2.76183L14.1997 5.83828L17.5367 4.35774L10.0268 1.62195L6.78606 2.76183ZM1.88879 14.4239L1.88879 5.06467L9.64898 8.50762V18.1701L1.88879 14.4239ZM17.8728 14.4287L10.649 18.0405V8.50762L17.8728 5.30263V14.4287Z\" fill-rule=\"evenodd\"><\/path><\/svg> {{ product.metafields.custom.hinweise.value.children[0].children[0].value }} <\/p>"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 20,
+            "show_inventory_transfer": true,
+            "color_scheme": "accent-6"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "countdown_CbhPTK",
+        "rating",
+        "price",
+        "custom_liquid_y38iyk",
+        "variant_picker",
+        "description",
+        "text_PmQPPX",
+        "text_8nNGWf",
+        "collapsible_tab-0",
+        "collapsible_tab-1",
+        "custom_liquid_DaQ4an",
+        "inventory_status",
+        "buy_buttons"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "media_size": "small",
+        "gallery_layout": "thumbnail_slider",
+        "image_ratio": "adapt",
+        "show_featured_media": false,
+        "show_thumbnails": true,
+        "hide_variants": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "mobile_image_ratio": "adapt_first",
+        "show_mobile_thumbnails": true,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_list_limit": 4,
+        "show_divider": false,
+        "heading": "Das könnte dir auch gefallen",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1703271860ee895e98": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "show_divider": false,
+        "heading": "Kürzlich angesehene Produkte",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "empty-space",
+    "main",
+    "product-recommendations",
+    "1703271860ee895e98",
+    "recently-viewed-products"
+  ]
+}

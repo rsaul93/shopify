@@ -1,0 +1,211 @@
+{%- comment -%}
+  First-view purchase guidance for the dedicated Lagun product template.
+  Prices, availability, SKU, benefits and payment methods come from Shopify.
+{%- endcomment -%}
+
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign silver_handle = 'lagun-tischgestell-set-mit-standard-befestigungsplatte-silber'
+  assign black_handle = 'lagun-tischgestell-set-mit-standard-befestigungsplatte-schwarz'
+  assign compact_handles = 'lagun-tischgestell-set-mit-standard-befestigungsplatte-silber,lagun-tischgestell-set-mit-400mm-tischbein-silber,lagun-tischgestell-set-mit-700mm-tischbein-silber,lagun-tischgestell-set-mit-smarter-befestigungsplatte-silber,lagun-tischgestell-set-mit-dreh-klappbarer-untertischbefestigungsplatte-silber' | split: ','
+  assign upgrade_product = all_products['lagun-tischgestell-set-mit-dreh-klappbarer-untertischbefestigungsplatte-silber']
+  assign silver_product = all_products[silver_handle]
+  assign black_product = all_products[black_handle]
+  assign selected_set_handle = product.handle
+  if product.handle == black_handle
+    assign selected_set_handle = silver_handle
+  endif
+  assign show_black_option = false
+  if black_product != blank
+    if product.handle == silver_handle or product.handle == black_handle
+      assign show_black_option = true
+    endif
+  endif
+  assign buybox_mode = mode | default: 'selection'
+  assign cp_settings = editor_block.settings
+-%}
+
+{%- if buybox_mode == 'review-love' -%}
+  <a
+    class="cp-lagun-review-love"
+    href="#cp-lagun-product-reviews"
+    style="color:inherit;text-decoration:none"
+    data-cp-random-five-star
+    data-product-id="{{ product.id }}"
+    hidden
+    aria-live="polite"
+  >
+    <span class="cp-lagun-review-love__people" aria-hidden="true">
+      <span data-cp-reviewer-avatar>★</span>
+      <span>★</span>
+      <span>★</span>
+    </span>
+    <span class="cp-lagun-review-love__copy">
+      <span>
+        <strong data-cp-reviewer-name></strong>
+        {{ cp_settings.join_text | default: 'und' | escape }} <strong data-cp-reviewer-count></strong> {{ cp_settings.love_text | default: 'weitere Personen lieben dieses Produkt.' | escape }}
+      </span>
+      <small>{{ cp_settings.source_text | default: 'Aus echten 5-Sterne-Produktbewertungen' | escape }}</small>
+    </span>
+  </a>
+  <script>
+    document.currentScript.previousElementSibling.addEventListener('click', () => {
+      const reviews = document.querySelector('#cp-lagun-product-reviews details.cp-reviews__panel');
+      if (reviews) reviews.open = true;
+    });
+  </script>
+{%- elsif buybox_mode == 'selection' -%}
+  <div class="cp-lagun-buybox-selection" data-cp-buybox-selection>
+    <div class="cp-lagun-buybox-status">
+      <span class="cp-lagun-buybox-status__availability{% unless current_variant.available %} is-unavailable{% endunless %}">
+        <span aria-hidden="true"></span>
+        {% if current_variant.available %}{{ cp_settings.available_text | default: 'Auf Lager' | escape }}{% else %}{{ cp_settings.unavailable_text | default: 'Derzeit nicht verfügbar' | escape }}{% endif %}
+      </span>
+      {%- if current_variant.sku != blank -%}
+        <span class="cp-lagun-buybox-status__sku">{{ cp_settings.sku_prefix | default: 'Art.-Nr.' | escape }} {{ current_variant.sku }}</span>
+      {%- endif -%}
+    </div>
+
+    <div class="cp-lagun-buybox-benefits" aria-label="Produktvorteile">
+      {{ product.metafields.custom.core_produktvorteile.value | newline_to_br }}
+    </div>
+
+    <div class="cp-lagun-color-picker" aria-labelledby="cp-lagun-color-title">
+      <div class="cp-lagun-buybox-picker__heading">
+        <strong id="cp-lagun-color-title">{{ cp_settings.color_heading | default: 'Farbe wählen' | escape }}</strong>
+        <span>{% if product.handle == black_handle %}{{ cp_settings.black_selected | default: 'Schwarz ausgewählt' | escape }}{% else %}{{ cp_settings.silver_selected | default: 'Silber ausgewählt' | escape }}{% endif %}</span>
+      </div>
+      <div class="cp-lagun-color-picker__grid{% unless show_black_option %} is-single{% endunless %}">
+        <a class="cp-lagun-color-option{% unless product.handle == black_handle %} is-selected{% endunless %}" href="{{ silver_product.url }}"{% unless product.handle == black_handle %} aria-current="page"{% endunless %} data-cp-lagun-product-switch>
+          <span class="cp-lagun-color-option__swatch cp-lagun-color-option__swatch--silver" aria-hidden="true"></span>
+          <span><strong>{{ cp_settings.silver_label | default: 'Silber' | escape }}</strong><small>{{ silver_product.price | money }}</small></span>
+          {%- unless product.handle == black_handle -%}<span class="cp-lagun-color-option__check" aria-hidden="true">✓</span>{%- endunless -%}
+        </a>
+        {%- if show_black_option -%}
+          <a class="cp-lagun-color-option{% if product.handle == black_handle %} is-selected{% endif %}" href="{{ black_product.url }}"{% if product.handle == black_handle %} aria-current="page"{% endif %} data-cp-lagun-product-switch>
+            <span class="cp-lagun-color-option__swatch cp-lagun-color-option__swatch--black" aria-hidden="true"></span>
+            <span><strong>{{ cp_settings.black_label | default: 'Schwarz' | escape }}</strong><small>{{ black_product.price | money }}</small></span>
+            {%- if product.handle == black_handle -%}<span class="cp-lagun-color-option__check" aria-hidden="true">✓</span>{%- endif -%}
+            <span class="visually-hidden">{% if black_product.available %}{{ cp_settings.available_text | default: 'Auf Lager' | escape }}{% else %}{{ cp_settings.unavailable_text | default: 'Derzeit nicht verfügbar' | escape }}{% endif %}</span>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="cp-lagun-buybox-picker">
+      <div class="cp-lagun-buybox-picker__heading">
+        <strong>{{ cp_settings.set_heading | default: 'Set auswählen' | escape }}</strong>
+        <span>{{ cp_settings.config_count | default: '3 Konfigurationen' | escape }}</span>
+      </div>
+      <div class="cp-lagun-buybox-picker__grid" role="list">
+        {%- for compact_handle in compact_handles -%}
+          {%- assign compact_product = all_products[compact_handle] -%}
+          {%- if compact_product != blank -%}
+            {%- liquid
+              assign compact_label = cp_settings.standard_label | default: 'Standard'
+              assign compact_note = cp_settings.standard_note | default: 'Wandplatte'
+              if compact_handle contains '400mm-tischbein'
+                assign compact_label = cp_settings.compact_label | default: '400 mm'
+                assign compact_note = cp_settings.compact_note | default: 'Kurzes Bein'
+              elsif compact_handle contains '700mm-tischbein'
+                assign compact_label = cp_settings.tall_label | default: '700 mm'
+                assign compact_note = cp_settings.tall_note | default: 'Langes Bein'
+              elsif compact_handle contains 'smarter-befestigungsplatte'
+                assign compact_label = cp_settings.smart_label | default: 'Smart'
+                assign compact_note = cp_settings.smart_note | default: 'Smart-Platte'
+              elsif compact_handle contains 'dreh-klappbarer'
+                assign compact_label = cp_settings.fold_label | default: 'Dreh/Klapp'
+                assign compact_note = cp_settings.fold_note | default: 'Komplettset'
+              endif
+              assign compact_url = compact_product.url
+              assign compact_card_product = compact_product
+              if product.handle == black_handle and compact_handle == silver_handle
+                assign compact_url = product.url
+                assign compact_card_product = product
+              endif
+            -%}
+            <a
+              class="cp-lagun-buybox-option{% if compact_handle == selected_set_handle %} is-selected{% endif %}"
+              href="{{ compact_url }}"
+              role="listitem"
+              {% if compact_handle == selected_set_handle %}aria-current="page"{% endif %}
+              data-cp-lagun-product-switch
+            >
+              <span class="cp-lagun-buybox-option__check" aria-hidden="true"></span>
+              <span class="cp-lagun-buybox-option__copy">
+                <strong>{{ compact_label }}</strong>
+                <small>{{ compact_note }}</small>
+              </span>
+              <span class="cp-lagun-buybox-option__price">{{ compact_card_product.price | money }}</span>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <a class="cp-lagun-buybox-picker__compare" href="#cp-lagun-compare-title">
+        {{ cp_settings.compare_label | default: 'Alle fünf Lagun-Sets im Detail vergleichen' | escape }}
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="cp-lagun-buybox-included">
+      <span class="cp-lagun-buybox-included__icon" aria-hidden="true">✓</span>
+      <span>
+        <strong>{{ cp_settings.included_heading | default: 'Deine Auswahl' | escape }}</strong>
+        <small>{{ cp_settings.included_body | default: 'Tischplatte separat erhältlich' | escape }}</small>
+      </span>
+    </div>
+  </div>
+{%- else -%}
+  <div class="cp-lagun-buybox-support" data-cp-buybox-support>
+    <ul class="cp-lagun-buybox-trust" role="list" aria-label="Service und Vorteile beim Bestellen">
+      <li>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7L4 8.6"/><path d="M4 4v4.6h4.6"/></svg></span>
+        <strong>{{ cp_settings.trust_1_value | default: '30 Tage' | escape }}</strong><small>{{ cp_settings.trust_1_label | default: 'Rückgaberecht' | escape }}</small>
+      </li>
+      <li>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg></span>
+        <strong>{{ cp_settings.trust_2_value | default: 'Modular' | escape }}</strong><small>{{ cp_settings.trust_2_label | default: 'Ersatzteile erhältlich' | escape }}</small>
+      </li>
+      <li>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 6h11v11H3zM14 10h3l4 4v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></span>
+        <strong>{{ cp_settings.trust_3_value | default: 'Ab 200 €' | escape }}</strong><small>{{ cp_settings.trust_3_label | default: 'Paketversand frei' | escape }}</small>
+      </li>
+      <li>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 11a6 6 0 0 1 12 0v5a2 2 0 0 1-2 2h-2v-6h4M6 12H2v4a2 2 0 0 0 2 2h2v-6Z"/><path d="M14 19c0 1.1-.9 2-2 2h-2"/></svg></span>
+        <strong>{{ cp_settings.trust_4_value | default: 'Persönlich' | escape }}</strong><small>{{ cp_settings.trust_4_label | default: 'für dich da' | escape }}</small>
+      </li>
+    </ul>
+
+    {%- if upgrade_product != blank and product.handle != upgrade_product.handle -%}
+      <a class="cp-lagun-buybox-upgrade" href="{{ upgrade_product.url }}" data-cp-lagun-product-switch>
+        <span class="cp-lagun-buybox-upgrade__media">
+          {%- if upgrade_product.featured_image != blank -%}
+            {{ upgrade_product.featured_image | image_url: width: 240 | image_tag:
+              loading: 'lazy',
+              widths: '120, 180, 240',
+              sizes: '76px',
+              alt: upgrade_product.title
+            }}
+          {%- endif -%}
+        </span>
+        <span class="cp-lagun-buybox-upgrade__copy">
+          <small>{{ cp_settings.upgrade_kicker | default: 'Noch mehr Bewegungsfreiheit?' | escape }}</small>
+          <strong>{{ cp_settings.upgrade_heading | default: 'Tischplatte zusätzlich drehen und wegklappen' | escape }}</strong>
+          <span>{{ upgrade_product.price | money }} · {% if upgrade_product.available %}{{ cp_settings.upgrade_available | default: 'verfügbar' | escape }}{% else %}{{ cp_settings.upgrade_unavailable | default: 'aktuell nicht verfügbar' | escape }}{% endif %}</span>
+        </span>
+        <span class="cp-lagun-buybox-upgrade__arrow" aria-hidden="true">→</span>
+      </a>
+    {%- endif -%}
+
+    {%- if shop.enabled_payment_types.size > 0 -%}
+      <div class="cp-lagun-buybox-payments" aria-label="Verfügbare Zahlungsarten">
+        <span>{{ cp_settings.payment_heading | default: 'Sicher bezahlen' | escape }}</span>
+        <div>
+          {%- for payment_type in shop.enabled_payment_types limit: 8 -%}
+            {{ payment_type | payment_type_svg_tag }}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+{%- endif -%}

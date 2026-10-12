@@ -1,0 +1,94 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "4fad5d0a-3407-4ce5-b40b-cf71291a1c6e": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19900203073863__4fad5d0a-3407-4ce5-b40b-cf71291a1c6e-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Herzlich Willkommen auf dem Blog von Camping-Pioneers!",
+            "heading_size": "h1",
+            "heading_tag": "h1"
+          }
+        },
+        "template--19900203073863__4fad5d0a-3407-4ce5-b40b-cf71291a1c6e-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hier findest du Ratgeber, Tipps für Reisen, Infos zu Produkten und vieles mehr.<br\/> Schön, dass du uns besuchst!<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "template--19900203073863__4fad5d0a-3407-4ce5-b40b-cf71291a1c6e-heading-1",
+        "template--19900203073863__4fad5d0a-3407-4ce5-b40b-cf71291a1c6e-text-1"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "show_comment_count": true
+          }
+        },
+        "summary": {
+          "type": "summary",
+          "settings": {}
+        },
+        "read_more": {
+          "type": "read_more",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title",
+        "summary",
+        "read_more"
+      ],
+      "settings": {
+        "per_page": 12,
+        "show_tag_filter": true,
+        "show_image": true,
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    }
+  },
+  "order": [
+    "4fad5d0a-3407-4ce5-b40b-cf71291a1c6e",
+    "main"
+  ]
+}

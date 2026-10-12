@@ -1,0 +1,515 @@
+{{ 'cp-homepage-showcase.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign hero_image = section.settings.hero_image
+  assign hero_image_alt = hero_image.alt | default: section.settings.hero_image_alt
+  assign configurator_image = section.settings.configurator_image
+  assign configurator_image_alt = configurator_image.alt | default: section.settings.configurator_image_alt
+  assign film_one_video = section.settings.film_one_video
+  assign film_one_url = section.settings.film_one_url
+  assign film_two_video = section.settings.film_two_video
+  assign film_two_url = section.settings.film_two_url
+  assign consulting_image = section.settings.consulting_image
+-%}
+
+<section class="cp-home" data-section-id="{{ section.id }}">
+  <div class="cp-home__hero cp-home__shell">
+    <div class="cp-home__hero-copy">
+      <p class="cp-home__eyebrow">{{ section.settings.hero_kicker | escape }}</p>
+      <h1>{{ section.settings.hero_heading }}</h1>
+      <div class="cp-home__lead rte">{{ section.settings.hero_text }}</div>
+      <div class="cp-home__actions">
+        {%- if section.settings.hero_primary_label != blank -%}
+          <a class="cp-home__button cp-home__button--primary" href="{{ section.settings.hero_primary_link }}">
+            {{ section.settings.hero_primary_label | escape }}
+            <span aria-hidden="true">→</span>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.hero_secondary_label != blank -%}
+          <a class="cp-home__button cp-home__button--secondary" href="{{ section.settings.hero_secondary_link }}">
+            {{ section.settings.hero_secondary_label | escape }}
+            <span aria-hidden="true">→</span>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="cp-home__hero-media">
+      {%- if hero_image != blank -%}
+        {{ hero_image | image_url: width: 1800 | image_tag:
+          widths: '640, 900, 1200, 1500, 1800',
+          sizes: '(min-width: 990px) 56vw, 100vw',
+          loading: 'eager',
+          fetchpriority: 'high',
+          alt: hero_image_alt
+        }}
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'cp-home__placeholder' }}
+      {%- endif -%}
+      <div class="cp-home__hero-caption"><span>{{ section.settings.hero_caption | escape }}</span></div>
+    </div>
+  </div>
+
+  <section class="cp-home__promise cp-home__shell" aria-labelledby="cp-home-promises-{{ section.id }}">
+    <header class="cp-home__promise-heading">
+      <p class="cp-home__eyebrow">{{ section.settings.promise_kicker | escape }}</p>
+      <h2 id="cp-home-promises-{{ section.id }}">{{ section.settings.promise_heading }}</h2>
+      <div class="rte">{{ section.settings.promise_text }}</div>
+    </header>
+    <div class="cp-home__promise-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'usp' -%}
+          <article class="cp-home__promise-card" {{ block.shopify_attributes }}>
+            <span class="cp-home__promise-icon" aria-hidden="true">
+              {%- case block.settings.icon -%}
+                {%- when 'showroom' -%}
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M3 10.5 12 3l9 7.5M5.5 9.5V21h13V9.5M9 21v-7h6v7"/></svg>
+                {%- when 'rental' -%}
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 7h12l-2.5-2.5M17 17H5l2.5 2.5M19 7l-2.5 2.5M5 17l2.5-2.5"/></svg>
+                {%- when 'fit' -%}
+                  <svg viewBox="0 0 24 24" fill="none"><path d="m4 12 5 5L20 6M4 4h4M4 4v4M20 20h-4M20 20v-4"/></svg>
+                {%- else -%}
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M4 18.5V20h1.5l10-10-1.5-1.5-10 10ZM13 5.5l1.5-1.5L20 9.5 18.5 11M7 5h4M7 9h3"/></svg>
+              {%- endcase -%}
+            </span>
+            <p class="cp-home__promise-number">0{{ forloop.index }}</p>
+            <h3>{{ block.settings.title | escape }}</h3>
+            <p>{{ block.settings.text | escape }}</p>
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </section>
+
+  <div class="cp-home__lagun cp-home__section cp-home__shell">
+    <header class="cp-home__section-heading cp-home__section-heading--split">
+      <div>
+        <p class="cp-home__eyebrow">{{ section.settings.lagun_kicker | escape }}</p>
+        <h2>{{ section.settings.lagun_heading }}</h2>
+      </div>
+      <div class="cp-home__section-intro rte">{{ section.settings.lagun_text }}</div>
+    </header>
+
+    <div class="cp-home__product-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'lagun_product' -%}
+          {%- assign featured_product = block.settings.product -%}
+          <article class="cp-home__product-card" {{ block.shopify_attributes }}>
+            <a class="cp-home__product-media" href="{{ featured_product.url | default: block.settings.fallback_link }}">
+              {%- if featured_product.featured_image != blank -%}
+                {{ featured_product.featured_image | image_url: width: 900 | image_tag:
+                  widths: '360, 540, 720, 900',
+                  sizes: '(min-width: 990px) 31vw, (min-width: 650px) 47vw, 88vw',
+                  loading: 'lazy',
+                  alt: featured_product.featured_image.alt | default: featured_product.title
+                }}
+              {%- elsif block.settings.fallback_image != blank -%}
+                {{ block.settings.fallback_image | image_url: width: 900 | image_tag:
+                  widths: '360, 540, 720, 900',
+                  sizes: '(min-width: 990px) 31vw, (min-width: 650px) 47vw, 88vw',
+                  loading: 'lazy'
+                }}
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'cp-home__placeholder' }}
+              {%- endif -%}
+              {%- if block.settings.badge != blank -%}<span class="cp-home__badge">{{ block.settings.badge | escape }}</span>{%- endif -%}
+            </a>
+            <div class="cp-home__product-copy">
+              <p class="cp-home__card-kicker">{{ block.settings.kicker | escape }}</p>
+              <h3><a href="{{ featured_product.url | default: block.settings.fallback_link }}">{{ block.settings.title | default: featured_product.title | escape }}</a></h3>
+              <p>{{ block.settings.text | escape }}</p>
+              <div class="cp-home__product-meta">
+                {%- if featured_product != blank -%}<span class="cp-home__price">{% if request.locale.iso_code == 'en' %}from{% else %}ab{% endif %} {{ featured_product.price_min | money }}</span>{%- endif -%}
+                <a class="cp-home__button cp-home__button--secondary cp-home__button--compact" href="{{ featured_product.url | default: block.settings.fallback_link }}" aria-label="{{ block.settings.title | default: featured_product.title | escape }} ansehen">Ansehen <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {%- if film_one_video != blank or film_one_url != blank -%}
+    <div class="cp-home__film cp-home__shell">
+      <div class="cp-home__film-media media-wrapper">
+        {%- if section.settings.film_one_poster != blank -%}
+          {{ section.settings.film_one_poster | image_url: width: 1800 | image_tag:
+            class: 'cp-home__film-poster',
+            widths: '640, 900, 1200, 1500, 1800',
+            sizes: '(min-width: 990px) 62vw, 100vw',
+            loading: 'lazy',
+            alt: ''
+          }}
+        {%- endif -%}
+        <video-section class="cp-home__film-player" data-video-hero data-parent=".cp-home__film-media" data-loop="1"
+          {%- if film_one_video != blank %} data-type="mp4"{% else %} data-type="{{ film_one_url.type }}" data-video-id="{{ film_one_url.id }}"{% endif %}
+          aria-hidden="true">
+          {%- if film_one_video != blank -%}
+            {{ film_one_video | video_tag: image_size: '1800x', autoplay: true, loop: true, controls: false, muted: true, playsinline: true }}
+          {%- endif -%}
+        </video-section>
+        <div class="cp-home__film-shade"></div>
+      </div>
+      <div class="cp-home__film-copy">
+        <p class="cp-home__eyebrow cp-home__eyebrow--light">{{ section.settings.film_one_kicker | escape }}</p>
+        <h2>{{ section.settings.film_one_heading }}</h2>
+        {%- if section.settings.film_one_label != blank -%}
+          <a class="cp-home__button cp-home__button--light" href="{{ section.settings.film_one_link }}">{{ section.settings.film_one_label | escape }}<span aria-hidden="true">→</span></a>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="cp-home__configurator cp-home__shell">
+    <div class="cp-home__configurator-media">
+      {%- if configurator_image != blank -%}
+        {{ configurator_image | image_url: width: 1500 | image_tag:
+          widths: '560, 760, 1000, 1250, 1500',
+          sizes: '(min-width: 990px) 52vw, 100vw',
+          loading: 'lazy',
+          alt: configurator_image_alt
+        }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'cp-home__placeholder' }}
+      {%- endif -%}
+      <p>{{ section.settings.configurator_media_label | escape }}</p>
+    </div>
+    <div class="cp-home__configurator-copy">
+      <p class="cp-home__eyebrow cp-home__eyebrow--light">{{ section.settings.configurator_kicker | escape }}</p>
+      <h2>{{ section.settings.configurator_heading }}</h2>
+      <div class="rte">{{ section.settings.configurator_text }}</div>
+      <ol class="cp-home__steps">
+        <li><span>01</span>Einbausituation beschreiben</li>
+        <li><span>02</span>Höhe & Bewegungsraum festlegen</li>
+        <li><span>03</span>Farbe & Komponenten wählen</li>
+      </ol>
+      <a class="cp-home__button cp-home__button--light" href="{{ section.settings.configurator_link }}">{{ section.settings.configurator_label | escape }}<span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <div class="cp-home__section cp-home__shell">
+    <header class="cp-home__section-heading cp-home__section-heading--center">
+      <p class="cp-home__eyebrow">{{ section.settings.worlds_kicker | escape }}</p>
+      <h2>{{ section.settings.worlds_heading }}</h2>
+      <div class="cp-home__section-intro rte">{{ section.settings.worlds_text }}</div>
+    </header>
+
+    <div class="cp-home__world-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'world' -%}
+          <a class="cp-home__world-card cp-home__world-card--{{ block.settings.size }} cp-home__world-card--copy-{{ block.settings.text_position }}" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+            <div class="cp-home__world-media">
+              {%- if block.settings.image != blank -%}
+                {%- assign world_image_alt = block.settings.image.alt | default: block.settings.title -%}
+                {{ block.settings.image | image_url: width: 1400 | image_tag:
+                  widths: '400, 640, 800, 1100, 1400',
+                  sizes: '(min-width: 990px) 48vw, (min-width: 650px) 50vw, 100vw',
+                  loading: 'lazy',
+                  alt: world_image_alt
+                }}
+              {%- else -%}
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'cp-home__placeholder' }}
+              {%- endif -%}
+            </div>
+            <div class="cp-home__world-overlay"></div>
+            <div class="cp-home__world-copy">
+              <p>{{ block.settings.kicker | escape }}</p>
+              <h3>{{ block.settings.title | escape }}</h3>
+              <span class="cp-home__button cp-home__button--light cp-home__button--compact">{{ block.settings.link_label | escape }} <b aria-hidden="true">→</b></span>
+            </div>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {%- if film_two_video != blank or film_two_url != blank -%}
+    <div class="cp-home__film cp-home__film--second cp-home__shell">
+      <div class="cp-home__film-media media-wrapper">
+        {%- if section.settings.film_two_poster != blank -%}
+          {{ section.settings.film_two_poster | image_url: width: 1800 | image_tag:
+            class: 'cp-home__film-poster',
+            widths: '640, 900, 1200, 1500, 1800',
+            sizes: '(min-width: 990px) 62vw, 100vw',
+            loading: 'lazy',
+            alt: ''
+          }}
+        {%- endif -%}
+        <video-section class="cp-home__film-player" data-video-hero data-parent=".cp-home__film-media" data-loop="1"
+          {%- if film_two_video != blank %} data-type="mp4"{% else %} data-type="{{ film_two_url.type }}" data-video-id="{{ film_two_url.id }}"{% endif %}
+          aria-hidden="true">
+          {%- if film_two_video != blank -%}
+            {{ film_two_video | video_tag: image_size: '1800x', autoplay: true, loop: true, controls: false, muted: true, playsinline: true }}
+          {%- endif -%}
+        </video-section>
+        <div class="cp-home__film-shade"></div>
+      </div>
+      <div class="cp-home__film-copy">
+        <p class="cp-home__eyebrow cp-home__eyebrow--light">{{ section.settings.film_two_kicker | escape }}</p>
+        <h2>{{ section.settings.film_two_heading }}</h2>
+        {%- if section.settings.film_two_label != blank -%}
+          <a class="cp-home__button cp-home__button--light" href="{{ section.settings.film_two_link }}">{{ section.settings.film_two_label | escape }}<span aria-hidden="true">→</span></a>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <section class="cp-home__answers cp-home__section cp-home__shell" aria-labelledby="cp-home-answers-{{ section.id }}">
+    {%- if request.locale.iso_code == 'en' -%}
+    <header class="cp-home__section-heading cp-home__section-heading--split">
+      <div>
+        <p class="cp-home__eyebrow">Quick answers</p>
+        <h2 id="cp-home-answers-{{ section.id }}">What suits your <em>plans?</em></h2>
+      </div>
+      <div class="cp-home__section-intro rte"><p>Key answers about Lagun table leg systems, rentals and personal advice at a glance.</p></div>
+    </header>
+    <div class="cp-home__answer-grid">
+      <a class="cp-home__answer-card" href="{% if request.locale.iso_code == 'en' %}/en{% endif %}/pages/lagun-tischgestell-konfigurator">
+        <p>01</p>
+        <h3>Which Lagun table leg system suits my camper?</h3>
+        <div class="rte"><p>That depends on the mounting surface, desired height and available movement range. The Lagun configurator guides you step by step to the right combination.</p></div>
+        <span class="cp-home__button cp-home__button--secondary cp-home__button--compact">Configure your Lagun <b aria-hidden="true">→</b></span>
+      </a>
+      <a class="cp-home__answer-card" href="{% if request.locale.iso_code == 'en' %}/en{% endif %}/pages/dachzelte-mieten">
+        <p>02</p>
+        <h3>Can I rent a rooftop tent before buying?</h3>
+        <div class="rte"><p>Yes. Choose your travel period and try the rooftop tent on your own adventure.</p></div>
+        <span class="cp-home__button cp-home__button--secondary cp-home__button--compact">Rent a rooftop tent <b aria-hidden="true">→</b></span>
+      </a>
+      <a class="cp-home__answer-card" href="{% if request.locale.iso_code == 'en' %}/en{% endif %}/pages/showrooms">
+        <p>03</p>
+        <h3>Where can I see the products in person?</h3>
+        <div class="rte"><p>You can compare selected products and get personal advice at our showrooms in Thuringia and Bavaria.</p></div>
+        <span class="cp-home__button cp-home__button--secondary cp-home__button--compact">Explore showrooms <b aria-hidden="true">→</b></span>
+      </a>
+    </div>
+    {%- else -%}
+    <header class="cp-home__section-heading cp-home__section-heading--split">
+      <div>
+        <p class="cp-home__eyebrow">Schnell orientiert</p>
+        <h2 id="cp-home-answers-{{ section.id }}">Was passt zu deinem <em>Vorhaben?</em></h2>
+      </div>
+      <div class="cp-home__section-intro rte"><p>Die wichtigsten Antworten zu Lagun Tischgestellen, Vermietung und persönlicher Beratung auf einen Blick.</p></div>
+    </header>
+    <div class="cp-home__answer-grid">
+      <a class="cp-home__answer-card" href="/pages/lagun-tischgestell-konfigurator">
+        <p>01</p>
+        <h3>Welches Lagun Tischgestell passt in meinen Camper?</h3>
+        <div class="rte"><p>Das hängt von Montagefläche, gewünschter Höhe und Bewegungsraum ab. Der Lagun Konfigurator führt dich Schritt für Schritt zur passenden Kombination.</p></div>
+        <span class="cp-home__button cp-home__button--secondary cp-home__button--compact">Lagun konfigurieren <b aria-hidden="true">→</b></span>
+      </a>
+      <a class="cp-home__answer-card" href="/pages/dachzelte-mieten">
+        <p>02</p>
+        <h3>Kann ich ein Dachzelt erst mieten?</h3>
+        <div class="rte"><p>Ja. Wähle deinen Reisezeitraum und probiere das Dachzelt in Ruhe auf deinem eigenen Abenteuer aus.</p></div>
+        <span class="cp-home__button cp-home__button--secondary cp-home__button--compact">Dachzelt mieten <b aria-hidden="true">→</b></span>
+      </a>
+      <a class="cp-home__answer-card" href="/pages/showrooms">
+        <p>03</p>
+        <h3>Wo kann ich die Produkte persönlich ansehen?</h3>
+        <div class="rte"><p>In unseren Showrooms in Thüringen und Bayern kannst du ausgewählte Produkte vergleichen und dich persönlich beraten lassen.</p></div>
+        <span class="cp-home__button cp-home__button--secondary cp-home__button--compact">Showrooms entdecken <b aria-hidden="true">→</b></span>
+      </a>
+    </div>
+    {%- endif -%}
+  </section>
+
+  <section class="cp-home__consulting cp-home__shell" aria-labelledby="cp-home-consulting-{{ section.id }}">
+    <div class="cp-home__consulting-media">
+      {%- if consulting_image != blank -%}
+        {%- assign consulting_image_alt = consulting_image.alt | default: section.settings.consulting_image_alt -%}
+        {{ consulting_image | image_url: width: 1800 | image_tag:
+          widths: '520, 760, 1000, 1400, 1800',
+          sizes: '(min-width: 990px) 52vw, 100vw',
+          loading: 'lazy',
+          alt: consulting_image_alt
+        }}
+      {%- else -%}
+        <img src="{{ 'cp-team-bad-berka.jpg' | asset_url }}" width="1800" height="1126" loading="lazy" alt="{{ section.settings.consulting_image_alt | escape }}">
+      {%- endif -%}
+    </div>
+    <div class="cp-home__consulting-copy">
+      <p class="cp-home__eyebrow">{{ section.settings.consulting_kicker | escape }}</p>
+      <h2 id="cp-home-consulting-{{ section.id }}">{{ section.settings.consulting_heading }}</h2>
+      <div class="rte">{{ section.settings.consulting_text }}</div>
+      <a class="cp-home__button cp-home__button--primary" href="{{ section.settings.consulting_link }}">{{ section.settings.consulting_label | escape }}<span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</section>
+
+<script type="application/ld+json">
+{%- if request.locale.iso_code == 'en' -%}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which Lagun table leg system suits my camper?",
+      "acceptedAnswer": { "@type": "Answer", "text": "That depends on the mounting surface, desired height and available movement range. The Lagun configurator guides you step by step to the right combination." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I rent a rooftop tent before buying?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Choose your travel period and try the rooftop tent on your own adventure." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I see the products in person?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You can compare selected products and get personal advice at our showrooms in Thuringia and Bavaria." }
+    }
+  ]
+}
+{%- else -%}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Welches Lagun Tischgestell passt in meinen Camper?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Das hängt von Montagefläche, gewünschter Höhe und Bewegungsraum ab. Der Lagun Konfigurator führt dich Schritt für Schritt zur passenden Kombination." }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich ein Dachzelt erst mieten?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ja. Wähle deinen Reisezeitraum und probiere das Dachzelt in Ruhe auf deinem eigenen Abenteuer aus." }
+    },
+    {
+      "@type": "Question",
+      "name": "Wo kann ich die Produkte persönlich ansehen?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In unseren Showrooms in Thüringen und Bayern kannst du ausgewählte Produkte vergleichen und dich persönlich beraten lassen." }
+    }
+  ]
+}
+{%- endif -%}
+</script>
+
+{% schema %}
+{
+  "name": "CP Startseite – Showcase",
+  "tag": "section",
+  "class": "cp-homepage-showcase-section",
+  "settings": [
+    { "type": "header", "content": "Einstieg" },
+    { "type": "text", "id": "hero_kicker", "label": "Übertitel", "default": "Ausrüstung, die zu deinem Abenteuer passt" },
+    { "type": "inline_richtext", "id": "hero_heading", "label": "Überschrift", "default": "Mehr Platz. Mehr Freiheit. <em>Besser unterwegs.</em>" },
+    { "type": "richtext", "id": "hero_text", "label": "Text", "default": "<p>Lagun Tischgestelle, Dachzelte und Anhänger für Camper, Wohnmobil und Auto – passend auswählen, kaufen oder erst einmal mieten.</p>" },
+    { "type": "image_picker", "id": "hero_image", "label": "Bild" },
+    { "type": "text", "id": "hero_image_alt", "label": "Alternativtext", "default": "Camping-Abenteuer mit CAMPING-PIONEERS" },
+    { "type": "text", "id": "hero_caption", "label": "Bildunterschrift", "default": "Draußen beginnt dein Freiraum." },
+    { "type": "text", "id": "hero_primary_label", "label": "Primärer Button", "default": "Lagun konfigurieren" },
+    { "type": "url", "id": "hero_primary_link", "label": "Primärer Link" },
+    { "type": "text", "id": "hero_secondary_label", "label": "Sekundärer Button", "default": "Dachzelte entdecken" },
+    { "type": "url", "id": "hero_secondary_link", "label": "Sekundärer Link" },
+    { "type": "header", "content": "Serviceversprechen" },
+    { "type": "text", "id": "promise_kicker", "label": "Übertitel", "default": "Darauf kannst du dich verlassen" },
+    { "type": "inline_richtext", "id": "promise_heading", "label": "Überschrift", "default": "Mehr Sicherheit bei jeder <em>Entscheidung.</em>" },
+    { "type": "richtext", "id": "promise_text", "label": "Text", "default": "<p>Wir verbinden eigene Campingerfahrung mit Beratung, Showrooms und flexiblen Mietangeboten.</p>" },
+    { "type": "header", "content": "Lagun Auswahl" },
+    { "type": "text", "id": "lagun_kicker", "label": "Übertitel", "default": "Der schwedische Klassiker" },
+    { "type": "inline_richtext", "id": "lagun_heading", "label": "Überschrift", "default": "Ein Tischgestell. <em>Viele Möglichkeiten.</em>" },
+    { "type": "richtext", "id": "lagun_text", "label": "Text", "default": "<p>Vergleiche drei beliebte Lagun Tischgestell-Sets für Camper und Wohnmobile – vom vielseitigen Standard bis zur mattschwarzen Black Edition.</p>" },
+    { "type": "header", "content": "Film 1 – Lagun" },
+    { "type": "video", "id": "film_one_video", "label": "Shopify-Video (bevorzugt)" },
+    { "type": "video_url", "id": "film_one_url", "accept": ["youtube", "vimeo"], "label": "YouTube-/Vimeo-Video" },
+    { "type": "image_picker", "id": "film_one_poster", "label": "Vorschaubild" },
+    { "type": "text", "id": "film_one_kicker", "label": "Übertitel", "default": "Lagun in Bewegung" },
+    { "type": "inline_richtext", "id": "film_one_heading", "label": "Überschrift", "default": "Mehr Raum entsteht, wenn alles <em>beweglich</em> bleibt." },
+    { "type": "text", "id": "film_one_label", "label": "Button", "default": "Lagun kennenlernen" },
+    { "type": "url", "id": "film_one_link", "label": "Link" },
+    { "type": "header", "content": "Konfigurator" },
+    { "type": "image_picker", "id": "configurator_image", "label": "Bild" },
+    { "type": "text", "id": "configurator_image_alt", "label": "Alternativtext", "default": "Lagun Tischgestell im Camper" },
+    { "type": "text", "id": "configurator_media_label", "label": "Text auf dem Bild", "default": "Dein Ausbau. Dein Lagun." },
+    { "type": "text", "id": "configurator_kicker", "label": "Übertitel", "default": "Stück für Stück" },
+    { "type": "inline_richtext", "id": "configurator_heading", "label": "Überschrift", "default": "Nicht irgendein Lagun. <em>Deins.</em>" },
+    { "type": "richtext", "id": "configurator_text", "label": "Text", "default": "<p>Beantworte drei kurze Fragen zu Einbauort, Platz und Optik. So stellst du genau das Lagun Tischgestell zusammen, das sich in deinem Camper frei bewegen lässt und zu deinem Ausbau passt.</p>" },
+    { "type": "text", "id": "configurator_label", "label": "Button", "default": "Jetzt zusammenstellen" },
+    { "type": "url", "id": "configurator_link", "label": "Link" },
+    { "type": "header", "content": "Themenwelten" },
+    { "type": "text", "id": "worlds_kicker", "label": "Übertitel", "default": "Alles für deinen nächsten Aufbruch" },
+    { "type": "inline_richtext", "id": "worlds_heading", "label": "Überschrift", "default": "Kaufen. Mieten. <em>Losfahren.</em>" },
+    { "type": "richtext", "id": "worlds_text", "label": "Text", "default": "<p>Plane deine nächste Reise oder deinen Transport ohne Umwege: Dachzelte und Anhänger kannst du bei uns kaufen, mieten und persönlich ansehen.</p>" },
+    { "type": "header", "content": "Film 2 – Dachzelt" },
+    { "type": "video", "id": "film_two_video", "label": "Shopify-Video (bevorzugt)" },
+    { "type": "video_url", "id": "film_two_url", "accept": ["youtube", "vimeo"], "label": "YouTube-/Vimeo-Video" },
+    { "type": "image_picker", "id": "film_two_poster", "label": "Vorschaubild" },
+    { "type": "text", "id": "film_two_kicker", "label": "Übertitel", "default": "Oben schlafen. Weiter träumen." },
+    { "type": "inline_richtext", "id": "film_two_heading", "label": "Überschrift", "default": "Heute hier. Morgen schon <em>woanders.</em>" },
+    { "type": "text", "id": "film_two_label", "label": "Button", "default": "Dachzelte entdecken" },
+    { "type": "url", "id": "film_two_link", "label": "Link" },
+    { "type": "header", "content": "Beratung" },
+    { "type": "image_picker", "id": "consulting_image", "label": "Teambild" },
+    { "type": "text", "id": "consulting_image_alt", "label": "Alternativtext", "default": "Das CAMPING-PIONEERS Team vor dem Showroom in Bad Berka" },
+    { "type": "text", "id": "consulting_kicker", "label": "Übertitel", "default": "Echte Menschen. Echte Erfahrung." },
+    { "type": "inline_richtext", "id": "consulting_heading", "label": "Überschrift", "default": "Du musst nicht allein <em>entscheiden.</em>" },
+    { "type": "richtext", "id": "consulting_text", "label": "Text", "default": "<p>Hinter CAMPING-PIONEERS steht ein Team, das Camping selbst lebt. Wir helfen dir bei Maßen, Montage, Fahrzeugkompatibilität und Mietablauf – online, am Telefon oder persönlich im Showroom.</p>" },
+    { "type": "text", "id": "consulting_label", "label": "Button", "default": "Kontakt & Beratung" },
+    { "type": "url", "id": "consulting_link", "label": "Link" }
+  ],
+  "blocks": [
+    {
+      "type": "usp",
+      "name": "Serviceversprechen",
+      "limit": 4,
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Symbol", "default": "advice", "options": [
+          { "value": "advice", "label": "Beratung" },
+          { "value": "showroom", "label": "Showroom" },
+          { "value": "rental", "label": "Miete" },
+          { "value": "fit", "label": "Passende Auswahl" }
+        ] },
+        { "type": "text", "id": "title", "label": "Titel" },
+        { "type": "textarea", "id": "text", "label": "Beschreibung" }
+      ]
+    },
+    {
+      "type": "lagun_product",
+      "name": "Lagun Konfiguration",
+      "limit": 3,
+      "settings": [
+        { "type": "product", "id": "product", "label": "Produkt" },
+        { "type": "image_picker", "id": "fallback_image", "label": "Ersatzbild" },
+        { "type": "url", "id": "fallback_link", "label": "Ersatzlink" },
+        { "type": "text", "id": "badge", "label": "Badge" },
+        { "type": "text", "id": "kicker", "label": "Übertitel" },
+        { "type": "text", "id": "title", "label": "Titel" },
+        { "type": "textarea", "id": "text", "label": "Kurztext" }
+      ]
+    },
+    {
+      "type": "world",
+      "name": "Themenwelt",
+      "limit": 5,
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Bild" },
+        { "type": "text", "id": "kicker", "label": "Übertitel" },
+        { "type": "text", "id": "title", "label": "Titel" },
+        { "type": "text", "id": "link_label", "label": "Linktext", "default": "Entdecken" },
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "select", "id": "text_position", "label": "Textposition", "default": "bottom-left", "options": [
+          { "value": "top-left", "label": "Oben links" },
+          { "value": "top-center", "label": "Oben mittig" },
+          { "value": "top-right", "label": "Oben rechts" },
+          { "value": "bottom-left", "label": "Unten links" },
+          { "value": "bottom-center", "label": "Unten mittig" },
+          { "value": "bottom-right", "label": "Unten rechts" }
+        ] },
+        { "type": "select", "id": "size", "label": "Kartengröße", "default": "standard", "options": [
+          { "value": "standard", "label": "Standard" },
+          { "value": "wide", "label": "Breit" }
+        ] }
+      ]
+    }
+  ],
+  "presets": [{
+    "name": "CP Startseite – Showcase",
+    "blocks": [
+      { "type": "usp" }, { "type": "usp" }, { "type": "usp" }, { "type": "usp" },
+      { "type": "lagun_product" }, { "type": "lagun_product" }, { "type": "lagun_product" },
+      { "type": "world" }, { "type": "world" }, { "type": "world" }, { "type": "world" }, { "type": "world" }
+    ]
+  }]
+}
+{% endschema %}

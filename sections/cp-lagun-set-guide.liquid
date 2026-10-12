@@ -1,0 +1,34 @@
+{% render 'cp-lagun-pdp-experience', product: product, module: 'set-guide', scene: 'paper', module_section: section %}
+
+{% schema %}
+{
+  "name": "Lagun – Setvergleich",
+  "tag": "section",
+  "class": "cp-lagun-editor-section",
+  "settings": [
+    { "type": "text", "id": "compare_kicker", "label": "Vergleich: Übertitel", "default": "Finde dein passendes Set" },
+    { "type": "text", "id": "compare_heading", "label": "Vergleich: Überschrift", "default": "Welche Lagun-Lösung passt zu deinem Einbau?" },
+    { "type": "textarea", "id": "compare_body", "label": "Vergleich: Text", "default": "Vergleiche Beinhöhe, Befestigung und Bewegungsfreiheit. Preis und Verfügbarkeit sind immer aktuell." },
+    { "type": "text", "id": "current_badge", "label": "Kennzeichnung aktuelle Auswahl", "default": "Aktuelle Auswahl" },
+    { "type": "text", "id": "available_label", "label": "Text verfügbar", "default": "Verfügbar" },
+    { "type": "text", "id": "unavailable_label", "label": "Text nicht verfügbar", "default": "Aktuell nicht verfügbar" },
+    { "type": "header", "content": "Bezeichnungen der Sets" },
+    { "type": "text", "id": "standard_label", "label": "Standard-Set: Bezeichnung", "default": "Standard-Set" },
+    { "type": "text", "id": "standard_note", "label": "Standard-Set: Kurztext", "default": "Flexibel für die meisten Einbauten" },
+    { "type": "text", "id": "compact_label", "label": "400-mm-Set: Bezeichnung", "default": "400-mm-Set" },
+    { "type": "text", "id": "compact_note", "label": "400-mm-Set: Kurztext", "default": "Für niedrige Einbauhöhen" },
+    { "type": "text", "id": "tall_label", "label": "700-mm-Set: Bezeichnung", "default": "700-mm-Set" },
+    { "type": "text", "id": "tall_note", "label": "700-mm-Set: Kurztext", "default": "Für höhere Tischpositionen" },
+    { "type": "text", "id": "smart_label", "label": "Smart-Set: Bezeichnung", "default": "Smart-Set" },
+    { "type": "text", "id": "smart_note", "label": "Smart-Set: Kurztext", "default": "Schnell an- und abnehmen" },
+    { "type": "text", "id": "fold_label", "label": "Dreh-/Klapp-Set: Bezeichnung", "default": "Dreh-/Klapp-Set" },
+    { "type": "text", "id": "fold_note", "label": "Dreh-/Klapp-Set: Kurztext", "default": "Drehen, klappen und Platz schaffen" },
+    { "type": "header", "content": "Upgrade-Karte" },
+    { "type": "text", "id": "upgrade_kicker", "label": "Upgrade: Übertitel", "default": "Noch mehr freie Fläche" },
+    { "type": "text", "id": "upgrade_heading", "label": "Upgrade: Überschrift", "default": "Drehe und klappe deine Tischplatte einfach weg." },
+    { "type": "textarea", "id": "upgrade_body", "label": "Upgrade: Text", "default": "Wenn du den Innenraum maximal frei halten möchtest, wähle direkt das vollständige Dreh-/Klapp-Set. So kaufst du nur das Tischgestell, das wirklich zu deinem Ausbau passt." },
+    { "type": "text", "id": "upgrade_button", "label": "Upgrade: Button", "default": "Dreh-/Klapp-Set vergleichen" }
+  ],
+  "presets": [{ "name": "Lagun – Setvergleich" }]
+}
+{% endschema %}

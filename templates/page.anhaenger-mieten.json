@@ -1,0 +1,658 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        ".rte {display: none;}"
+      ],
+      "name": "Page",
+      "settings": {
+        "narrow": false,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_QLKYTM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_9tfR6d": {
+          "type": "heading",
+          "settings": {
+            "heading": "KFZ-Transportanhänger mieten",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_9gxKeE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Berechne unverbindlich den Mietpreis für unseren Besttrailers KFZ-Transportanhänger in Pettstadt bei Bamberg und sende direkt deine Anfrage.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9tfR6d",
+        "text_9gxKeE"
+      ],
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_wGU8qW": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "name": "n8n direkt",
+      "settings": {
+        "custom_liquid": "<!-- Legacy external pricing block intentionally removed. -->",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_ibwBHY": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_77eG6b": {
+          "type": "heading",
+          "settings": {
+            "heading": "So funktioniert die Anhängermiete",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_6JhXie": {
+          "type": "text",
+          "settings": {
+            "text": "<ol><li><strong>Zeitraum und Standort wählen</strong><br/>Wähle Anhänger, Standort sowie Abhol- und Rückgabedatum im Kalender.</li><li><strong>Verfügbarkeit prüfen</strong><br/>Du siehst direkt, ob dein Zeitraum am Standort verfügbar ist.</li><li><strong>Anfrage absenden</strong><br/>Name und E-Mail eintragen, Anfrage abschicken.</li><li><strong>Rückmeldung erhalten</strong><br/>Wir bestätigen dir den Termin und senden dir alle Infos zur Abholung.</li></ol>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "underline"
+          }
+        }
+      },
+      "block_order": [
+        "heading_77eG6b",
+        "text_6JhXie"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_pxVVJJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_aCALKz": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "KFZ-Transport einfach & zuverlässig – direkt ab Pettstadt bei Bamberg",
+            "subheading_size": "h5",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "heading_tXrJdf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Besttrailers KFZ-Transport Anhänger zur Miete",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_9cex4h": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du möchtest ein Fahrzeug sicher von A nach B transportieren? Mit unserem <strong>KFZ-Transport Anhänger zur Miete</strong> bist du bestens ausgestattet – ideal für Autotransporte, Werkstattfahrten oder den sicheren Transport von nicht fahrbereiten Fahrzeugen.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_6w688R": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Neuwertiger KFZ-Transport Anhänger (EZ 2026) zur Miete</li><li>inkl. Seilwinde & Auffahrrampen</li><li>Vermietung nur mit gültigem Personalausweis und Führerschein</li><li>Keine Auslandsfahrten</li><li>Kaution: 500 €</li></ul><h3><strong>Wichtig: Dieser Anhänger ist ausschließlich an unserem Standort Pettstadt bei Bamberg verfügbar und kann nur gemietet (nicht gekauft) werden.</strong></h3>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_aCALKz",
+        "heading_tXrJdf",
+        "text_9cex4h",
+        "text_6w688R"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Besttrailers_KFZ_Anhaenger.png",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "adapt",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_overlay_thYKGD": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_Gfcqnf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Technische Daten:",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_63h8pp": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Model: Rebel SM 4,5 x 2,1 m *BESTTRAILERS*</p><p>Länge Ladefläche: 4,5m<br/>Leergewicht: 600kg<br/>Maximale Zuladung: 2100kg<br/>Maximalgeschwindigkeit: 80km/h</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "heading_LG94ND": {
+          "type": "heading",
+          "settings": {
+            "heading": "Deine Vorteile auf einen Blick:",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_RzXqMi": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>Perfekt geeignet für den Transport von PKW & Fahrzeugen</li><li>Stabile und sichere Bauweise für zuverlässige Fahrten</li><li>Ideal für kurzfristige Einsätze oder geplante Transporte</li><li>Einfache Abwicklung & persönliche Übergabe vor Ort in Pettstadt</li></ul>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Gfcqnf",
+        "text_63h8pp",
+        "heading_LG94ND",
+        "text_RzXqMi"
+      ],
+      "name": "t:sections.image-with-text-overlay.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Besttrailers_KFZ_Anhaenger_3.jpg",
+        "image_position": "center center",
+        "text_box_position": "flex-start",
+        "text_alignment": "left",
+        "image_ratio": "500px",
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "image_mobile": "shopify://shop_images/Besttrailers_KFZ_Anhaenger_3.jpg",
+        "mobile_text_box_position": "image_first",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "video_url": "",
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_overlay": "#f3f3f3",
+        "colors_overlay_opacity": 92,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "rich_text_KaWewB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_tHYdrp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Unsicher, welcher Anhänger der richtige ist? Wir beraten dich persönlich!</strong>",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_BdB3JN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du bist dir unsicher, welcher Anhänger der richtige für dein Vorhaben ist?<br/><br/>Kein Problem – wir beraten dich gerne persönlich und helfen dir, die passende Lösung für deinen Transport zu finden.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_CPRfPr": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Kontakt aufnehmen und beraten lassen",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tHYdrp",
+        "text_BdB3JN",
+        "button_CPRfPr"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#ffb503",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_qXLHmQ": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_QdRRpN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Abholung in Pettstadt bei Bamberg",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "subheading_6MMWry": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Der Besttrailers KFZ-Transportanhänger ist ausschließlich an unserem Standort in Pettstadt verfügbar. Die Übergabe erfolgt persönlich und inklusive Einweisung.",
+            "subheading_size": "h5",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_jVGH9V": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Pettstadt bei Bamberg</h4><p>Unser Standort in Pettstadt liegt nur wenige Minuten von Bamberg entfernt und ist ideal für Kunden aus Bamberg, Forchheim, Erlangen und der gesamten Region Oberfranken.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "custom_liquid_iTCBPP": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"cp-showroom\">\n\n  <div class=\"cp-showroom__grid\">\n\n    <!-- Adresse / Infos -->\n    <div class=\"cp-showroom__info\">\n\n      <h3>Showroom Pettstadt</h3>\n\n      <p>\n        <strong>Adresse:</strong><br>\n        Camping Pioneers Showroom<br>\n        Eichenhof 1b<br>\n        96175 Pettstadt<br>\n        Deutschland\n      </p>\n\n      <p>\n        Unser Showroom ist nicht durchgehend besetzt.  \n        Bitte setze dich vor deinem Besuch kurz mit uns in Verbindung.\n      </p>\n\n      <a class=\"cp-route-btn\"\n         target=\"_blank\"\n         rel=\"noopener\"\n         href=\"https://www.google.com/maps/dir/?api=1&destination=49.831000,10.918847\">\n         Route planen\n      </a>\n\n    </div>\n\n    <!-- Karte -->\n    <div class=\"cp-showroom__map\">\n\n      <iframe\n        title=\"Showroom Pettstadt Karte\"\n        src=\"https://www.openstreetmap.org/export/embed.html?bbox=10.917719900608065%2C49.830268240685726%2C10.919972956180574%2C49.83173021217208&layer=mapnik\"\n        loading=\"lazy\"\n        referrerpolicy=\"no-referrer-when-downgrade\"\n        allowfullscreen>\n      </iframe>\n\n      <small class=\"cp-map-link\">\n        <a href=\"https://www.openstreetmap.org/?#map=19/49.831000/10.918847\"\n           target=\"_blank\"\n           rel=\"noopener\">\n           Größere Karte anzeigen\n        </a>\n      </small>\n\n    </div>\n\n  </div>\n\n</div>\n\n<style>\n\n.cp-showroom{\n  margin:40px 0;\n}\n\n.cp-showroom__grid{\n  display:grid;\n  grid-template-columns:1fr;\n  gap:24px;\n  align-items:center;\n}\n\n@media(min-width:900px){\n  .cp-showroom__grid{\n    grid-template-columns:1fr 1.2fr;\n  }\n}\n\n.cp-showroom__info h3{\n  margin-top:0;\n}\n\n.cp-route-btn{\n  display:inline-block;\n  margin-top:10px;\n  padding:10px 16px;\n  border-radius:10px;\n  background:#092C91;\n  color:#fff;\n  text-decoration:none;\n  font-weight:600;\n}\n\n.cp-showroom__map iframe{\n  width:100%;\n  height:280px;\n  border:0;\n  border-radius:10px;\n  box-shadow:0 6px 16px rgba(0,0,0,.08);\n}\n\n.cp-map-link{\n  display:block;\n  margin-top:6px;\n  font-size:13px;\n  opacity:.7;\n}\n\n.cp-map-link a{\n  color:inherit;\n}\n\n</style>\n\n<!-- Local SEO Markup -->\n<script type=\"application/ld+json\">\n{\n \"@context\": \"https://schema.org\",\n \"@type\": \"LocalBusiness\",\n \"name\": \"Camping Pioneers Showroom Pettstadt\",\n \"address\": {\n   \"@type\": \"PostalAddress\",\n   \"streetAddress\": \"Eichenhof 1b\",\n   \"addressLocality\": \"Pettstadt\",\n   \"postalCode\": \"96175\",\n   \"addressCountry\": \"DE\"\n },\n \"geo\": {\n   \"@type\": \"GeoCoordinates\",\n   \"latitude\": 49.831000,\n   \"longitude\": 10.918847\n },\n \"url\": \"https://www.camping-pioneers.de/pages/showroom\"\n}\n</script>"
+          }
+        },
+        "button_4k9hjn": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Unsere Showrooms",
+            "button_link": "shopify://pages/showrooms",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QdRRpN",
+        "subheading_6MMWry",
+        "text_jVGH9V",
+        "custom_liquid_iTCBPP",
+        "button_4k9hjn"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_dEXYHc": {
+      "type": "contact-form",
+      "blocks": {
+        "contact_Q4VrcK": {
+          "type": "contact",
+          "settings": {
+            "heading": "Kontaktadresse",
+            "text": "info@camping-pioneers.de",
+            "link": ""
+          }
+        },
+        "contact_pgzUMq": {
+          "type": "contact",
+          "settings": {
+            "heading": "Hotline (9-17 Uhr, Mo-Fr)",
+            "text": "+49 364 387 804 70",
+            "link": ""
+          }
+        },
+        "contact_RVnrN6": {
+          "type": "contact",
+          "settings": {
+            "heading": "WhatsApp",
+            "text": "+49 364 387 804 70",
+            "link": "https://api.whatsapp.com/send/?phone=4936438780470&text=&type=phone_number&app_absent=0"
+          }
+        }
+      },
+      "block_order": [
+        "contact_Q4VrcK",
+        "contact_pgzUMq",
+        "contact_RVnrN6"
+      ],
+      "settings": {
+        "return_url": "",
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "KFZ-Transportanhänger mieten – Kontakt aufnehmen",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_UVdYWy": {
+      "type": "faq",
+      "blocks": {
+        "question_DHkBCV": {
+          "type": "question",
+          "settings": {
+            "title": "Wie kann ich den KFZ-Transportanhänger mieten?",
+            "text": "<p>Wähle den gewünschten Zeitraum im Mietpreisrechner und sende anschließend deine Anfrage. Wir prüfen die Verfügbarkeit und melden uns schnellstmöglich bei dir.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_dzTFmC": {
+          "type": "question",
+          "settings": {
+            "title": "Wie schnell erhalte ich eine Rückmeldung?",
+            "text": "<p>In der Regel erhältst du innerhalb kurzer Zeit eine Rückmeldung von uns. Wir informieren dich über die Verfügbarkeit und alle weiteren Schritte.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_kWcE8C": {
+          "type": "question",
+          "settings": {
+            "title": "Wie erfolgt die Bezahlung?",
+            "text": "<p>Du kannst bequem per <strong>Barzahlung, EC-Karte, PayPal oder Überweisung</strong> bezahlen. Alle Zahlungsdetails erhältst du vorab mit deiner Buchungsbestätigung. Die Bezahlung erfolgt in der Regel bei Abholung des Anhängers.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_JjDirE": {
+          "type": "question",
+          "settings": {
+            "title": "Wie hoch ist die Kaution?",
+            "text": "<p>Die Kaution für den Besttrailers KFZ-Transportanhänger beträgt <strong>500 €</strong>. Sie wird bei Abholung hinterlegt und nach ordnungsgemäßer, besenreiner Rückgabe vollständig zurückgezahlt.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_kydfXK": {
+          "type": "question",
+          "settings": {
+            "title": "In welcher Ausstattung wird der Anhänger vermietet?",
+            "text": "<p>Der Besttrailers KFZ-Transportanhänger wird mit manueller Seilwinde und integrierten Auffahrrampen vermietet. Passende Spanngurte kannst du bei der Anfrage ergänzen. Bei der Übergabe erhältst du eine persönliche Einweisung.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_9KMXaL": {
+          "type": "question",
+          "settings": {
+            "title": "Wo kann ich den Anhänger abholen?",
+            "text": "<p>Der Besttrailers KFZ-Transportanhänger kann ausschließlich in Pettstadt bei Bamberg abgeholt werden. Die genaue Adresse und alle Details erhältst du mit der Buchungsbestätigung.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_qtMPtL": {
+          "type": "question",
+          "settings": {
+            "title": "Ist eine Einweisung bei der Abholung dabei?",
+            "text": "<p>Ja, bei der Abholung erhältst du eine persönliche Einweisung. Wir erklären dir alles Wichtige zur sicheren Nutzung des Anhängers.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_t3qKpp": {
+          "type": "question",
+          "settings": {
+            "title": "Was ist bei der Rückgabe des Anhängers zu beachten?",
+            "text": "<p>Der Anhänger sollte <strong>besenrein und in ordnungsgemäßem Zustand</strong> zurückgegeben werden. Normale Gebrauchsspuren durch die Nutzung sind selbstverständlich kein Problem.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_JcJQE7": {
+          "type": "question",
+          "settings": {
+            "title": "Welche Voraussetzungen muss mein Fahrzeug erfüllen?",
+            "text": "<p>Dein Zugfahrzeug benötigt eine Anhängerkupplung, eine geeignete Anhängelast und die passende elektrische Verbindung. Bitte prüfe vorab die zulässigen Werte von Zugfahrzeug, Anhänger und Gespann.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_yRxfbP": {
+          "type": "question",
+          "settings": {
+            "title": "Benötige ich einen speziellen Führerschein?",
+            "text": "<p>Für den Besttrailers KFZ-Transportanhänger wird in der Regel die Führerscheinklasse BE benötigt, da das zulässige Gesamtgewicht des Gespanns 3,5 t überschreiten kann. Bitte prüfe deine konkrete Kombination vorab.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_zhikec": {
+          "type": "question",
+          "settings": {
+            "title": "Kann ich den Anhänger auch kurzfristig mieten?",
+            "text": "<p>Ja, kurzfristige Anfragen sind möglich. Die Verfügbarkeit kannst du ganz einfach über das Anfrageformular prüfen lassen.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "question_pbYU4i": {
+          "type": "question",
+          "settings": {
+            "title": "Für welche Einsatzzwecke eignet sich der Anhänger?",
+            "text": "<p>Der Besttrailers KFZ-Transportanhänger eignet sich für den Transport von PKW und anderen Fahrzeugen, etwa bei Werkstattfahrten oder zum Transport nicht fahrbereiter Fahrzeuge.</p>",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "question_DHkBCV",
+        "question_dzTFmC",
+        "question_kWcE8C",
+        "question_JjDirE",
+        "question_kydfXK",
+        "question_9KMXaL",
+        "question_qtMPtL",
+        "question_t3qKpp",
+        "question_JcJQE7",
+        "question_yRxfbP",
+        "question_zhikec",
+        "question_pbYU4i"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "FAQ – KFZ-Transportanhänger mieten",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "featured_collection_qQFTdC": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "anhanger-zubehor",
+        "products_to_show": 8,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "enable_drag": false,
+        "heading": "Anhänger & Zubehör",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "enable_image_fill": false,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": false,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "custom_liquid_ybLiRy": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>\n  .cpb-wrap {\n    --cpb-blue: #2B00FF;\n    --cpb-blue-light: rgba(43,0,255,0.10);\n    --cpb-blue-mid: rgba(43,0,255,0.18);\n    --cpb-navy: #092C91;\n    --cpb-border: #E5E7EB;\n    --cpb-text: #1a1b18;\n    --cpb-muted: #6B7280;\n    --cpb-ok-bg: #d1fae5;\n    --cpb-ok-fg: #065f46;\n    --cpb-no-bg: #fee2e2;\n    --cpb-no-fg: #991b1b;\n    --cpb-card: #fff;\n    color: var(--cpb-text);\n    font-size: inherit;\n    line-height: inherit;\n    background: #f9fafb;\n    border: 1px solid var(--cpb-border);\n    border-radius: 18px;\n    padding: 20px;\n    max-width: 980px;\n    margin: 0 auto;\n  }\n\n  /* ── Header ── */\n  .cpb-header { margin-bottom: 16px; }\n  .cpb-title { margin: 0; font-size: inherit; font-weight: 700; color: var(--cpb-text); }\n  .cpb-sub { margin: 6px 0 0; color: var(--cpb-muted); font-size: inherit; line-height: 1.5; }\n\n  /* ── Product/Location selectors ── */\n  .cpb-grid {\n    display: grid;\n    grid-template-columns: repeat(2, minmax(160px, 1fr));\n    gap: 12px;\n    margin-bottom: 14px;\n  }\n  .cpb-field label {\n    display: block;\n    margin-bottom: 5px;\n    font-weight: 600;\n    font-size: inherit;\n    color: #374151;\n    text-transform: uppercase;\n    letter-spacing: 0.04em;\n  }\n  .cpb-input, .cpb-select {\n    width: 100%;\n    padding: 10px 12px;\n    border: 1.5px solid var(--cpb-border);\n    border-radius: 10px;\n    background: #fff;\n    color: var(--cpb-text);\n    font-size: inherit;\n    box-sizing: border-box;\n  }\n  .cpb-input:focus, .cpb-select:focus {\n    outline: none;\n    border-color: var(--cpb-blue);\n    box-shadow: 0 0 0 3px rgba(43,0,255,0.10);\n  }\n  .cpb-input[aria-invalid=\"true\"], .cpb-select[aria-invalid=\"true\"] {\n    border-color: #dc2626;\n    box-shadow: 0 0 0 3px rgba(220,38,38,0.10);\n  }\n\n  /* ── Calendar container ── */\n  .cpb-calendar {\n    background: #fff;\n    border: 1.5px solid var(--cpb-border);\n    border-radius: 16px;\n    padding: 14px;\n    margin-top: 4px;\n  }\n  .cpb-cal-head {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    margin-bottom: 10px;\n  }\n  .cpb-month { font-weight: 700; font-size: 1rem; color: var(--cpb-navy); }\n  .cpb-nav {\n    border: 1.5px solid var(--cpb-border);\n    background: #fff;\n    border-radius: 8px;\n    width: 36px;\n    height: 32px;\n    cursor: pointer;\n    font-size: 1rem;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: var(--cpb-text);\n    transition: border-color 0.15s;\n  }\n  .cpb-nav:hover { border-color: var(--cpb-blue); }\n\n  /* ── Weekday labels ── */\n  .cpb-weekdays {\n    display: grid;\n    grid-template-columns: repeat(7, minmax(0, 1fr));\n    gap: 3px 0;\n    margin-bottom: 2px;\n  }\n  .cpb-weekdays div {\n    text-align: center;\n    font-size: inherit;\n    font-weight: 700;\n    color: var(--cpb-muted);\n    padding: 3px 0;\n    text-transform: uppercase;\n    letter-spacing: 0.04em;\n  }\n\n  /* ── Day grid — NO horizontal gap, only vertical ── */\n  .cpb-days {\n    display: grid;\n    grid-template-columns: repeat(7, minmax(0, 1fr));\n    gap: 3px 0;\n  }\n\n  /* ── Day button ── */\n  .cpb-day {\n    position: relative;\n    border: none;\n    background: transparent;\n    padding: 0;\n    cursor: pointer;\n    min-height: 58px;\n    display: flex;\n    align-items: stretch;\n    justify-content: stretch;\n  }\n  .cpb-day[disabled] {\n    opacity: 0.38;\n    cursor: default;\n    pointer-events: none;\n  }\n\n  /* ── Range bar (full-width background behind circle) ── */\n  .cpb-bar {\n    position: absolute;\n    top: 6px;\n    bottom: 6px;\n    left: 0;\n    right: 0;\n    background: transparent;\n    pointer-events: none;\n    z-index: 0;\n  }\n\n  /* ── Circle (number + label) ── */\n  .cpb-circle {\n    position: relative;\n    z-index: 1;\n    width: 100%;\n    min-height: 52px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    border-radius: 10px;\n    margin: 3px 4px;\n    box-sizing: border-box;\n    transition: background 0.1s;\n  }\n  .cpb-circle .d {\n    font-weight: 700;\n    font-size: inherit;\n    line-height: 1.1;\n  }\n  .cpb-circle .s {\n    font-size: 0.78em;\n    margin-top: 2px;\n    line-height: 1.1;\n  }\n\n  /* ── Available / unavailable default appearance ── */\n  .cpb-day.ok .cpb-circle {\n    background: var(--cpb-ok-bg);\n    color: var(--cpb-ok-fg);\n  }\n  .cpb-day.no .cpb-circle {\n    background: var(--cpb-no-bg);\n    color: var(--cpb-no-fg);\n  }\n  .cpb-day.past .cpb-circle {\n    background: #f3f4f6 !important;\n    color: #9ca3af !important;\n  }\n  .cpb-day.past .cpb-bar {\n    background: transparent !important;\n  }\n  .cpb-day:not([disabled]):hover .cpb-circle {\n    filter: brightness(0.93);\n  }\n\n  /* ── Anchor: solid blue circle, no bar ── */\n  .cpb-day.anchor .cpb-circle {\n    background: var(--cpb-blue) !important;\n    color: #fff !important;\n  }\n  .cpb-day.anchor .cpb-bar {\n    background: transparent;\n  }\n\n  /* ── sel-start: blue circle, bar extends RIGHT half ── */\n  .cpb-day.sel-start .cpb-circle {\n    background: var(--cpb-blue) !important;\n    color: #fff !important;\n  }\n  .cpb-day.sel-start .cpb-bar {\n    left: 50%;\n    right: 0;\n    background: var(--cpb-blue-light);\n  }\n\n  /* ── sel-end: blue circle, bar extends LEFT half ── */\n  .cpb-day.sel-end .cpb-circle {\n    background: var(--cpb-blue) !important;\n    color: #fff !important;\n  }\n  .cpb-day.sel-end .cpb-bar {\n    left: 0;\n    right: 50%;\n    background: var(--cpb-blue-light);\n  }\n\n  /* ── in-range: full-width bar, no special circle ── */\n  .cpb-day.in-range .cpb-bar {\n    left: 0;\n    right: 0;\n    background: var(--cpb-blue-light);\n  }\n  .cpb-day.in-range .cpb-circle {\n    background: transparent !important;\n    color: var(--cpb-navy) !important;\n  }\n\n  /* ── Hint text below calendar ── */\n  .cpb-hint {\n    margin-top: 10px;\n    font-size: inherit;\n    color: var(--cpb-muted);\n    min-height: 1.2em;\n  }\n\n  /* ── Slot selectors ── */\n  .cpb-slots {\n    display: grid;\n    grid-template-columns: repeat(2, minmax(160px, 1fr));\n    gap: 12px;\n    margin-top: 14px;\n  }\n\n  /* ── Contact form ── */\n  .cpb-contact {\n    margin-top: 14px;\n    display: grid;\n    grid-template-columns: repeat(2, minmax(160px, 1fr));\n    gap: 12px;\n  }\n  .cpb-contact .full { grid-column: 1 / -1; }\n  .cpb-contact-note {\n    grid-column: 1 / -1;\n    font-size: 0.78rem;\n    color: var(--cpb-muted);\n    margin-top: -4px;\n  }\n\n  .cpb-accessory {\n    margin-top: 14px;\n    background: #fff;\n    border: 1.5px solid var(--cpb-border);\n    border-radius: 14px;\n    padding: 14px;\n  }\n  .cpb-accessory-label {\n    display: flex;\n    align-items: flex-start;\n    gap: 12px;\n    cursor: pointer;\n  }\n  .cpb-accessory-label input { margin-top: 3px; }\n  .cpb-accessory-title {\n    display: flex;\n    align-items: baseline;\n    justify-content: space-between;\n    gap: 12px;\n    font-weight: 700;\n    color: var(--cpb-text);\n  }\n  .cpb-accessory-price {\n    color: var(--cpb-navy);\n    white-space: nowrap;\n  }\n  .cpb-accessory-text {\n    display: block;\n    margin-top: 4px;\n    color: var(--cpb-muted);\n    line-height: 1.45;\n  }\n\n  /* ── Action buttons ── */\n  .cpb-actions {\n    margin-top: 16px;\n    display: flex;\n    gap: 10px;\n    flex-wrap: wrap;\n  }\n  .cpb-btn {\n    border: none;\n    border-radius: 10px;\n    padding: 11px 20px;\n    font-weight: 700;\n    cursor: pointer;\n    font-size: inherit;\n    transition: opacity 0.15s;\n  }\n  .cpb-btn.primary {\n    background: var(--cpb-blue);\n    color: #fff;\n  }\n  .cpb-btn.primary:hover { opacity: 0.88; }\n  .cpb-btn.secondary {\n    background: #fff;\n    color: var(--cpb-navy);\n    border: 1.5px solid var(--cpb-border);\n  }\n  .cpb-btn.secondary:hover { border-color: var(--cpb-blue); }\n  .cpb-btn[disabled] { opacity: 0.45; cursor: not-allowed; }\n\n  /* ── Result box ── */\n  .cpb-result {\n    margin-top: 16px;\n    background: #fff;\n    border: 1.5px solid var(--cpb-border);\n    border-radius: 14px;\n    padding: 16px;\n    line-height: 1.6;\n    font-size: inherit;\n  }\n\n  /* ── Error box ── */\n  .cpb-error {\n    margin-top: 12px;\n    background: #fef2f2;\n    border: 1px solid #fca5a5;\n    border-radius: 10px;\n    padding: 10px 14px;\n    color: #991b1b;\n    font-size: 0.875rem;\n    display: none;\n  }\n\n  @media (max-width: 820px) {\n    .cpb-wrap { max-width: 100%; padding: 14px; }\n    .cpb-grid, .cpb-slots, .cpb-contact { grid-template-columns: 1fr; }\n    .cpb-day { min-height: 52px; }\n    .cpb-circle { margin: 2px 2px; min-height: 46px; }\n  }\n  @media (max-width: 440px) {\n    .cpb-circle .s { display: none; }\n  }\n</style>\n\n<div class=\"cpb-wrap\" id=\"cpb-root\">\n  <div class=\"cpb-header\">\n    <h3 class=\"cpb-title\">Anhänger online anfragen</h3>\n    <p class=\"cpb-sub\">Wähle Anhänger und Standort, markiere im Kalender deinen Wunschzeitraum und sende deine Anfrage direkt ab.</p>\n  </div>\n\n  <div class=\"cpb-grid\">\n    <div class=\"cpb-field\">\n      <label for=\"cpb-product\">Anhänger</label>\n      <select id=\"cpb-product\" class=\"cpb-select\"></select>\n    </div>\n    <div class=\"cpb-field\">\n      <label for=\"cpb-location\">Standort</label>\n      <select id=\"cpb-location\" class=\"cpb-select\"></select>\n    </div>\n  </div>\n\n  <div class=\"cpb-calendar\" id=\"cpb-calendar-wrap\" style=\"display:none;\">\n    <div class=\"cpb-cal-head\">\n      <button type=\"button\" class=\"cpb-nav\" id=\"cpb-prev\" aria-label=\"Monat zurück\">&#8592;</button>\n      <div class=\"cpb-month\" id=\"cpb-month\"></div>\n      <button type=\"button\" class=\"cpb-nav\" id=\"cpb-next\" aria-label=\"Monat vor\">&#8594;</button>\n    </div>\n    <div class=\"cpb-weekdays\">\n      <div>Mo</div><div>Di</div><div>Mi</div><div>Do</div><div>Fr</div><div>Sa</div><div>So</div>\n    </div>\n    <div class=\"cpb-days\" id=\"cpb-days\"></div>\n    <div class=\"cpb-hint\" id=\"cpb-range-hint\"></div>\n  </div>\n\n  <div class=\"cpb-error\" id=\"cpb-error\"></div>\n\n  <div class=\"cpb-slots\" id=\"cpb-slots\" style=\"display:none;\">\n    <div class=\"cpb-field\">\n      <label for=\"cpb-pickup-slot\">Abholung</label>\n      <select id=\"cpb-pickup-slot\" class=\"cpb-select\"></select>\n    </div>\n    <div class=\"cpb-field\">\n      <label for=\"cpb-return-slot\">Rückgabe</label>\n      <select id=\"cpb-return-slot\" class=\"cpb-select\"></select>\n    </div>\n  </div>\n\n  <div class=\"cpb-accessory\" id=\"cpb-accessory\" style=\"display:none;\">\n    <label class=\"cpb-accessory-label\" for=\"cpb-accessory-straps\">\n      <input id=\"cpb-accessory-straps\" type=\"checkbox\" />\n      <span>\n        <span class=\"cpb-accessory-title\">\n          <span>Passende Spanngurte mitmieten</span>\n          <span class=\"cpb-accessory-price\" id=\"cpb-accessory-price\">+5&nbsp;€/Tag</span>\n        </span>\n        <span class=\"cpb-accessory-text\">Für den Besttrailers KFZ-Transportanhänger kannst du die passenden Gurte direkt mit anfragen. Der Aufpreis wird automatisch nach deinem Mietzeitraum berechnet.</span>\n      </span>\n    </label>\n  </div>\n\n  <div class=\"cpb-contact\" id=\"cpb-contact\" style=\"display:none;\">\n    <div class=\"cpb-field\">\n      <label for=\"cpb-name\">Dein Name *</label>\n      <input id=\"cpb-name\" class=\"cpb-input\" autocomplete=\"name\" aria-required=\"true\" />\n    </div>\n    <div class=\"cpb-field\">\n      <label for=\"cpb-email\">E-Mail *</label>\n      <input id=\"cpb-email\" type=\"email\" class=\"cpb-input\" autocomplete=\"email\" />\n    </div>\n    <div class=\"cpb-field\">\n      <label for=\"cpb-phone\">Telefon *</label>\n      <input id=\"cpb-phone\" type=\"tel\" class=\"cpb-input\" autocomplete=\"tel\" />\n    </div>\n    <div class=\"cpb-field\">\n      <label for=\"cpb-vehicle\">Fahrzeug (optional)</label>\n      <input id=\"cpb-vehicle\" class=\"cpb-input\" />\n    </div>\n    <div class=\"cpb-contact-note\">* Pflichtfeld: Name plus E-Mail oder Telefon</div>\n  </div>\n\n  <div class=\"cpb-actions\" id=\"cpb-actions\" style=\"display:none;\">\n    <button type=\"button\" class=\"cpb-btn primary\" id=\"cpb-check\">Verfügbarkeit prüfen</button>\n    <button type=\"button\" class=\"cpb-btn secondary\" id=\"cpb-reset\">Auswahl zurücksetzen</button>\n  </div>\n\n  <div class=\"cpb-result\" id=\"cpb-result\" style=\"display:none;\"></div>\n</div>\n\n<script>\n(function() {\n  var RENTAL_KIND = 'haenger';\n  var TRAILER_STRAP_ACCESSORY_CODE = 'TRAILER_SPANNGURTE';\n  var API_BASE = 'https://booking.camping-pioneers.de/api/public/v1';\n  var initProductId = {{ product.id | default: blank | json }};\n  var initVariantId = {{ product.selected_or_first_available_variant.id | default: blank | json }};\n  var initKaution = {{ product.metafields.custom.kaution | default: '' | json }};\n  var SHOP_DOMAIN = {{ shop.permanent_domain | json }};\n  var PAGE_PATH = {{ request.path | json }};\n\n  var els = {\n    root:     document.getElementById('cpb-root'),\n    product:  document.getElementById('cpb-product'),\n    location: document.getElementById('cpb-location'),\n    calWrap:  document.getElementById('cpb-calendar-wrap'),\n    month:    document.getElementById('cpb-month'),\n    days:     document.getElementById('cpb-days'),\n    prev:     document.getElementById('cpb-prev'),\n    next:     document.getElementById('cpb-next'),\n    hint:     document.getElementById('cpb-range-hint'),\n    errBox:   document.getElementById('cpb-error'),\n    slots:    document.getElementById('cpb-slots'),\n    pickup:   document.getElementById('cpb-pickup-slot'),\n    ret:      document.getElementById('cpb-return-slot'),\n    accessory: document.getElementById('cpb-accessory'),\n    accessoryStraps: document.getElementById('cpb-accessory-straps'),\n    accessoryPrice: document.getElementById('cpb-accessory-price'),\n    contact:  document.getElementById('cpb-contact'),\n    name:     document.getElementById('cpb-name'),\n    email:    document.getElementById('cpb-email'),\n    phone:    document.getElementById('cpb-phone'),\n    vehicle:  document.getElementById('cpb-vehicle'),\n    actions:  document.getElementById('cpb-actions'),\n    check:    document.getElementById('cpb-check'),\n    reset:    document.getElementById('cpb-reset'),\n    result:   document.getElementById('cpb-result')\n  };\n\n  if (!els.root) return;\n\n  var state = {\n    products:        [],\n    visibleProducts: [],\n    locations:       [],\n    selectedProduct: null,\n    selectedLocation: null,\n    calendarMonth:   monthStart(new Date()),\n    calendarMap:     {},\n    anchorDate:      '',\n    selectedRange:   null,   // { start, end } — end may be ''\n    selectedUnitRange: null,\n    avail:           null,\n    pricePreview:    null,\n    loading:         false,\n    strapAccessorySelected: false,\n    depositAmount:   (initKaution != null && !isNaN(Number(initKaution)) && Number(initKaution) > 0) ? Number(initKaution) : null\n  };\n\n  var ANALYTICS_ENDPOINT = 'https://analytics.camping-pioneers.de/api/collect';\n  var ANALYTICS_JOURNEY_KEY = 'cp_mietmanager_journey_id';\n  var ANALYTICS_SESSION_KEY = 'cp_mietmanager_session_id';\n  var contactStartedTracked = false;\n\n  function analyticsRandomId(prefix) {\n    if (window.crypto && window.crypto.randomUUID) return prefix + '_' + window.crypto.randomUUID();\n    return prefix + '_' + Date.now() + '_' + Math.random().toString(36).slice(2);\n  }\n\n  function analyticsStorageGet(key) {\n    try { return window.localStorage.getItem(key) || ''; } catch (e) { return ''; }\n  }\n\n  function analyticsStorageSet(key, value) {\n    try { window.localStorage.setItem(key, value); } catch (e) {}\n  }\n\n  function analyticsId(key, prefix) {\n    var current = analyticsStorageGet(key);\n    if (current) return current;\n    current = analyticsRandomId(prefix);\n    analyticsStorageSet(key, current);\n    return current;\n  }\n\n  function analyticsUtm(url) {\n    return {\n      source: url.searchParams.get('utm_source') || undefined,\n      medium: url.searchParams.get('utm_medium') || undefined,\n      campaign: url.searchParams.get('utm_campaign') || undefined,\n      term: url.searchParams.get('utm_term') || undefined,\n      content: url.searchParams.get('utm_content') || undefined\n    };\n  }\n\n  function analyticsRental(extra) {\n    var p = currentProduct();\n    var l = currentLocation();\n    var range = state.selectedRange || {};\n    var payload = {\n      rentalKind: RENTAL_KIND,\n      productId: p && p.product_id,\n      productTitle: p && p.title,\n      variantId: p && p.variant_id,\n      variantTitle: p && p.variant_title,\n      locationId: l && Number(l.id),\n      startDate: range.start || undefined,\n      endDate: range.end || undefined,\n      days: (state.avail && state.avail.days) || (state.pricePreview && state.pricePreview.days),\n      price: (state.avail && state.avail.calculated_price) || (state.pricePreview && state.pricePreview.calculated_price)\n    };\n    extra = extra || {};\n    Object.keys(extra).forEach(function(key) { payload[key] = extra[key]; });\n    return payload;\n  }\n\n  function trackMietmanager(name, options) {\n    try {\n      options = options || {};\n      var url = new URL(window.location.href);\n      pushGtmConversion(name, options);\n      var body = JSON.stringify({ events: [{\n        name: name,\n        property: 'mietmanager',\n        timestamp: new Date().toISOString(),\n        pixelVersion: 'mietmanager-liquid-1.1.0-fetch-verified',\n        visitorId: analyticsId(ANALYTICS_JOURNEY_KEY, 'mmj'),\n        journeyId: analyticsId(ANALYTICS_JOURNEY_KEY, 'mmj'),\n        sessionId: analyticsId(ANALYTICS_SESSION_KEY, 'mms'),\n        consent: { analytics: true },\n        utm: analyticsUtm(url),\n        page: { url: url.toString(), referrer: document.referrer || undefined, title: document.title || undefined },\n        target: options.targetLabel ? { label: options.targetLabel } : undefined,\n        rental: options.rental || analyticsRental(),\n        raw: options.raw\n      }] });\n      fetch(ANALYTICS_ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: body, keepalive: true, mode: 'cors' })\n        .then(function(response) { if (!response.ok) throw new Error('collector ' + response.status); })\n        .catch(function() {\n          try { if (navigator.sendBeacon) navigator.sendBeacon(ANALYTICS_ENDPOINT, new Blob([body], { type: 'application/json' })); } catch (e) {}\n        });\n    } catch (e) {}\n  }\n\n  function pushGtmConversion(name, options) {\n    var conversion = null;\n    if (name === 'rental_availability_checked') {\n      conversion = { event: 'cp_rental_booking_step', conversionId: '398604311', conversionLabel: 'd9FMCI_dv6kcEJfwiL4B', conversionCategory: 'rental_booking' };\n    } else if (name === 'rental_booking_requested') {\n      conversion = { event: 'cp_rental_booking_created', conversionId: '398604311', conversionLabel: 'd9FMCI_dv6kcEJfwiL4B', conversionCategory: 'rental_booking' };\n    }\n    if (!conversion) return;\n    var rental = (options && options.rental) || analyticsRental();\n    conversion.rentalKind = rental.rentalKind;\n    conversion.productId = rental.productId;\n    conversion.variantId = rental.variantId;\n    conversion.locationId = rental.locationId;\n    conversion.value = rental.price;\n    conversion.currency = rental.price ? 'EUR' : undefined;\n    window.dataLayer = window.dataLayer || [];\n    window.dataLayer.push(conversion);\n  }\n\n  /* ── Utilities ── */\n  function pad2(n) { return String(n).padStart(2, '0'); }\n  function ymd(d) { return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()); }\n  function parseYmd(v) { return new Date(v + 'T00:00:00'); }\n  function addDays(iso, days) { var d = parseYmd(iso); d.setDate(d.getDate() + days); return ymd(d); }\n  function monthStart(d) { return new Date(d.getFullYear(), d.getMonth(), 1); }\n  function mondayFirstOffset(year, month) {\n    var sundayFirst = new Date(Date.UTC(year, month, 1)).getUTCDay();\n    return (sundayFirst + 6) % 7;\n  }\n  function monthLabel(d) { return d.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' }); }\n  function fmtDate(iso) { return parseYmd(iso).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' }); }\n  function esc(v) {\n    return String(v == null ? '' : v).replace(/[&<>\"']/g, function(c) {\n      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '\"': '&quot;', \"'\": '&#39;' })[c];\n    });\n  }\n  function showError(msg) {\n    if (!msg) { els.errBox.style.display = 'none'; els.errBox.textContent = ''; return; }\n    els.errBox.textContent = msg;\n    els.errBox.style.display = '';\n  }\n\n  function markInvalid(el, invalid) {\n    if (!el) return;\n    if (invalid) el.setAttribute('aria-invalid', 'true');\n    else el.removeAttribute('aria-invalid');\n  }\n\n  function showFieldError(msg, el) {\n    showError(msg);\n    if (els.errBox.scrollIntoView) els.errBox.scrollIntoView({ block: 'center', behavior: 'smooth' });\n    if (el && el.focus) el.focus();\n  }\n\n  /* ── API ── */\n  async function api(path, options) {\n    var res = await fetch(API_BASE + path, options || {});\n    if (!res.ok) throw new Error('HTTP ' + res.status);\n    return res.json();\n  }\n\n  /* ── Select helpers ── */\n  function renderSelectOptions(selectEl, list, labelFn, valueFn) {\n    selectEl.innerHTML = '';\n    list.forEach(function(item, i) {\n      var o = document.createElement('option');\n      o.value = valueFn(item, i);\n      o.textContent = labelFn(item, i);\n      selectEl.appendChild(o);\n    });\n  }\n\n  function currentProduct() {\n    return state.visibleProducts.find(function(p) { return (p.product_id + '|' + p.variant_id) === els.product.value; }) || null;\n  }\n  function currentLocation() {\n    return state.locations.find(function(l) { return String(l.id) === els.location.value; }) || null;\n  }\n\n  function productsForLocation(locationId) {\n    var lid = Number(locationId);\n    return state.products.filter(function(p) {\n      if (!Array.isArray(p.future_location_ids) || !p.future_location_ids.length) return false;\n      return p.future_location_ids.indexOf(lid) >= 0;\n    });\n  }\n\n  function syncSelectedProductMeta() {\n    state.selectedProduct = currentProduct();\n    var p = state.selectedProduct;\n    if (p && p.deposit_amount != null && !isNaN(Number(p.deposit_amount)) && Number(p.deposit_amount) > 0) {\n      state.depositAmount = Number(p.deposit_amount);\n      updateAccessoryDisplay();\n      return;\n    }\n    state.depositAmount = (initKaution != null && !isNaN(Number(initKaution)) && Number(initKaution) > 0) ? Number(initKaution) : null;\n    updateAccessoryDisplay();\n  }\n\n  function supportsStrapAccessory(product) {\n    if (!product) return false;\n    if (product.supports_trailer_strap_accessory === true) return true;\n    var haystack = [product.title, product.variant_title, product.model_code].join(' ').toLowerCase();\n    return haystack.indexOf('besttrailers') >= 0 && /kfz|auto|transport/.test(haystack);\n  }\n\n  function selectedAccessories() {\n    return state.strapAccessorySelected && supportsStrapAccessory(currentProduct()) ? [TRAILER_STRAP_ACCESSORY_CODE] : [];\n  }\n\n  function updateAccessoryDisplay(pricing) {\n    if (!els.accessory) return;\n    var show = !!(supportsStrapAccessory(currentProduct()) && state.selectedRange && state.selectedRange.start && state.selectedRange.end);\n    els.accessory.style.display = show ? '' : 'none';\n    if (!show) {\n      state.strapAccessorySelected = false;\n      if (els.accessoryStraps) els.accessoryStraps.checked = false;\n    }\n    if (els.accessoryPrice) {\n      var price = pricing && pricing.accessory_price_total ? Number(pricing.accessory_price_total) : 0;\n      els.accessoryPrice.textContent = state.strapAccessorySelected && price > 0 ? '+' + price + '\\u00A0€' : '+5\\u00A0€/Tag';\n    }\n  }\n\n  function refreshProductsForLocation() {\n    var loc = currentLocation();\n    var prevValue = els.product.value;\n    state.visibleProducts = loc ? productsForLocation(loc.id) : [];\n    els.product.innerHTML = '';\n    if (!state.visibleProducts.length) {\n      var emptyOpt = document.createElement('option');\n      emptyOpt.value = '';\n      emptyOpt.textContent = 'Keine Mietprodukte mit Zukunftsbestand';\n      els.product.appendChild(emptyOpt);\n      els.product.disabled = true;\n      state.selectedProduct = null;\n      return;\n    }\n    els.product.disabled = false;\n    renderSelectOptions(\n      els.product,\n      state.visibleProducts,\n      function(p) {\n        return p.title + (p.variant_title && p.variant_title !== 'Default Title' ? ' – ' + p.variant_title : '');\n      },\n      function(p) { return p.product_id + '|' + p.variant_id; }\n    );\n    if (prevValue && state.visibleProducts.some(function(p) { return (p.product_id + '|' + p.variant_id) === prevValue; })) {\n      els.product.value = prevValue;\n    }\n    syncSelectedProductMeta();\n  }\n\n  /* ── Bootstrap ── */\n  async function loadBootstrap() {\n    var qs = new URLSearchParams();\n    qs.set('kind', RENTAL_KIND);\n    if (initProductId) qs.set('product_id', String(initProductId));\n    if (initVariantId) qs.set('variant_id', String(initVariantId));\n    var data = await api('/bootstrap?' + qs.toString());\n\n    state.products  = data.products  || [];\n    state.locations = data.locations || [];\n\n    if (!state.products.length || !state.locations.length) {\n      throw new Error('Keine Mietprodukte oder Standorte verfügbar');\n    }\n\n    renderSelectOptions(\n      els.location,\n      state.locations,\n      function(l) { return l.name; },\n      function(l) { return String(l.id); }\n    );\n\n    state.selectedLocation = currentLocation();\n    refreshProductsForLocation();\n    var initial = state.visibleProducts.find(function(p) {\n      return String(p.product_id) === String(initProductId || '') && String(p.variant_id) === String(initVariantId || '');\n    });\n    if (initial) els.product.value = initial.product_id + '|' + initial.variant_id;\n    syncSelectedProductMeta();\n\n    els.calWrap.style.display = '';\n    if (!state.selectedProduct) {\n      showError('Für den gewählten Standort ist aktuell kein Mietprodukt mit Zukunftsbestand verfügbar.');\n      hideSlotAndContact();\n      return;\n    }\n    await loadCalendar();\n    trackMietmanager('rental_widget_viewed', {\n      raw: {\n        shop: SHOP_DOMAIN,\n        pagePath: PAGE_PATH,\n        hasProductContext: !!(initProductId || initVariantId)\n      }\n    });\n  }\n\n  /* ── Calendar load ── */\n  async function loadCalendar() {\n    state.selectedProduct  = currentProduct();\n    state.selectedLocation = currentLocation();\n    if (!state.selectedProduct || !state.selectedLocation) {\n      state.calendarMap = {};\n      renderCalendar();\n      return;\n    }\n\n    var from   = ymd(monthStart(state.calendarMonth));\n    var to     = addDays(from, 119);\n    var params = new URLSearchParams({\n      location_id: String(state.selectedLocation.id),\n      product_id:  state.selectedProduct.product_id,\n      variant_id:  state.selectedProduct.variant_id,\n      from: from,\n      to:   to\n    });\n    if (state.anchorDate) params.set('selected_date', state.anchorDate);\n\n    var res = await api('/availability/calendar?' + params.toString());\n    state.calendarMap = {};\n    (res.dates || []).forEach(function(d) { state.calendarMap[d.date] = d; });\n    state.selectedUnitRange = res.selected_unit_range || null;\n    renderCalendar();\n  }\n\n  /* ── Calendar render (Airbnb-style) ── */\n  function renderCalendar() {\n    var year   = state.calendarMonth.getFullYear();\n    var month  = state.calendarMonth.getMonth();\n    var last   = new Date(year, month + 1, 0).getDate();\n    var offset = mondayFirstOffset(year, month);\n\n    els.month.textContent = monthLabel(state.calendarMonth);\n    els.days.innerHTML    = '';\n\n    var hasRange  = !!(state.selectedRange && state.selectedRange.start && state.selectedRange.end);\n    var hasAnchor = !!state.anchorDate && !hasRange;\n    var todayKey  = ymd(new Date());\n\n    for (var dayNum = 1; dayNum <= last; dayNum++) {\n      var d   = new Date(year, month, dayNum);\n      var key = ymd(d);\n      var info      = state.calendarMap[key];\n      var isPast    = key < todayKey;\n      var available = !isPast && !!(info && (info.handover_available != null ? info.handover_available : info.is_available));\n      var inUnit    = !!(state.anchorDate && info && info.in_selected_unit_range);\n\n      var isAnchor   = hasAnchor && key === state.anchorDate;\n      var isSelStart = hasRange  && key === state.selectedRange.start;\n      var isSelEnd   = hasRange  && key === state.selectedRange.end;\n      var isInRange  = hasRange  && key > state.selectedRange.start && key < state.selectedRange.end;\n\n      /* Label inside circle */\n      var circleLabel = '';\n      if (isAnchor || isSelStart) circleLabel = 'Abholung';\n      else if (isSelEnd) circleLabel = 'Rückgabe';\n      else if (isInRange) circleLabel = '';\n      else if (isPast) circleLabel = '';\n      else if (available) circleLabel = 'frei';\n      else circleLabel = '';\n\n      /* Build class list */\n      var cls = 'cpb-day';\n      if (isPast) cls += ' past';\n      else if (available) cls += ' ok';\n      else cls += ' no';\n      if (isAnchor)   cls += ' anchor';\n      if (isSelStart) cls += ' sel-start';\n      if (isSelEnd)   cls += ' sel-end';\n      if (isInRange)  cls += ' in-range';\n\n      var btn = document.createElement('button');\n      btn.type      = 'button';\n      btn.className = cls;\n      if (isPast || !available) btn.disabled = true;\n      if (dayNum === 1) btn.style.gridColumnStart = String(offset + 1);\n\n      /* Bar span */\n      var bar = document.createElement('span');\n      bar.className = 'cpb-bar';\n\n      /* Circle span */\n      var circle = document.createElement('span');\n      circle.className = 'cpb-circle';\n      circle.innerHTML =\n        '<span class=\"d\">' + dayNum + '</span>' +\n        '<span class=\"s\">' + esc(circleLabel) + '</span>';\n\n      btn.appendChild(bar);\n      btn.appendChild(circle);\n\n      if (!isPast && available) {\n        btn.addEventListener('click', (function(k) {\n          return function() { pickDate(k); };\n        })(key));\n      }\n\n      els.days.appendChild(btn);\n    }\n\n    /* Update hint text */\n    if (hasAnchor) {\n      els.hint.textContent = 'Abholung: ' + fmtDate(state.anchorDate) + ' — wähle jetzt das Rückgabedatum.';\n    } else if (hasRange) {\n      els.hint.textContent = 'Zeitraum: ' + fmtDate(state.selectedRange.start) + ' bis ' + fmtDate(state.selectedRange.end) + '.';\n    } else {\n      els.hint.textContent = 'Klicke zuerst auf das Abholdatum, dann auf das Rückgabedatum.';\n    }\n  }\n\n  /* ── Date pick logic ── */\n  async function pickDate(key) {\n    showError('');\n    state.avail = null;\n    showResult('');\n\n    /* Case 1: No anchor yet (or range already complete → start over) */\n    if (!state.anchorDate || (state.selectedRange && state.selectedRange.start && state.selectedRange.end)) {\n      state.anchorDate    = key;\n      state.selectedRange = { start: key, end: '' };\n      /* SYNCHRONOUS render first — gives instant blue circle */\n      renderCalendar();\n      /* Then load API in background to get unit-range info */\n      loadCalendar().catch(function() {});\n      hideSlotAndContact();\n      return;\n    }\n\n    /* Case 2: Click same day as anchor → deselect */\n    if (key === state.anchorDate) {\n      state.anchorDate      = '';\n      state.selectedRange   = null;\n      state.selectedUnitRange = null;\n      renderCalendar();\n      hideSlotAndContact();\n      return;\n    }\n\n    /* Case 3: Second click → finalize range */\n    var start = key < state.anchorDate ? key : state.anchorDate;\n    var end   = key < state.anchorDate ? state.anchorDate : key;\n    state.selectedRange = { start: start, end: end };\n    /* SYNCHRONOUS render for immediate range highlight */\n    renderCalendar();\n    /* Load slots asynchronously */\n    await loadSlots();\n    trackMietmanager('rental_date_selected');\n  }\n\n  function hideSlotAndContact() {\n    els.slots.style.display   = 'none';\n    if (els.accessory) els.accessory.style.display = 'none';\n    els.contact.style.display = 'none';\n    els.actions.style.display = 'none';\n  }\n\n  function hideContactOnly() {\n    els.contact.style.display = 'none';\n    markInvalid(els.name, false);\n    markInvalid(els.email, false);\n    markInvalid(els.phone, false);\n  }\n\n  function contactVisible() {\n    return els.contact.style.display !== 'none';\n  }\n\n  function showBookingForm() {\n    els.contact.style.display = '';\n    if (els.contact.scrollIntoView) els.contact.scrollIntoView({ block: 'center', behavior: 'smooth' });\n    if (els.name && els.name.focus) els.name.focus();\n  }\n\n  /* ── Slot loading ── */\n  function setSlotOptions(selectEl, slots) {\n    selectEl.innerHTML = '';\n    if (!slots || !slots.length) {\n      var o = document.createElement('option');\n      o.value = '';\n      o.textContent = 'Keine Slots verfügbar';\n      selectEl.appendChild(o);\n      return;\n    }\n    slots.forEach(function(s) {\n      var o = document.createElement('option');\n      o.value = s.slot;\n      o.textContent = s.slot;\n      selectEl.appendChild(o);\n    });\n  }\n\n  async function loadSlots() {\n    if (!state.selectedRange || !state.selectedRange.start || !state.selectedRange.end) return;\n    var p = currentProduct();\n    var l = currentLocation();\n    if (!p || !l) return;\n\n    var base = new URLSearchParams({\n      location_id: String(l.id),\n      product_id:  p.product_id,\n      variant_id:  p.variant_id\n    });\n\n    var pickupParams = new URLSearchParams(base);\n    pickupParams.set('date', state.selectedRange.start);\n    pickupParams.set('kind', 'pickup');\n\n    var returnParams = new URLSearchParams(base);\n    returnParams.set('date', state.selectedRange.end);\n    returnParams.set('kind', 'return');\n\n    var [pickupRes, returnRes] = await Promise.all([\n      api('/slots?' + pickupParams.toString()),\n      api('/slots?' + returnParams.toString())\n    ]);\n\n    setSlotOptions(els.pickup, pickupRes.slots || []);\n    setSlotOptions(els.ret,    returnRes.slots || []);\n\n    els.slots.style.display   = '';\n    updateAccessoryDisplay();\n    hideContactOnly();\n    els.actions.style.display = '';\n    updatePricePreview().catch(function() {\n      showResult('<p>Der Mietpreis konnte gerade nicht berechnet werden. Bitte prüfe deine Auswahl noch einmal.</p>');\n    });\n  }\n\n  /* ── Result display ── */\n  function pricingText(pricing, product, availabilityKnown) {\n    var totalFee = Number(pricing.calculated_price || 0);\n    var baseFee = Number(pricing.base_calculated_price || totalFee);\n    var accessoryTotal = Number(pricing.accessory_price_total || 0);\n    var securityDeposit = Number(pricing.security_deposit || 0);\n    var buyBonus50 = Number(pricing.buy_bonus_50 || Math.round(totalFee * 0.5));\n    var buyText = product && product.can_buy_after_rent\n      ? '<p style=\"margin-top:10px;\">Falls du dich für den Kauf eines Anhängers entscheidest, rechnen wir dir <b>' + esc(buyBonus50 || 0) + '\\u00A0€</b> (50\\u00A0% der Miete) auf den Kaufpreis an.</p>'\n      : '';\n    var intro = availabilityKnown\n      ? 'Die Anmietung des gewählten Anhängers'\n      : 'Der Mietpreis für den gewählten Anhänger';\n    var suffix = availabilityKnown\n      ? 'können wir dir für'\n      : 'beträgt';\n    var availabilityNote = availabilityKnown\n      ? ''\n      : '<p style=\"margin-top:10px;\">Wähle anschließend deine Abhol- und Rückgabezeit und prüfe die Verfügbarkeit.</p>';\n    var accessoryText = accessoryTotal > 0\n      ? '<p style=\"margin-top:10px;\">Mit dabei: <b>Spanngurte für den KFZ-Transport</b> für <b>' + esc(accessoryTotal) + '\\u00A0€</b>. Die reine Anhängermiete beträgt <b>' + esc(baseFee) + '\\u00A0€</b>.</p>'\n      : '';\n    return (\n      '<p>' + intro + ' (<b>' + esc(product ? product.title : '') + '</b>) für <b>' + esc(pricing.days) + '</b> Tage ' + suffix + ' <b>' + esc(totalFee) + '\\u00A0€</b>. Darin enthalten ist eine persönliche <b>Einweisung</b>.</p>' +\n      '<p style=\"margin-top:10px;\">Es fällt außerdem eine Kaution in Höhe von <b>' + esc((state.depositAmount != null && Number(state.depositAmount) > 0) ? state.depositAmount : securityDeposit) + '\\u00A0€</b> an. Diese bitte in Bar mitbringen.</p>' +\n      accessoryText +\n      buyText +\n      availabilityNote\n    );\n  }\n\n  function showResult(html) {\n    if (!html) {\n      els.result.style.display = 'none';\n      els.result.innerHTML     = '';\n      return;\n    }\n    els.result.style.display = '';\n    els.result.innerHTML     = html;\n\n    if (state.avail && state.avail.is_bookable) {\n      var cta = document.createElement('div');\n      cta.style.marginTop = '14px';\n      var btn = document.createElement('button');\n      btn.type      = 'button';\n      btn.className = 'cpb-btn primary';\n      btn.textContent = 'Buchung anfragen';\n      btn.addEventListener('click', function() {\n        if (!contactVisible()) {\n          showBookingForm();\n          btn.textContent = 'Anfrage senden';\n          return;\n        }\n        submitBooking().catch(function() {\n          showResult('<p>Sorry – das Absenden hat leider nicht geklappt. Bitte versuche es erneut.</p>');\n        });\n      });\n      cta.appendChild(btn);\n      els.result.appendChild(cta);\n    }\n  }\n\n  /* ── Validation ── */\n  function validateContactForm() {\n    var name  = (els.name.value  || '').trim();\n    var email = (els.email.value || '').trim();\n    var phone = (els.phone.value || '').trim();\n    markInvalid(els.name, false);\n    markInvalid(els.email, false);\n    markInvalid(els.phone, false);\n    if (!name) {\n      markInvalid(els.name, true);\n      showFieldError('Bitte gib deinen Namen ein.', els.name);\n      return false;\n    }\n    if (!email && !phone) {\n      markInvalid(els.email, true);\n      markInvalid(els.phone, true);\n      showFieldError('Bitte gib eine E-Mail-Adresse oder Telefonnummer an.', els.email);\n      return false;\n    }\n    if (email && !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {\n      markInvalid(els.email, true);\n      showFieldError('Bitte gib eine gültige E-Mail-Adresse ein oder lass das Feld leer und nutze Telefon.', els.email);\n      return false;\n    }\n    showError('');\n    return true;\n  }\n\n  function validateRequiredSelection() {\n    var p = currentProduct();\n    var l = currentLocation();\n    if (!p) { showError('Bitte wähle ein Mietprodukt.'); return false; }\n    if (!l) { showError('Bitte wähle einen Standort.'); return false; }\n    if (!state.selectedRange || !state.selectedRange.start || !state.selectedRange.end) {\n      showError('Bitte wähle zuerst Abhol- und Rückgabedatum im Kalender.');\n      return false;\n    }\n    if (!els.pickup.value || !els.ret.value) {\n      showError('Bitte wähle Abhol- und Rückgabe-Slot.');\n      return false;\n    }\n    showError('');\n    return true;\n  }\n\n  /* ── Availability check payload ── */\n  function buildCheckPayload() {\n    var p = currentProduct();\n    var l = currentLocation();\n    if (!p || !l || !state.selectedRange || !state.selectedRange.start || !state.selectedRange.end) return null;\n    var payload = {\n      product_id:  p.product_id,\n      variant_id:  p.variant_id,\n      location_id: Number(l.id),\n      start_date:  state.selectedRange.start,\n      end_date:    state.selectedRange.end,\n      pickup_slot: els.pickup.value,\n      return_slot: els.ret.value\n    };\n    if (state.depositAmount != null && Number(state.depositAmount) > 0) payload.deposit_amount = Number(state.depositAmount);\n    payload.selected_accessories = selectedAccessories();\n    return payload;\n  }\n\n  function buildPricingPayload() {\n    var p = currentProduct();\n    if (!p || !state.selectedRange || !state.selectedRange.start || !state.selectedRange.end) return null;\n    var payload = {\n      product_id: p.product_id,\n      variant_id: p.variant_id,\n      start_date: state.selectedRange.start,\n      end_date: state.selectedRange.end\n    };\n    if (state.depositAmount != null && Number(state.depositAmount) > 0) payload.deposit_amount = Number(state.depositAmount);\n    payload.selected_accessories = selectedAccessories();\n    return payload;\n  }\n\n  async function updatePricePreview() {\n    var payload = buildPricingPayload();\n    if (!payload) return;\n    var preview = await api('/pricing/preview', {\n      method: 'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body: JSON.stringify(payload)\n    });\n    state.pricePreview = preview;\n    state.avail = null;\n    updateAccessoryDisplay(preview);\n    showResult(pricingText(preview, currentProduct(), false));\n  }\n\n  async function checkAvailability() {\n    if (!validateRequiredSelection()) return;\n    var payload = buildCheckPayload();\n    if (!payload) { showError('Bitte prüfe deine Angaben.'); return; }\n\n    showResult('<p>Verfügbarkeit wird geprüft …</p>');\n    var avail = await api('/availability/check', {\n      method:  'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body:    JSON.stringify(payload)\n    });\n    state.avail = avail;\n    state.pricePreview = avail;\n    updateAccessoryDisplay(avail);\n    trackMietmanager('rental_availability_checked', {\n      rental: analyticsRental({\n        days: avail.days,\n        price: avail.calculated_price,\n        bookable: !!avail.is_bookable\n      })\n    });\n\n    if (!avail.is_bookable) {\n      showResult('<p>Leider ist der Anhänger für diesen Zeitraum nicht verfügbar. Bitte wähle andere Daten.</p>');\n      return;\n    }\n\n    hideContactOnly();\n    showResult(pricingText(avail, currentProduct(), true));\n  }\n\n  async function submitBooking() {\n    if (!validateRequiredSelection()) return;\n    if (!contactVisible()) {\n      showBookingForm();\n      return;\n    }\n    if (!validateContactForm()) return;\n    var payload = buildCheckPayload();\n    if (!payload) { showError('Bitte prüfe deine Angaben.'); return; }\n\n    payload.customer = {\n      name:    (els.name.value    || '').trim(),\n      email:   (els.email.value   || '').trim(),\n      phone:   (els.phone.value   || '').trim(),\n      vehicle: (els.vehicle.value || '').trim()\n    };\n\n    showResult('<p>Anfrage wird gesendet …</p>');\n    var res = await api('/bookings', {\n      method:  'POST',\n      headers: { 'Content-Type': 'application/json' },\n      body:    JSON.stringify(payload)\n    });\n\n    state.avail = null;\n    state.pricePreview = null;\n    state.strapAccessorySelected = false;\n    if (els.accessoryStraps) els.accessoryStraps.checked = false;\n    trackMietmanager('rental_booking_requested', {\n      rental: analyticsRental({\n        days: res.booking.days,\n        price: res.booking.calculated_price,\n        bookable: true\n      })\n    });\n    showResult(\n      '<p><b>Danke für deine Anfrage!</b> Hier sind deine Details:</p>' +\n      '<p>Referenz: <b>' + esc(res.booking.external_ref) + '</b><br>' +\n      'Zeitraum: <b>' + esc(fmtDate(res.booking.start_date)) + ' bis ' + esc(fmtDate(res.booking.end_date)) + '</b></p>' +\n      '<p>Wir kümmern uns jetzt um die Prüfung und melden uns schnell bei dir. Du wirst automatisch benachrichtigt, sobald wir die Buchung bestätigt haben.</p>'\n    );\n  }\n\n  /* ── Reset ── */\n  function resetAll() {\n    state.anchorDate       = '';\n    state.selectedRange    = null;\n    state.selectedUnitRange = null;\n    state.avail            = null;\n    state.pricePreview     = null;\n    state.strapAccessorySelected = false;\n    if (els.accessoryStraps) els.accessoryStraps.checked = false;\n    showError('');\n    markInvalid(els.name, false);\n    markInvalid(els.email, false);\n    markInvalid(els.phone, false);\n    showResult('');\n    hideSlotAndContact();\n    refreshProductsForLocation();\n    syncSelectedProductMeta();\n    loadCalendar().catch(function() {});\n  }\n\n  /* ── Event bindings ── */\n  els.prev.addEventListener('click', function() {\n    state.calendarMonth = new Date(state.calendarMonth.getFullYear(), state.calendarMonth.getMonth() - 1, 1);\n    loadCalendar().catch(function() {});\n  });\n  els.next.addEventListener('click', function() {\n    state.calendarMonth = new Date(state.calendarMonth.getFullYear(), state.calendarMonth.getMonth() + 1, 1);\n    loadCalendar().catch(function() {});\n  });\n  els.product.addEventListener('change', function() {\n    syncSelectedProductMeta();\n    trackMietmanager('rental_product_selected');\n    resetAll();\n  });\n  els.location.addEventListener('change', function() {\n    refreshProductsForLocation();\n    syncSelectedProductMeta();\n    trackMietmanager('rental_product_selected');\n    resetAll();\n  });\n  els.check.addEventListener('click', function() {\n    checkAvailability().catch(function() {\n      showResult('<p>Sorry – die Verfügbarkeit konnte nicht geprüft werden. Bitte versuche es erneut.</p>');\n    });\n  });\n  els.reset.addEventListener('click', resetAll);\n  if (els.accessoryStraps) {\n    els.accessoryStraps.addEventListener('change', function() {\n      state.strapAccessorySelected = !!els.accessoryStraps.checked;\n      state.avail = null;\n      updatePricePreview().catch(function() {\n        updateAccessoryDisplay();\n        showResult('<p>Der Mietpreis konnte gerade nicht berechnet werden. Bitte prüfe deine Auswahl noch einmal.</p>');\n      });\n    });\n  }\n  [els.name, els.email, els.phone].forEach(function(el) {\n    el.addEventListener('input', function() {\n      if (!contactStartedTracked) {\n        contactStartedTracked = true;\n        trackMietmanager('rental_contact_started');\n      }\n      if (el === els.email || el === els.phone) {\n        markInvalid(els.email, false);\n        markInvalid(els.phone, false);\n        return;\n      }\n      markInvalid(el, false);\n    });\n  });\n\n  /* ── Boot ── */\n  loadBootstrap().catch(function(err) {\n    showResult('<p>Sorry – das Laden der Buchungsdaten hat leider nicht geklappt (' + esc(err && err.message || '') + ').</p>');\n  });\n})();\n</script>\n"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_QLKYTM",
+    "custom_liquid_wGU8qW",
+    "custom_liquid_ybLiRy",
+    "rich_text_ibwBHY",
+    "image_with_text_pxVVJJ",
+    "image_with_text_overlay_thYKGD",
+    "rich_text_KaWewB",
+    "rich_text_qXLHmQ",
+    "contact_form_dEXYHc",
+    "faq_UVdYWy",
+    "featured_collection_qQFTdC"
+  ]
+}

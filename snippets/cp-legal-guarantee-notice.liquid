@@ -1,0 +1,233 @@
+{% comment %}
+  Official EU harmonised notice on the legal guarantee of conformity.
+  Source files: European Commission, unmodified RGB SVG versions.
+  Installed by scripts/shopify/install-legal-guarantee-notice.mjs.
+{% endcomment %}
+{%- liquid
+  assign cp_legal_language = request.locale.iso_code | slice: 0, 2
+  case cp_legal_language
+    when 'en'
+      assign cp_legal_trigger = 'Your legal guarantee rights'
+      assign cp_legal_compact_trigger = 'Legal guarantee'
+      assign cp_legal_title = 'Legal guarantee rights'
+      assign cp_legal_close = 'Close'
+      assign cp_legal_more = 'Further information online'
+      assign cp_legal_alt = 'Official EU notice on the legal guarantee of conformity'
+      assign cp_legal_asset = 'cp-legal-guarantee-en.svg'
+      assign cp_legal_url = 'https://europa.eu/youreurope/guarantees'
+    when 'fr'
+      assign cp_legal_trigger = 'Vos droits de garantie légale'
+      assign cp_legal_compact_trigger = 'Garantie légale'
+      assign cp_legal_title = 'Garantie légale de conformité'
+      assign cp_legal_close = 'Fermer'
+      assign cp_legal_more = 'Plus d’informations en ligne'
+      assign cp_legal_alt = 'Avis officiel de l’UE sur la garantie légale de conformité'
+      assign cp_legal_asset = 'cp-legal-guarantee-fr.svg'
+      assign cp_legal_url = 'https://europa.eu/youreurope/garanties'
+    else
+      assign cp_legal_trigger = 'Deine gesetzlichen Gewährleistungsrechte'
+      assign cp_legal_compact_trigger = 'Gewährleistung'
+      assign cp_legal_title = 'Gesetzliches Gewährleistungsrecht'
+      assign cp_legal_close = 'Schließen'
+      assign cp_legal_more = 'Weitere Informationen online'
+      assign cp_legal_alt = 'Offizielles EU-Label zum gesetzlichen Gewährleistungsrecht'
+      assign cp_legal_asset = 'cp-legal-guarantee-de.svg'
+      assign cp_legal_url = 'https://europa.eu/youreurope/garantien'
+  endcase
+-%}
+
+{%- if context == 'cart' -%}
+  <div class="cp-legal-guarantee-cart" data-cp-legal-guarantee-cart>
+    <button
+      class="cp-legal-guarantee-link"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="cp-legal-guarantee-dialog"
+      data-cp-legal-guarantee-open
+      onclick="window.__cpLegalGuaranteeReturnFocus = this; document.getElementById('cp-legal-guarantee-dialog').showModal();"
+    >
+      <span aria-hidden="true">ⓘ</span>
+      {{ cp_legal_trigger }}
+    </button>
+  </div>
+{%- elsif context == 'announcement' -%}
+  <div class="cp-legal-guarantee-announcement" data-cp-legal-guarantee>
+    <button
+      class="announcement-link cp-legal-guarantee-link"
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="cp-legal-guarantee-dialog"
+      data-cp-legal-guarantee-open
+      onclick="window.__cpLegalGuaranteeReturnFocus = this; document.getElementById('cp-legal-guarantee-dialog').showModal();"
+    >
+      <span aria-hidden="true">ⓘ</span>
+      {{ cp_legal_compact_trigger }}
+    </button>
+  </div>
+{%- else -%}
+
+  <dialog
+    class="cp-legal-guarantee-dialog"
+    id="cp-legal-guarantee-dialog"
+    aria-labelledby="cp-legal-guarantee-title"
+    data-cp-legal-guarantee-dialog
+    onclick="if (event.target === this) this.close();"
+    onkeydown="if (event.key === 'Escape') { event.preventDefault(); this.close(); }"
+    onclose="if (window.__cpLegalGuaranteeReturnFocus) window.__cpLegalGuaranteeReturnFocus.focus(); window.__cpLegalGuaranteeReturnFocus = null;"
+  >
+    <div class="cp-legal-guarantee-dialog__header">
+      <h2 id="cp-legal-guarantee-title">{{ cp_legal_title }}</h2>
+      <button class="cp-legal-guarantee-close" type="button" aria-label="{{ cp_legal_close | escape }}" data-cp-legal-guarantee-close onclick="document.getElementById('cp-legal-guarantee-dialog').close();">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="cp-legal-guarantee-dialog__viewport">
+      <a href="{{ cp_legal_url }}" target="_blank" rel="noopener">
+        <img
+          src="{{ cp_legal_asset | asset_url }}"
+          alt="{{ cp_legal_alt | escape }}"
+          width="210"
+          height="297"
+          loading="lazy"
+        >
+      </a>
+    </div>
+    <p class="cp-legal-guarantee-dialog__more">
+      <a href="{{ cp_legal_url }}" target="_blank" rel="noopener">{{ cp_legal_more }}</a>
+    </p>
+  </dialog>
+
+  <style>
+    .cp-legal-guarantee-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: 1.4;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      cursor: pointer;
+    }
+    .cp-legal-guarantee-announcement {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      inset-inline-end: 1.5rem;
+      display: flex;
+      align-items: center;
+      min-height: 30px;
+      padding-inline-start: 18px;
+      background: rgb(var(--color-background));
+      color: inherit;
+      transform: translateY(-50%);
+      box-shadow: -12px 0 14px rgb(var(--color-background));
+    }
+    .shopify-section-announcement-bar .announcement-bar {
+      position: relative;
+    }
+    @media screen and (max-width: 749px) {
+      .cp-legal-guarantee-announcement {
+        inset-inline-end: 0.8rem;
+        padding-inline-start: 10px;
+      }
+    }
+    .cp-legal-guarantee-link:focus-visible,
+    .cp-legal-guarantee-close:focus-visible,
+    .cp-legal-guarantee-dialog a:focus-visible {
+      outline: 3px solid #ffed00;
+      outline-offset: 3px;
+    }
+    .cp-legal-guarantee-cart {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 0 12px;
+      color: #003399;
+    }
+    .cp-legal-guarantee-dialog {
+      width: min(92vw, 780px);
+      max-width: none;
+      max-height: 94vh;
+      margin: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 18px;
+      background: #fff;
+      color: #111;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .36);
+    }
+    .cp-legal-guarantee-dialog::backdrop {
+      background: rgba(0, 0, 0, .72);
+    }
+    .cp-legal-guarantee-dialog__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 18px;
+      border-bottom: 1px solid #d9dde7;
+    }
+    .cp-legal-guarantee-dialog__header h2 {
+      margin: 0;
+      color: #111;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+    .cp-legal-guarantee-close {
+      display: grid;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      padding: 0;
+      border: 1px solid #c8ceda;
+      border-radius: 50%;
+      background: #fff;
+      color: #111;
+      font-size: 30px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .cp-legal-guarantee-dialog__viewport {
+      max-height: calc(94vh - 142px);
+      overflow: auto;
+      padding: 18px;
+      background: #eef2f8;
+      text-align: center;
+      overscroll-behavior: contain;
+    }
+    .cp-legal-guarantee-dialog__viewport a {
+      display: inline-block;
+    }
+    .cp-legal-guarantee-dialog__viewport img {
+      display: block;
+      width: 680px;
+      max-width: none;
+      height: auto;
+      background: #fff;
+    }
+    .cp-legal-guarantee-dialog__more {
+      margin: 0;
+      padding: 12px 18px 16px;
+      text-align: center;
+    }
+    .cp-legal-guarantee-dialog__more a {
+      color: #003399;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    @media (min-width: 760px) {
+      .cp-legal-guarantee-dialog__viewport img {
+        width: min(680px, calc(92vw - 64px));
+      }
+    }
+  </style>
+
+  {% comment %}cp-legal-guarantee-dialog-v20260728{% endcomment %}
+{%- endif -%}

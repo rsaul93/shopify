@@ -1,0 +1,109 @@
+{%- assign drawing_id = section.id | prepend: 'lagun-' -%}
+<div class="cp-lagun-assembly" data-cp-assembly data-drawing-id="{{ drawing_id }}">
+  <svg viewBox="0 0 400 420" role="img" aria-label="Dein Lagun: Befestigung, Tischbein, Schwenkarm und Untertischplatte" data-cp-assembly-svg>
+    <defs>
+      <linearGradient id="{{ drawing_id }}-silver-face" x1="0" x2="1"><stop stop-color="#8796a5"/><stop offset=".16" stop-color="#d6dfe7"/><stop offset=".55" stop-color="#f0f3f6"/><stop offset="1" stop-color="#acbbc9"/></linearGradient>
+      <linearGradient id="{{ drawing_id }}-silver-top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6f8fa"/><stop offset=".5" stop-color="#dbe2e9"/><stop offset="1" stop-color="#acbac8"/></linearGradient>
+      <linearGradient id="{{ drawing_id }}-black-face" x1="0" x2="1"><stop stop-color="#17212b"/><stop offset=".2" stop-color="#414b55"/><stop offset=".6" stop-color="#303b46"/><stop offset="1" stop-color="#17232f"/></linearGradient>
+      <linearGradient id="{{ drawing_id }}-black-top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#697580"/><stop offset=".45" stop-color="#46515d"/><stop offset="1" stop-color="#273440"/></linearGradient>
+    </defs>
+    <g transform="translate(15 40)">
+      <ellipse cx="169" cy="367" rx="95" ry="10" fill="#263f62" opacity=".07"/>
+      <g data-assembly-extra="gap" class="cp-assembly-piece cp-assembly-gap" hidden>
+        <g data-gap-shape="standard">
+          <path class="cp-metal-side" d="m64 247 14 6v104l-14-6z"/>
+          <path class="cp-metal-top" d="m64 247 36-13 14 6-36 13z"/>
+          <path d="m64 351 14 6 18 6-14-6z"/>
+        </g>
+        <g data-gap-shape="smart" hidden>
+          <path class="cp-metal-side" d="m87 239 14 6v106l-14-6z"/>
+          <path class="cp-metal-top" d="m87 239 17-6 14 6-17 6z"/>
+          <path d="m87 345 14 6 13 5-14-6z"/>
+        </g>
+      </g>
+      <g data-assembly-piece="mount" class="cp-assembly-piece">
+        <g class="cp-assembly-wall" data-mount-shape="standard">
+          <path d="m78 253 36-13 18 6v104l-36 13-18-6z"/>
+          <path class="cp-metal-side" d="m112 245 13 4v97l-13 5z"/>
+          <path class="cp-metal-rail" d="m108 246 9-3 8 3-8 3v97l-9 3z"/>
+          <g class="cp-metal-holes"><ellipse cx="85" cy="265" rx="2.6" ry="3.5"/><ellipse cx="105" cy="258" rx="2.6" ry="3.5"/><ellipse cx="85" cy="344" rx="2.6" ry="3.5"/><ellipse cx="105" cy="337" rx="2.6" ry="3.5"/></g>
+        </g>
+        <g class="cp-assembly-wall" data-mount-shape="smart" hidden>
+          <path d="m101 245 17-6 13 6v105l-17 6-13-5z"/><path class="cp-metal-rail" d="m109 244 9-3 8 3-8 3v98l-9 3z"/>
+          <g class="cp-metal-holes"><ellipse cx="105" cy="257" rx="2.5" ry="3"/><ellipse cx="105" cy="299" rx="2.5" ry="3"/><ellipse cx="105" cy="341" rx="2.5" ry="3"/></g>
+        </g>
+        <g class="cp-assembly-floor" data-mount-shape="flush" hidden>
+          <ellipse cx="130" cy="359" rx="47" ry="17"/><ellipse class="cp-metal-top" cx="130" cy="356" rx="47" ry="16"/>
+          <g class="cp-metal-holes"><ellipse cx="96" cy="355" rx="3" ry="1.8"/><ellipse cx="155" cy="348" rx="3" ry="1.8"/><ellipse cx="150" cy="365" rx="3" ry="1.8"/></g>
+        </g>
+        <g class="cp-assembly-floor" data-mount-shape="surface" hidden>
+          <ellipse cx="130" cy="359" rx="47" ry="17"/><ellipse class="cp-metal-top" cx="130" cy="356" rx="47" ry="16"/>
+          <path d="M110 335v21c0 10 40 10 40 0v-21z"/><ellipse class="cp-metal-top" cx="130" cy="335" rx="20" ry="8"/>
+          <g class="cp-metal-holes"><ellipse cx="94" cy="355" rx="3" ry="1.8"/><ellipse cx="165" cy="355" rx="3" ry="1.8"/></g>
+        </g>
+      </g>
+      <g data-assembly-piece="leg" class="cp-assembly-piece">
+        <path d="m116 156 22-8 14 6v199l-22 8-14-6z"/>
+        <path class="cp-metal-side" d="m138 148 14 6v199l-14-6z"/>
+        <path class="cp-metal-rail" d="m117 159 5-2 4 2-5 2v190l-4 2z"/>
+        <path class="cp-metal-cap" d="m116 351 14 5 22-8v5l-22 8-14-6z"/>
+        <ellipse class="cp-metal-top" cx="135" cy="150" rx="13" ry="6"/>
+        <path class="cp-metal-handle" d="M148 300c7-2 10 1 11 5l4 25c1 5-4 7-6 2l-7-20-5-5z"/>
+        <g data-assembly-double-grip hidden><path class="cp-metal-handle" d="M148 249c7-2 10 1 11 5l4 25c1 5-4 7-6 2l-7-20-5-5z"/></g>
+      </g>
+      <g data-assembly-piece="arm" class="cp-assembly-piece">
+        <path d="m115 140 115-44 22 9-115 44z" class="cp-metal-top"/>
+        <path d="m137 149 115-44v25l-115 44z"/>
+        <path class="cp-metal-side" d="m115 140 22 9v25l-22-9z"/>
+        <ellipse class="cp-metal-ring" cx="133" cy="145" rx="12" ry="6"/><ellipse class="cp-metal-cap" cx="133" cy="144" rx="8" ry="3.5"/>
+        <path class="cp-metal-handle" d="M117 161c-6-2-11-1-11 3l-1 18c0 5 4 6 6 2l4-12 8-6z"/>
+        <text x="167" y="149" transform="rotate(-21 167 149)" class="cp-metal-brand">Lagun</text>
+      </g>
+      <g data-assembly-extra="extension" data-assembly-piece="extension" class="cp-assembly-piece" hidden>
+        <path class="cp-metal-pin" d="M233 88h16v22c0 6-16 6-16 0z"/><ellipse class="cp-metal-top" cx="241" cy="88" rx="8" ry="4"/>
+        <path class="cp-metal-top" d="m151 53 103 37-20 10-103-37z"/>
+        <path d="m131 63 103 37v23L131 86z"/>
+        <path class="cp-metal-side" d="m234 100 20-10v23l-20 10z"/>
+        <ellipse class="cp-metal-ring" cx="242" cy="94" rx="10" ry="5"/>
+        <path class="cp-metal-handle" d="m252 109 12 2c4 1 4 5 0 6l-11 2-7-6z"/>
+        <text x="167" y="87" transform="rotate(20 167 87)" class="cp-metal-brand">Lagun</text>
+      </g>
+      <g data-assembly-head transform="translate(240 107)">
+        <g data-assembly-piece="under" class="cp-assembly-piece">
+          <path d="M-8-31H8V3c0 7-16 7-16 0z"/><ellipse class="cp-metal-top" cx="0" cy="-31" rx="8" ry="4"/>
+          <path class="cp-metal-handle" d="m-4-12-24 5c-6 1-7 5-1 6l25-2 8-5z"/>
+          <g data-under-shape="standard">
+            <path class="cp-metal-top" d="m-58-36 58-22 61 22L3-13z"/>
+            <path d="m-58-36 61 23 58-23v6L3-7-58-30z"/>
+            <path class="cp-metal-side" d="m-37-24 11 4 49-18-11-4z"/>
+            <g class="cp-metal-holes"><ellipse cx="-39" cy="-34" rx="2" ry="1.2"/><ellipse cx="0" cy="-49" rx="2" ry="1.2"/><ellipse cx="40" cy="-34" rx="2" ry="1.2"/><ellipse cx="3" cy="-20" rx="2" ry="1.2"/></g>
+          </g>
+          <g data-under-shape="fold" hidden>
+            <g data-fold-plane="flat"><path class="cp-metal-top" d="m-56-36 56-20 59 22-57 21z"/><path d="m-56-36 58 23 57-21v5L2-8-56-31z"/></g>
+            <g data-fold-plane="tilted" hidden>
+              <path d="m-48-103 94 29v89L-48-14z"/>
+              <path class="cp-metal-top" d="m-48-103 5-3 94 29-5 3z"/>
+              <path class="cp-metal-side" d="m46-74 5-3v89l-5 3z"/>
+              <g class="cp-metal-holes"><ellipse cx="-39" cy="-90" rx="2" ry="2.5"/><ellipse cx="37" cy="-67" rx="2" ry="2.5"/><ellipse cx="-39" cy="-25" rx="2" ry="2.5"/><ellipse cx="37" cy="-2" rx="2" ry="2.5"/></g>
+            </g>
+            <path d="m-46-42 92 28v13l-92-28z"/><ellipse class="cp-metal-ring" cx="-46" cy="-35" rx="6" ry="8"/>
+            <path class="cp-metal-handle" d="m-5-43 5-10 7 2 2 9-6 3z"/>
+          </g>
+        </g>
+        <g data-assembly-extra="table" hidden>
+          <g data-table-plane="flat"><path d="m-84-43 83-31 91 31-86 33z" fill="#d9b995" stroke="#a98a66"/><path d="m-84-43 88 33 86-33v6L4-4-84-37z" fill="#b58f65"/></g>
+          <g data-table-plane="tilted" hidden><path d="m-67-103 131 40v98L-67-5z" fill="#d9b995" stroke="#a98a66"/><path d="m64-63 5-2V33l-5 2z" fill="#b58f65"/></g>
+        </g>
+      </g>
+    </g>
+  </svg>
+  <div class="cp-assembly-hotspots" aria-label="Bauteil im Gestell auswählen">
+    <button type="button" data-cp-jump="mount" class="cp-assembly-marker cp-assembly-marker--mount" aria-label="Befestigung auswählen">1</button>
+    <button type="button" data-cp-jump="leg" class="cp-assembly-marker cp-assembly-marker--leg" aria-label="Bein auswählen">2</button>
+    <button type="button" data-cp-jump="arm" class="cp-assembly-marker cp-assembly-marker--arm" aria-label="Arm auswählen">3</button>
+    <button type="button" data-cp-jump="under" class="cp-assembly-marker cp-assembly-marker--under" aria-label="Untertischplatte auswählen">4</button>
+    <button type="button" data-cp-jump="arm" data-cp-extension-marker class="cp-assembly-marker cp-assembly-marker--extension" aria-label="Zweiten Arm auswählen" hidden>+</button>
+  </div>
+</div>
+<p class="cp-lagun-assembly-caption" data-cp-assembly-caption>Wähle deine Bauteile – hier wächst dein Lagun mit.</p>
+<button type="button" class="cp-lagun-fold-preview" data-cp-fold-preview aria-pressed="false" hidden>Klappfunktion ansehen ↗</button>

@@ -1,0 +1,159 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_htJeaF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_ckxWYE": {
+          "type": "heading",
+          "settings": {
+            "heading": "Persönliche Abholung",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_V44iax": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Du willst die Ware selbst abholen? Kein Problem!<\/strong><\/p><p>An folgenden <strong>Standorten <\/strong>können unsere Artikel <strong>persönlich abgeholt <\/strong>werden:<\/p><ul><li>Weimar<\/li><li>Jena<\/li><li>Coburg<\/li><li>Haßfurt<\/li><li>Berlin - Löwenberger Land direkt an der B96 <br\/><br\/><\/li><\/ul><p><strong>Bitte beachte VOR einer Abholung folgende Punkte: <\/strong><\/p><ul><li>Bitte kontaktiere uns vorher und rechtzeitig per E-Mail oder Telefon und gib uns deinen Abholort, sowie die gewünschten Artikel durch. Wir melden uns dann mit einem Termin und der aktuellen Verfügbarkeit bei dir. Wir haben nicht immer überall alles vorrätig, daher bitte unbedingt vorab nachfragen.<\/li><li>Bei Barzahlung bitte den Betrag möglichst passend mitbringen, ansonsten akzeptieren wir natürlich unsere normalen Zahlungsmethoden. Du kannst auch vorab eine Bestellung im Shop aufgeben und schon bezahlen.<\/li><li>Warenbestände können schwanken, daher ist nicht immer alles, überall verfügbar.<\/li><\/ul>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "button_Qaf9nD": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Hier Nachricht senden",
+            "button_link": "https:\/\/campingpioneers.de\/pages\/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_ckxWYE",
+        "text_V44iax",
+        "button_Qaf9nD"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/abholung_camping_pioneers_jpg.webp",
+        "image_position": "bottom center",
+        "layout": "text_first",
+        "text_box_position": "bottom",
+        "text_alignment": "left",
+        "image_ratio": "550px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 76,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_34kNjP": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "bestseller-camping-pioneers",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Hier stöbern:",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": false,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "narrow": true,
+        "padding_top": 60,
+        "padding_bottom": 72
+      }
+    },
+    "featured_blog_mGMxDh": {
+      "type": "featured-blog",
+      "blocks": {
+        "title_GPQnQm": {
+          "type": "title",
+          "settings": {
+            "show_date": true,
+            "show_author": false,
+            "show_comment_count": false
+          }
+        },
+        "summary_mmAewm": {
+          "type": "summary",
+          "settings": {}
+        },
+        "read_more_CLQPbA": {
+          "type": "read_more",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_GPQnQm",
+        "summary_mmAewm",
+        "read_more_CLQPbA"
+      ],
+      "settings": {
+        "blog": "blog",
+        "post_limit": 3,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Zu unseren Blogbeiträgen:",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_image": true,
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_with_text_htJeaF",
+    "featured_collection_34kNjP",
+    "main",
+    "featured_blog_mGMxDh"
+  ]
+}

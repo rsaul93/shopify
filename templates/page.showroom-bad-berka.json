@@ -1,0 +1,526 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [
+        ".rte {display: none;}"
+      ],
+      "settings": {
+        "narrow": false,
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_tz7AzL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_JPdQMf": {
+          "type": "heading",
+          "settings": {
+            "heading": "CAMPING-PIONEERS Showroom Bad Berka",
+            "heading_size": "h2",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "subheading_Qr3YXy": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Dachzelte, Anhänger & Campingzubehör live erleben.",
+            "subheading_size": "h5",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_fPKfde": {
+          "type": "text",
+          "settings": {
+            "text": "<h4><strong>Willkommen im CAMPING-PIONEERS Showroom Bad Berka.</strong> Hier kannst du ausgewählte Dachzelte, Anhänger und Campingzubehör live erleben und dich persönlich beraten lassen. Gerne zeigen wir dir verschiedene Modelle, beantworten deine Fragen und unterstützen dich dabei, die passende Lösung für dein nächstes Campingabenteuer zu finden. </h4><p><strong>CAMPING-PIONEERS</strong></p><p>Am Schloßberg 3<br/>Miwo Gelände<br/>99438 Bad Berka<br/>Deutschland</p><h4><strong>Da unser Showroom nicht dauerhaft besetzt ist, bitten wir dich, vor deinem Besuch einen Termin zu vereinbaren.</strong></h4>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_GfL4hb": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Route planen",
+            "button_link": "https://maps.app.goo.gl/szspakSu4EAixwvX7",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_JPdQMf",
+        "subheading_Qr3YXy",
+        "text_fPKfde",
+        "button_GfL4hb"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_9028_1.webp",
+        "image_position": "20% 50%",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "adapt",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_DtbbmV": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_FUYGje": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/Z3970_8.jpg",
+            "title": "Dachzelte live erleben",
+            "title_size": "h3",
+            "text": "<p>Entdecke verschiedene Dachzelt-Modelle direkt vor Ort und vergleiche sie in Ruhe.</p>",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_remUkE": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/Kopie_von_WhatsApp_Image_2026-01-20_at_20.05.55_1__resize_f00e2675-ded7-4e8d-bb45-972f1ea10c6e.webp",
+            "title": "Anhänger entdecken",
+            "title_size": "h3",
+            "text": "<p>Besichtige unsere Anhänger und finde die passende Lösung für Freizeit und Transport.</p>",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_wJXjpD": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/hand-shake-meeting.jpg",
+            "title": "Persönliche Beratung",
+            "title_size": "h3",
+            "text": "<p>Wir nehmen uns Zeit für deine Fragen und beraten dich individuell zu unseren Produkten.</p>",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_wdwVaC": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/view-from-above-as-person-sits-at-white-desktop.jpg",
+            "title": "Besuch nach Termin",
+            "title_size": "h3",
+            "text": "<p>Vereinbare vorab einen Termin, damit wir uns ausreichend Zeit für deine Beratung nehmen können.</p>",
+            "show_popup": false,
+            "popup_image": "shopify://shop_images/view-from-above-as-person-sits-at-white-desktop.jpg",
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "column_FUYGje",
+        "column_remUkE",
+        "column_wJXjpD",
+        "column_wdwVaC"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "text_alignment": "left",
+        "show_divider": false,
+        "image_width": "full",
+        "columns_desktop": 4,
+        "open_in_new_tab": false,
+        "heading": "Deine Vorteile vor Ort",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "card_border_radius": 0,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "contact_form_dEXYHc": {
+      "type": "contact-form",
+      "blocks": {
+        "contact_Q4VrcK": {
+          "type": "contact",
+          "settings": {
+            "heading": "E-Mail",
+            "text": "info@camping-pioneers.de",
+            "link": ""
+          }
+        },
+        "contact_pgzUMq": {
+          "type": "contact",
+          "settings": {
+            "heading": "Hotline (9-17 Uhr, Mo-Fr)",
+            "text": "+49 364 387 804 70",
+            "link": ""
+          }
+        },
+        "contact_nWn9Ep": {
+          "type": "contact",
+          "settings": {
+            "heading": "WhatsApp",
+            "text": "+49 364 387 804 70",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "contact_Q4VrcK",
+        "contact_pgzUMq",
+        "contact_nWn9Ep"
+      ],
+      "settings": {
+        "return_url": "",
+        "show_phone": true,
+        "show_divider": false,
+        "heading": "Showroom besuchen - Kontakt aufnehmen",
+        "heading_size": "h2",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_tPLUpw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_yfc4kz": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/IMG_5716.webp",
+            "title": "",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_nw74hF": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/IMG_5714.webp",
+            "title": "",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_8Nmqqq": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/IMG_5718_Kopie.webp",
+            "title": "",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "column_yfc4kz",
+        "column_nw74hF",
+        "column_8Nmqqq"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "text_alignment": "left",
+        "show_divider": false,
+        "image_width": "full",
+        "columns_desktop": 3,
+        "open_in_new_tab": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "card_border_radius": 0,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "image_with_text_txXzgH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Q6fkX4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Entdecke auch unseren zweiten Showroom",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "text_8M4MrP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Du wohnst näher an Bamberg oder möchtest unseren zweiten Standort besuchen? Dann freuen wir uns auf deinen Besuch in unserem Showroom in Pettstadt. Auch dort kannst du Dachzelte, Anhänger und Campingzubehör live erleben und dich persönlich beraten lassen.</p><p>📍 <strong>Pettstadt bei Bamberg</strong><br/>Eichenhof 1b · 96175 Pettstadt</p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_XXGxpa": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Zum Showroom Pettstadt",
+            "button_link": "shopify://pages/showroom-pettstadt",
+            "button_style_secondary": false,
+            "button_alt_label": "",
+            "button_alt_link": "",
+            "button_alt_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Q6fkX4",
+        "text_8M4MrP",
+        "button_XXGxpa"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/showroom-bamberg_cp.png",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "image_mobile": "shopify://shop_images/showroom-bamberg_cp.png",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_EdcYr3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VthfBq": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/02_qeedo_Freedom_Slim.jpg",
+            "title": "",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_dY4fg4": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/L1000572.jpg",
+            "title": "",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "column_EN9zGX": {
+          "type": "column",
+          "settings": {
+            "background_color": "#f2f2f2",
+            "heading_color": "#000000",
+            "text_color": "#333333",
+            "image": "shopify://shop_images/DSC_2522_1.jpg",
+            "title": "",
+            "title_size": "h3",
+            "text": "",
+            "show_popup": false,
+            "popup_image_position": "top",
+            "justify_text": false,
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false,
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "column_VthfBq",
+        "column_dY4fg4",
+        "column_EN9zGX"
+      ],
+      "settings": {
+        "image_ratio": "landscape",
+        "image_position": "center center",
+        "text_alignment": "left",
+        "show_divider": false,
+        "image_width": "full",
+        "columns_desktop": 3,
+        "open_in_new_tab": false,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "mobile_text_alignment": "left",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "card_border_radius": 0,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_tz7AzL",
+    "multicolumn_DtbbmV",
+    "contact_form_dEXYHc",
+    "multicolumn_tPLUpw",
+    "image_with_text_txXzgH",
+    "multicolumn_EdcYr3"
+  ]
+}

@@ -1,0 +1,55 @@
+{%- liquid
+  assign cp_skip_breadcrumb_jsonld = false
+  if request.page_type == 'index' or request.page_type == 'cart' or request.page_type == 'password'
+    assign cp_skip_breadcrumb_jsonld = true
+  endif
+-%}
+
+{%- unless cp_skip_breadcrumb_jsonld -%}
+  {%- liquid
+    assign cp_home_name = 'general.breadcrumbs.home' | t | default: 'Home'
+    assign cp_home_url = request.origin | append: routes.root_url
+    assign cp_current_url = canonical_url | split: '?' | first
+    assign cp_current_name = page_title | strip_html | replace: '*', '' | strip
+
+    if request.page_type == 'product' and product
+      assign cp_current_name = product.title | strip_html | replace: '*', '' | strip
+      assign cp_product_path = product.url | split: '?' | first
+      assign cp_current_url = request.origin | append: cp_product_path
+    elsif request.page_type == 'collection' and collection
+      assign cp_current_name = collection.title | strip_html | replace: '*', '' | strip
+      assign cp_current_url = request.origin | append: collection.url
+    elsif request.page_type == 'page' and page
+      assign cp_current_name = page.title | strip_html | replace: '*', '' | strip
+      assign cp_current_url = request.origin | append: page.url
+    elsif request.page_type == 'article' and article
+      assign cp_current_name = article.title | strip_html | replace: '*', '' | strip
+      assign cp_current_url = request.origin | append: article.url
+    elsif request.page_type == 'blog' and blog
+      assign cp_current_name = blog.title | strip_html | replace: '*', '' | strip
+      assign cp_current_url = request.origin | append: blog.url
+    endif
+  -%}
+  {%- if cp_current_name != blank and cp_current_url != blank -%}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": {{ cp_home_name | json }},
+            "item": {{ cp_home_url | json }}
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": {{ cp_current_name | json }},
+            "item": {{ cp_current_url | json }}
+          }
+        ]
+      }
+    </script>
+  {%- endif -%}
+{%- endunless -%}

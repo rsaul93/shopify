@@ -1,0 +1,352 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_H9JJg4": {
+      "type": "custom-liquid",
+      "custom_css": [
+        ".breadcrumbs ul {list-style-type: none; padding: 0; margin: 0;}",
+        ".breadcrumbs li {display: inline;}",
+        ".breadcrumbs li a {color: #333; text-decoration: none;}",
+        ".breadcrumbs li a:hover {text-decoration: underline;}",
+        ".breadcrumbs li:not(:last-child) {margin: 0 7px;}"
+      ],
+      "settings": {
+        "custom_liquid": "<div class=\"breadcrumbs\">\n  <ul>\n    <li><a href=\"\/\">Home<\/a> ›<\/li>\n    {% if collection %}\n      <li><a href=\"{{ collection.url }}\">{{ collection.title }}<\/a> ›<\/li>\n    {% endif %}\n    {% if product.collections.size > 0 %}\n      {% assign category = product.collections.first %}\n      {% if category %}\n        <li><a href=\"{{ category.url }}\">{{ category.title }}<\/a> ›<\/li>\n      {% endif %}\n    {% endif %}\n\n    {% for collection in product.collections %}\n      {% if forloop.last %}\n        <li><a href=\"{{ collection.url }}\">{{ collection.title }}<\/a> ›<\/li>\n      {% endif %}\n    {% endfor %}\n\n    <li>{{ product.title }}<\/li>\n  <\/ul>\n<\/div>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "empty-space": {
+      "type": "empty-space",
+      "settings": {
+        "desktop_height": 8,
+        "mobile_height": 16
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "title_size": "h2",
+            "show_price": true,
+            "price_size": "medium"
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_size": "large",
+            "show_badges": true,
+            "sale_badge_basis": "auto"
+          }
+        },
+        "cp_reviews_product_review_summary_FwjTMn": {
+          "type": "shopify:\/\/apps\/cp-reviews\/blocks\/product_review_summary\/019dd0bf-8ecd-7351-9670-40d418fe3748",
+          "settings": {
+            "loading_text": "Bewertungen werden geladen...",
+            "empty_text": "Noch keine Bewertungen",
+            "singular_text": "Bewertung",
+            "plural_text": "Bewertungen",
+            "star_color": "#f0b647",
+            "star_size": 18,
+            "text_size": 14
+          }
+        },
+        "custom_liquid_bKGNXM": {
+          "type": "custom_liquid",
+          "name": "Black Friday",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% assign today_date = \"now\" | date: \"%Y-%m-%d\" %}\n{% assign target_date = \"2024-11-20\" %}\n\n{% if product.id == 8924748939591 and today_date >= target_date %}\n  \n  <p class=\"qeedosummersale\"><b>BLACK FRIDAY 2024:<\/b> Unser Super Deal für das Lagun Tischgestell in der Black Edition zum Black Friday. 40€ Rabatt auf das schwarze Tischgestell und 10% Rabatt auf schwarzes Zubehör. <br><b>Rabatte werden automatisch im Warenkorb angewandt.<\/b><br> <a href=\"\/pages\/black-friday-2024-bei-camping-pioneers\">Alle Details & Bedingungen hier<\/a><\/p>\n{% endif %}"
+          }
+        },
+        "custom_liquid_qxWg83": {
+          "type": "custom_liquid",
+          "name": "Summer Collection",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{% assign collection_handle = \"qeedo-summer-sale-2024\" %}\n\n\n\n{% assign product_in_collection = false %}\n\n{% for collection in product.collections %}\n  {% if collection.handle == collection_handle %}\n    {% assign product_in_collection = true %}\n  {% endif %}\n{% endfor %}\n\n{% if product_in_collection %}\n{% if product.selected_or_first_available_variant %}\n  {% assign variant_price = product.selected_or_first_available_variant.price %}\n  {% assign discount = variant_price | times: 0.15 %}\n  {% assign discount_formatted = discount | money %}\n\n{% else %}\n  {% assign product_price = product.price %}\n  {% assign discount = product_price | times: 0.15 %}\n  {% assign discount_formatted = discount | money %}\n\n{% endif %}\n\n  <p class=\"qeedosummersale\"><b>qeedo Summer Sale 2024:<\/b> Jetzt bis zu <b>{{discount_formatted}}<\/b> auf diesen Artikel sparen! Beim Kauf eines qeedo Zubehörprodukts gibt es einen Rabatt von 10%. Ab dem zweiten Zubehörprodukt erhältst du einen Rabatt von 15% auf jedes qeedo Zubehörprodukt.  <a href=\"\/collections\/qeedo-summer-sale-2024\">Mehr Details & Bedingungen hier<\/a><\/p>\n{% endif %}"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_variant_labels": true,
+            "picker_type": "button",
+            "swatch_source": "variant",
+            "swatch_type": "round",
+            "enable_swatch_unavailable_click": true,
+            "size_chart": ""
+          }
+        },
+        "custom_liquid_EXtKER": {
+          "type": "custom_liquid",
+          "name": "Dachzeltmaße",
+          "settings": {
+            "custom_liquid": "{% assign size_images = product.metafields.custom.grosen_mase.value %}\n\n{% if size_images != blank and size_images.size > 0 %}\n  <div class=\"cp-size-guide\" id=\"cp-size-guide-{{ product.id }}\" data-size-guide>\n    <script type=\"application\/json\" data-product-json>\n      {{ product | json }}\n    <\/script>\n\n    <div class=\"cp-size-guide__header\">\n      <h3>Größen & Maße<\/h3>\n    <\/div>\n\n    <div class=\"cp-size-guide__slider\">\n      <button class=\"cp-size-guide__arrow cp-size-guide__arrow--prev\" type=\"button\" aria-label=\"Vorheriges Bild\">‹<\/button>\n\n      <div class=\"cp-size-guide__viewport\">\n        <div class=\"cp-size-guide__track\">\n          {% for media in size_images %}\n            {% assign image_url = media | image_url: width: 1200 %}\n            <div\n              class=\"cp-size-guide__slide\"\n              data-search=\"{{ media.alt | default: product.title | downcase | escape }} {{ image_url | downcase | escape }}\"\n            >\n              <img\n                src=\"{{ image_url }}\"\n                alt=\"{{ media.alt | default: product.title | escape }}\"\n                loading=\"lazy\"\n              >\n            <\/div>\n          {% endfor %}\n        <\/div>\n      <\/div>\n\n      <button class=\"cp-size-guide__arrow cp-size-guide__arrow--next\" type=\"button\" aria-label=\"Nächstes Bild\">›<\/button>\n    <\/div>\n\n    {% if size_images.size > 1 %}\n      <div class=\"cp-size-guide__dots\">\n        {% for media in size_images %}\n          <button\n            class=\"cp-size-guide__dot{% if forloop.first %} is-active{% endif %}\"\n            type=\"button\"\n            aria-label=\"Bild {{ forloop.index }} anzeigen\"\n            data-index=\"{{ forloop.index0 }}\"\n          ><\/button>\n        {% endfor %}\n      <\/div>\n    {% endif %}\n  <\/div>\n\n  <style>\n    #cp-size-guide-{{ product.id }} {\n      margin-top: 22px;\n      max-width: 760px;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__header h3 {\n      margin: 0 0 12px;\n      font-size: 18px;\n      line-height: 1.3;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__slider {\n      display: grid;\n      grid-template-columns: auto 1fr auto;\n      align-items: center;\n      gap: 10px;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__viewport {\n      overflow: hidden;\n      width: 100%;\n      border-radius: 12px;\n      background: #f7f7f7;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__track {\n      display: flex;\n      transition: transform 0.3s ease;\n      will-change: transform;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__slide {\n      flex: 0 0 100%;\n      min-width: 100%;\n      box-sizing: border-box;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      padding: 8px;\n      background: #fff;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__slide img {\n      display: block;\n      width: auto;\n      max-width: 100%;\n      height: auto;\n      max-height: 360px;\n      object-fit: contain;\n      border-radius: 10px;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__arrow {\n      width: 34px;\n      height: 34px;\n      border: 0;\n      border-radius: 999px;\n      background: rgba(0,0,0,0.08);\n      cursor: pointer;\n      font-size: 22px;\n      line-height: 1;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__arrow:hover {\n      background: rgba(0,0,0,0.14);\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__dots {\n      display: flex;\n      justify-content: center;\n      gap: 7px;\n      margin-top: 12px;\n      flex-wrap: wrap;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__dot {\n      width: 9px;\n      height: 9px;\n      border: 0;\n      border-radius: 999px;\n      background: rgba(0,0,0,0.22);\n      cursor: pointer;\n      padding: 0;\n    }\n\n    #cp-size-guide-{{ product.id }} .cp-size-guide__dot.is-active {\n      background: rgba(0,0,0,0.65);\n    }\n\n    @media screen and (max-width: 749px) {\n      #cp-size-guide-{{ product.id }} {\n        max-width: 100%;\n      }\n\n      #cp-size-guide-{{ product.id }} .cp-size-guide__slider {\n        grid-template-columns: 1fr;\n      }\n\n      #cp-size-guide-{{ product.id }} .cp-size-guide__arrow {\n        display: none;\n      }\n\n      #cp-size-guide-{{ product.id }} .cp-size-guide__slide img {\n        max-height: 280px;\n      }\n\n      #cp-size-guide-{{ product.id }} .cp-size-guide__header h3 {\n        font-size: 17px;\n      }\n    }\n  <\/style>\n\n  <script>\n    (function() {\n      function normalize(value) {\n        return String(value || '')\n          .toLowerCase()\n          .replace(\/ä\/g, 'ae')\n          .replace(\/ö\/g, 'oe')\n          .replace(\/ü\/g, 'ue')\n          .replace(\/ß\/g, 'ss')\n          .replace(\/\\s+\/g, '')\n          .replace(\/-\/g, '')\n          .replace(\/_\/g, '')\n          .replace(\/cm\/g, '');\n      }\n\n      function getNumbers(value) {\n        return String(value || '').match(\/\\d+\/g) || [];\n      }\n\n      function initSizeGuide(root) {\n        if (!root || root.dataset.cpReady === 'true') return;\n\n        var track = root.querySelector('.cp-size-guide__track');\n        var slides = root.querySelectorAll('.cp-size-guide__slide');\n        var dots = root.querySelectorAll('.cp-size-guide__dot');\n        var productJson = root.querySelector('[data-product-json]');\n\n        if (!track || !slides.length) return;\n\n        var productData = null;\n        var currentIndex = 0;\n\n        try {\n          productData = productJson ? JSON.parse(productJson.textContent) : null;\n        } catch(e) {}\n\n        function updateSlider() {\n          track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';\n\n          dots.forEach(function(dot, index) {\n            dot.classList.toggle('is-active', index === currentIndex);\n          });\n        }\n\n        function goToSlide(index) {\n          if (index < 0) index = slides.length - 1;\n          if (index >= slides.length) index = 0;\n\n          currentIndex = index;\n          updateSlider();\n        }\n\n        function findSizeOptionIndex() {\n          if (!productData || !productData.options) return -1;\n\n          for (var i = 0; i < productData.options.length; i++) {\n            var name = normalize(productData.options[i]);\n\n            if (\n              name.indexOf('groesse') !== -1 ||\n              name.indexOf('grosse') !== -1 ||\n              name.indexOf('size') !== -1 ||\n              name.indexOf('breite') !== -1 ||\n              name.indexOf('mass') !== -1 ||\n              name.indexOf('masse') !== -1\n            ) {\n              return i;\n            }\n          }\n\n          return -1;\n        }\n\n        function getProductForm() {\n          return root.closest('section') && root.closest('section').querySelector('form[action*=\"\/cart\/add\"]')\n            ? root.closest('section').querySelector('form[action*=\"\/cart\/add\"]')\n            : document.querySelector('form[action*=\"\/cart\/add\"]');\n        }\n\n        function getSelectedSizeValue() {\n          var sizeIndex = findSizeOptionIndex();\n          if (sizeIndex === -1 || !productData) return null;\n\n          var form = getProductForm();\n          var optionName = productData.options[sizeIndex];\n          var normalizedOptionName = normalize(optionName);\n\n          if (form) {\n            var checkedRadios = form.querySelectorAll('input[type=\"radio\"]:checked');\n\n            for (var r = 0; r < checkedRadios.length; r++) {\n              var radioName = normalize(checkedRadios[r].name);\n\n              if (\n                radioName.indexOf(normalizedOptionName) !== -1 ||\n                radioName.indexOf('option' + (sizeIndex + 1)) !== -1 ||\n                radioName.indexOf('options') !== -1\n              ) {\n                return checkedRadios[r].value;\n              }\n            }\n\n            var selects = form.querySelectorAll('select');\n\n            for (var s = 0; s < selects.length; s++) {\n              var selectName = normalize(selects[s].name);\n\n              if (\n                selectName.indexOf(normalizedOptionName) !== -1 ||\n                selectName.indexOf('option' + (sizeIndex + 1)) !== -1 ||\n                selectName.indexOf('options') !== -1\n              ) {\n                return selects[s].value;\n              }\n            }\n          }\n\n          var variantInput = form ? form.querySelector('[name=\"id\"]') : document.querySelector('[name=\"id\"]');\n\n          if (variantInput && productData.variants) {\n            var variantId = Number(variantInput.value);\n\n            for (var v = 0; v < productData.variants.length; v++) {\n              if (Number(productData.variants[v].id) === variantId) {\n                return productData.variants[v].options[sizeIndex];\n              }\n            }\n          }\n\n          return null;\n        }\n\n        function goToMatchingSizeImage() {\n          var selectedSize = getSelectedSizeValue();\n          if (!selectedSize) return;\n\n          var selectedNormalized = normalize(selectedSize);\n          var selectedNumbers = getNumbers(selectedSize);\n\n          var matchedIndex = -1;\n\n          slides.forEach(function(slide, index) {\n            if (matchedIndex !== -1) return;\n\n            var searchText = normalize(slide.getAttribute('data-search'));\n\n            if (searchText.indexOf(selectedNormalized) !== -1) {\n              matchedIndex = index;\n              return;\n            }\n\n            selectedNumbers.forEach(function(number) {\n              if (matchedIndex === -1 && searchText.indexOf(number) !== -1) {\n                matchedIndex = index;\n              }\n            });\n          });\n\n          if (matchedIndex !== -1) {\n            goToSlide(matchedIndex);\n          }\n        }\n\n        root.addEventListener('click', function(event) {\n          var prev = event.target.closest('.cp-size-guide__arrow--prev');\n          var next = event.target.closest('.cp-size-guide__arrow--next');\n          var dot = event.target.closest('.cp-size-guide__dot');\n\n          if (prev) {\n            event.preventDefault();\n            goToSlide(currentIndex - 1);\n          }\n\n          if (next) {\n            event.preventDefault();\n            goToSlide(currentIndex + 1);\n          }\n\n          if (dot) {\n            event.preventDefault();\n            goToSlide(parseInt(dot.getAttribute('data-index'), 10));\n          }\n        });\n\n        var startX = 0;\n\n        root.addEventListener('touchstart', function(event) {\n          if (!event.target.closest('.cp-size-guide__viewport')) return;\n          startX = event.changedTouches[0].clientX;\n        }, { passive: true });\n\n        root.addEventListener('touchend', function(event) {\n          if (!event.target.closest('.cp-size-guide__viewport')) return;\n\n          var endX = event.changedTouches[0].clientX;\n          var diff = startX - endX;\n\n          if (Math.abs(diff) > 40) {\n            diff > 0 ? goToSlide(currentIndex + 1) : goToSlide(currentIndex - 1);\n          }\n        }, { passive: true });\n\n        function delayedMatch() {\n          setTimeout(goToMatchingSizeImage, 250);\n          setTimeout(goToMatchingSizeImage, 700);\n        }\n\n        document.addEventListener('change', delayedMatch);\n\n        document.addEventListener('click', function(event) {\n          if (\n            event.target.matches('input[type=\"radio\"]') ||\n            event.target.matches('label') ||\n            event.target.closest('variant-radios') ||\n            event.target.closest('variant-selects') ||\n            event.target.closest('.product-form__input')\n          ) {\n            delayedMatch();\n          }\n        });\n\n        document.addEventListener('variant:change', delayedMatch);\n        document.addEventListener('product:variant-change', delayedMatch);\n        document.addEventListener('variant:changed', delayedMatch);\n\n        root.dataset.cpReady = 'true';\n\n        updateSlider();\n        delayedMatch();\n      }\n\n      function initAllSizeGuides() {\n        document.querySelectorAll('[data-size-guide]').forEach(initSizeGuide);\n      }\n\n      initAllSizeGuides();\n\n      document.addEventListener('shopify:section:load', initAllSizeGuides);\n\n      var observer = new MutationObserver(function() {\n        initAllSizeGuides();\n      });\n\n      observer.observe(document.body, {\n        childList: true,\n        subtree: true\n      });\n    })();\n  <\/script>\n{% endif %}"
+          }
+        },
+        "custom_liquid_iEJ7Kk": {
+          "type": "custom_liquid",
+          "name": "3 USPs",
+          "settings": {
+            "custom_liquid": "{% assign benefits = product.metafields.custom.core_produktvorteile.value %}\n\n{% if benefits != blank and benefits != \"no relevant base information\" %}\n<div class=\"benefits\" style=\"display: flex; flex-direction: column; gap: 6px; margin-bottom:32px; box-shadow:0 2px 5px #0003; border-radius:4px; padding:12px; background-color:#eee;\">\n  <span class=\"inline-benefit\" style=\"display: flex; align-items: center; gap: 8px;\">\n    {{ benefits | newline_to_br }}\n  <\/span>\n<\/div>\n{% endif %}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "collapsible_tab-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Beschreibung",
+            "content": "{{ product.description }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_cQ4HDe": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Eigenschaften",
+            "content": "{{ product.metafields.custom.produkteigenschaften_richtext | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_pB6XnB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Hinweise",
+            "content": "{{ product.metafields.custom.hinweise | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab_Ypm6my": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Lieferumfang",
+            "content": "{{ product.metafields.custom.lieferumfang | metafield_tag }}",
+            "page": "",
+            "custom_liquid": "",
+            "keep_open": false
+          }
+        },
+        "collapsible_tab-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "icon": "none",
+            "heading": "Herstellerinformationen",
+            "content": "",
+            "page": "",
+            "custom_liquid": "{% if product.metafields.custom.gpsr_data.value.name.value \n  and product.metafields.custom.gpsr_data.value.e_mail.value \n  and product.metafields.custom.gpsr_data.value.adresse %}\n\n<p>\n  <strong>Herstellerangaben gemäß EU-Produktsicherheitsverordnung (GPSR):<\/strong><br><br>\n\n  <span style=\"display:block; margin-left:16px;\">\n    <strong>Hersteller:<\/strong> {{ product.metafields.custom.gpsr_data.value.name.value }}<br>\n    <strong>Kontakt:<\/strong> {{ product.metafields.custom.gpsr_data.value.e_mail.value }}<br>\n    <strong>Adresse:<\/strong> {{ product.metafields.custom.gpsr_data.value.adresse | strip_html | replace: '\\n', ', ' }}\n  <\/span>\n<\/p>\n\n{% endif %}",
+            "keep_open": false
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 20,
+            "show_inventory_transfer": true,
+            "color_scheme": "accent-6"
+          }
+        },
+        "custom_liquid_HXJVGq": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if product.metafields.custom.lieferzeit != blank %}\n\n<div style=\"\nmargin-top:12px;\npadding:12px;\nborder:1px solid #e5e5e5;\nborder-radius:8px;\nbackground:#f8f8f8;\nfont-size:14px;\nline-height:1.5;\n\">\n\n✔ Individuelle Fertigung<br>\n✔ Lieferzeit: {{ product.metafields.custom.lieferzeit }}\n\n<\/div>\n\n{% endif %}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_liquid_BjzJRj": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>.unit-price, .price__unit, .unit-price-measurement { display: none !important; }<\/style>"
+          }
+        },
+        "custom_liquid_tXaxWB": {
+          "type": "custom_liquid",
+          "name": "Dachzelt zur Probe mieten Hinweis",
+          "settings": {
+            "custom_liquid": "{% if product.tags contains 'rental_enabled' %}\n  <div style=\"margin-top:16px; padding:16px 18px; border-radius:12px; background:#f7f9fc; border:1px solid #dbe3f0; line-height:1.55; box-shadow:0 2px 8px rgba(9,44,145,0.04);\">\n    <div style=\"display:flex; align-items:flex-start; gap:10px;\">\n      <div style=\"font-size:20px; line-height:1;\">⛺<\/div>\n      <div>\n        <div style=\"font-weight:700; font-size:16px; color:#092C91; margin-bottom:6px;\">\n          Erst mieten, dann entscheiden\n        <\/div>\n        <div style=\"font-size:14px; color:#2b2b2b; margin-bottom:10px;\">\n          Du möchtest vor dem Kauf erst herausfinden, welches Modell am besten zu dir und deinen Abenteuern passt? Dann miete dein Wunsch-Dachzelt einfach vorab. Du bekommst eine persönliche Einweisung inklusive Montage an deinem Fahrzeug. Bei anschließendem Kauf werden dir <strong>50 % der Miete auf den Kaufpreis angerechnet<\/strong>.\n        <\/div>\n        <a href=\"\/pages\/dachzelte-mieten\" style=\"display:inline-block; font-weight:700; color:#092C91; text-decoration:none;\">\n          Jetzt Dachzelt mieten\n        <\/a>\n      <\/div>\n    <\/div>\n  <\/div>\n{% endif %}"
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Teilen"
+          }
+        },
+        "sticky_cart": {
+          "type": "sticky_cart",
+          "settings": {
+            "show_quantity_selector": false
+          }
+        },
+        "cp_reviews_product_reviews_w7YmDx": {
+          "type": "shopify:\/\/apps\/cp-reviews\/blocks\/product_reviews\/019dd0bf-8ecd-7351-9670-40d418fe3748",
+          "settings": {
+            "loading_text": "Bewertungen werden geladen...",
+            "empty_text": "Noch keine Bewertungen",
+            "summary_text": "[rating] von 5 Sternen aus [count] [reviews]",
+            "review_singular": "Bewertung",
+            "review_plural": "Bewertungen",
+            "limit": 12,
+            "star_color": "#ffb606",
+            "show_top_border": true,
+            "margin_top": 32,
+            "padding_top": 24
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "rating",
+        "price",
+        "cp_reviews_product_review_summary_FwjTMn",
+        "custom_liquid_bKGNXM",
+        "custom_liquid_qxWg83",
+        "variant_picker",
+        "custom_liquid_EXtKER",
+        "custom_liquid_iEJ7Kk",
+        "description",
+        "collapsible_tab-0",
+        "collapsible_tab_cQ4HDe",
+        "collapsible_tab_pB6XnB",
+        "collapsible_tab_Ypm6my",
+        "collapsible_tab-1",
+        "inventory_status",
+        "custom_liquid_HXJVGq",
+        "buy_buttons",
+        "custom_liquid_BjzJRj",
+        "custom_liquid_tXaxWB",
+        "share",
+        "sticky_cart",
+        "cp_reviews_product_reviews_w7YmDx"
+      ],
+      "custom_css": [
+        ".badge‐lagerräumung {display: inline-block; background-color: #e53935; \/* kräftiges Rot *\/ color: #fff; \/* weißer Text *\/ font-weight: 600; \/* etwas stärker als normal *\/ text-transform: uppercase; \/* alles groß *\/ line-height: 1; padding: 0.25em 0.75em; \/* oben\/unten, links\/rechts *\/ border-radius: 0.375rem; \/* abgerundete Ecken *\/ letter-spacing: 0.05em; \/* etwas mehr Abstand *\/ vertical-align: middle; \/* in einer Zeile mit Text korrekt ausrichten *\/}",
+        ".badge‐lagerräumung:hover {background-color: #d32f2f; cursor: default;}"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_position": "left",
+        "media_size": "small",
+        "gallery_layout": "thumbnail_slider",
+        "image_ratio": "adapt",
+        "show_featured_media": false,
+        "show_thumbnails": true,
+        "hide_variants": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "mobile_image_ratio": "adapt_first",
+        "show_mobile_thumbnails": true,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_list_limit": 4,
+        "show_divider": false,
+        "heading": "Das könnte dir auch gefallen",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "colors_highlight": "#ffb503",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "enable_highlight": false,
+        "highlight_style": "marker"
+      }
+    },
+    "1703271860ee895e98": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "show_divider": false,
+        "heading": "Kürzlich angesehene Produkte",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_H9JJg4",
+    "empty-space",
+    "main",
+    "product-recommendations",
+    "1703271860ee895e98",
+    "recently-viewed-products"
+  ]
+}

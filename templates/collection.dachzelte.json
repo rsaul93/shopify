@@ -1,0 +1,444 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "heading_size": "h0",
+        "show_description": true,
+        "show_image": true,
+        "apply_overlay": true,
+        "image_position": "top center",
+        "image_ratio": "400px",
+        "text_alignment": "center",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "250px",
+        "show_text_below": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "subs": {
+      "type": "main-collection-subs",
+      "disabled": true,
+      "settings": {
+        "menu": "",
+        "per_row": 5,
+        "columns_mobile": "1",
+        "horizontal_on_mobile": true,
+        "grid_image": "product",
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "apply_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_CH7Jxa": {
+      "type": "rich-text",
+      "blocks": {
+        "text_gCTjyy": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bringe dein Abenteuer auf die Überholspur - mit unseren Dachzelten fürs Auto! Hebe deine Camping-Erfahrung auf ein neues Level, montiere spielend leicht ein Dachzelt auf deinem Fahrzeug und erkunde die Welt mit grenzenloser Freiheit. </p><p>Einfach, bequem und stilvoll - erlebe die Freiheit des Campings auf dem Dach deines Autos!</p><p></p><p>Noch unentschlossen? Dann komm in unseren <a href=\"/pages/qeedo-showroom-bad-berka\" title=\"qeedo Showroom Bad Berka\">Showroom in Bad Berka.</a></p><p></p><p>Falls du nur temporär ein Dachzelt benötigst oder es einfach mal ausprobieren möchtest, bieten wir auch eine <a href=\"/pages/qeedo-dachzelt-mieten\" title=\"qeedo Dachzelt mieten\">Vermietung der Dachzelte</a> an. </p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_style": "circle"
+          }
+        }
+      },
+      "block_order": [
+        "text_gCTjyy"
+      ],
+      "settings": {
+        "text_alignment": "center",
+        "mobile_text_alignment": "center",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "countdown_timer_4byBnn": {
+      "type": "countdown-timer",
+      "blocks": {
+        "heading_nmFkBG": {
+          "type": "heading",
+          "settings": {
+            "heading": "qeedo Aktion im Juli 2024",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "subheading_7byjQy": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Quick Kimmy S + Buch GRATIS zum Dachzelt - 163,90€ sparen bis zum 15. Juli!",
+            "subheading_size": "h4",
+            "secondary_color": false
+          }
+        },
+        "countdown_Lbf9PJ": {
+          "type": "countdown",
+          "settings": {
+            "date": "07-15-2024",
+            "number_size": "small",
+            "message": "<p>Aktion abgelaufen.</p>",
+            "message_size": "typeset2"
+          }
+        },
+        "button_H677mh": {
+          "type": "button",
+          "settings": {
+            "button_label": "Alle Details zur Aktion",
+            "button_link": "shopify://pages/qeedo-aktion-im-juli-2024",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nmFkBG",
+        "subheading_7byjQy",
+        "countdown_Lbf9PJ",
+        "button_H677mh"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 120%;}",
+        "p {font-size: 80%; margin-top: 0.5em;}",
+        ".button {margin-top: 10px; margin-bottom: 0; min-height: 1em;}",
+        "countdown-timer {line-height: 1.5em;}",
+        ".image-with-text__content {padding-left: 15px; padding-top: 0; padding-bottom: 0; padding-right: 0;}",
+        ".media--400px {height: 200px;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Z3863_7.jpg",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "enlarge_content": true,
+        "full_width": true,
+        "show_divider": false,
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "200px",
+        "use_custom_colors": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#f3f3f3",
+        "gradient_background": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        ".badge--onsale {display: none;}"
+      ],
+      "settings": {
+        "products_per_row": 3,
+        "rows_per_page": 3,
+        "columns_mobile": "2",
+        "pagination": "paginated",
+        "enable_sticky_facet": true,
+        "enable_sorting": false,
+        "enable_viewing": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_filtering_color_swatches": false,
+        "filtering_color_swatches_add_label": false,
+        "filtering_max_items": 10,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 0,
+        "padding_bottom": 72
+      }
+    },
+    "image_with_text_pqbWrk": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_U3TFPN": {
+          "type": "heading",
+          "settings": {
+            "heading": "qeedo Showroom Bad Berka",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "subheading_6g67eE": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "qeedo Dachzelte live erleben",
+            "subheading_size": "h5",
+            "secondary_color": false
+          }
+        },
+        "custom_liquid_LxVRPb": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<br>"
+          }
+        },
+        "text_WDzFfh": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Noch unentschlossen? Dann komm in unseren Showroom in Bad Berka und erlebe die qeedo Dachzelte hautnah.</p><p>Entdecke die Vielfalt unserer Modelle, lass dich persönlich beraten und finde das perfekte Dachzelt für dein nächstes Abenteuer.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "text_knDVD8": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>CAMPING-PIONEERS</strong></p><p>Am Schloßberg 3<br/>Miwo Gelände<br/>99438 Bad Berka<br/>Deutschland</p><p></p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_PTT4fM": {
+          "type": "button",
+          "settings": {
+            "button_size": "large",
+            "button_label": "Mehr Infos  & Kontakt",
+            "button_link": "shopify://pages/showroom-bad-berka",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_U3TFPN",
+        "subheading_6g67eE",
+        "custom_liquid_LxVRPb",
+        "text_WDzFfh",
+        "text_knDVD8",
+        "button_PTT4fM"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/IMG_5716.webp",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_igiJCJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_fp8rKf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dachzelt mieten",
+            "heading_size": "h2",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Yf9jaH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Noch unsicher ob ein Dachzelt das richtige für dich ist? Oder du brauchst nur ein Dachzelt für einen kurzen Zeitraum?</p><p>Unsere hochwertigen Zelte bieten Komfort und Abenteuer zugleich. Egal, ob Roadtrip oder Campingausflug, wir haben das passende Zelt für dich. Erlebe Natur pur und schaffe unvergessliche Erinnerungen. </p><p>Unsere Preise beginnen - je nach Modell und Dauer - bei ca. 180 € für 1-4 Tage. Darin enthalten ist bereits die Montage sowie die Endreinigung.</p><p>Um ein Dachzelt zu mieten, nimm bitte Kontakt zu uns auf. Bitte gib an, an welchem qeedo Modell du interessiert bist. In unserem <a href=\"/pages/qeedo-dachzelt-mieten\" target=\"_blank\" title=\"qeedo Dachzelt mieten\">Mietrechner</a> kannst du dir vorab die Konditionen berechnen und direkt in eine E-Mail übertragen lassen. </p><p><br/></p><p><strong>Übrigens</strong>: <em>Solltest du dich anschließend für einen Kauf entscheiden rechnen wir dir 50% der Miete auf den Kaufpreis an!</em></p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_Q8imy4": {
+          "type": "button",
+          "settings": {
+            "button_size": "large",
+            "button_label": "Mehr Infos & Kontakt",
+            "button_link": "shopify://pages/qeedo-dachzelt-mieten",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "heading_fp8rKf",
+        "text_Yf9jaH",
+        "button_Q8imy4"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/mietung.png",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "right",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_3Uwmgp": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_P7pXLr": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie hoch sind die Versandkosten?",
+            "row_content": "<p>Da unsere Dachzelte per Spedition geliefert werden und eine Speditionslieferung mit höherem Aufwand verbunden ist, berechnen wir dir hierfür 130€.</p><p>Ab einem Bestellwert von 3500,00€ liefern wir kostenlos.</p><p></p><p>Die Lieferung von Dachzelten erfolgt per Spedition innerhalb Deutschlands. Wir arbeiten daran, auch andere Länder anzubieten.</p><p>Zur Vereinbarung der Zustellung ist eine Telefonnummer erforderlich. Bitte geben Sie diese während des Bestellvorgangs an. Die Spedition wird Sie dann direkt kontaktieren, um die Lieferung zu arrangieren. Nach dem Versand erhalten Sie eine E-Mail mit einem Tracking-Link, um den aktuellen Status Ihrer Sendung jederzeit einzusehen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_4Ltg3m": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Passt das Dachzelt auf mein Auto?",
+            "row_content": "<p>Die qeedo Dachzelte sind für fast alle Fahrzeugmodelle geeignet. </p><p>Entscheidend sind vor allem die Angabe des Herstellers zur Dachlast, die Möglichkeit einer Montage und die Größe des Fahrzeugs. </p><p>Mehr Informationen erhältst du auch auf YouTube: <a href=\"https://www.youtube.com/watch?v=o70lIXVJlIs \" target=\"_blank\" title=\"https://www.youtube.com/watch?v=o70lIXVJlIs \">https://www.youtube.com/watch?v=o70lIXVJlIs </a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_rTJ9zE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Welcher Dachträger wird für die Montage benötigt?",
+            "row_content": "<p>Die qeedo Dachzelte können auf jedem handelsüblichen Grund- oder Querträger montiert werden. </p><p>Es werden zwei verschiedene Montagebügel mitgeliefert, damit das Zelt auch auf breiteren Grundträgern markiert werden kann. </p><p></p><p>Wichtig ist also eigentlich nur, dass die Träger zu deinem Fahrzeug passen.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_K8by86": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie reinige und pflege ich mein Dachzelt?",
+            "row_content": "<p>Bitte achte darauf, dein Dachzelt immer trocken einzupacken. Das gilt selbstverständlich auch für die Lagerung. Ansonsten besteht Schimmelgefahr.</p><p>Falls du das Dachzelt nass einpacken muss, dann baue es bitte innerhalb von 48h erneut auf sodass es trocknen kann.</p><p></p><p>Für die Reinigung empfiehlt qeedo lauwarmes Wasser, Spülmittel und einen Schwamm. Bitte benutze keine anderen Reinigungsmittel.</p><p></p><p>qeedo stellt außerdem folgendes YouTube Video zur Pflege zur Verfügung:</p><p><a href=\"https://youtu.be/PeZxhHxJDV8 \" target=\"_blank\" title=\"https://youtu.be/PeZxhHxJDV8 \">https://youtu.be/PeZxhHxJDV8 </a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_YzY9Cq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Deine Frage wurde noch nicht geklärt? Hier wird dir geholfen",
+            "row_content": "<p>Falls deine Frage in dieser FAQ noch nicht geklärt wurde stehen dir folgende Optionen zur Verfügung:</p><p><strong>Du kannst uns gerne direkt dazu kontaktieren:</strong></p><p>Telefonisch: <br/>(Mo-Fr, 9:00 - 17:00 Uhr)<br/> <a href=\"tel:+4936438780470\">+49 3643 8780470</a></p><p>E-Mail:<strong><br/></strong><a href=\"mailto:info@camping-pioneers.de\" target=\"_blank\"><strong>info@camping-pioneers.de</strong></a><br/><br/>Telegram:<strong><br/></strong><a href=\"https://telegram.me/CampingPioneers\" target=\"_blank\"><strong>telegram.me/CampingPioneers</strong></a></p><p><br/><br/></p><p><strong>Außerdem steht dir die offizielle qeedo Wissensdatenbank zur Verfügung:</strong></p><p><a href=\"https://service.qeedo.de/support/solutions/80000421320\" target=\"_blank\" title=\"https://service.qeedo.de/support/solutions/80000421320\">https://service.qeedo.de/support/solutions/80000421320</a></p><p></p><p></p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_P7pXLr",
+        "collapsible_row_4Ltg3m",
+        "collapsible_row_rTJ9zE",
+        "collapsible_row_K8by86",
+        "collapsible_row_YzY9Cq"
+      ],
+      "settings": {
+        "open_first_collapsible_row": false,
+        "narrow": false,
+        "show_divider": false,
+        "heading": "Häufig gestellte Fragen (FAQ)",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "enable_faq_schema": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "show_divider": true,
+        "heading": "Kürzlich angesehene Produkte",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "portrait",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_i9pjFJ": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<a style=\"color:black;text-decoration:none\" href=\"https://www.qeedo.de\" target=\"_blank\" rel=\"noopener noreferrer\">\n  qeedo\n</a>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subs",
+    "rich_text_CH7Jxa",
+    "countdown_timer_4byBnn",
+    "product-grid",
+    "image_with_text_pqbWrk",
+    "image_with_text_igiJCJ",
+    "collapsible_content_3Uwmgp",
+    "recently-viewed",
+    "custom_liquid_i9pjFJ"
+  ]
+}

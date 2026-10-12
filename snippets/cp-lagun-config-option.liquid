@@ -1,0 +1,31 @@
+{%- liquid
+  assign card_key = choice | append: ':' | append: value
+  for candidate_block in section.blocks
+    if candidate_block.type == 'product_card' and candidate_block.settings.key == card_key
+      assign card_block = candidate_block
+      break
+    endif
+  endfor
+  assign title = card_block.settings.title | default: title
+  assign description = card_block.settings.description | default: description
+  assign facts = card_block.settings.facts | default: facts
+  if card_block != blank
+    assign tag = card_block.settings.tag
+  endif
+  assign card_image = card_block.settings.image_silver | default: card_product.featured_image
+-%}
+<button type="button" class="cp-lagun-choice" data-cp-choice="{{ choice }}" data-value="{{ value }}" {% if card_block.settings.image_silver %}data-image-silver="{{ card_block.settings.image_silver | image_url: width: 640 }}"{% endif %} {% if card_block.settings.image_black %}data-image-black="{{ card_block.settings.image_black | image_url: width: 640 }}"{% endif %} aria-pressed="false" {{ card_block.shopify_attributes }}>
+  <span class="cp-lagun-choice__image" data-cp-choice-image>
+    {%- if card_image -%}
+      {{ card_image | image_url: width: 640 | image_tag: widths: '320, 480, 640', sizes: '(min-width: 990px) 320px, 45vw', loading: 'lazy', alt: title }}
+    {%- endif -%}
+    <i class="cp-lagun-choice__tick" aria-hidden="true">✓</i>
+  </span>
+  <span class="cp-lagun-choice__body">
+    <span class="cp-lagun-choice__badge-row">{%- if tag != blank -%}<span class="cp-lagun-choice__tag">{{ tag | escape }}</span>{%- endif -%}</span>
+    <strong>{{ title }}</strong>
+    <span class="cp-lagun-choice__description">{{ description }}</span>
+    {%- if facts != blank -%}<span class="cp-lagun-choice__facts">{{ facts }}</span>{%- endif -%}
+    <span class="cp-lagun-choice__bottom"><b data-cp-choice-price></b><small data-cp-choice-stock></small></span>
+  </span>
+</button>

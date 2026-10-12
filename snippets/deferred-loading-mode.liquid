@@ -1,0 +1,8 @@
+{%- liquid
+  assign defer_enabled = enabled
+  if defer_enabled and section.index != nil and request.design_mode == false
+    echo 'placeholder'
+  else
+    echo 'content'
+  endif
+-%}

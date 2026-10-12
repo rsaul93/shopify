@@ -1,0 +1,460 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header-group.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "fd0f2f82-9dcc-4b77-8e37-c1269372d13c": {
+          "type": "announcement",
+          "settings": {
+            "text": "📦 Versandkosten je nach Artikel & Lieferland – Details ansehen",
+            "text_on_mobile": "📦 Versandkosten nach Artikel & Lieferland",
+            "text_size": 13,
+            "link": "shopify://pages/zahlung-und-versand-1",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "397e7f07-5c0d-4ab0-892e-3eddb55a4d0b": {
+          "type": "announcement",
+          "settings": {
+            "text": "↺ 30 Tage Rückgaberecht",
+            "text_on_mobile": "↺ 30 Tage Rückgaberecht",
+            "text_size": 13,
+            "link": "",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "b90c56a4-858b-47c4-bcda-90bb41d8e9c6": {
+          "type": "announcement",
+          "settings": {
+            "text": "📃 Bequemer Kauf auf Rechnung",
+            "text_on_mobile": "📃 Bequemer Kauf auf Rechnung",
+            "text_size": 13,
+            "link": "",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        },
+        "7654df96-6da8-41bc-9752-29abe1323fb3": {
+          "type": "announcement",
+          "settings": {
+            "text": "𐀪𐀪 Persönliche Beratung",
+            "text_on_mobile": "𐀪𐀪 Persönliche Beratung",
+            "text_size": 13,
+            "link": "",
+            "enable_highlight": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "fd0f2f82-9dcc-4b77-8e37-c1269372d13c",
+        "397e7f07-5c0d-4ab0-892e-3eddb55a4d0b",
+        "b90c56a4-858b-47c4-bcda-90bb41d8e9c6",
+        "7654df96-6da8-41bc-9752-29abe1323fb3"
+      ],
+      "custom_css": [
+        ".announcement-text {font-weight: 700;}"
+      ],
+      "settings": {
+        "only_homepage": false,
+        "layout": "default",
+        "mobile_layout": "marquee",
+        "autorotate": true,
+        "autorotate_speed": 5,
+        "show_navigation": true,
+        "direction": "left",
+        "speed": 2.5,
+        "colors_text": "#ffffff",
+        "colors_background": "#092c91",
+        "gradient_background": "",
+        "colors_highlight": "#ffb503",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_tQDDjn": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Mietrechner",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/getting-business-finances-in-order.jpg",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Mietrechner",
+            "promo_text_1": "Berechne deinen Mietpreis und sichere dir deinen Wunschzeitraum.",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://pages/dachzelte-mieten",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_WzUFp7": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Showrooms",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/Shoroom_Bad_Berka_Pettstadt.png",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Besuche uns in einem unserer Showrooms",
+            "promo_text_1": "In Bad Berka oder Pettstadt",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://pages/showrooms",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_GKDYkX": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Service & Hilfe",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/pexels-artempodrez-6779307_resize.webp",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Wir sind für dich da",
+            "promo_text_1": "Persönliche Beratung & schnelle Hilfe – kontaktiere uns jetzt",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://pages/contact",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_VBa7ec": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Sale",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/SALE_Bild_resize.webp",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "SALE - Jetzt sparen",
+            "promo_text_1": "Reduzierte Camping Highlights - nur für kurze Zeit",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://collections/sale",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_Ja7bpL": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Campingzubehör",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/pexels-uriel-mont-6271390_resize.webp",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Campingzubehör",
+            "promo_text_1": "Alles für deinen perfekten Camper – praktisch, durchdacht & vielseitig",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://collections/camperausbau",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_nyfmrG": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Anhänger",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/8_c08026a6-48d6-4f2a-8f26-27dcdeedcc89.png",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Neptun Anhänger kaufen",
+            "promo_text_1": "Zuverlässige Qualität für Transport, Alltag & Camping",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://products/neptun-anhanger",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_LKBGaC": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Dachzelte",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/Z3970_7.jpg",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Entdecke unsere hochwertigen Dachzelte",
+            "promo_text_1": "Dachzelte & Zubehör",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://collections/alle-dachzelte-zubehor",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_AMwgRD": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_title": "Home",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/230921_Lagun_schwarz_klein.gif",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Lagun Tischgestell",
+            "promo_text_1": "",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://products/lagun-tischgestell-in-matt-schwarz-limited-edition-2023",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "6e1e8422-f05a-452a-8229-7c7e0ba6ac60": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_title": "Lagun Tischgestell",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/lagun_schwarz_2023_Edition_lagun_black_leg_bein.webp",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Das Original Lagun Tischgestell aus Schweden",
+            "promo_text_1": "",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://products/lagun-tischgestell-set-mit-standard-befestigungsplatte-schwarz",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "Die Limited Edition 2023 in Matt Schwarz",
+            "promo_text_2": "Das Original aus Schweden!",
+            "promo_overlay_content_2": true,
+            "promo_link_2": "shopify://products/lagun-tischgestell-set-mit-standard-befestigungsplatte-schwarz"
+          }
+        },
+        "6ad30f6c-f828-4e4c-ac02-b9b83c651854": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_title": "Camperausbau",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/Lagun_Contravans_2.webp",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Alles für unsere Campinghandwerker",
+            "promo_text_1": "",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://collections/camperausbau",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": true,
+            "promo_link_2": "shopify://collections/camperausbau"
+          }
+        },
+        "3ea1912f-712a-4f9b-a5f6-a44155d9df18": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_title": "Ausrüstung",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/biolite_basecharge_4x1chainingadapter_lifestyle_1280x1280_6e1b9e2a-19d0-49a8-ba48-1e4df216306c.webp",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "80% 50%",
+            "promo_heading_1": "Smarte Ausstattung für dein Vanlifeabenteuer",
+            "promo_text_1": "",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_aNDnQC": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_title": "Service & Hilfe",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/christian-dubovan-Y_x747Yshlw-unsplash.jpg",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Affiliate program",
+            "promo_text_1": "Join forces with us and earn a commission on successful sales.",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://pages/affiliate-program",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        },
+        "mega_menu_8V7h9Y": {
+          "type": "mega_menu",
+          "disabled": true,
+          "settings": {
+            "menu_title": "Dachzelte",
+            "narrow": true,
+            "show_menu_image": true,
+            "defer_loading": false,
+            "promo_image_1": "shopify://shop_images/02_qeedo_Freedom_Fast.jpg",
+            "promo_image_ratio_1": "adapt",
+            "promo_image_position_1": "center center",
+            "promo_heading_1": "Alle Dachzelte im direkten Vergleich",
+            "promo_text_1": "",
+            "promo_overlay_content_1": false,
+            "promo_link_1": "shopify://pages/qeedo-dachzelte-im-vergleich",
+            "promo_image_ratio_2": "adapt",
+            "promo_image_position_2": "center center",
+            "promo_heading_2": "",
+            "promo_text_2": "",
+            "promo_overlay_content_2": false,
+            "promo_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_tQDDjn",
+        "mega_menu_WzUFp7",
+        "mega_menu_GKDYkX",
+        "mega_menu_VBa7ec",
+        "mega_menu_Ja7bpL",
+        "mega_menu_nyfmrG",
+        "mega_menu_LKBGaC",
+        "mega_menu_AMwgRD",
+        "6e1e8422-f05a-452a-8229-7c7e0ba6ac60",
+        "6ad30f6c-f828-4e4c-ac02-b9b83c651854",
+        "3ea1912f-712a-4f9b-a5f6-a44155d9df18",
+        "mega_menu_aNDnQC",
+        "mega_menu_8V7h9Y"
+      ],
+      "custom_css": [
+        "span.label {font-weight: 700; text-transform: uppercase;}",
+        ".mega-menu__item span.label {color: black;}",
+        " /* Header Suche (Lupe) ausblenden */.header__icon--search {display: none !important;}"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/camping_pioneers_logo_high_quality_07.01.24_black_schwarz.webp",
+        "mobile_logo": "shopify://shop_images/camping_pioneers_logo_high_quality_07.01.24_black_schwarz.webp",
+        "logo_height": 70,
+        "mobile_logo_height": 42,
+        "logo_position": "top-center",
+        "menu": "main-menu-neu-2026",
+        "menu_mobile": "main-menu-neu-2026",
+        "customer_account_menu": "",
+        "enable_dropdown_menu": true,
+        "show_line_separator": false,
+        "uppercase_menu_items": true,
+        "cart_icon": "cart",
+        "icon_weight": "1.7",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_sticky_header": true,
+        "show_sticky_header_scroll_up": true,
+        "transparent_logo": "shopify://shop_images/camping_pioneers_logo_high_quality_07.01.24_white_weiss_Kopie.webp",
+        "mobile_transparent_logo": "shopify://shop_images/camping_pioneers_logo_high_quality_07.01.24_white_weiss_Kopie.webp",
+        "enable_transparent_header": false,
+        "enable_transparent_header_collection": false,
+        "enable_transparent_header_custom": "",
+        "show_transparent_header_border": false,
+        "transparent_text_color": "#ffffff",
+        "enable_highlight": false,
+        "highlight_labels": "",
+        "highlight_style": "circle",
+        "enable_sidebar": false,
+        "sidebar_heading": "",
+        "mobile_logo_position": "center",
+        "colors_text": "#282828",
+        "colors_border": "#d2d5d9",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "colors_highlight": "#87adf5",
+        "padding_top": 12,
+        "padding_bottom": 12
+      }
+    },
+    "custom_liquid_7mmbeH": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"cp-searchbar\" data-cp-search>\n  <form action=\"{{ routes.search_url }}\" method=\"get\" role=\"search\" class=\"cp-searchbar__form\">\n    <div class=\"cp-searchbar__field\">\n      <input\n        class=\"cp-searchbar__input\"\n        type=\"search\"\n        name=\"q\"\n        placeholder=\"Suche nach Tischgestellen, Dachzelten & Anhängern…\"\n        aria-label=\"Suche\"\n        autocomplete=\"off\"\n        data-cp-search-input\n      >\n      <span class=\"cp-searchbar__icon\" aria-hidden=\"true\">🔍</span>\n    </div>\n\n    <!-- Shopify-Option: prefix matching (letztes Wort) -->\n    <input type=\"hidden\" name=\"options[prefix]\" value=\"last\">\n  </form>\n\n  <div class=\"cp-searchbar__dropdown\" data-cp-search-dropdown hidden>\n    <ul class=\"cp-searchbar__list\" data-cp-search-list></ul>\n  </div>\n</div>\n\n<style>\n  :root{ --cp-brand:#092C91; }\n\n  .cp-searchbar{\n    max-width: 820px;\n    margin: 6px auto;\n    padding: 0 16px;\n    position: relative;\n  }\n\n  .cp-searchbar__form{ margin: 0; }\n\n  /* Feld (Underline + Glow) */\n  .cp-searchbar__field{\n    position: relative;\n    display:flex;\n    align-items:center;\n    background: transparent;\n    border-bottom: 1px solid rgba(0,0,0,.12);\n    transition: box-shadow .2s ease, border-color .2s ease;\n  }\n\n  /* Glow in Markenfarbe (ohne extra Linie) */\n  .cp-searchbar__field:focus-within{\n    box-shadow: 0 8px 22px rgba(9,44,145,.18);\n  }\n\n  .cp-searchbar__input{\n    width: 100%;\n    padding: 6px 34px 6px 4px; /* rechts Platz für Lupe */\n    border: none;\n    background: transparent;\n    font-size: 15px;\n    line-height: 1.2;\n  }\n\n  .cp-searchbar__input::placeholder{ opacity:.6; }\n  .cp-searchbar__input:focus{ outline:none; }\n\n  /* Lupe dezent im Feld rechts */\n  .cp-searchbar__icon{\n    position:absolute;\n    right: 4px;\n    top: 50%;\n    transform: translateY(-50%);\n    width: 28px;\n    height: 28px;\n    display:flex;\n    align-items:center;\n    justify-content:center;\n    opacity: .55;\n    pointer-events: none;\n    line-height: 1;\n  }\n\n  /* Dropdown */\n  .cp-searchbar__dropdown{\n    position:absolute;\n    left:16px;\n    right:16px;\n    top: calc(100% + 8px);\n    background:#fff;\n    border-radius: 8px;\n    box-shadow: 0 6px 18px rgba(0,0,0,.06);\n    border: 1px solid rgba(0,0,0,.06);\n    overflow:hidden;\n    z-index:50;\n  }\n\n  .cp-searchbar__list{\n    list-style:none;\n    margin:0;\n    padding:4px 0;\n  }\n\n  .cp-searchbar__item a{\n    display:block;\n    padding:8px 14px;\n    font-size:14px;\n    text-decoration:none;\n    color:inherit;\n  }\n\n  .cp-searchbar__item a:hover{\n    background: rgba(0,0,0,.03);\n  }\n\n  .cp-searchbar__muted{\n    font-size:12px;\n    opacity:.5;\n    margin-left:6px;\n    white-space: nowrap;\n  }\n\n  /* Section titles + Divider */\n  .cp-searchbar__section-title{\n    padding: 10px 14px 6px;\n    font-size: 12px;\n    letter-spacing: .02em;\n    text-transform: uppercase;\n    opacity: .6;\n  }\n\n  .cp-searchbar__divider{\n    height: 1px;\n    background: rgba(0,0,0,.06);\n    margin: 6px 0;\n  }\n</style>\n\n<script>\n(() => {\n  const root = document.querySelector('[data-cp-search]');\n  if (!root) return;\n\n  const input = root.querySelector('[data-cp-search-input]');\n  const dropdown = root.querySelector('[data-cp-search-dropdown]');\n  const list = root.querySelector('[data-cp-search-list]');\n  let t = null;\n\n  const close = () => {\n    dropdown.hidden = true;\n    list.innerHTML = '';\n  };\n\n  const open = () => { dropdown.hidden = false; };\n\n  const escapeHtml = (s) =>\n    String(s).replace(/[&<>\"']/g, m => ({\n      '&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#039;'\n    }[m]));\n\n  const fetchSuggestions = async (q) => {\n    // ✅ Produkte + Seiten + Kollektionen + Blogartikel\n    const url =\n      `/search/suggest.json?q=${encodeURIComponent(q)}` +\n      `&resources[type]=product,page,collection,article` +\n      `&resources[limit]=16` +\n      `&resources[options][unavailable_products]=last` +\n      `&resources[options][fields]=title,product_type`;\n\n    const res = await fetch(url, { headers: { 'Accept': 'application/json' } });\n    if (!res.ok) return { products: [], pages: [], collections: [], articles: [] };\n\n    const data = await res.json();\n\n    const products = (data?.resources?.results?.products || []).map(p => ({\n      kind: 'product',\n      title: p.title,\n      url: p.url,\n      meta: p.product_type || 'Produkt'\n    }));\n\n    const pages = (data?.resources?.results?.pages || []).map(p => ({\n      kind: 'page',\n      title: p.title,\n      url: p.url,\n      meta: 'Seite'\n    }));\n\n    const collections = (data?.resources?.results?.collections || []).map(c => ({\n      kind: 'collection',\n      title: c.title,\n      url: c.url,\n      meta: 'Kollektion'\n    }));\n\n    const articles = (data?.resources?.results?.articles || []).map(a => ({\n      kind: 'article',\n      title: a.title,\n      url: a.url,\n      meta: 'Ratgeber'\n    }));\n\n    return { products, pages, collections, articles };\n  };\n\n  const renderSection = (title, items, limit) => {\n    const sliced = items.slice(0, limit);\n    if (!sliced.length) return '';\n\n    const rows = sliced.map(i => `\n      <li class=\"cp-searchbar__item\">\n        <a href=\"${escapeHtml(i.url)}\">\n          ${escapeHtml(i.title)}\n          ${i.meta ? `<span class=\"cp-searchbar__muted\">${escapeHtml(i.meta)}</span>` : ``}\n        </a>\n      </li>\n    `).join('');\n\n    return `\n      <li class=\"cp-searchbar__section-title\">${escapeHtml(title)}</li>\n      ${rows}\n    `;\n  };\n\n  const render = ({ products, pages, collections, articles }) => {\n    if (!products.length && !pages.length && !collections.length && !articles.length) {\n      close(); return;\n    }\n\n    // ✅ Priorität: Produkte → Seiten → Kollektionen → Ratgeber\n    // Limits: so bleibt es übersichtlich, aber „alles“ ist drin.\n    const p  = renderSection('Produkte',     products,    6);\n    const pg = renderSection('Seiten',       pages,       4);\n    const co = renderSection('Kollektionen', collections, 4);\n    const ar = renderSection('Ratgeber',     articles,    3);\n\n    const parts = [];\n    const add = (html) => {\n      if (!html) return;\n      if (parts.length) parts.push(`<li class=\"cp-searchbar__divider\"></li>`);\n      parts.push(html);\n    };\n\n    add(p);\n    add(pg);\n    add(co);\n    add(ar);\n\n    list.innerHTML = parts.join('');\n    open();\n  };\n\n  input.addEventListener('input', () => {\n    const q = input.value.trim();\n    clearTimeout(t);\n\n    if (q.length < 2) { close(); return; }\n\n    t = setTimeout(async () => {\n      try {\n        const results = await fetchSuggestions(q);\n        render(results);\n      } catch {\n        close();\n      }\n    }, 140);\n  });\n\n  input.addEventListener('focus', () => {\n    if (list.children.length) open();\n  });\n\n  document.addEventListener('click', e => {\n    if (!root.contains(e.target)) close();\n  });\n\n  document.addEventListener('keydown', e => {\n    if (e.key === 'Escape') close();\n  });\n})();\n</script>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "custom_liquid_7mmbeH"
+  ]
+}

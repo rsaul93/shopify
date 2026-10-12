@@ -1,0 +1,140 @@
+{%- comment -%}
+  Modular scroll storytelling for the dedicated Lagun PDP.
+  The 360° scene and component hotspots are separate native Shopify sections.
+{%- endcomment -%}
+
+{%- liquid
+  assign immersive_mode = mode | default: 'all'
+  assign canonical_product = all_products['lagun-tischgestell-set-mit-standard-befestigungsplatte-silber']
+  assign product_spin_video = product.media | where: 'media_type', 'video' | first
+  assign canonical_spin_video = canonical_product.media | where: 'media_type', 'video' | first
+  assign spin_video = module_section.settings.video | default: product_spin_video | default: canonical_spin_video
+  assign hotspot_image = module_section.settings.image | default: spin_video.preview_image
+-%}
+
+{%- if spin_video != blank and immersive_mode == 'spin' -%}
+  <div
+    class="cp-lagun-experience cp-lagun-experience--module"
+    id="cp-lagun-spin-module-{{ module_section.id }}"
+    data-cp-lagun-experience
+    data-cp-scene="technical"
+  >
+    <section
+      class="cp-lagun-spin"
+      aria-labelledby="cp-lagun-spin-title-{{ module_section.id }}"
+      data-cp-video-scrub
+      data-cp-background-scene="technical"
+    >
+      <div class="cp-lagun-spin__sticky">
+        <div class="cp-lagun-spin__heading page-width">
+          <p class="cp-lagun-kicker">{{ module_section.settings.kicker | default: 'Rundum ansehen' | escape }}</p>
+          <h2 id="cp-lagun-spin-title-{{ module_section.id }}">{{ module_section.settings.heading | default: 'Sieh selbst, wie wenig Platz Flexibilität braucht.' | escape }}</h2>
+          <p>{{ module_section.settings.body | default: 'Scrolle weiter und entdecke, wie Arme, Bein und Platten als bewegliches System zusammenspielen.' | escape }}</p>
+        </div>
+
+        <div class="cp-lagun-spin__stage">
+          {{ spin_video | video_tag:
+            autoplay: false,
+            loop: false,
+            controls: false,
+            muted: true,
+            playsinline: true,
+            preload: 'metadata',
+            image_size: '1800x',
+            class: 'cp-lagun-spin__video'
+          }}
+          <div class="cp-lagun-spin__glow" aria-hidden="true"></div>
+          {%- if module_section.blocks.size > 0 -%}
+            <ol class="cp-lagun-spin__chapters" aria-label="Details der 360-Grad-Ansicht">
+              {%- for block in module_section.blocks -%}
+                <li{% if forloop.first %} class="is-active"{% endif %} data-cp-spin-chapter {{ block.shopify_attributes }}>
+                  <span>0{{ forloop.index }}</span>
+                  <strong>{{ block.settings.heading | escape }}</strong>
+                  <small>{{ block.settings.body | escape }}</small>
+                </li>
+              {%- endfor -%}
+            </ol>
+          {%- endif -%}
+        </div>
+
+        <div class="cp-lagun-spin__progress page-width" aria-hidden="true">
+          <span>{{ module_section.settings.progress_label | default: 'Scrollen und entdecken' | escape }}</span>
+          <span class="cp-lagun-spin__progress-track"><i></i></span>
+          <span>{{ module_section.settings.progress_end | default: '360°' | escape }}</span>
+        </div>
+      </div>
+    </section>
+  </div>
+{%- endif -%}
+
+{%- if hotspot_image != blank and immersive_mode == 'hotspots' -%}
+  <div
+    class="cp-lagun-experience cp-lagun-experience--module"
+    id="cp-lagun-hotspots-module-{{ module_section.id }}"
+    data-cp-lagun-experience
+    data-cp-scene="technical"
+  >
+    <section
+      class="cp-lagun-hotspots"
+      aria-labelledby="cp-lagun-hotspots-title-{{ module_section.id }}"
+      data-cp-hotspots
+      data-cp-background-scene="technical"
+    >
+      <div class="cp-lagun-hotspots__sticky page-width">
+        <div class="cp-lagun-hotspots__heading">
+          <p class="cp-lagun-kicker">{{ module_section.settings.kicker | default: 'So funktioniert dein Lagun' | escape }}</p>
+          <h2 id="cp-lagun-hotspots-title-{{ module_section.id }}">{{ module_section.settings.heading | default: 'Vier Bauteile. Maximale Bewegungsfreiheit.' | escape }}</h2>
+          <p>{{ module_section.settings.body | default: 'Scrolle weiter und sieh direkt am Produkt, welche Aufgabe jedes Bauteil für dich übernimmt.' | escape }}</p>
+        </div>
+
+        <div class="cp-lagun-hotspots__stage">
+          <div class="cp-lagun-hotspots__product">
+            <div class="cp-lagun-hotspots__canvas" data-cp-hotspot-canvas>
+              {{ hotspot_image | image_url: width: 1800 | image_tag:
+                loading: 'lazy',
+                widths: '600, 900, 1200, 1500, 1800',
+                sizes: '(min-width: 990px) 64vw, 100vw',
+                alt: 'Lagun Tischgestell mit markierten Bauteilen',
+                class: 'cp-lagun-hotspots__image'
+              }}
+
+              {%- for block in module_section.blocks -%}
+                <span
+                  class="cp-lagun-hotspot-marker{% if forloop.first %} is-active{% endif %}"
+                  style="--cp-hotspot-x: {{ block.settings.position_x }}%; --cp-hotspot-y: {{ block.settings.position_y }}%;"
+                  data-cp-hotspot-marker="{{ forloop.index0 }}"
+                  data-cp-source-x="{{ block.settings.position_x }}"
+                  data-cp-source-y="{{ block.settings.position_y }}"
+                  aria-hidden="true"
+                ><i>{{ forloop.index }}</i></span>
+              {%- endfor -%}
+            </div>
+          </div>
+
+          <div class="cp-lagun-hotspots__cards">
+            {%- for block in module_section.blocks -%}
+              <article
+                class="cp-lagun-hotspot-card cp-lagun-hotspot-card--component{% if forloop.first %} is-active{% endif %}"
+                data-cp-hotspot-card="{{ forloop.index0 }}"
+                {{ block.shopify_attributes }}
+              >
+                <span class="cp-lagun-hotspot-card__step">0{{ forloop.index }} / 0{{ forloop.length }}</span>
+                <div class="cp-lagun-hotspot-card__body cp-lagun-hotspot-card__body--component">
+                  <span class="cp-lagun-component-number" aria-hidden="true">0{{ forloop.index }}</span>
+                  <span>
+                    <small>{{ block.settings.eyebrow | escape }}</small>
+                    <strong>{{ block.settings.heading | escape }}</strong>
+                  </span>
+                </div>
+                <p>{{ block.settings.body | escape }}</p>
+                <div class="cp-lagun-component-status">
+                  <span aria-hidden="true">✓</span> {{ module_section.settings.status_text | default: 'In deinem ausgewählten Lagun-Set enthalten' | escape }}
+                </div>
+              </article>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+{%- endif -%}

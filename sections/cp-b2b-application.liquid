@@ -1,0 +1,90 @@
+{% comment %}cp-b2b-experience-v20261005 – bilingual, minimal public B2B application.{% endcomment %}
+{% assign cp_language = request.locale.iso_code | slice: 0, 2 %}
+{% if cp_language == 'en' %}
+  {% assign cp_eyebrow = 'Lagun dealer programme' %}
+  {% assign cp_title = 'Apply for a B2B account' %}
+  {% assign cp_intro = 'Enter only the information we need for an initial order. B2B pricing starts at a combined total of five Lagun table frames and B2B shipping is always charged. For smaller quantities, standard shop prices and shipping rates apply. VAT IDs for EU cross-border applications are checked automatically through VIES.' %}
+  {% assign cp_company = 'Company' %}{% assign cp_contact = 'Contact person' %}{% assign cp_billing = 'Billing address' %}{% assign cp_shipping = 'Shipping address' %}
+  {% assign cp_company_name = 'Company name' %}{% assign cp_first_name = 'First name' %}{% assign cp_last_name = 'Last name' %}{% assign cp_email = 'Business email address' %}{% assign cp_phone = 'Phone' %}
+  {% assign cp_street = 'Street and house number' %}{% assign cp_zip = 'Postal code' %}{% assign cp_city = 'City' %}{% assign cp_country = 'Country' %}{% assign cp_choose = 'Please select' %}
+  {% assign cp_vat = 'VAT ID' %}{% assign cp_same = 'Shipping address is the same as the billing address' %}{% assign cp_notes_title = 'Notes' %}{% assign cp_notes = 'Notes about the first order' %}
+  {% assign cp_business = 'I confirm that I am acting for a business and purchasing exclusively for commercial purposes.' %}
+  {% assign cp_privacy_before = 'I consent to the processing of my details to review and set up B2B access. The' %}{% assign cp_privacy_link = 'privacy policy' %}{% assign cp_privacy_after = 'applies.' %}
+  {% assign cp_submit = 'Submit application' %}{% assign cp_sending = 'Submitting…' %}
+  {% assign cp_success_before = 'Thank you. Your application was recorded under' %}{% assign cp_success_after = 'After approval, you will automatically receive an email with the B2B portal link.' %}
+  {% assign cp_error = 'The application could not be submitted. Please check your information or email info@camping-pioneers.de.' %}
+  {% assign cp_vat_invalid = 'The application was recorded, but the VAT ID could not be confirmed by VIES. Please check the number or contact us.' %}
+  {% assign cp_vat_unavailable = 'The application was recorded. VIES is currently unavailable; we will check the VAT ID again before approval.' %}
+{% else %}
+  {% assign cp_eyebrow = 'Lagun Händlerprogramm' %}
+  {% assign cp_title = 'Als B2B-Kunde bewerben' %}
+  {% assign cp_intro = 'Tragen Sie nur die Angaben ein, die wir für eine erste Bestellung benötigen. B2B-Konditionen gelten ab insgesamt fünf Lagun-Tischgestellen; B2B-Versand wird immer berechnet. Bei kleineren Mengen gelten Shoppreise und Shop-Versandkosten. USt-IDs bei EU-Auslandsbewerbungen werden automatisch über VIES geprüft.' %}
+  {% assign cp_company = 'Unternehmen' %}{% assign cp_contact = 'Ansprechpartner' %}{% assign cp_billing = 'Rechnungsadresse' %}{% assign cp_shipping = 'Lieferadresse' %}
+  {% assign cp_company_name = 'Firmenname' %}{% assign cp_first_name = 'Vorname' %}{% assign cp_last_name = 'Nachname' %}{% assign cp_email = 'Geschäftliche E-Mail-Adresse' %}{% assign cp_phone = 'Telefon' %}
+  {% assign cp_street = 'Straße und Hausnummer' %}{% assign cp_zip = 'PLZ' %}{% assign cp_city = 'Ort' %}{% assign cp_country = 'Land' %}{% assign cp_choose = 'Bitte auswählen' %}
+  {% assign cp_vat = 'USt-IdNr.' %}{% assign cp_same = 'Lieferadresse entspricht der Rechnungsadresse' %}{% assign cp_notes_title = 'Notiz' %}{% assign cp_notes = 'Notiz zur ersten Bestellung' %}
+  {% assign cp_business = 'Ich bestätige, dass ich für ein Unternehmen handle und ausschließlich zu gewerblichen Zwecken einkaufe.' %}
+  {% assign cp_privacy_before = 'Ich stimme der Verarbeitung meiner Angaben zur Prüfung und Einrichtung des B2B-Zugangs zu. Es gilt die' %}{% assign cp_privacy_link = 'Datenschutzerklärung' %}{% assign cp_privacy_after = '.' %}
+  {% assign cp_submit = 'Bewerbung absenden' %}{% assign cp_sending = 'Wird übermittelt…' %}
+  {% assign cp_success_before = 'Vielen Dank. Ihre Bewerbung wurde unter' %}{% assign cp_success_after = 'erfasst. Nach der Freigabe erhalten Sie automatisch eine E-Mail mit dem Link zum B2B-Portal.' %}
+  {% assign cp_error = 'Die Bewerbung konnte nicht übermittelt werden. Bitte prüfen Sie Ihre Angaben oder schreiben Sie an info@camping-pioneers.de.' %}
+  {% assign cp_vat_invalid = 'Die Bewerbung wurde erfasst, aber die USt-ID konnte durch VIES nicht bestätigt werden. Bitte prüfen Sie die Nummer oder kontaktieren Sie uns.' %}
+  {% assign cp_vat_unavailable = 'Die Bewerbung wurde erfasst. VIES ist derzeit nicht erreichbar; wir prüfen die USt-ID vor der Freigabe erneut.' %}
+{% endif %}
+<section class="cp-b2b-apply page-width" data-cp-b2b-apply data-endpoint="https://b2b.camping-pioneers.de/api/applications" data-locale="{{ cp_language | escape }}" data-submit-label="{{ cp_submit | escape }}" data-sending-label="{{ cp_sending | escape }}" data-success-before="{{ cp_success_before | escape }}" data-success-after="{{ cp_success_after | escape }}" data-error="{{ cp_error | escape }}" data-vat-invalid="{{ cp_vat_invalid | escape }}" data-vat-unavailable="{{ cp_vat_unavailable | escape }}">
+  <div class="cp-b2b-apply__hero"><p class="cp-b2b-apply__eyebrow">{{ cp_eyebrow }}</p><h1>{{ cp_title }}</h1><p>{{ cp_intro }}</p></div>
+  <form class="cp-b2b-apply__form" data-form novalidate>
+    <fieldset><legend>{{ cp_company }}</legend><div class="cp-b2b-apply__grid">
+      <label class="cp-b2b-apply__wide"><span>{{ cp_company_name }} *</span><input name="companyName" autocomplete="organization" maxlength="200" required></label>
+      <label class="cp-b2b-apply__wide" data-vat-field hidden><span>{{ cp_vat }} *</span><input name="vatId" maxlength="80" autocomplete="off" placeholder="ATU12345678"></label>
+    </div></fieldset>
+    <fieldset><legend>{{ cp_contact }}</legend><div class="cp-b2b-apply__grid">
+      <label><span>{{ cp_first_name }} *</span><input name="contactFirstName" autocomplete="given-name" maxlength="100" required></label>
+      <label><span>{{ cp_last_name }} *</span><input name="contactLastName" autocomplete="family-name" maxlength="100" required></label>
+      <label><span>{{ cp_email }} *</span><input name="email" type="email" autocomplete="email" maxlength="320" required></label>
+      <label><span>{{ cp_phone }} *</span><input name="phone" type="tel" autocomplete="tel" maxlength="80" required></label>
+    </div></fieldset>
+    <fieldset><legend>{{ cp_billing }}</legend><div class="cp-b2b-apply__grid">
+      <label class="cp-b2b-apply__wide"><span>{{ cp_street }} *</span><input name="billingAddress1" autocomplete="address-line1" maxlength="200" required></label>
+      <label><span>{{ cp_zip }} *</span><input name="billingZip" autocomplete="postal-code" maxlength="30" required></label>
+      <label><span>{{ cp_city }} *</span><input name="billingCity" autocomplete="address-level2" maxlength="120" required></label>
+      <label><span>{{ cp_country }} *</span><select name="billingCountryCode" autocomplete="country" required><option value="">{{ cp_choose }}</option>{% for country in localization.available_countries %}<option value="{{ country.iso_code }}"{% if country.iso_code == localization.country.iso_code %} selected{% endif %}>{{ country.name }}</option>{% endfor %}</select></label>
+    </div></fieldset>
+    <fieldset><legend>{{ cp_shipping }}</legend><label class="cp-b2b-apply__check"><input type="checkbox" name="shippingSameAsBilling" checked><span>{{ cp_same }}</span></label><div class="cp-b2b-apply__shipping" data-shipping hidden><div class="cp-b2b-apply__grid">
+      <label><span>{{ cp_first_name }} *</span><input name="shippingFirstName" autocomplete="shipping given-name" maxlength="100"></label>
+      <label><span>{{ cp_last_name }} *</span><input name="shippingLastName" autocomplete="shipping family-name" maxlength="100"></label>
+      <label class="cp-b2b-apply__wide"><span>{{ cp_street }} *</span><input name="shippingAddress1" autocomplete="shipping address-line1" maxlength="200"></label>
+      <label><span>{{ cp_zip }} *</span><input name="shippingZip" autocomplete="shipping postal-code" maxlength="30"></label>
+      <label><span>{{ cp_city }} *</span><input name="shippingCity" autocomplete="shipping address-level2" maxlength="120"></label>
+      <label><span>{{ cp_country }} *</span><select name="shippingCountryCode" autocomplete="shipping country"><option value="">{{ cp_choose }}</option>{% for country in localization.available_countries %}<option value="{{ country.iso_code }}">{{ country.name }}</option>{% endfor %}</select></label>
+    </div></div></fieldset>
+    <fieldset><legend>{{ cp_notes_title }}</legend><label><span>{{ cp_notes }}</span><textarea name="notes" rows="4" maxlength="3000"></textarea></label></fieldset>
+    <div class="cp-b2b-apply__consents">
+      <label class="cp-b2b-apply__check"><input type="checkbox" name="businessConfirmation" required><span>{{ cp_business }} *</span></label>
+      <label class="cp-b2b-apply__check"><input type="checkbox" name="privacyConsent" required><span>{{ cp_privacy_before }} <a href="/pages/datenschutz" target="_blank">{{ cp_privacy_link }}</a> {{ cp_privacy_after }} *</span></label>
+      <label class="cp-b2b-apply__honeypot" aria-hidden="true">Fax<input name="fax" tabindex="-1" autocomplete="off"></label>
+    </div>
+    <button class="button button--primary" type="submit" data-submit>{{ cp_submit }}</button><p class="cp-b2b-apply__status" data-status role="status" aria-live="polite"></p>
+  </form>
+</section>
+<style>
+.cp-b2b-apply{max-width:1050px;margin-top:42px;margin-bottom:70px;color:#1a1b18}.cp-b2b-apply__hero{max-width:780px;margin-bottom:34px}.cp-b2b-apply__eyebrow{color:#092c91;font-weight:800;text-transform:uppercase;letter-spacing:.09em;font-size:13px;margin:0 0 8px}.cp-b2b-apply__hero h1{margin:0 0 14px}.cp-b2b-apply__hero p{font-size:18px;line-height:1.55}.cp-b2b-apply__form{display:grid;gap:24px}.cp-b2b-apply fieldset{border:1px solid #d2d5d9;border-radius:12px;padding:24px;margin:0;background:#fff}.cp-b2b-apply legend{padding:0 10px;font-size:20px;font-weight:800}.cp-b2b-apply__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.cp-b2b-apply label{display:grid;gap:7px}.cp-b2b-apply label>span{font-weight:650}.cp-b2b-apply input,.cp-b2b-apply select,.cp-b2b-apply textarea{width:100%;min-height:46px;border:1px solid #8b9098;border-radius:6px;padding:10px 12px;background:#fff;color:#1a1b18;font:inherit}.cp-b2b-apply textarea{min-height:110px}.cp-b2b-apply input:focus,.cp-b2b-apply select:focus,.cp-b2b-apply textarea:focus{outline:3px solid rgba(9,44,145,.2);border-color:#092c91}.cp-b2b-apply__wide{grid-column:1/-1}.cp-b2b-apply__check{display:flex!important;align-items:flex-start;gap:10px}.cp-b2b-apply__check input{width:20px;min-height:20px;margin-top:2px;flex:0 0 auto}.cp-b2b-apply__consents{display:grid;gap:14px}.cp-b2b-apply__honeypot{position:absolute!important;left:-10000px!important}.cp-b2b-apply__status{font-weight:700}.cp-b2b-apply__status[data-tone="error"]{color:#c0270b}.cp-b2b-apply__status[data-tone="success"]{color:#1f7a3a}@media(max-width:700px){.cp-b2b-apply__grid{grid-template-columns:1fr}.cp-b2b-apply fieldset{padding:18px}.cp-b2b-apply__wide{grid-column:auto}}
+</style>
+<script>
+(() => {
+  const root=document.querySelector('[data-cp-b2b-apply]'); if(!root)return;
+  const form=root.querySelector('[data-form]'),same=form.elements.shippingSameAsBilling,shipping=root.querySelector('[data-shipping]'),status=root.querySelector('[data-status]'),button=root.querySelector('[data-submit]'),billingCountry=form.elements.billingCountryCode,vatField=root.querySelector('[data-vat-field]'),vat=form.elements.vatId;
+  const euForeign=new Set(['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE']);
+  function toggleShipping(){shipping.hidden=same.checked;shipping.querySelectorAll('input,select').forEach((field)=>{field.required=!same.checked})}
+  function toggleVat(){const required=euForeign.has(billingCountry.value);vatField.hidden=!required;vat.required=required;if(!required)vat.value=''}
+  function uuid(){if(crypto.randomUUID)return crypto.randomUUID();const bytes=new Uint8Array(16);crypto.getRandomValues(bytes);bytes[6]=(bytes[6]&15)|64;bytes[8]=(bytes[8]&63)|128;return [...bytes].map((value,index)=>([4,6,8,10].includes(index)?'-':'')+value.toString(16).padStart(2,'0')).join('')}
+  same.addEventListener('change',toggleShipping);billingCountry.addEventListener('change',toggleVat);toggleShipping();toggleVat();
+  form.addEventListener('submit',async(event)=>{event.preventDefault();status.textContent='';status.dataset.tone='';if(!form.reportValidity())return;button.disabled=true;button.textContent=root.dataset.sendingLabel;
+    const values=Object.fromEntries(new FormData(form).entries());const payload={...values,idempotencyKey:uuid(),preferredLanguage:root.dataset.locale==='en'?'en':'de',shippingSameAsBilling:same.checked,privacyConsent:form.elements.privacyConsent.checked,businessConfirmation:form.elements.businessConfirmation.checked};
+    try{const response=await fetch(root.dataset.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const body=await response.json();if(!response.ok)throw new Error(body.error||'request_failed');form.reset();same.checked=true;toggleShipping();toggleVat();const vatMessage=body.vatValidationStatus==='invalid'?root.dataset.vatInvalid:body.vatValidationStatus==='unavailable'?root.dataset.vatUnavailable:'';status.dataset.tone=body.vatValidationStatus==='invalid'?'error':'success';status.textContent=root.dataset.successBefore+' '+body.reference+'. '+(vatMessage||root.dataset.successAfter);status.scrollIntoView({behavior:'smooth',block:'center'});}
+    catch(error){status.dataset.tone='error';status.textContent=root.dataset.error;}
+    finally{button.disabled=false;button.textContent=root.dataset.submitLabel;}
+  });
+})();
+</script>
+{% schema %}{"name":"B2B application","settings":[],"presets":[{"name":"B2B application"}]}{% endschema %}

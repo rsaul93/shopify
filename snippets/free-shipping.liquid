@@ -1,0 +1,12 @@
+{% comment %}No subtotal-based free-delivery promise: Shopify delivery profiles, destinations and mixed carts determine the actual charge.{% endcomment %}
+{{ 'component-free-shipping.css' | asset_url | stylesheet_tag }}
+{%- assign cp_language = request.locale.iso_code | downcase | slice: 0, 2 -%}
+{%- if cart.item_count > 0 -%}
+<div class="free-shipping{% if is_last %} is-last{% endif %} typeset0" data-cp-shipping-summary style="display: block; text-align: left;">
+  <p>{% if cp_language == 'en' %}Shipping costs depend on the items, destination and shipping method. Charges for different shipping groups may be added together. Pickup is not delivery.{% else %}Versandkosten hängen von Artikeln, Lieferland und Versandart ab. Bei gemischten Warenkörben können Versandkosten mehrerer Versandgruppen zusammenkommen. Selbstabholung ist keine Lieferung.{% endif %}
+  <a class="link underlined-link" href="{{ pages['zahlung-und-versand-1'].url }}">{% if cp_language == 'en' %}View shipping rates{% else %}Versandkosten ansehen{% endif %}</a></p>
+  {%- assign cp_cart_products = cart.items | map: 'product' | uniq -%}
+  {%- for cp_product in cp_cart_products -%}{%- render 'cp-shipping-notice', product: cp_product, cart_context: true -%}{%- endfor -%}
+  <p>{% if cp_language == 'en' %}The total shipping charge is shown at checkout before you submit your order.{% else %}Die gesamten Versandkosten werden dir im Checkout vor dem verbindlichen Bestellen angezeigt.{% endif %}</p>
+</div>
+{%- endif -%}

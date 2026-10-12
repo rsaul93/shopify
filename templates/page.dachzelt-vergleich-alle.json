@@ -1,0 +1,627 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "narrow": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_T3BaxN": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_84KVbT": {
+          "type": "heading",
+          "settings": {
+            "heading": "Finde das perfekte Dachzelt für dein Abenteuer!",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "subheading_KwABUB": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Entdecke die besten Dachzelt-Hersteller im Überblick",
+            "subheading_size": "h5",
+            "secondary_color": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_84KVbT",
+        "subheading_KwABUB"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/beautiful-shot-orange-tent-rocky-mountain-surrounded-by-trees-during-sunset_2_1920x1920_e51fc601-6001-4ac2-8d15-b3d25c366489.jpg",
+        "image_position": "center center",
+        "text_box_position": "middle-center",
+        "text_alignment": "center",
+        "image_ratio": "500px",
+        "show_text_box": false,
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "ambient",
+        "mobile_image": "shopify:\/\/shop_images\/beautiful-shot-orange-tent-rocky-mountain-surrounded-by-trees-during-sunset_2_1920x1920_e51fc601-6001-4ac2-8d15-b3d25c366489.jpg",
+        "mobile_text_alignment": "center",
+        "mobile_image_ratio": "auto",
+        "stack_images_on_mobile": true,
+        "show_text_below": true,
+        "colors_button_label": "#1a1b18",
+        "colors_button_background": "#ffffff",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 28,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collection_list_CjwUdP": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_JCBhfp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "qeedo-dachzelt",
+            "image": "shopify:\/\/shop_images\/Web_1920_1.webp",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_a83gai": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "horntools-dachzelte",
+            "image": "shopify:\/\/shop_images\/dachzelt_track_horntools.webp",
+            "image_position": "center center"
+          }
+        },
+        "featured_collection_UHBAnW": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "vickywood",
+            "image": "shopify:\/\/shop_images\/klapp-dachzelt-willowpro-vickywood.webp",
+            "image_position": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_JCBhfp",
+        "featured_collection_a83gai",
+        "featured_collection_UHBAnW"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "show_view_all": false,
+        "show_divider": false,
+        "columns_desktop": 3,
+        "heading": "Beliebte Dachzelt-Hersteller - Unsere Top Marken im Vergleich:",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "image_ratio": "square",
+        "apply_overlay": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_cBeMeJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_A6kYpw": {
+          "type": "heading",
+          "settings": {
+            "heading": "VICKYWOOD Dachzelte – Premium Komfort und höchste Qualität",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Yfk9me": {
+          "type": "text",
+          "settings": {
+            "text": "<p>VICKYWOOD Dachzelte stehen für maximalen Komfort, hochwertige Materialien und durchdachte Konstruktion. Sie bieten besonders viel Platz, eine hochwertige Matratze und eignen sich ideal für längere Reisen und anspruchsvolle Camper.<\/p><h4><strong>Vorteile von VICKYWOOD Dachzelten:<\/strong><\/h4><ul><li>besonders hoher Schlafkomfort<br\/><\/li><li>hochwertige und langlebige Materialien<br\/><\/li><li>sehr robuste und stabile Bauweise<br\/><\/li><li>ideal für lange Reisen und Vanlife<br\/><\/li><li>große Auswahl an Modellen<br\/><\/li><\/ul><h4><strong>Ideal für dich, wenn du:<\/strong><\/h4><ul><li>maximalen Komfort möchtest<br\/><\/li><li>regelmäßig und lange unterwegs bist<br\/><\/li><li>ein Premium Dachzelt suchst<\/li><\/ul>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_R76WnJ": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Vickywood Dachzelte entdecken",
+            "button_link": "shopify:\/\/collections\/vickywood",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_A6kYpw",
+        "text_Yfk9me",
+        "button_R76WnJ"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/cumaru-xp-all-black-aluminiumdachzelt.jpg",
+        "image_position": "80% 100%",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "450px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_MKYjbi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7jitzk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Horntools Dachzelte – extrem robust und perfekt für Offroad Abenteuer",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_MLgcUd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Horntools Dachzelte wurden speziell für anspruchsvolle Einsätze entwickelt und überzeugen durch ihre extreme Stabilität und Langlebigkeit. Sie sind die perfekte Wahl für Offroad-Abenteuer und intensive Nutzung.<\/p><h4><strong>Vorteile von Horntools Dachzelten:<\/strong><\/h4><ul><li>besonders robuste und langlebige Bauweise<br\/><\/li><li>ideal für Offroad und Expeditionen<br\/><\/li><li>sehr hochwertige Verarbeitung<br\/><\/li><li>wetterfest und widerstandsfähig<br\/><\/li><li>für anspruchsvolle Abenteuer entwickelt<br\/><\/li><\/ul><h4><strong>Ideal für dich, wenn du:<\/strong><\/h4><ul><li>Offroad unterwegs bist<br\/><\/li><li>maximale Stabilität brauchst<br\/><\/li><li>ein besonders langlebiges Dachzelt suchst<\/li><\/ul>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_B4tpdf": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Horntools Dachzelte entdecken",
+            "button_link": "shopify:\/\/collections\/horntools-dachzelte",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7jitzk",
+        "text_MLgcUd",
+        "button_B4tpdf"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/230522R_0896_f4e83cf1-2f0f-472b-a07c-1c5baf809162.webp",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "adapt",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_9npDND": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_F7mG8C": {
+          "type": "heading",
+          "settings": {
+            "heading": "Qeedo Dachzelte – leicht, schnell aufgebaut und ideal für Einsteiger",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_8EB4At": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Qeedo Dachzelte überzeugen durch ihre besonders einfache Handhabung und ihr geringes Gewicht. Dank durchdachter Schnellaufbau-Systeme sind sie in wenigen Minuten einsatzbereit und eignen sich ideal für spontane Reisen und Wochenendtrips.<\/p><p><\/p><h4><strong>Vorteile von Qeedo Dachzelten:<\/strong><\/h4><ul><li>besonders leicht und benutzerfreundlich<br\/><\/li><li>schneller und einfacher Aufbau<br\/><\/li><li>sehr gutes Preis-Leistungs-Verhältnis<br\/><\/li><li>ideal für viele Fahrzeugtypen<br\/><\/li><li>perfekt für Einsteiger und Allround-Camper<br\/><\/li><\/ul><h4><strong>Ideal für dich, wenn du:<\/strong><\/h4><ul><li>neu im Dachzelt-Camping bist<\/li><li>ein leichtes Dachzelt suchst<\/li><li>ein gutes Preis-Leistungs-Verhältnis möchtest<\/li><\/ul>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_DKXyyy": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "qeedo Dachzelte entdecken",
+            "button_link": "shopify:\/\/collections\/qeedo-dachzelt",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_F7mG8C",
+        "text_8EB4At",
+        "button_DKXyyy"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/250312_QDO_Freedom_Hybrid_2_Top_Banner_Desktop_DS_V02_N01.webp",
+        "image_position": "20% 50%",
+        "layout": "image_first",
+        "text_box_position": "top",
+        "text_alignment": "left",
+        "image_ratio": "600px",
+        "enlarge_content": false,
+        "full_width": true,
+        "show_divider": false,
+        "image_behavior": "none",
+        "image_mobile": "shopify:\/\/shop_images\/250312_QDO_Freedom_Hybrid_2_Top_Banner_Desktop_DS_V02_N01.webp",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_cRxVeD": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n\n\/* Tabelle *\/\n\n.compare-table{\nwidth:100%;\nborder-collapse:separate;\nborder-spacing:0;\nborder-radius:12px;\noverflow:hidden;\nborder:1px solid #e5e7eb;\nfont-family:inherit;\nmargin-bottom:10px;\n}\n\n\n.compare-table th{\n\nbackground:#f9fafb;\npadding:16px;\ntext-align:left;\nfont-weight:600;\n\n}\n\n\n.compare-table td{\n\npadding:16px;\nborder-top:1px solid #eee;\n\n}\n\n\n.compare-table tr:hover{\n\nbackground:#f9fafb;\n\n}\n\n\n\/* Premium Highlight *\/\n\n.best-choice{\n\nborder-left:4px solid #f5b301;\nbackground:#fffdf7;\n\n}\n\n\n\/* Sterne *\/\n\n.star-gold{\n\ncolor:#f5b301;\nfont-size:18px;\nletter-spacing:2px;\n\n}\n\n.star-grey{\n\ncolor:#d1d5db;\nfont-size:18px;\nletter-spacing:2px;\n\n}\n\n\n\/* Button im Camping Pioneers Stil *\/\n\n.compare-btn{\n\nbackground:#092C91;\ncolor:#ffffff;\npadding:10px 16px;\nborder-radius:8px;\ntext-decoration:none;\nfont-weight:600;\ndisplay:inline-block;\ntransition:0.2s;\n\n}\n\n.compare-btn:hover{\n\nbackground:#071f66;\ncolor:#ffffff;\n\n}\n\n\n\/* Disclaimer *\/\n\n.compare-disclaimer{\n\nfont-size:12px;\ncolor:#6b7280;\nmargin-top:6px;\nline-height:1.5;\n\n}\n\n<\/style>\n\n\n\n<table class=\"compare-table\">\n\n\n<tr>\n\n<th>Hersteller<\/th>\n<th>Komfort<\/th>\n<th>Gewicht<\/th>\n<th>Robustheit<\/th>\n<th>Ideal für<\/th>\n<th><\/th>\n\n<\/tr>\n\n\n\n<tr class=\"best-choice\">\n\n<td>\n\n<strong>VICKYWOOD<\/strong><br>\n\nPremium Komfort\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★★★<\/span>\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★<\/span><span class=\"star-grey\">★★<\/span>\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★★<\/span><span class=\"star-grey\">★<\/span>\n\n<\/td>\n\n\n<td>\n\nVanlife & lange Reisen\n\n<\/td>\n\n\n<td>\n\n<a href=\"\/collections\/vickywood\" class=\"compare-btn\">\n\nAnsehen →\n\n<\/a>\n\n<\/td>\n\n<\/tr>\n\n\n\n\n<tr>\n\n<td>\n\n<strong>Horntools<\/strong><br>\n\nMaximale Stabilität\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★★<\/span><span class=\"star-grey\">★<\/span>\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★<\/span><span class=\"star-grey\">★★<\/span>\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★★★<\/span>\n\n<\/td>\n\n\n<td>\n\nOffroad & Expedition\n\n<\/td>\n\n\n<td>\n\n<a href=\"\/collections\/horntools-dachzelte\" class=\"compare-btn\">\n\nAnsehen →\n\n<\/a>\n\n<\/td>\n\n<\/tr>\n\n\n\n\n<tr>\n\n<td>\n\n<strong>Qeedo<\/strong><br>\n\nPreis-Leistungs Sieger\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★★<\/span><span class=\"star-grey\">★<\/span>\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★★★<\/span>\n\n<\/td>\n\n\n<td>\n\n<span class=\"star-gold\">★★★<\/span><span class=\"star-grey\">★★<\/span>\n\n<\/td>\n\n\n<td>\n\nEinsteiger & Allround\n\n<\/td>\n\n\n<td>\n\n<a href=\"\/collections\/qeedo-dachzelt\" class=\"compare-btn\">\n\nAnsehen →\n\n<\/a>\n\n<\/td>\n\n<\/tr>\n\n\n<\/table>\n\n\n\n<div class=\"compare-disclaimer\">\n\n*Bewertungen basieren auf typischer Markenpositionierung, Materialien, Komfort, Gewicht und Einsatzzweck. Je nach Modell können Eigenschaften variieren. Detaillierte Informationen findest du auf den jeweiligen Produktseiten.*\n\n<\/div>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_3WBrLM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_3QHmTz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welches Dachzelt passt am besten zu dir?",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_zYKghj": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Wähle Qeedo, wenn du ein leichtes und preiswertes Dachzelt suchst<\/h2><p>Perfekt für Einsteiger, Wochenend-Trips und alle, die ein unkompliziertes Dachzelt mit sehr gutem Preis-Leistungs-Verhältnis möchten.<\/p><h2>Wähle VICKYWOOD, wenn Komfort für dich an erster Stelle steht<\/h2><p>Ideal für lange Reisen, Vanlife und alle, die besonders bequem und komfortabel unterwegs sein möchten.<\/p><h2>Wähle Horntools, wenn du maximale Stabilität und Offroad-Tauglichkeit brauchst<\/h2><p>Die beste Wahl für Abenteurer, Offroad-Fans und intensive Nutzung unter anspruchsvollen Bedingungen.<\/p><h3><strong>Fazit: Drei Hersteller – drei perfekte Einsatzbereiche<\/strong><\/h3><p>Alle drei Dachzelt Hersteller bieten hochwertige und zuverlässige Lösungen. Die richtige Wahl hängt vor allem von deinen persönlichen Anforderungen ab:<\/p><ul><li><h4><strong>Qeedo:<\/strong> beste Wahl für Einsteiger und Preis-Leistung<br\/><\/h4><\/li><li><h4><strong>VICKYWOOD:<\/strong> beste Wahl für Komfort und Premium Camping<br\/><\/h4><\/li><li><h4><strong>Horntools:<\/strong> beste Wahl für Offroad und maximale Robustheit<\/h4><\/li><\/ul><p><\/p><p><\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_style": "marker"
+          }
+        }
+      },
+      "block_order": [
+        "heading_3QHmTz",
+        "text_zYKghj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_xWQtW4": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n\n.guide-section{\n\nbackground:#f8fafc;\nborder-radius:12px;\npadding:28px;\nmargin-top:40px;\nmargin-bottom:20px;\n\n}\n\n\n.guide-title{\n\nfont-size:22px;\nfont-weight:700;\nmargin-bottom:10px;\n\n}\n\n\n.guide-text{\n\nfont-size:15px;\ncolor:#374151;\nmargin-bottom:20px;\nline-height:1.6;\n\n}\n\n\n.guide-button{\n\nbackground:#092C91;\ncolor:#ffffff;\npadding:12px 20px;\nborder-radius:8px;\ntext-decoration:none;\nfont-weight:600;\ndisplay:inline-block;\ntransition:0.2s;\n\n}\n\n\n.guide-button:hover{\n\nbackground:#071f66;\ncolor:#ffffff;\n\n}\n\n<\/style>\n\n\n\n<div class=\"guide-section\">\n\n\n<div class=\"guide-title\">\n\nDachzelt Ratgeber – Alles was du wissen musst\n\n<\/div>\n\n\n<div class=\"guide-text\">\n\nDu bist dir noch unsicher, welches Dachzelt das richtige für dich ist oder wie die Montage funktioniert? In unserem umfassenden Dachzelt Ratgeber erfährst du alles über Einsatzmöglichkeiten, Vorteile, Montage und wichtige Kaufkriterien – ideal für Einsteiger und erfahrene Camper.\n\n<\/div>\n\n\n<a href=\"\/pages\/der-umfassende-ratgeber-fur-dachzelte-einsatzmoglichkeiten-und-montage\" class=\"guide-button\">\n\nZum Dachzelt Ratgeber →\n\n<\/a>\n\n\n<\/div>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "faq_8RiTty": {
+      "type": "faq",
+      "blocks": {
+        "question_L38zXA": {
+          "type": "question",
+          "settings": {
+            "title": "Welches Dachzelt ist das beste?",
+            "text": "<p>Das beste Dachzelt hängt von deinem Fahrzeug, deinem Reiseverhalten und deinem Komfortanspruch ab. Premium Dachzelte bieten meist mehr Schlafkomfort, langlebigere Materialien und eine robustere Bauweise. Leichtere Modelle sind dafür oft preislich attraktiver und einfacher zu handhaben. Ein Vergleich verschiedener Hersteller hilft dir, das passende Dachzelt für deine individuellen Anforderungen zu finden.<\/p>"
+          }
+        },
+        "question_4fEe9K": {
+          "type": "question",
+          "settings": {
+            "title": "Welche Dachzelt Hersteller sind die besten?",
+            "text": "<p>Zu den beliebtesten und bewährtesten Dachzelt Herstellern gehören Marken wie VICKYWOOD, Horntools und Qeedo. Sie bieten unterschiedliche Stärken – von besonders komfortablen Premium Dachzelten über extrem robuste Offroad-Modelle bis hin zu leichten und vielseitigen Dachzelten mit sehr gutem Preis-Leistungs-Verhältnis.<\/p>"
+          }
+        },
+        "question_nEWGTW": {
+          "type": "question",
+          "settings": {
+            "title": "Worauf sollte ich beim Dachzelt Vergleich achten?",
+            "text": "<p>Die wichtigsten Kriterien beim Dachzelt Vergleich sind:<\/p><ul><li>Gewicht und Kompatibilität mit deinem Fahrzeug<br\/><\/li><li>Schlafkomfort und Matratzenqualität<br\/><\/li><li>Material und Wetterbeständigkeit<br\/><\/li><li>Aufbauzeit und Handhabung<br\/><\/li><li>Preis-Leistungs-Verhältnis<br\/><\/li><\/ul><p>Diese Faktoren entscheiden darüber, wie komfortabel und langlebig dein Dachzelt ist.<\/p>"
+          }
+        },
+        "question_9rhNdh": {
+          "type": "question",
+          "settings": {
+            "title": "Ist ein teureres Dachzelt besser?",
+            "text": "<p>Hochwertigere Dachzelte bieten in der Regel bessere Materialien, höheren Schlafkomfort und eine längere Lebensdauer. Wenn du dein Dachzelt regelmäßig nutzt oder längere Reisen planst, kann sich die Investition in ein Premium Dachzelt langfristig auszahlen.<\/p>"
+          }
+        },
+        "question_hnd7zd": {
+          "type": "question",
+          "settings": {
+            "title": "Welches Dachzelt ist für Einsteiger geeignet?",
+            "text": "<p>Einsteiger profitieren besonders von Dachzelten, die einfach zu montieren und leicht zu bedienen sind. Viele moderne Dachzelte sind heute so konstruiert, dass sie sich schnell aufbauen lassen und sofort einsatzbereit sind.<\/p>"
+          }
+        },
+        "question_a7FAV6": {
+          "type": "question",
+          "settings": {
+            "title": "Passt ein Dachzelt auf jedes Auto?",
+            "text": "<p>In den meisten Fällen ja. Voraussetzung ist ein geeigneter Dachträger und die Einhaltung der maximalen Dachlast deines Fahrzeugs. Dachzelte können auf vielen Fahrzeugtypen montiert werden, darunter:<\/p><ul><li>Kleinwagen<br\/><\/li><li>SUVs<br\/><\/li><li>Vans<br\/><\/li><li>Geländewagen<\/li><\/ul>"
+          }
+        },
+        "question_i6Q8mP": {
+          "type": "question",
+          "settings": {
+            "title": "Wie viel kostet ein gutes Dachzelt?",
+            "text": "<p>Gute Dachzelte kosten in der Regel zwischen etwa 1.000 € und 4.000 €, abhängig von Ausstattung, Komfort und Materialqualität. Hochwertigere Modelle bieten oft mehr Komfort und sind für langfristige Nutzung ausgelegt.<\/p>"
+          }
+        },
+        "question_47nryY": {
+          "type": "question",
+          "settings": {
+            "title": "Wie lange hält ein Dachzelt?",
+            "text": "<p>Ein hochwertiges Dachzelt kann bei richtiger Nutzung und Pflege viele Jahre halten. Besonders Premium Dachzelte sind für langfristige Nutzung und häufiges Reisen konzipiert.<\/p>"
+          }
+        },
+        "question_feqmzF": {
+          "type": "question",
+          "settings": {
+            "title": "Welches Dachzelt ist für lange Reisen am besten geeignet?",
+            "text": "<p>Für längere Reisen eignen sich besonders Dachzelte mit hohem Schlafkomfort, stabiler Bauweise und langlebigen Materialien. Diese bieten ein angenehmes Schlafgefühl und sind auf regelmäßige Nutzung ausgelegt.<\/p>"
+          }
+        },
+        "question_K4jJgt": {
+          "type": "question",
+          "settings": {
+            "title": "Lohnt sich ein Dachzelt?",
+            "text": "<p>Ein Dachzelt lohnt sich für alle, die flexibel, komfortabel und unabhängig reisen möchten. Es ermöglicht spontane Übernachtungen und bietet eine praktische Alternative zu klassischen Campinglösungen.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_L38zXA",
+        "question_4fEe9K",
+        "question_nEWGTW",
+        "question_9rhNdh",
+        "question_hnd7zd",
+        "question_a7FAV6",
+        "question_i6Q8mP",
+        "question_47nryY",
+        "question_feqmzF",
+        "question_K4jJgt"
+      ],
+      "name": "t:sections.faq.presets.name",
+      "settings": {
+        "narrow": false,
+        "secondary_background": false,
+        "show_divider": false,
+        "heading": "FAQ - Häufige Fragen zum Dachzelt Vergleich",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_AzikQR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Y8CPLq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Du bist immer noch unentschlossen?",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_6BYiTA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dann komm uns in einer unserer Showrooms  besuchen und lass dich individuell beraten! Du findest uns in Bad Berka bei Weimar & in Pettstadt bei Bamberg.<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_HUd9Y6": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Jetzt Termin vereinbaren",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y8CPLq",
+        "text_6BYiTA",
+        "button_HUd9Y6"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pexels-taryn-elliott-6861130.jpg",
+        "image_position": "center center",
+        "layout": "image_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_LFG9iK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xXGDkY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Du möchtest erstmal ein Dachzelt mieten statt kaufen?",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_4UACDY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kein Problem! Schick uns einfach eine Anfrage und sichere dir noch heute dein Dachzelt.<\/p>",
+            "text_size": "typeset2",
+            "secondary_color": false,
+            "highlight_style": "marker"
+          }
+        },
+        "button_UXEKqE": {
+          "type": "button",
+          "settings": {
+            "button_size": "medium",
+            "button_label": "Dachzelt mieten",
+            "button_link": "shopify:\/\/pages\/dachzelte-mieten",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xXGDkY",
+        "text_4UACDY",
+        "button_UXEKqE"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "horizontal_content": false,
+        "narrow": false,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#1a1b18",
+        "colors_text": "#212326",
+        "colors_background": "#ffffff",
+        "colors_highlight": "#bbff00",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_MxQpaU": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "alle-dachzelte-zubehor",
+        "products_to_show": 8,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Unsere Dachzelte & Zubehör:",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": true,
+        "enable_countdown": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_T3BaxN",
+    "collection_list_CjwUdP",
+    "image_with_text_cBeMeJ",
+    "image_with_text_MKYjbi",
+    "image_with_text_9npDND",
+    "custom_liquid_cRxVeD",
+    "rich_text_3WBrLM",
+    "custom_liquid_xWQtW4",
+    "faq_8RiTty",
+    "image_with_text_AzikQR",
+    "rich_text_LFG9iK",
+    "featured_collection_MxQpaU"
+  ]
+}

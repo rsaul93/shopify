@@ -1,0 +1,217 @@
+{% comment %}
+  Electronic revocation function under section 356a BGB.
+  Installed by scripts/shopify/install-revocation-function.mjs.
+{% endcomment %}
+{%- liquid
+  assign cp_lang = request.locale.iso_code | slice: 0, 2
+  case cp_lang
+    when 'en'
+      assign cp_title = 'Cancel contract online'
+      assign cp_intro = 'You can submit your revocation directly online here. Giving a reason is optional.'
+      assign cp_name = 'Full name'
+      assign cp_email = 'Email address for the confirmation'
+      assign cp_contract = 'Order or contract number'
+      assign cp_date = 'Order date (optional)'
+      assign cp_items = 'Goods or part of the contract concerned (optional)'
+      assign cp_note = 'Additional message (optional)'
+      assign cp_review = 'Review details'
+      assign cp_review_title = 'Review your revocation'
+      assign cp_review_intro = 'Please check the details. Your revocation will only be submitted when you activate the confirmation button.'
+      assign cp_back = 'Correct details'
+      assign cp_confirm = 'Confirm revocation'
+      assign cp_sending = 'Submitting…'
+      assign cp_success = 'Your revocation has been submitted.'
+      assign cp_email_notice = 'We have also sent the confirmation to the email address provided.'
+      assign cp_error = 'The revocation could not be submitted. Please try again or email info@camping-pioneers.de.'
+      assign cp_privacy = 'The information is used exclusively to process and document the revocation.'
+      assign cp_privacy_link = 'Privacy policy'
+      assign cp_reference = 'Reference'
+      assign cp_received = 'Received'
+      assign cp_print = 'Print confirmation or save as PDF'
+    when 'fr'
+      assign cp_title = 'Révoquer le contrat en ligne'
+      assign cp_intro = 'Vous pouvez transmettre directement votre rétractation en ligne. L’indication d’un motif est facultative.'
+      assign cp_name = 'Nom complet'
+      assign cp_email = 'Adresse e-mail pour la confirmation'
+      assign cp_contract = 'Numéro de commande ou de contrat'
+      assign cp_date = 'Date de commande (facultatif)'
+      assign cp_items = 'Marchandise ou partie du contrat concernée (facultatif)'
+      assign cp_note = 'Message complémentaire (facultatif)'
+      assign cp_review = 'Vérifier les informations'
+      assign cp_review_title = 'Vérifiez votre rétractation'
+      assign cp_review_intro = 'Veuillez vérifier les informations. Votre rétractation ne sera transmise qu’après activation du bouton de confirmation.'
+      assign cp_back = 'Corriger les informations'
+      assign cp_confirm = 'Confirmer la rétractation'
+      assign cp_sending = 'Transmission…'
+      assign cp_success = 'Votre rétractation a été transmise.'
+      assign cp_email_notice = 'Nous avons également envoyé la confirmation à l’adresse e-mail indiquée.'
+      assign cp_error = 'La rétractation n’a pas pu être transmise. Veuillez réessayer ou écrire à info@camping-pioneers.de.'
+      assign cp_privacy = 'Les informations sont utilisées exclusivement pour traiter et documenter la rétractation.'
+      assign cp_privacy_link = 'Politique de confidentialité'
+      assign cp_reference = 'Référence'
+      assign cp_received = 'Réception'
+      assign cp_print = 'Imprimer la confirmation ou l’enregistrer au format PDF'
+    else
+      assign cp_title = 'Vertrag online widerrufen'
+      assign cp_intro = 'Hier können Sie Ihren Widerruf direkt online erklären. Die Angabe eines Grundes ist nicht erforderlich.'
+      assign cp_name = 'Vor- und Nachname'
+      assign cp_email = 'E-Mail-Adresse für die Eingangsbestätigung'
+      assign cp_contract = 'Bestell- oder Vertragsnummer'
+      assign cp_date = 'Bestellt am (optional)'
+      assign cp_items = 'Betroffene Ware oder betroffener Vertragsteil (optional)'
+      assign cp_note = 'Ergänzende Nachricht (optional)'
+      assign cp_review = 'Angaben prüfen'
+      assign cp_review_title = 'Widerruf prüfen'
+      assign cp_review_intro = 'Bitte prüfen Sie Ihre Angaben. Der Widerruf wird erst mit der anschließenden Bestätigung übermittelt.'
+      assign cp_back = 'Angaben korrigieren'
+      assign cp_confirm = 'Widerruf bestätigen'
+      assign cp_sending = 'Wird übermittelt…'
+      assign cp_success = 'Ihr Widerruf wurde übermittelt.'
+      assign cp_email_notice = 'Die Eingangsbestätigung haben wir zusätzlich an die angegebene E-Mail-Adresse gesendet.'
+      assign cp_error = 'Der Widerruf konnte nicht übermittelt werden. Bitte versuchen Sie es erneut oder schreiben Sie an info@camping-pioneers.de.'
+      assign cp_privacy = 'Die Angaben werden ausschließlich zur Bearbeitung und Dokumentation des Widerrufs verwendet.'
+      assign cp_privacy_link = 'Datenschutzerklärung'
+      assign cp_reference = 'Referenz'
+      assign cp_received = 'Eingang'
+      assign cp_print = 'Bestätigung drucken oder als PDF speichern'
+  endcase
+-%}
+
+<section class="cp-revocation page-width" id="vertrag-widerrufen" data-cp-revocation data-endpoint="https://b2b.camping-pioneers.de/widerruf-api/v1/revocations" data-locale="{{ request.locale.iso_code | escape }}">
+  <div class="cp-revocation__card">
+    <h2>{{ cp_title }}</h2>
+    <p>{{ cp_intro }}</p>
+    <form class="cp-revocation__form" data-form novalidate>
+      <div data-entry-step>
+        <div class="cp-revocation__grid">
+          <label><span>{{ cp_name }} *</span><input type="text" name="name" autocomplete="name" maxlength="160" required></label>
+          <label><span>{{ cp_email }} *</span><input type="email" name="email" autocomplete="email" maxlength="254" required></label>
+          <label><span>{{ cp_contract }} *</span><input type="text" name="contractId" autocomplete="off" maxlength="100" required></label>
+          <label><span>{{ cp_date }}</span><input type="date" name="orderDate"></label>
+        </div>
+        <label><span>{{ cp_items }}</span><textarea name="items" rows="3" maxlength="1000"></textarea></label>
+        <label><span>{{ cp_note }}</span><textarea name="note" rows="3" maxlength="2000"></textarea></label>
+        <label class="cp-revocation__honeypot" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <p class="cp-revocation__privacy">{{ cp_privacy }} <a href="{{ routes.root_url }}pages/datenschutzerklarung">{{ cp_privacy_link }}</a></p>
+        <button class="button button--primary" type="submit">{{ cp_review }}</button>
+      </div>
+      <div data-review-step hidden>
+        <h3 tabindex="-1" data-review-heading>{{ cp_review_title }}</h3>
+        <p>{{ cp_review_intro }}</p>
+        <dl class="cp-revocation__summary" data-summary></dl>
+        <div class="cp-revocation__actions">
+          <button class="button button--secondary" type="button" data-back>{{ cp_back }}</button>
+          <button class="button button--primary" type="button" data-confirm data-label="{{ cp_confirm | escape }}" data-sending="{{ cp_sending | escape }}">{{ cp_confirm }}</button>
+        </div>
+      </div>
+      <div class="cp-revocation__status" role="status" aria-live="polite" data-status></div>
+      <div class="cp-revocation__success" role="status" tabindex="-1" data-success hidden>
+        <h3>{{ cp_success }}</h3>
+        <p>{{ cp_email_notice }}</p>
+        <p><strong>{{ cp_reference }}:</strong> <span data-reference></span><br><strong>{{ cp_received }}:</strong> <span data-received></span></p>
+        <button class="button button--secondary" type="button" onclick="window.print()">{{ cp_print }}</button>
+      </div>
+    </form>
+    <noscript><p>Für die elektronische Widerrufsfunktion muss JavaScript aktiviert sein. Alternativ können Sie Ihren Widerruf an <a href="mailto:info@camping-pioneers.de">info@camping-pioneers.de</a> senden.</p></noscript>
+  </div>
+</section>
+
+<style>
+  .cp-revocation { padding-top: 20px; padding-bottom: 60px; }
+  .cp-revocation__card { max-width: 820px; margin-inline: auto; padding: clamp(22px, 4vw, 42px); border: 2px solid rgb(var(--color-border)); border-radius: 12px; background: rgb(var(--color-background)); box-shadow: 0 10px 30px rgba(0,0,0,.07); }
+  .cp-revocation__card h2 { margin-top: 0; }
+  .cp-revocation__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+  .cp-revocation label { display: block; margin-bottom: 18px; font-weight: 700; }
+  .cp-revocation label span { display: block; margin-bottom: 6px; }
+  .cp-revocation input, .cp-revocation textarea { width: 100%; padding: 12px; border: 1px solid #777; border-radius: 4px; background: #fff; color: #111; font: inherit; }
+  .cp-revocation input:focus, .cp-revocation textarea:focus { outline: 3px solid #ffed00; outline-offset: 2px; border-color: #111; }
+  .cp-revocation__privacy { margin: 0 0 20px; font-size: .9em; }
+  .cp-revocation__honeypot { position: absolute !important; inset-inline-start: -10000px !important; width: 1px !important; height: 1px !important; overflow: hidden !important; }
+  .cp-revocation__summary { margin: 22px 0; padding: 18px; background: rgba(var(--color-foreground),.06); border-radius: 6px; }
+  .cp-revocation__summary div { display: grid; grid-template-columns: minmax(150px, 1fr) 2fr; gap: 14px; padding: 8px 0; border-bottom: 1px solid rgba(var(--color-foreground),.16); }
+  .cp-revocation__summary div:last-child { border-bottom: 0; }
+  .cp-revocation__summary dt { font-weight: 700; }
+  .cp-revocation__summary dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .cp-revocation__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .cp-revocation__status:not(:empty) { margin-top: 18px; padding: 14px; border-left: 4px solid #b00020; background: #fff2f3; color: #710014; }
+  .cp-revocation__success { padding: 22px; border-left: 5px solid #16833b; background: #eefaf1; color: #102f19; }
+  .cp-revocation__success h3 { margin-top: 0; }
+  @media (max-width: 749px) { .cp-revocation__grid { grid-template-columns: 1fr; gap: 0; } .cp-revocation__summary div { grid-template-columns: 1fr; gap: 3px; } }
+  @media print { header, footer, .shopify-section-announcement-bar, .cp-revocation__card > h2, .cp-revocation__card > p, [data-entry-step], [data-review-step], .cp-revocation__status { display: none !important; } .cp-revocation__success { display: block !important; border: 1px solid #000; } }
+</style>
+
+<script>
+(() => {
+  const root = document.querySelector('[data-cp-revocation]');
+  if (!root || root.dataset.ready === 'true') return;
+  root.dataset.ready = 'true';
+  const form = root.querySelector('[data-form]');
+  const entry = root.querySelector('[data-entry-step]');
+  const review = root.querySelector('[data-review-step]');
+  const summary = root.querySelector('[data-summary]');
+  const status = root.querySelector('[data-status]');
+  const success = root.querySelector('[data-success]');
+  const confirmButton = root.querySelector('[data-confirm]');
+  const labels = {};
+  form.querySelectorAll('label').forEach((label) => {
+    const control = label.querySelector('input,textarea');
+    const title = label.querySelector('span');
+    if (control && title) labels[control.name] = title.textContent.replace(/\s*\*$/, '');
+  });
+  const values = () => Object.fromEntries(new FormData(form).entries());
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    status.textContent = '';
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    const data = values();
+    summary.textContent = '';
+    ['name','email','contractId','orderDate','items','note'].forEach((name) => {
+      if (!data[name]) return;
+      const row = document.createElement('div');
+      const term = document.createElement('dt');
+      const detail = document.createElement('dd');
+      term.textContent = labels[name] || name;
+      detail.textContent = data[name];
+      row.append(term, detail);
+      summary.append(row);
+    });
+    entry.hidden = true;
+    review.hidden = false;
+    root.querySelector('[data-review-heading]').focus();
+  });
+  root.querySelector('[data-back]').addEventListener('click', () => {
+    review.hidden = true;
+    entry.hidden = false;
+    form.elements.name.focus();
+  });
+  confirmButton.addEventListener('click', async () => {
+    confirmButton.disabled = true;
+    confirmButton.textContent = confirmButton.dataset.sending;
+    status.textContent = '';
+    try {
+      const response = await fetch(root.dataset.endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...values(), locale: root.dataset.locale }),
+      });
+      const result = await response.json();
+      if (!response.ok || !result.ok) throw new Error(result.error || 'Request failed');
+      review.hidden = true;
+      success.hidden = false;
+      success.querySelector('[data-reference]').textContent = result.reference;
+      success.querySelector('[data-received]').textContent = result.receivedAt;
+      success.focus();
+      form.reset();
+    } catch (error) {
+      status.textContent = error && error.message ? error.message : '{{ cp_error | escape }}';
+      confirmButton.disabled = false;
+      confirmButton.textContent = confirmButton.dataset.label;
+    }
+  });
+})();
+</script>
+
+{% schema %}
+{"name":"Online-Widerruf","settings":[],"presets":[{"name":"Online-Widerruf"}]}
+{% endschema %}
+{% comment %}cp-revocation-function-v20260825{% endcomment %}

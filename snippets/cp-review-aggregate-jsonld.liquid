@@ -1,0 +1,27 @@
+{%- if request.page_type == 'product' and product -%}
+  {%- liquid
+    assign cp_review_count = product.metafields.reviews.rating_count | default: 0 | plus: 0
+    assign cp_rating = product.metafields.reviews.rating.value
+    assign cp_rating_value = 0
+    if cp_rating != blank
+      assign cp_rating_value = cp_rating.rating | default: cp_rating.value | default: cp_rating | plus: 0
+    endif
+    assign cp_product_path = product.url | split: '?' | first
+    assign cp_product_node_id = cp_product_path | append: '#product'
+  -%}
+  {%- if cp_review_count > 0 and cp_rating_value > 0 -%}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": {{ cp_product_node_id | json }},
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": {{ cp_rating_value | round: 1 | json }},
+          "reviewCount": {{ cp_review_count | json }},
+          "bestRating": 5,
+          "worstRating": 1
+        }
+      }
+    </script>
+  {%- endif -%}
+{%- endif -%}

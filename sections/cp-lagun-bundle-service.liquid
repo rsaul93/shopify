@@ -1,0 +1,33 @@
+{% render 'cp-lagun-pdp-experience', product: product, module: 'bundle-service', scene: 'paper', module_section: section %}
+
+{% schema %}
+{
+  "name": "Lagun – Zubehör & Hilfe",
+  "tag": "section",
+  "class": "cp-lagun-editor-section",
+  "settings": [
+    { "type": "header", "content": "Zubehör-Auswahl" },
+    { "type": "text", "id": "bundle_kicker", "label": "Übertitel", "default": "Passend zu deinem Einbau" },
+    { "type": "text", "id": "bundle_heading", "label": "Überschrift", "default": "Nimm nur mit, was du wirklich brauchst." },
+    { "type": "textarea", "id": "bundle_body", "label": "Text", "default": "Wähle das Zubehör passend zu Wand, Montageort und gewünschter Nutzung – der Gesamtpreis aktualisiert sich automatisch." },
+    { "type": "text", "id": "base_label", "label": "Bezeichnung Basisprodukt", "default": "Basisprodukt" },
+    { "type": "text", "id": "accessory_label", "label": "Bezeichnung Zubehör", "default": "Optionales Zubehör" },
+    { "type": "text", "id": "unavailable_label", "label": "Text nicht verfügbar", "default": "Aktuell nicht verfügbar" },
+    { "type": "text", "id": "total_label", "label": "Bezeichnung Gesamtpreis", "default": "Gesamtpreis der Auswahl" },
+    { "type": "text", "id": "tax_note", "label": "Hinweis unter Gesamtpreis", "default": "Inklusive MwSt., zzgl. möglicher Versandkosten." },
+    { "type": "text", "id": "add_button", "label": "Warenkorb-Button", "default": "Auswahl in den Warenkorb" },
+    { "type": "text", "id": "adding_text", "label": "Status beim Hinzufügen", "default": "Auswahl wird hinzugefügt …" },
+    { "type": "text", "id": "success_text", "label": "Erfolgsmeldung", "default": "Die Auswahl liegt jetzt im Warenkorb." },
+    { "type": "text", "id": "error_text", "label": "Fehlermeldung", "default": "Die Auswahl konnte nicht hinzugefügt werden." },
+    { "type": "header", "content": "Beratung" },
+    { "type": "text", "id": "service_kicker", "label": "Übertitel", "default": "Du musst nicht allein planen" },
+    { "type": "text", "id": "service_heading", "label": "Überschrift", "default": "Wir finden gemeinsam das passende Set für deinen Ausbau." },
+    { "type": "textarea", "id": "service_body", "label": "Text", "default": "Schick uns ein Foto oder beschreibe deinen Einbau. Wir helfen dir persönlich bei Befestigung, Zubehör und der passenden Lagun-Konfiguration." },
+    { "type": "text", "id": "primary_label", "label": "Erster Button", "default": "Einbau prüfen lassen" },
+    { "type": "url", "id": "primary_link", "label": "Link des ersten Buttons" },
+    { "type": "text", "id": "secondary_label", "label": "Zweiter Button", "default": "+49 3643 8780470" },
+    { "type": "text", "id": "secondary_link", "label": "Link des zweiten Buttons", "default": "tel:+4936438780470" }
+  ],
+  "presets": [{ "name": "Lagun – Zubehör & Hilfe" }]
+}
+{% endschema %}

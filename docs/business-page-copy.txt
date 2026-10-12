@@ -1,0 +1,8 @@
+Geschäftskunden-Seite – Textkorrektur vom 12.10.2026
+
+Nutzervorgabe: Kurz und direkt. Lagun-Staffelpreise für Wiederverkäufer und
+Ausbauer nennen, CTA schlicht „Anfrageformular“. Keine Erklärungen zu internen
+B2B-/B2C-Abläufen oder künftigem Bestellbereich. Englischen Doppeltext aus der
+deutschen Seite entfernen. Bestehendes Formularziel unverändert lassen.
+
+Änderung ausschließlich im Preview-Theme 202395255111.

@@ -23,7 +23,7 @@
         "heading_Mmzygz": {
           "type": "heading",
           "settings": {
-            "heading": "Für Ausbaupartner und Wiederverkäufer",
+            "heading": "Lagun für dein Business",
             "heading_size": "h1",
             "heading_tag": "h2"
           }
@@ -31,7 +31,7 @@
         "text_mMjVpp": {
           "type": "text",
           "settings": {
-            "text": "<p><em>Beantrage hier deinen persönlichen Lagun-B2B-Zugang. Das Formular erfasst nur die Daten, die wir für eine erste Bestellung benötigen. Der spätere B2B-Bestellbereich wird getrennt vom normalen B2C-Checkout geführt.</em></p><p><em>Apply for your personal Lagun B2B access. The form only collects the information needed for an initial order. The B2B ordering area is separate from the standard B2C checkout.</em></p>",
+            "text": "<p>Lagun-Staffelpreise für Wiederverkäufer und Ausbauer. Frag deine Konditionen über unser Anfrageformular an.</p>",
             "text_size": "typeset2",
             "secondary_color": false
           }
@@ -40,7 +40,7 @@
           "type": "button",
           "settings": {
             "button_size": "medium",
-            "button_label": "B2B-Zugang beantragen / Apply for B2B access",
+            "button_label": "Anfrageformular",
             "button_link": "shopify://pages/b2b-haendler-werden",
             "button_style_secondary": false
           }

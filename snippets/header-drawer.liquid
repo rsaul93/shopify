@@ -145,6 +145,25 @@
                 {%- liquid
                   assign menu_block = false
                   assign link_title_handle = link.title | downcase | handle
+                  assign link_url_handle = link.url | split: '?' | first | split: '#' | first | split: '/' | last | handle
+                  case link_url_handle
+                    when 'lagun-tischgestell'
+                      assign link_title_handle = 'lagun-tischgestell'
+                    when 'alle-dachzelte-zubehor'
+                      assign link_title_handle = 'dachzelte'
+                    when 'anhanger-zubehor'
+                      assign link_title_handle = 'anhanger'
+                    when 'dachzelte-mieten'
+                      assign link_title_handle = 'mietrechner'
+                    when 'camperausbau'
+                      assign link_title_handle = 'campingzubehor'
+                    when 'sale'
+                      assign link_title_handle = 'sale'
+                    when 'showrooms'
+                      assign link_title_handle = 'showrooms'
+                    when 'contact'
+                      assign link_title_handle = 'service-hilfe'
+                  endcase
                   for block in blocks
                     assign menu_title_handle = block.settings.menu_title | downcase | handle
                     if block.type == 'mega_menu' and menu_title_handle == link_title_handle

@@ -358,9 +358,9 @@
     >
       {%- liquid
         if section.settings.menu_mobile != blank
-          render 'header-drawer', main_menu: section.settings.menu_mobile, enable_highlight: section.settings.enable_highlight, highlight_labels: highlight_labels, highlight_style: section.settings.highlight_style
+          render 'header-drawer', main_menu: section.settings.menu_mobile, blocks: section.blocks, enable_highlight: section.settings.enable_highlight, highlight_labels: highlight_labels, highlight_style: section.settings.highlight_style
         elsif section.settings.menu != blank
-          render 'header-drawer', main_menu: section.settings.menu, enable_highlight: section.settings.enable_highlight, highlight_labels: highlight_labels, highlight_style: section.settings.highlight_style
+          render 'header-drawer', main_menu: section.settings.menu, blocks: section.blocks, enable_highlight: section.settings.enable_highlight, highlight_labels: highlight_labels, highlight_style: section.settings.highlight_style
         endif
       -%}
 

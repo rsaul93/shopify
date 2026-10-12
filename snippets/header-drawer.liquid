@@ -3,6 +3,7 @@
 
   Accepts:
   - main_menu: {Object} Main menu
+  - blocks: {Array} Header blocks used for matching an optional menu promo
   - language_selector: {HTML} Shows on the screen as customers scroll up when true
   - country_selector: {HTML} Show filtering when true
 
@@ -130,14 +131,28 @@
     <div id="menu-drawer" class="menu-drawer motion-reduce" tabindex="-1">
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
-          <drawer-close-button class="header__icon header__icon--menu medium-hide large-up-hide" data-animate data-animate-delay-{{ animate_count }}>
-            <svg class="icon icon-close" aria-hidden="true" focusable="false">
-              <use href="#icon-close"></use>
-            </svg>
-          </drawer-close-button>
+          <div class="menu-drawer__masthead" data-animate data-animate-delay-{{ animate_count }}>
+            <span class="menu-drawer__masthead-title">{{ 'sections.header.menu' | t }}</span>
+            <drawer-close-button class="header__icon header__icon--menu">
+              <svg class="icon icon-close" aria-hidden="true" focusable="false">
+                <use href="#icon-close"></use>
+              </svg>
+            </drawer-close-button>
+          </div>
           <nav class="menu-drawer__navigation" data-animate data-animate-delay-{{ animate_count }}>
             <ul class="menu-drawer__menu list-menu" role="list">
               {%- for link in main_menu.links -%}
+                {%- liquid
+                  assign menu_block = false
+                  assign link_title_handle = link.title | downcase | handle
+                  for block in blocks
+                    assign menu_title_handle = block.settings.menu_title | downcase | handle
+                    if block.type == 'mega_menu' and menu_title_handle == link_title_handle
+                      assign menu_block = block
+                      break
+                    endif
+                  endfor
+                -%}
                 <li>
                   {%- if link.links != blank -%}
                     <details>
@@ -161,7 +176,10 @@
                             <button type="button" class="menu-drawer__close-button focus-inset" aria-expanded="true" data-close aria-label="{{ 'accessibility.close_menu' | t }}">
                               {% render 'icon', icon: 'arrow' %}
                             </button>
-                            <a class="menu-drawer__menu-item" href="{{ link.url }}">{{ link.title | escape }}</a>
+                            <a class="menu-drawer__menu-item" href="{{ link.url }}">
+                              <span>{{ link.title | escape }}</span>
+                              <span class="menu-drawer__topbar-action">{{ 'sections.collection_list.view_all' | t }}</span>
+                            </a>
                           </div>
                           <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
                             {%- for childlink in link.links -%}
@@ -203,6 +221,30 @@
                               </li>
                             {%- endfor -%}
                           </ul>
+                          {%- if menu_block and menu_block.settings.promo_image_1 != blank -%}
+                            <div class="menu-drawer__promo">
+                              <a class="menu-drawer__promo-link focus-inset" href="{% if menu_block.settings.promo_link_1 != blank %}{{ menu_block.settings.promo_link_1 }}{% else %}{{ link.url }}{% endif %}">
+                                <div class="menu-drawer__promo-media media" style="--image-position: {{ menu_block.settings.promo_image_position_1 }};">
+                                  {{ menu_block.settings.promo_image_1 | image_url: width: 900 | image_tag:
+                                    loading: 'lazy',
+                                    class: 'motion-reduce',
+                                    sizes: '(max-width: 749px) calc(100vw - 5.6rem), 38rem',
+                                    widths: '360, 535, 750, 900'
+                                  }}
+                                </div>
+                                {%- if menu_block.settings.promo_heading_1 != blank or menu_block.settings.promo_text_1 != blank -%}
+                                  <div class="menu-drawer__promo-content">
+                                    {%- if menu_block.settings.promo_heading_1 != blank -%}
+                                      <span class="menu-drawer__promo-heading">{{ menu_block.settings.promo_heading_1 | escape }}</span>
+                                    {%- endif -%}
+                                    {%- if menu_block.settings.promo_text_1 != blank -%}
+                                      <span class="menu-drawer__promo-text">{{ menu_block.settings.promo_text_1 | escape }}</span>
+                                    {%- endif -%}
+                                  </div>
+                                {%- endif -%}
+                              </a>
+                            </div>
+                          {%- endif -%}
                         </div>
                       </div>
                     </details>

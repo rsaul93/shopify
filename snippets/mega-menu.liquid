@@ -48,6 +48,14 @@
         <div class="page-width{% if block.settings.narrow %} page-width--inner{% endif %}">
           {%- capture sizes -%}(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 10rem) / 4), (min-width: 750px) calc((100vw - 10rem) / 3), calc(100vw - 3rem){%- endcapture -%}
 
+          <div class="mega-menu__panel-heading">
+            <p class="mega-menu__panel-title">{{ link.title | escape }}</p>
+            <a class="mega-menu__view-all focus-inset" href="{{ link.url }}">
+              <span>{{ 'sections.collection_list.view_all' | t }}</span>
+              {% render 'icon', icon: 'arrow' %}
+            </a>
+          </div>
+
           {%- if link.links != blank -%}
             <div class="list-mega-menu">
               {%- for childlink in link.links -%}
@@ -82,9 +90,6 @@
                   {%- endif -%}
                 </div>
               {%- endfor -%}
-              {%- if link.links.size < 4 -%}
-                <div class="mega-menu__item mega-menu__item--blank"></div>
-              {%- endif -%}
             </div>
           {%- endif -%}
 

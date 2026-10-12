@@ -6,3 +6,11 @@ B2B-/B2C-Abläufen oder künftigem Bestellbereich. Englischen Doppeltext aus der
 deutschen Seite entfernen. Bestehendes Formularziel unverändert lassen.
 
 Änderung ausschließlich im Preview-Theme 202395255111.
+
+Ergänzung: Deutsch, Englisch und Französisch erhalten kurze, suchorientierte
+Texte, eine eindeutige H1 sowie eigene SEO-Titel und Meta-Beschreibungen.
+Zentrale Textquelle: snippets/cp-business-copy.liquid (andere Sprachen: Englisch).
+Die Overrides gelten nur für das Template geschaeftskunden. Der Formularlink
+verwendet Shopifys lokalisierte Page-URL. Bestehende Canonicals und hreflang-
+Verweise werden beibehalten. Keine Ranking-Garantie; SEO-Änderungen sind erst
+nach Veröffentlichung für die produktive Website wirksam.

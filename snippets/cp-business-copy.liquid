@@ -1,0 +1,34 @@
+{%- comment -%}Business landing-page copy. Other locales fall back to English.{%- endcomment -%}
+{%- assign language = request.locale.iso_code | slice: 0, 2 -%}
+{%- case language -%}
+{%- when 'de' -%}
+{%- case field -%}
+{%- when 'title' -%}Lagun Tischgestelle für Wiederverkäufer & Ausbauer
+{%- when 'heading' -%}Lagun-Staffelpreise für dein Unternehmen
+{%- when 'body' -%}Lagun Tischgestelle zu Staffelpreisen für Wiederverkäufer und Camperausbauer. Frag die passenden Konditionen für deinen Bedarf über unser Anfrageformular an.
+{%- when 'cta' -%}Anfrageformular
+{%- when 'related' -%}Auch interessant
+{%- when 'seo_title' -%}Lagun Tischgestelle: Staffelpreise für Geschäftskunden
+{%- when 'description' -%}Lagun Tischgestelle zu Staffelpreisen für Wiederverkäufer und Camperausbauer. Jetzt Konditionen für dein Unternehmen über unser Anfrageformular anfragen.
+{%- endcase -%}
+{%- when 'fr' -%}
+{%- case field -%}
+{%- when 'title' -%}Pieds de table Lagun pour revendeurs et aménageurs
+{%- when 'heading' -%}Tarifs dégressifs Lagun pour les professionnels
+{%- when 'body' -%}Des pieds de table Lagun à tarifs dégressifs pour les revendeurs et les aménageurs de vans et camping-cars. Demandez les tarifs adaptés à vos besoins via notre formulaire.
+{%- when 'cta' -%}Formulaire de demande
+{%- when 'related' -%}À découvrir aussi
+{%- when 'seo_title' -%}Pieds de table Lagun | Tarifs professionnels dégressifs
+{%- when 'description' -%}Pieds de table Lagun à tarifs dégressifs pour revendeurs et aménageurs de vans et camping-cars. Demandez vos tarifs via notre formulaire.
+{%- endcase -%}
+{%- else -%}
+{%- case field -%}
+{%- when 'title' -%}Lagun table mounts for resellers & campervan converters
+{%- when 'heading' -%}Lagun volume pricing for your business
+{%- when 'body' -%}Lagun table mounts with volume pricing for resellers and campervan converters. Use our enquiry form to request pricing for your business.
+{%- when 'cta' -%}Enquiry form
+{%- when 'related' -%}You may also like
+{%- when 'seo_title' -%}Lagun Table Mounts | Trade & Volume Pricing
+{%- when 'description' -%}Lagun table mounts with volume pricing for resellers and campervan converters. Request pricing for your business through our enquiry form.
+{%- endcase -%}
+{%- endcase -%}

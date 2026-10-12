@@ -212,11 +212,30 @@
       <div class="flex-grid__item">
         <div class="image-with-text__content {{ section.settings.text_box_position }} {{ section.settings.text_alignment }} mobile-{{ section.settings.mobile_text_alignment }}">
           {%- for block in section.blocks -%}
+            {%- liquid
+              assign localized_heading = block.settings.heading
+              assign localized_text = block.settings.text
+              assign localized_button = block.settings.button_label
+              assign localized_link = block.settings.button_link
+              if template.suffix == 'geschaeftskunden'
+                capture localized_heading
+                  render 'cp-business-copy', field: 'heading'
+                endcapture
+                capture localized_text
+                  render 'cp-business-copy', field: 'body'
+                endcapture
+                assign localized_text = localized_text | escape | prepend: '<p>' | append: '</p>'
+                capture localized_button
+                  render 'cp-business-copy', field: 'cta'
+                endcapture
+                assign localized_link = pages['b2b-haendler-werden'].url
+              endif
+            -%}
             {% case block.type %}
               {%- when 'heading' -%}
                 <{{ block.settings.heading_tag }} class="image-with-text__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
                   {%- render 'highlight-text', 
-                    hl_input: block.settings.heading, 
+                    hl_input: localized_heading,
                     hl_style: block.settings.highlight_style,
                     hl_enable: block.settings.enable_highlight,
                     hl_animateWrap: true -%}
@@ -232,7 +251,7 @@
               {%- when 'text' -%}
                 <div class="image-with-text__text{% if block.settings.secondary_color %} image-with-text__text--colored{% endif %} {{ block.settings.text_size }} rte" {{ block.shopify_attributes }}>
                   {%- render 'highlight-text', 
-                    hl_input: block.settings.text, 
+                    hl_input: localized_text,
                     hl_style: block.settings.highlight_style,
                     hl_enable: block.settings.enable_highlight,
                     hl_animateWrap: true -%}
@@ -244,13 +263,13 @@
                   {%- if block.settings.button_label != blank or block.settings.button_alt_label != blank -%}
                     {%- if block.settings.button_label != blank -%}
                       {%- if block.settings.button_style_secondary -%}
-                        <a class="button button--cta button--{{ block.settings.button_size }}"{% if block.settings.button_link != blank %} href="{{ block.settings.button_link }}"{% else %} role="link" aria-disabled="true"{% endif %} {{ block.shopify_attributes }}>
-                          <span class="label">{{ block.settings.button_label | escape }}</span>
+                        <a class="button button--cta button--{{ block.settings.button_size }}"{% if localized_link != blank %} href="{{ localized_link }}"{% else %} role="link" aria-disabled="true"{% endif %} {{ block.shopify_attributes }}>
+                          <span class="label">{{ localized_button | escape }}</span>
                           {% render 'icon', icon: 'arrow' %}
                         </a>
                       {%- else -%}
-                        <a class="button button--{{ block.settings.button_size }}"{% if block.settings.button_link != blank %} href="{{ block.settings.button_link }}"{% else %} role="link" aria-disabled="true"{% endif %} {{ block.shopify_attributes }}>
-                          {{ block.settings.button_label | escape }}
+                        <a class="button button--{{ block.settings.button_size }}"{% if localized_link != blank %} href="{{ localized_link }}"{% else %} role="link" aria-disabled="true"{% endif %} {{ block.shopify_attributes }}>
+                          {{ localized_button | escape }}
                         </a>
                       {%- endif -%}
                     {%- endif -%}

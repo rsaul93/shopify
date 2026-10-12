@@ -24,8 +24,12 @@
   <div class="page-width">
     <div class="title-wrapper{% if section.settings.heading == blank %} title-wrapper--no-heading{% endif %} {{ section.settings.heading_alignment }}">
       <{{ section.settings.heading_tag }} class="title {{ section.settings.heading_size }}">
-        {%- render 'highlight-text', 
-          hl_input: section.settings.heading, 
+        {%- assign localized_heading = section.settings.heading -%}
+        {%- if template.suffix == 'geschaeftskunden' -%}
+          {%- capture localized_heading -%}{% render 'cp-business-copy', field: 'related' %}{%- endcapture -%}
+        {%- endif -%}
+        {%- render 'highlight-text',
+          hl_input: localized_heading,
           hl_style: section.settings.highlight_style,
           hl_enable: section.settings.enable_highlight,
           hl_animateWrap: true -%}

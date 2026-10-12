@@ -25,6 +25,14 @@
 
 
     {%- liquid
+      if request.page_type == 'page' and template.suffix == 'geschaeftskunden'
+        capture page_title
+          render 'cp-business-copy', field: 'seo_title'
+        endcapture
+        capture page_description
+          render 'cp-business-copy', field: 'description'
+        endcapture
+      endif
       assign title_site_suffix = ' – ' | append: shop.name
       assign title_with_site_len = page_title.size | plus: title_site_suffix.size
       assign page_title_downcase = page_title | downcase
@@ -48,7 +56,7 @@
       <meta name="description" content="{{ page_description | escape }}">
     {%- endif -%}
 
-    {% render 'meta-tags' %}
+    {% render 'meta-tags', page_title: page_title, page_description: page_description %}
     {% render 'cp-rich-results-breadcrumbs' %}
     {% render 'cp-review-aggregate-jsonld' %}
 

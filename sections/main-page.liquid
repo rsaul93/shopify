@@ -12,7 +12,11 @@
 
 <div class="page-width{% if section.settings.narrow %} page-width--inner{% endif %} section--padding">
   <h1 class="page-title">
-    {{ page.title | escape }}
+    {%- if template.suffix == 'geschaeftskunden' -%}
+      {% render 'cp-business-copy', field: 'title' %}
+    {%- else -%}
+      {{ page.title | escape }}
+    {%- endif -%}
   </h1>
   <div class="rte">
     {{ page.content }}
